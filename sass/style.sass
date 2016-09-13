@@ -289,7 +289,7 @@ a.tdu
 	font-size: 15px
 	cursor: pointer
 	padding-right: 15px
-	margin-top: 10px
+	margin-top: 23px
 	&:before
 		content: ''
 		width: 8px
@@ -299,7 +299,12 @@ a.tdu
 		position: absolute
 		right: 0px
 		top: 5px
+		+trans
 		+rotate(-45)
+
+	&:hover
+		&:before
+			border-color: #f45302
 
 .save-product-btn
 	font-size: 15px
@@ -446,6 +451,21 @@ a.tdu
 	padding: 0 13px
 	cursor: pointer
 
+	&:hover
+		.login-icon
+			&:after
+				opacity: 1
+
+			&:before
+				opacity: 0
+
+		.saved-icon
+			&:after
+				opacity: 1
+
+			&:before
+				opacity: 0
+
 .b-header-login__item-icon
 	display: inline-block
 	vertical-align: middle
@@ -454,11 +474,30 @@ a.tdu
 		width: 22px
 		height: 26px
 		position: relative
-		&:after
+		&:before
 			content: ''
 			+sprite(saved-icon, "abs_middle")
+			+trans
+		&:after
+			content: ''
+			+sprite(save-orange, "abs_middle")
+			opacity: 0
+			+trans
 	&.login-icon
 		+sprite(login-icon)
+		background: none !important
+		position: relative
+
+		&:before
+			content: ''
+			+trans
+			+sprite(login-icon, 'abs_middle')
+
+		&:after
+			content: ''
+			opacity: 0
+			+trans
+			+sprite(login-icon_hover, 'abs_middle')
 
 .saved-icon__text
 	position: absolute
@@ -740,7 +779,7 @@ a.tdu
 	display: inline-block
 	vertical-align: middle
 	width: 150px
-
+	font-family: $cr
 
 .b-filter-select__name
 	cursor: pointer
@@ -1274,7 +1313,7 @@ a.tdu
 	&:last-child
 		margin-right: 0
 	&.active
-		text-decoration: underline
+		//text-decoration: underline
 		color: #f45302
 	&:hover
 		color: #f45302
