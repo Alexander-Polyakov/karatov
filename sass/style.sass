@@ -62,6 +62,9 @@ body
 .f_r
 	float: right
 
+.rel
+	position: relative
+
 .tac
 	text-align: center
 
@@ -70,6 +73,16 @@ body
 
 .tar
 	text-align: right
+
+.taj
+	text-align: justify
+	position: relative
+	&:after
+		content: ''
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: 100%
 
 .w32
 	width: 32%
@@ -130,6 +143,9 @@ body
 
 .txt_gray
 	color: #9b9fa1
+
+.txt_gray2
+	color: #7f7d7f
 
 .bg_w
 	background: #fff
@@ -196,6 +212,9 @@ a.tdu
 .pad_40
 	padding: 40px
 
+.pt30
+	padding-top: 30px
+
 .pt40
 	padding-top: 40px
 
@@ -213,6 +232,11 @@ a.tdu
 
 
 
+.fz28-title
+	font-size: 28px
+	font-family: $cl
+	text-align: center
+	margin-bottom: 30px
 
 
 .full_w
@@ -702,11 +726,15 @@ a.tdu
 .b-filter-select__units
 	display: inline-block
 	vertical-align: middle
-	padding: 0 30px
-	.b-filter-select
-		margin: 0 30px
-		display: inline-block
-		vertical-align: middle
+
+.b-filter-select
+	margin: 0 30px
+	display: inline-block
+	vertical-align: middle
+	&:first-child
+		margin-left: 0
+	&:last-child
+		margin-right: 0
 
 .b-teaser__item-content
 	display: inline-block
@@ -880,7 +908,8 @@ a.tdu
 	line-height: 42px
 	font-family: $cl
 	font-size: 17px
-	border-right: 1px dotted #000
+	&.br
+		border-right: 1px dotted #000
 
 .b-for-whom__item
 	margin-right: 50px
@@ -956,12 +985,25 @@ a.tdu
 			margin-bottom: 20px
 
 
-.b-product-slider 
+.b-product-slider.browsing
 	.b-fade-slider
 		position: relative
 		height: 230px
 		width: 100%
-
+	.b-product-item
+		padding: 20px 15px 170px
+		&:hover
+			box-shadow: 0px 2px 3px 0px #ccc
+			background: #fff
+			.b-product-item__content, .b-fade-slider__nav
+				opacity: 1
+	.b-product-item__content
+		position: absolute
+		top: 260px
+		left: 0
+		width: 100%
+		opacity: 0
+		+trans
 
 .b-fade-slider__slides
 	position: absolute
@@ -1016,31 +1058,17 @@ a.tdu
 .b-product-slider__item
 	text-align: center
 	padding: 5px
-
-
-.b-product-item__content
-	position: absolute
-	top: 260px
-	left: 0
-	width: 100%
-	opacity: 0
 	+trans
-
+	
 .b-product-item
-	padding: 20px 15px 170px
-	+trans
-	&:hover
-		box-shadow: 0px 2px 3px 0px #ccc
-		background: #fff
-		.b-product-item__content, .b-fade-slider__nav
-			opacity: 1
+	text-align: center
 
 .b-product-item__price
 	font-size: 20px
 	font-family: $cr
 	margin-bottom: 5px
 
-.b-product-item__name
+.b-product-item__descr
 	color: #bdbdbd
 	font-size: 12px
 	margin-bottom: 15px
@@ -1147,14 +1175,6 @@ a.tdu
 	text-align: center
 	margin-bottom: 30px
 
-.b-seo
-	padding: 65px 0
-	text-align: center
-
-.b-seo__title
-	font-size: 28px
-	margin-bottom: 35px
-	font-family: $cl
 
 .b-subscribe-wrapper
 	background: url(../img/letter-bg.png) no-repeat 200px center, #efe9e4
@@ -1232,6 +1252,15 @@ a.tdu
 .b-section-wrapper
 	&.p13
 		padding: 13px 0
+	&.p40
+		padding: 40px 0
+	&.p55
+		padding: 55px 0
+	&.p65
+		padding: 65px 0
+	&.bb
+		border-bottom: 1px solid #e0e1e1
+
 
 .b-main-nav__item
 	margin-right: 75px
@@ -1632,15 +1661,13 @@ a.tdu
 	padding-left: 75px
 
 
-.b-similar-wrapper
-	padding: 40px 0
-	border-bottom: 1px solid #e0e1e1
-
 .b-similar__item-title
 	font-size: 20px
 	font-family: $cl
 	margin-bottom: 25px
 	color: #7f7d7f
+	&.txt_black
+		color: #000
 
 .b-similar__item
 	display: inline-block
@@ -1696,3 +1723,186 @@ a.tdu
 		background: #f26417
 		color: #fff
 		border-color: #f26417
+
+.b-grid-nav
+	font-size: 0
+
+.b-grid-nav__item
+	font-size: 17px
+	display: inline-block
+	vertical-align: middle
+	width: 24%
+	margin-right: 1.25%
+	position: relative
+	padding: 0 105px 0 25px
+	height: 100px
+	border: 1px solid #e3e3e3
+	overflow: hidden
+	+trans
+	&:last-child
+		margin-right: 0
+	&:before
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		height: 100%
+	&:hover
+		border-color: #f26417
+		.b-grid-nav__item__bg
+			+scale(1.2)
+
+.b-grid-nav__item__bg
+	width: 100px
+	height: 100px
+	position: absolute
+	right: 0
+	top: 50%
+	margin-top: -50px
+	line-height: 100px
+	text-align: center
+	+trans
+	img
+		max-width: 90%
+		max-height: 90%
+		vertical-align: middle
+
+.b-grid-nav__item__text
+	display: inline-block
+	vertical-align: middle
+	font-family: $cl
+	text-transform: uppercase
+	width: 90%
+
+.b-sliders-tabs__nav
+	font-size: 0
+	margin-bottom: 40px
+
+.b-sliders-tabs__nav__item
+	width: 33.33%
+	display: inline-block
+	vertical-align: middle
+	font-size: 12px
+	text-align: center
+	text-transform: uppercase
+	+trans
+	background: #efefef
+	border-right: 1px solid #fff
+	cursor: pointer
+	padding: 8px
+	&.active
+		background: #acacac
+		color: #fff
+
+.b-sliders-tabs__content
+	height: 300px
+	position: relative
+
+.b-sliders-tabs__content__item
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	+trans
+	opacity: 0
+	&.active
+		opacity: 1
+
+.b-best-collection__units
+	font-size: 0
+
+.b-best-collection__item
+	width: 32%
+	margin-right: 2%
+	display: inline-block
+	vertical-align: middle
+	height: 195px
+	overflow: hidden
+	position: relative
+	text-align: right
+	padding: 10px
+	&:nth-child(3n+3)
+		margin-right: 0
+	&:before
+		content: ''
+		height: 100%
+		vertical-align: middle
+		display: inline-block
+	&:hover
+		.b-best-collection__item__bg
+			+scale(1.2)
+
+.b-best-collection__item__bg
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 5
+	+trans
+	img
+		min-width: 100%
+		min-height: 100%
+
+.b-best-collection__item__text
+	position: relative
+	z-index: 10
+	display: inline-block
+	vertical-align: middle
+	font-size: 22px
+	text-transform: uppercase
+	font-family: $cl
+	width: 56%
+	text-align: left
+	letter-spacing: -0.5px
+
+
+.b-catalog-header
+	padding: 25px 0
+	border-bottom: 1px solid #333
+
+.b-catalog-content
+	padding: 25px 0
+
+
+.b-catalog-units
+	font-size: 0
+
+
+.b-catalog-units__item
+	display: inline-block
+	vertical-align: middle
+	width: 20%
+	margin-right: 6.66%
+	margin-bottom: 40px
+	&:nth-child(4n+4)
+		margin-right: 0
+
+
+.b-sidebar-filter
+	position: absolute
+	left: 0
+	height: 1000px
+	background: #fff
+	width: 300px
+	border: 1px solid #e8e8e8
+	z-index: 200
+	color: #7f7d7f
+	font-family: $cl
+	font-size: 14px
+
+.b-sidebar-filter__section
+	padding: 20px 45px
+
+.b-filter-ul__li
+	padding: 7px 0
+
+.b-sidebar-filter__section
+	border-bottom: 1px solid #e8e8e8
+
+
+.b-sidebar-filter__section__title
+	font-size: 12px
+	text-transform: uppercase
+	font-family: $cr
+	margin-bottom: 5px
