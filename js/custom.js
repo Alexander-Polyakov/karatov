@@ -25,6 +25,12 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    doc.on('click', '[data-filter-btn="toggle"]', function(e){
+        $(".b-sidebar-filter").toggleClass("active");
+        filter_geight();
+        e.preventDefault();
+    });
+
     doc.on('click', '.b-set-products__item', function(e){
         $(this).toggleClass("active");
         e.preventDefault();
@@ -57,7 +63,7 @@ $(document).ready(function(){
 
         if (!this_dropbox.hasClass("active")) {
             this_dropbox.toggleClass("active");
-            this_dropbox.find(".b-dropbox__popup").slideToggle(400);
+            this_dropbox.find(".b-dropbox__popup").slideToggle(400, filter_geight);
         }
         e.preventDefault();
     });
@@ -95,8 +101,28 @@ $(document).ready(function(){
         	filter.toggleClass("open");
         }
     });
-	
 
+
+
+    function filter_fix() {
+        var doc_pos = doc.scrollTop();
+        console.log(doc_pos);
+    }
+
+    function filter_geight() {
+        var filt_h = $("#b-sidebar-filter").outerHeight(),
+            fix_filt_h = $("#b-fix-filter").outerHeight(),
+            cat_header_h = $("#b-catalog-header").outerHeight();
+
+        if (!$(".b-sidebar-filter").hasClass("active")) {
+            $(".b-catalog-m-content").css("min-height", 1);
+            $("#b-sidebar-filter").css("top", -95);
+        } else {
+            $(".b-catalog-m-content").css("min-height", filt_h - 157);
+            $("#b-sidebar-filter").css("top", -(fix_filt_h+cat_header_h));
+
+        }
+    }
 
     function product_saved(this_click) {
         $("body").append("<span class='saved-animation'></span>");
@@ -116,4 +142,9 @@ $(document).ready(function(){
         },1000);
         
     }
+
+
+    doc.scroll(function(){
+        filter_fix();
+    });
 });

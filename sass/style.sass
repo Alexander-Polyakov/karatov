@@ -259,7 +259,7 @@ a.tdu
 	text-align: center
 	margin-bottom: 30px
 
-.width300px
+.w300px
 	width: 300px
 
 .full_w
@@ -344,6 +344,7 @@ a.tdu
 	padding-left: 45px
 	text-align: left
 
+
 .filter-open-btn
 	padding-left: 40px
 	color: #a8a7a6
@@ -351,6 +352,7 @@ a.tdu
 	font-family: $cl
 	position: relative
 	cursor: pointer
+	z-index: 150
 
 .hamburger
 	width: 26px
@@ -1420,6 +1422,8 @@ a.tdu
 	background-color: transparent
 
 .b-section-wrapper
+	&.pb60
+		padding-bottom: 60px
 	&.p13
 		padding: 13px 0
 	&.p40
@@ -2043,18 +2047,12 @@ a.tdu
 	text-align: left
 	letter-spacing: -0.5px
 
-
 .b-catalog-header
 	line-height: 70px
 	border-bottom: 1px solid #333
 
-.b-catalog-content
-	padding: 25px 0
-
-
 .b-catalog-units
 	font-size: 0
-
 
 .b-catalog-units__item
 	display: inline-block
@@ -2068,16 +2066,24 @@ a.tdu
 
 .b-sidebar-filter
 	position: absolute
-	left: 20px
+	left: 15px
 	background: #fff
 	width: 300px
 	border: 1px solid #e8e8e8
-	z-index: 200
+	padding-top: 95px
 	color: #7f7d7f
 	font-family: $cl
 	font-size: 14px
 	padding-bottom: 70px
-	display: none
+	top: -95px
+	filter: blur(20px)
+	opacity: 0
+	+trans()
+	z-index: -1
+	&.active
+		opacity: 1
+		filter: blur(0)
+		z-index: 130
 
 .b-filter-ul__li
 	padding: 7px 0
@@ -2145,8 +2151,30 @@ a.tdu
 	text-align: center
 	line-height: 38px
 	border-radius: 50%
+	+trans
+	border: 1px solid transparent
 	&.active
 		background: #f5f5f5
+	&:hover
+		border-color: #f5f5f5
 
 .b-pagination__link
 	display: block
+
+.b-pagination-wrapper
+	&.pos_b
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+
+
+.b-catalog-m-content
+	position: relative
+	padding-bottom:  120px
+	min-height: 1px
+	+trans()
+
+
+.b-catalog-fix-filter
+	padding-top: 25px
