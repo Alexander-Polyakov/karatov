@@ -29,4 +29,4 @@ a, img, a:active, a:focus { outline: none; }
 
 .r_bl { float: right; }
 
-.clearfix:after { clear: both; display: block; content: ""; }
+.hidden { display: none; }

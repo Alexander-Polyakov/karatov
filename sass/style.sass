@@ -588,6 +588,7 @@ a.tdu
 		width: 55px
 		top: 0
 		font-size: 0
+		z-index: 160
 		+trans
 		&:hover
 			background: #efefef
@@ -619,9 +620,9 @@ a.tdu
 			+rotate(-45)
 			position: absolute
 			top: 50%
-			left: 50%
+			right: 50%
 			margin-top: -15px
-			margin-left: -15px
+			margin-right: -22px
 	.owl-next
 		right: 0
 		&:before
@@ -635,7 +636,7 @@ a.tdu
 			top: 50%
 			left: 50%
 			margin-top: -15px
-			margin-left: -15px
+			margin-left: -22px
 
 
 .b-main-slider__item-content
@@ -780,6 +781,12 @@ a.tdu
 	vertical-align: middle
 	width: 150px
 	font-family: $cr
+
+.b-for-whom__item-input
+	&:checked
+		+ .b-for-whom__item
+			text-decoration: underline
+			color: #f2641a
 
 .b-filter-select__name
 	cursor: pointer
@@ -963,6 +970,9 @@ a.tdu
 	color: #a7a9ac
 	font-family: $cr
 
+.b-main-slider__item
+	display: block
+	text-decoration: none
 
 .b-main-slider__item-title
 	font-family: $cl
