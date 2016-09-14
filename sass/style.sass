@@ -53,6 +53,9 @@ body
 .lh1em
 	line-height: 1em
 
+.lh30
+	line-height: 30px
+
 .lh1-5em
 	line-height: 1.5em
 
@@ -104,6 +107,8 @@ body
 .mr20
 	margin-right: 20px
 
+.mr50
+	margin-right: 50px
 .mb2
 	margin-bottom: 2%
 
@@ -1194,11 +1199,6 @@ a.tdu
 		bottom: 30px
 		z-index: 0
 
-
-.b-reviews
-	padding: 60px 0
-	border-bottom: 1px solid #e0e1e1
-
 .b-reviews-slider
 	padding: 0 40px
 	margin-bottom: 30px
@@ -1364,6 +1364,8 @@ a.tdu
 		padding: 40px 0
 	&.p55
 		padding: 55px 0
+	&.p60
+		padding: 60px
 	&.p65
 		padding: 65px 0
 	&.bb
@@ -1596,14 +1598,30 @@ a.tdu
 
 .b-product-infographics
 	position: absolute
-	top: 0
-	right: 0
+	top: 25px
+	right: 20px
+	left: 20px
 
 .b-product-infographics__item
-	float: left
-	margin-left: 15px
+	height: 30px
+	width: 30px
+	position: relative
+	&.f_l
+		margin-right: 10px
+	&.f_r
+		margin-left: 10px
 	&.check44px
-		+sprite(check44px)
+		&:before
+			content: ''
+			+sprite(check44px, "abs_middle")
+	&.diamond26px
+		&:before
+			content: ''
+			+sprite(diamond26px, "abs_middle")
+	&.hit30px
+		&:before
+			content: ''
+			+sprite(hit30px, "abs_middle")
 
 
 .b-buy-gray-bonus
@@ -1766,10 +1784,6 @@ a.tdu
 		background: #cdcccd
 		position: absolute
 
-.b-set-wrapper
-	padding: 60px 0
-	border-bottom: 1px solid #e0e1e1
-
 .b-set__right
 	padding-left: 75px
 
@@ -1814,8 +1828,6 @@ a.tdu
 	margin-bottom: 0
 	&:before
 		display: none
-	.b-product-item
-		padding: 20px 15px
 
 .b-bread-crumbs-wrapper
 	&.footer
