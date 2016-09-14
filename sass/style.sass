@@ -83,6 +83,8 @@ body
 		display: inline-block
 		vertical-align: middle
 		width: 100%
+.ml10
+	margin-left: 10px
 
 .w32
 	width: 32%
@@ -212,6 +214,9 @@ a.tdu
 .pad_40
 	padding: 40px
 
+.pt5
+	padding-top: 5px
+
 .pt30
 	padding-top: 30px
 
@@ -226,6 +231,9 @@ a.tdu
 
 .pb20
 	padding-bottom: 20px
+
+.pr25
+	padding-right: 25px
 
 .pr30
 	padding-right: 30px
@@ -281,6 +289,53 @@ a.tdu
 	box-shadow: 0px 2px 3px 0px #ccc
 	display: none
 
+.reset-all-btn
+	font-size: 14px
+	color: #7c7c7c
+	padding-left: 20px
+	outline: none
+	background: transparent
+	position: relative
+	font-family: $cl
+
+.reset-all-btn__cross
+	position: absolute
+	left: 0
+	top: 50%
+	margin-top: -7px
+	width: 14px
+	height: 14px
+	+rotate(45)
+	&:before
+		content: ''
+		width: 100%
+		height: 2px
+		left: 0
+		top: 50%
+		margin-top: -1px
+		background: #999
+		position: absolute
+	&:after
+		content: ''
+		height: 100%
+		width: 2px
+		left: 50%
+		top: 0
+		margin-left: -1px
+		background: #999
+		position: absolute
+
+.gray-more-btn
+	padding: 2px 20px
+	background: #e8e8e8
+	color: #7f7d7f
+	font-size: 14px
+	display: inline-block
+	vertical-align: middle
+	+trans
+	&:hover
+		background: #000
+		color: #fff
 
 .btn-address-open
 	margin-left: 50px
@@ -890,7 +945,7 @@ a.tdu
 			+scale(1)
 
 
-.filter-radio.jq-checkbox
+.filter-radio.jq-radio
 	display: inline-block
 	vertical-align: middle
 	width: 18px
@@ -898,7 +953,7 @@ a.tdu
 	border-radius: 50%
 	border: 1px solid #dcddde
 	+trans
-	.jq-checkbox__div
+	.jq-radio__div
 		+trans
 		width: 6px
 		height: 6px
@@ -913,11 +968,13 @@ a.tdu
 		opacity: 0
 	&.checked
 		border-color: #f9b897
-		.jq-checkbox__div
+		.jq-radio__div
 			opacity: 1
 			+scale(1)
 
-
+.filter-radio.active-black.checked + .b-filter-label__text,
+.filter-checkbox.active-black.checked + .b-filter-label__text,
+	color: #000
 
 
 .b-nesting__item-content
@@ -926,14 +983,16 @@ a.tdu
 .b-filter-label__text
 	display: inline-block
 	vertical-align: middle
+	+trans
 
 .b-filter-label
 	cursor: pointer
 	position: relative
 	padding-left: 27px
 	display: inline-block
+	vertical-align: middle
 	+trans
-	.filter-checkbox.jq-checkbox, .filter-radio.jq-checkbox
+	.filter-checkbox.jq-checkbox, .filter-radio.jq-radio
 		position: absolute !important
 		top: 50%
 		margin-top: -9px
@@ -1553,6 +1612,11 @@ a.tdu
 	&:hover
 		.b-clarification__popup
 			display: block
+	&.abs_r
+		position: absolute
+		top: 50%
+		margin-top: -11.5px
+		right: 0
 
 
 .b-clarification__icon
@@ -1921,7 +1985,6 @@ a.tdu
 .b-sidebar-filter
 	position: absolute
 	left: 0
-	height: 1000px
 	background: #fff
 	width: 300px
 	border: 1px solid #e8e8e8
@@ -1929,19 +1992,76 @@ a.tdu
 	color: #7f7d7f
 	font-family: $cl
 	font-size: 14px
-
-.b-sidebar-filter__section
-	padding: 20px 45px
+	padding-bottom: 70px
 
 .b-filter-ul__li
 	padding: 7px 0
+	.b-dropbox__popup
+		padding-left: 30px
+
 
 .b-sidebar-filter__section
 	border-bottom: 1px solid #e8e8e8
-
+	padding: 20px 45px
+	&:last-child
+		border-bottom: none
 
 .b-sidebar-filter__section__title
 	font-size: 12px
 	text-transform: uppercase
 	font-family: $cr
 	margin-bottom: 5px
+	color: #626262
+
+.b-dropbox__popup
+	display: none
+
+.from-to__input
+	width: 80px
+	height: 30px
+	padding: 0 10px
+	font-size: 14px
+	font-family: $cl
+	color: #9d9d9d
+	border: 1px solid #9d9d9d
+	display: inline-block
+	vertical-align: middle
+	+phc(#9d9d9d)
+
+.from-to__button
+	display: inline-block
+	vertical-align: middle
+	height: 30px
+	background: #d9d9d9
+	outline: none
+	border: none
+	position: relative
+	width: 24px
+	&:before
+		content: ''
+		width: 10px
+		height: 10px
+		border-right: 2px solid #9d9d9d
+		border-top: 2px solid #9d9d9d
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -5px
+		margin-left: -7px
+		+rotate(45)
+
+.b-pagination__item
+	font-size: 17px
+	font-family: $cr
+	display: inline-block
+	vertical-align: middle
+	width: 38px
+	height: 38px
+	text-align: center
+	line-height: 38px
+	border-radius: 50%
+	&.active
+		background: #f5f5f5
+
+.b-pagination__link
+	display: block
