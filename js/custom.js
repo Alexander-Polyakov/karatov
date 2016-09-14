@@ -51,6 +51,18 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+
+    doc.on('click', '.b-dropbox__static', function(e){
+        var this_dropbox = $(this).closest(".b-dropbox");
+
+        if (!this_dropbox.hasClass("active")) {
+            this_dropbox.toggleClass("active");
+            this_dropbox.find(".b-dropbox__popup").slideToggle(400);
+        }
+        e.preventDefault();
+    });
+
+
     doc.on('click', '.save-product-btn', function(e){
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
