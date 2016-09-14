@@ -90,9 +90,9 @@ $(document).ready(function(){
             filter = target.closest(".b-filter-select");
         if (!filter.length > 0) {
             $(".b-filter-select").removeClass("open");
-        } else {
-        	$(".b-filter-select").removeClass("open");
-        	filter.addClass("open");
+        } else if(target.hasClass('b-filter-select__name')) {
+        	$(".b-filter-select").not(filter).removeClass("open");
+        	filter.toggleClass("open");
         }
     });
 	
