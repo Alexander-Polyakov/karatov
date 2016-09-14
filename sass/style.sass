@@ -215,6 +215,14 @@ a.tdu
 .st-title
 	line-height: 1.2em
 	margin-bottom: 20px
+	&.brush-icon
+		padding-top: 60px
+		position: relative
+		&:before
+			content: ''
+			+sprite(brush-icon, "abs_middle")
+			top: 0 !important
+			margin-top: 0 !important
 
 .pad_40
 	padding: 40px
@@ -708,7 +716,6 @@ a.tdu
 	margin-bottom: 70px
 
 .b-m-grid__item
-	background: #000
 	position: relative
 	&:hover
 		.b-m-grid__item__preview
@@ -985,7 +992,7 @@ a.tdu
 			+scale(1)
 
 .filter-radio.active-black.checked + .b-filter-label__text,
-.filter-checkbox.active-black.checked + .b-filter-label__text,
+.filter-checkbox.active-black.checked + .b-filter-label__text
 	color: #000
 
 
@@ -1065,6 +1072,8 @@ a.tdu
 .b-m-grid__item__content
 	position: relative
 	z-index: 10
+	&.middle
+		padding: 60px 50px 20px
 	&.top
 		top: 40px
 		right: 40px
@@ -1106,7 +1115,7 @@ a.tdu
 	.b-product-item
 		padding: 20px 15px 170px
 		&:hover
-			box-shadow: 0px 2px 3px 0px #ccc
+			box-shadow: 0 2px 3px 0 #ccc
 			background: #fff
 			.b-product-item__content, .b-fade-slider__nav
 				opacity: 1
