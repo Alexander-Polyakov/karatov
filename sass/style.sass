@@ -259,6 +259,8 @@ a.tdu
 	text-align: center
 	margin-bottom: 30px
 
+.width300px
+	width: 300px
 
 .full_w
 	width: 100%
@@ -337,6 +339,43 @@ a.tdu
 		margin-left: -1px
 		background: #999
 		position: absolute
+
+.b-filter-open
+	padding-left: 45px
+	text-align: left
+
+.filter-open-btn
+	padding-left: 40px
+	color: #a8a7a6
+	font-size: 17px
+	font-family: $cl
+	position: relative
+	cursor: pointer
+
+.hamburger
+	width: 26px
+	height: 20px
+	position: relative
+	display: inline-block
+	&.pos_l
+		left: 0
+		top: 50%
+		margin-top: -10px
+		position: absolute
+
+.hamburger__line
+	position: absolute
+	width: 100%
+	height: 2px
+	background: #000
+	left: 0
+	&.top
+		top: 0
+	&.middle
+		top: 50%
+		margin-top: -1px
+	&.bottom
+		bottom: 0
 
 .gray-more-btn
 	padding: 2px 20px
@@ -723,6 +762,7 @@ a.tdu
 			&.no-hover
 				+scale(1)
 
+
 .prop-item
 	position: relative
 
@@ -815,6 +855,7 @@ a.tdu
 	position: relative
 	z-index: 100
 	&.open
+		z-index: 150
 		.b-filter-select__dropdown
 			-webkit-transform: scale(1) translateY(0)
 			-ms-transform: scale(1) translateY(0)
@@ -864,6 +905,8 @@ a.tdu
 	-khtml-user-select: none
 	user-select: none
 	+trans
+	&.color-gray
+		color: #5a5a5a
 	&:before
 		content: ''
 		width: 8px
@@ -1027,6 +1070,7 @@ a.tdu
 	font-size: 17px
 	&.br
 		border-right: 1px dotted #000
+		
 
 .b-for-whom__item
 	margin-right: 50px
@@ -1064,16 +1108,27 @@ a.tdu
 	width: 100%
 	height: 100%
 	z-index: 5
-	+trans
+	+trans(all,5s,ease,0s)
 	img
 		min-width: 100%
 		min-height: 100%
+	&.orange-bg
+		background: url(../img/grid-img2.jpg) no-repeat center center
+		-webkit-background-size: cover
+		background-size: cover
+
 
 .b-m-grid__item__content
 	position: relative
 	z-index: 10
 	&.middle
-		padding: 60px 50px 20px
+		top: 20px
+		right: 20px
+		left: 20px
+		bottom: 20px
+		background: #fff
+		padding: 40px 30px 20px
+		position: absolute
 	&.top
 		top: 40px
 		right: 40px
@@ -1992,7 +2047,7 @@ a.tdu
 
 
 .b-catalog-header
-	padding: 25px 0
+	line-height: 70px
 	border-bottom: 1px solid #333
 
 .b-catalog-content
@@ -2015,7 +2070,7 @@ a.tdu
 
 .b-sidebar-filter
 	position: absolute
-	left: 0
+	left: 20px
 	background: #fff
 	width: 300px
 	border: 1px solid #e8e8e8
@@ -2024,6 +2079,7 @@ a.tdu
 	font-family: $cl
 	font-size: 14px
 	padding-bottom: 70px
+	display: none
 
 .b-filter-ul__li
 	padding: 7px 0
