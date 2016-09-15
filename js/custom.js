@@ -81,6 +81,18 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    doc.on('mousemove', function (e) {
+        var l = $('.b-container:eq(0)').offset().left,
+            l_mouse = e.clientX;
+
+        if(l < l_mouse) {
+            $('.up-site-btn').removeClass('dark');
+        } else {
+            $('.up-site-btn').addClass('dark');
+        }
+        // console.log(e.clientX)
+    });
+
     doc.on('mouseenter', '[data-fade-nav]', function(e){
        var  this_elem = $(this).data("fade-nav"),
             this_slider = $(this).closest(".b-fade-slider");
@@ -127,11 +139,13 @@ $(document).ready(function(){
     function product_saved(this_click) {
         $("body").append("<span class='saved-animation'></span>");
         var this_elem = $(".saved-animation");
-        var anim_elem = this_click.find(".icon");
+        var anim_elem = this_click.find(".icon"),
             pos_top = anim_elem.offset().top,
             pos_left = anim_elem.offset().left;
-        console.log(pos_top, pos_left);
+
+        // console.log(pos_top, pos_left);
         this_elem.css({"left": pos_left, "top": pos_top});
+
         setTimeout(function(){
             $(".saved-animation").addClass("anim");
         },100);
