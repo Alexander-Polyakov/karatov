@@ -128,7 +128,7 @@ $(document).ready(function(){
 
     doc.on('click', '.filter-height-btn', function(e){
        setTimeout(function(){
-           filter_height();
+           filter_change();
        },500);
         e.preventDefault();
     });
@@ -150,6 +150,16 @@ $(document).ready(function(){
         }
 
     }
+
+    function filter_change() {
+        var filt_h = $("#b-sidebar-filter").outerHeight(),
+            fix_filt_h = $("#b-fix-filter").outerHeight(),
+            cat_header_h = $("#b-catalog-header").outerHeight();
+
+            $("#b-catalog-content").css("min-height", filt_h - (fix_filt_h+cat_header_h+61));
+            $("#b-sidebar-filter").css("top", -(fix_filt_h+cat_header_h));
+    }
+
 
 
     function filter_height() {
