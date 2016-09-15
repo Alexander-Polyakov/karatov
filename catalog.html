@@ -499,10 +499,11 @@
 					</div>
 				</div>
 			</div>
-			<div class='b-catalog-body'>
+			<div id="b-catalog-body" class='b-catalog-body'>
 				<div id="b-fix-filter" class="b-catalog-fix-filter">
 					<div class="b-container">
-						<div class="b-filter-section taj">
+						<div class="b-catalog-filter">
+							<div class="b-filter-section taj">
 							<div class="b-filter-select">
 								<div class="b-filter-select__name">Вид</div>
 								<div class="b-filter-select__dropdown">
@@ -543,8 +544,8 @@
 										</li>
 										<li class='b-nesting__item'>
 											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
+												<label class="b-fieltr-label">
+													<input type="radio" class="filter-radio">
 													<span class='b-filter-label__text'>Платина</span>
 												</label>
 											</div>
@@ -552,7 +553,7 @@
 										<li class='b-nesting__item'>
 											<div class='b-nesting__item-content'>
 												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
+													<input type="radio" class="filter-radio">
 													<span class='b-filter-label__text'>Серебро</span>
 												</label>
 											</div>
@@ -562,119 +563,19 @@
 								</div>
 							</div>
 							<div class="b-filter-select">
-								<div class="b-filter-select__name">Металл</div>
-								<div class="b-filter-select__dropdown">
-									<ul class="b-nesting">
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-checkbox">
-													<span class='b-filter-label__text'>Золото</span>
-												</label>
-											</div>
-											<ul class="b-nesting__list">
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Красное</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Желтое</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Белое</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Мультицвет</span>
-													</label>
-												</li>
-											</ul>
-										</li>
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
-													<span class='b-filter-label__text'>Платина</span>
-												</label>
-											</div>
-										</li>
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
-													<span class='b-filter-label__text'>Серебро</span>
-												</label>
-											</div>
-										</li>
-									</ul>
-
+								<div class="b-filter-select-selected">
+									Металл: Золото
+									<span class="close-btn">
+										<span class="close-btn__cross"></span>
+									</span>
 								</div>
 							</div>
 							<div class="b-filter-select">
-								<div class="b-filter-select__name">Вставка</div>
-								<div class="b-filter-select__dropdown">
-									<ul class="b-nesting">
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-checkbox">
-													<span class='b-filter-label__text'>Золото</span>
-												</label>
-											</div>
-											<ul class="b-nesting__list">
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Красное</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Желтое</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Белое</span>
-													</label>
-												</li>
-												<li class="b-nesting__list__item">
-													<label class="b-filter-label">
-														<input type="checkbox" class="filter-checkbox">
-														<span class='b-filter-label__text'>Мультицвет</span>
-													</label>
-												</li>
-											</ul>
-										</li>
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
-													<span class='b-filter-label__text'>Платина</span>
-												</label>
-											</div>
-										</li>
-										<li class='b-nesting__item'>
-											<div class='b-nesting__item-content'>
-												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
-													<span class='b-filter-label__text'>Серебро</span>
-												</label>
-											</div>
-										</li>
-									</ul>
-
+								<div class="b-filter-select-selected">
+									4 вставки
+									<span class="close-btn">
+										<span class="close-btn__cross"></span>
+									</span>
 								</div>
 							</div>
 							<div class="b-filter-select">
@@ -718,7 +619,7 @@
 										<li class='b-nesting__item'>
 											<div class='b-nesting__item-content'>
 												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
+													<input type="radio" class="filter-radio">
 													<span class='b-filter-label__text'>Платина</span>
 												</label>
 											</div>
@@ -726,21 +627,34 @@
 										<li class='b-nesting__item'>
 											<div class='b-nesting__item-content'>
 												<label class="b-filter-label">
-													<input type="checkbox" class="filter-radio">
+													<input type="radio" class="filter-radio">
 													<span class='b-filter-label__text'>Серебро</span>
 												</label>
 											</div>
 										</li>
 									</ul>
-
 								</div>
 							</div>
-							<div class="b-filter-select">
-								<a class="txt_gray" href="#">Еще...</a>
+							<div class="b-filter-select ">
+								<div class="b-filter-select__name">Цена</div>
 							</div>
 							<div class="b-filter-select">
-								<a class="txt_gray" href="#">Очистить фильтры</a>
+								<div class="b-filter-select__name">Цена</div>
 							</div>
+							<div class="b-filter-select hidden">
+								<div class="b-filter-select__name">Цена</div>
+							</div>
+							<div class="b-filter-select hidden">
+								<div class="b-filter-select__name">Цена</div>
+							</div>
+							<div class="b-filter-select">
+								<span class="more-filters-btn accordion-toggle">
+									<span class="text_default">Еще...</span>
+									<span class="text_active">Скрыть</span>
+								</span>
+							</div>
+						</div>
+							<button class="clear-filters-btn">Очистить фильтры</button>
 						</div>
 					</div>
 				</div>
@@ -784,53 +698,98 @@
 							<p class='b-sidebar-filter__section__title'>вид украшения</p>
 							<ul class="b-filter-ul">
 								<li class="b-filter-ul__li b-dropbox">
-									<div class="b-dropbox__static">
+									<div class="b-dropbox__static filter-height-btn">
 										<label class="b-filter-label">
 											<input name="radio1" type="radio" class="filter-radio active-black">
 											<span class='b-filter-label__text'>Ювелирные украшения</span>
 										</label>
 									</div>
-									<div class="b-dropbox__popup">
-										<ul class="b-filter-ul">
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Кольца</span>
-												</label>
-											</li>
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Серьги</span>
-												</label>
-											</li>
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Подвески и кулоны</span>
-												</label>
-											</li>
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Цепочки</span>
-												</label>
-											</li>
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Браслеты</span>
-												</label>
-											</li>
-											<li class="b-filter-ul__li">
-												<label class="b-filter-label">
-													<input name="radio2" type="radio" class="filter-radio active-black">
-													<span class='b-filter-label__text'>Броши</span>
-												</label>
-											</li>
-										</ul>
+									<div class="b-dropbox__popup b-accordion-item">
+										<div class="b-accordion-item__default">
+											<ul class="b-filter-ul">
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Кольца</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Серьги</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Подвески и кулоны</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Цепочки</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Браслеты</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Броши</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+										<div class="b-accordion-item__popup">
+											<ul class="b-filter-ul">
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Кольца</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Серьги</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Подвески и кулоны</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Цепочки</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Браслеты</span>
+													</label>
+												</li>
+												<li class="b-filter-ul__li">
+													<label class="b-filter-label">
+														<input name="radio2" type="radio" class="filter-radio active-black">
+														<span class='b-filter-label__text'>Броши</span>
+													</label>
+												</li>
+											</ul>
+										</div>
 										<p class="pt5">
-											<a class="gray-more-btn" href="#">Еще...</a>
+											<a class="filter-height-btn gray-more-btn accordion-toggle" href="#">
+												<span class="text_default">Еще...</span>
+												<span class="text_active">Скрыть</span>
+											</a>
 										</p>
 									</div>
 								</li>
@@ -918,7 +877,7 @@
 								</li>
 							</ul>
 							<p class="pt5">
-								<a class="gray-more-btn" href="#">Еще...</a>
+								<a class="filter-height-btn gray-more-btn" href="#">Еще...</a>
 							</p>
 						</div>
 						<div class="b-sidebar-filter__section">
