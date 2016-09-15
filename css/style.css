@@ -732,7 +732,7 @@ a.tdu:hover { text-decoration: none; }
 .b-catalog-units__item { display: inline-block; vertical-align: middle; width: 20%; margin-right: 6.66%; margin-bottom: 40px; }
 .b-catalog-units__item:nth-child(4n+4) { margin-right: 0; }
 
-.b-sidebar-filter { position: absolute; left: 15px; background: #fff; width: 300px; border: 1px solid #e8e8e8; padding-top: 95px; color: #7f7d7f; font-family: "circle-light"; font-size: 14px; padding-bottom: 70px; top: -95px; filter: blur(20px); -webkit-filter: blur(20px); opacity: 0; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; z-index: -1; }
+.b-sidebar-filter { position: absolute; left: 15px; background: #fff; width: 300px; border: 1px solid #e8e8e8; padding-top: 95px; color: #7f7d7f; font-family: "circle-light"; font-size: 14px; padding-bottom: 70px; top: -95px; filter: blur(20px); -webkit-filter: blur(20px); opacity: 0; z-index: -1; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; }
 .b-sidebar-filter.active { opacity: 1; filter: blur(0); -webkit-filter: blur(0); z-index: 130; }
 
 .b-filter-ul__li { padding: 7px 0; }
