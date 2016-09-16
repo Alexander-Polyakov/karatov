@@ -31,7 +31,7 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
-    doc.on('click', '.b-set-products__item', function(e){
+    doc.on('click', '.b-set-products__item-check', function(e){
         $(this).toggleClass("active");
         e.preventDefault();
     });
@@ -213,32 +213,24 @@ $(document).ready(function(){
             this_h = $(this).outerHeight(),
             this_w = $(this).outerHeight(),
             percent_h = img_h/this_h,
-            persent_w = img_w/this_w;
+            persent_w = img_w/this_w,
+            offset = $(this).offset();
 
-
-        increase_hover(percent_h,persent_w);
+        increase_hover(percent_h,persent_w,offset);
     });
 
 
 
-    function increase_hover(percent_h,persent_w) {
+    function increase_hover(percent_h,persent_w,offset) {
 
         doc.on('mousemove', '.b-increase-hover', function(e){
-            var this_elem = $(this),
-                offset = $(this).offset();
-
-            var pos_x = (e.pageX - offset.left);
-            var pos_y = (e.pageY - offset.top);
-
-            var need_pers_x = pos_x * persent_w,
+            var this_elem = $(this);
+                pos_x = (e.pageX - offset.left),
+                pos_y = (e.pageY - offset.top),
+                need_pers_x = pos_x * persent_w,
                 need_pers_y = pos_y * percent_h;
 
-            console.log(pos_x,pos_y);
-            setTimeout(function(){
-                this_elem.find("img").css({"margin-top": -need_pers_y, "margin-left": -need_pers_y});
-            },10);
-
-
+            this_elem.find("img").css({"margin-top": -need_pers_y, "margin-left": -need_pers_x});
 
             e.preventDefault();
         });
