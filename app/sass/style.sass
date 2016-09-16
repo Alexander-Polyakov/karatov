@@ -1551,28 +1551,56 @@ a.tdu
 .b-bread-crumbs
     color: #b1b1b1
     font-family: $cl
+    font-size: 15px
+    > .b-bread-crumbs__item
+        &:first-child
+            margin-left: 0
+            .b-bread-crumbs__link
+                padding-left: 0
+                margin-left: 0
+                &:before
+                    display: none
+
+
 
 .b-bread-crumbs__item
-    float: left
-    margin-right: 50px
+    display: inline-block
+    vertical-align: middle
+    margin-left: 25px
+    .hover-show
+        display: none
+        .b-bread-crumbs__item:first-child
+            margin-left: 0
+    &:hover
+        .hover-hide
+            display: none
+        .hover-show
+            display: block
+
+.b-bread-crumbs__link
+    display: inline-block
+    vertical-align: middle
+    padding-left: 25px
     position: relative
     +trans
-    &:after
+    &:before
         content: ''
         width: 8px
         height: 8px
         border-left: 1px solid #ba9786
         border-top: 1px solid #ba9786
         position: absolute
-        right: -30px
+        left: 0
         top: 50%
         margin-top: -5px
         +rotate(-45)
-    &:last-child
-        &:after
-            display: none
+        +trans
     &:hover
         color: #f45302
+        &:before
+            border-left: 1px solid #f45302
+            border-top: 1px solid #f45302
+
 
 .b-product-cart-wrapper
     padding: 35px 0 60px
@@ -1615,13 +1643,38 @@ a.tdu
     opacity: 0
     text-align: center
     line-height: 560px
+    border: 2px solid transparent
     +trans
+    overflow: hidden
     &.active
         opacity: 1
+        z-index: 10
+    .hover-preview
+        display: none
+    .standard-preview
+        display: block
+        img
+            max-width: 90%
+            max-height: 90%
     img
         vertical-align: middle
-        max-width: 90%
-        max-height: 90%
+        position: relative
+    &:hover
+        border-color: #f26417
+        .hover-preview
+            display: block
+        .standard-preview
+            display: none
+
+.b-increase-hover
+    position: relative
+    height: 100%
+    width: 100%
+    img
+        position: absolute
+        left: 50%
+        top: 50%
+
 
 .b-presentation-slider__nav-item
     width: 95px

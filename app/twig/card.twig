@@ -1,5 +1,5 @@
 {% extends "layouts/main.twig" %}
-
+{% block pageTitle %} card page{% endblock %}
 {% block pageScripts %}
 
     <script>
@@ -90,7 +90,12 @@
                         </ul>
                         <div class="b-presentation-slider__slides">
                             <div class="b-presentation-slider__slide active" data-fade-slide="1">
-                                <img src="img/products/product-img6.jpg" alt="">
+                                <div class="standard-preview">
+                                    <img src="img/products/product-img6.jpg" alt="">
+                                </div>
+                                <div class="hover-preview b-increase-hover">
+                                    <img src="img/products/product-img6.jpg" style="width: 1000px; height: 1000px" alt="">
+                                </div>
                             </div>
                             <div class="b-presentation-slider__slide" data-fade-slide="2">
                                 <img src="img/products/product-img1.jpg" alt="">

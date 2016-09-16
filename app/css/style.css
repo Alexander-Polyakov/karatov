@@ -2578,25 +2578,55 @@ a.tdu:hover {
 .b-bread-crumbs {
   color: #b1b1b1;
   font-family: "circle-light";
+  font-size: 15px;
+}
+.b-bread-crumbs > .b-bread-crumbs__item:first-child {
+  margin-left: 0;
+}
+.b-bread-crumbs > .b-bread-crumbs__item:first-child .b-bread-crumbs__link {
+  padding-left: 0;
+  margin-left: 0;
+}
+.b-bread-crumbs > .b-bread-crumbs__item:first-child .b-bread-crumbs__link:before {
+  display: none;
 }
 
 .b-bread-crumbs__item {
-  float: left;
-  margin-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+.b-bread-crumbs__item .hover-show {
+  display: none;
+}
+.b-bread-crumbs__item .hover-show .b-bread-crumbs__item:first-child {
+  margin-left: 0;
+}
+.b-bread-crumbs__item:hover .hover-hide {
+  display: none;
+}
+.b-bread-crumbs__item:hover .hover-show {
+  display: block;
+}
+
+.b-bread-crumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 25px;
   position: relative;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.b-bread-crumbs__item:after {
+.b-bread-crumbs__link:before {
   content: "";
   width: 8px;
   height: 8px;
   border-left: 1px solid #ba9786;
   border-top: 1px solid #ba9786;
   position: absolute;
-  right: -30px;
+  left: 0;
   top: 50%;
   margin-top: -5px;
   -moz-transform: rotate(-45deg);
@@ -2606,12 +2636,17 @@ a.tdu:hover {
   transform: rotate(-45deg);
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
   zoom: 1;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
-.b-bread-crumbs__item:last-child:after {
-  display: none;
-}
-.b-bread-crumbs__item:hover {
+.b-bread-crumbs__link:hover {
   color: #f45302;
+}
+.b-bread-crumbs__link:hover:before {
+  border-left: 1px solid #f45302;
+  border-top: 1px solid #f45302;
 }
 
 .b-product-cart-wrapper {
@@ -2662,18 +2697,50 @@ a.tdu:hover {
   opacity: 0;
   text-align: center;
   line-height: 560px;
+  border: 2px solid transparent;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  overflow: hidden;
 }
 .b-presentation-slider__slide.active {
   opacity: 1;
+  z-index: 10;
+}
+.b-presentation-slider__slide .hover-preview {
+  display: none;
+}
+.b-presentation-slider__slide .standard-preview {
+  display: block;
+}
+.b-presentation-slider__slide .standard-preview img {
+  max-width: 90%;
+  max-height: 90%;
 }
 .b-presentation-slider__slide img {
   vertical-align: middle;
-  max-width: 90%;
-  max-height: 90%;
+  position: relative;
+}
+.b-presentation-slider__slide:hover {
+  border-color: #f26417;
+}
+.b-presentation-slider__slide:hover .hover-preview {
+  display: block;
+}
+.b-presentation-slider__slide:hover .standard-preview {
+  display: none;
+}
+
+.b-increase-hover {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.b-increase-hover img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 .b-presentation-slider__nav-item {
