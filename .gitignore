@@ -2,3 +2,6 @@
 /index2.html
 /.sass-cache/
 *.rar
+app/.sass-cache
+node_modules
+app/bower_components

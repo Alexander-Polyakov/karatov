@@ -1,0 +1,45 @@
+<div class="b-section-wrapper p60 bb">
+    <div class="b-container">
+        <p class="b-reviews__title">
+            {% if title is defined %}
+                {{ title }}
+            {% else %}
+                Что говорят наши дорогие клиенты
+            {% endif %}
+        </p>
+        <div class="b-reviews-slider">
+            <div class="b-reviews-slider__item">
+                <div class="b-reviews-slider__item__photo">
+                    <img src="img/photo-img1.jpg" alt="">
+                </div>
+                <div class="b-reviews-slider__item__content">
+                    <div class="b-reviews-slider__item__descr">Купила уже три изделия за короткий срок. Качественные работы практически на любой кошелёк. Ну а обслуживание в салоне просто на европейском уровне девушки тактичны, обходительны и доброжелательны.</div>
+                    <p class="b-reviews-slider__item__more">— Алина, Москва</p>
+                </div>
+            </div>
+            <div class="b-reviews-slider__item">
+                <div class="b-reviews-slider__item__photo">
+                </div>
+                <div class="b-reviews-slider__item__content">
+                    <div class="b-reviews-slider__item__descr">Купила уже три изделия за короткий срок. Качественные работы практически на любой кошелёк. Ну а обслуживание в салоне просто на европейском уровне девушки тактичны, обходительны и доброжелательны.</div>
+                    <p class="b-reviews-slider__item__more">— Алина, Москва</p>
+                </div>
+            </div>
+            <div class="b-reviews-slider__item">
+                <div class="b-reviews-slider__item__photo">
+                    <img src="img/photo-img1.jpg" alt="">
+                </div>
+                <div class="b-reviews-slider__item__content">
+                    <div class="b-reviews-slider__item__descr">Купила уже три изделия за короткий срок. Качественные работы практически на любой кошелёк. Ну а обслуживание в салоне просто на европейском уровне девушки тактичны, обходительны и доброжелательны.</div>
+                    <p class="b-reviews-slider__item__more">— Алина, Москва</p>
+                </div>
+            </div>
+        </div>
+        <p class="tac">
+            <a class="btn lh40 white ff_cr ttu fz13" href="#">все отзывы</a>
+            {% if add_review == true %}
+                <a class="btn lh40 white ff_cr ttu fz13" href="#">Добавить отзыв</a>
+            {% endif %}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,290 @@
+{% extends "layouts/main.twig" %}
+
+{% block pageScripts %}
+
+    <script>
+        $(document).ready(function () {
+            $(".b-full-slider").owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                mouseDrag: true
+            });
+        });
+
+        $(document).ready(function () {
+            $(".b-product-slider").owlCarousel({
+                items: 5,
+                loop: true,
+                nav: true,
+                dots: true,
+                mouseDrag: true
+            });
+        });
+
+
+        $(document).ready(function () {
+            $(".b-reviews-slider").owlCarousel({
+                items: 2,
+                loop: true,
+                nav: true,
+                dots: true,
+                mouseDrag: true,
+                margin: 30
+            });
+        });
+
+
+    </script>
+
+{% endblock %}
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block subscribe %}
+    {% include "widgets/subscribe.twig" %}
+{% endblock %}
+
+{% block feedbacks %}
+    {#{% include "widgets/feedbacks.twig" %}#}
+{% endblock %}
+
+{% block seoText %}
+    {% include "widgets/seo-text.twig" %}
+{% endblock %}
+
+{% block submenuBlock %}
+    {% include "widgets/submenu.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu.twig" %}
+{% endblock %}
+
+{% block breadCrumbs %}
+    {% include "widgets/breadcrumbs.twig" with {class: "footer"} %}
+{% endblock %}
+
+{% block pageContent %}
+    {% include "widgets/breadcrumbs.twig" with {class: "pt40"} %}
+
+    <div class="b-product-cart-wrapper">
+        <div class="b-container">
+            <div class="b-product-m-screen clearfix">
+                <div class="b-product-m-screen__left f_l">
+                    <div class='b-presentation-slider b-fade-slider'>
+                        <ul class="b-product-infographics">
+                            <li class="b-product-infographics__item check44px"></li>
+                        </ul>
+                        <ul class="b-presentation-slider__nav">
+                            <li class="b-presentation-slider__nav-item active" data-fade-nav="1">
+                                <img src="img/products/product-img6.jpg" alt="">
+                            </li>
+                            <li class="b-presentation-slider__nav-item" data-fade-nav="2">
+                                <img src="img/products/product-img1.jpg" alt="">
+                            </li>
+                            <li class="b-presentation-slider__nav-item video" data-fade-nav="3"></li>
+                        </ul>
+                        <div class="b-presentation-slider__slides">
+                            <div class="b-presentation-slider__slide active" data-fade-slide="1">
+                                <img src="img/products/product-img6.jpg" alt="">
+                            </div>
+                            <div class="b-presentation-slider__slide" data-fade-slide="2">
+                                <img src="img/products/product-img1.jpg" alt="">
+                            </div>
+                            <div class="b-presentation-slider__slide" data-fade-slide="3">
+                                <img src="img/products/product-img3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-product-m-screen__right f_r">
+                    <div class='b-buy-form'>
+                        <p class="fz22 ff_cl mb35">Обручальное кольцо с жемчужинами арт. 32435</p>
+                        <div class="mb20">
+                            <span class="fz47 lh1em ff_cl dib mr20 vab">41 000 Р</span>
+                            <div class="dib vab">
+                                <span class='fz14 ff_cr dib mr10'>Средняя цена</span>
+                                <div class="b-clarification dib">
+                                    <span class="b-clarification__icon"></span>
+                                    <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb35">
+                            <a href="#" class="b-buy-gray-bonus">+ за покупку начислим 323 руб.</a>
+                        </p>
+                        <div class='mb35'>
+                            <div class='b-select mb15'>
+                                <select class='select'>
+                                    <option >Выберите размер</option>
+                                    <option >Выберите размер1</option>
+                                    <option >Выберите размер2</option>
+                                    <option >Выберите размер3</option>
+                                </select>
+                            </div>
+                            <p>
+                                <a class="fz15 ff_cl tdu txt_gray" href="#">Как выбрать размер?</a>
+                            </p>
+                        </div>
+                        <p class="mb35">
+                            <a class="tac btn lh66 ff_cr ttu fz21 bg_y txt_white full_w" href="#">Где купить ?</a>
+                        </p>
+                        <div>
+                            <span class="dib fz12 ff_cr ttu mr15">Хочу в подарок</span>
+                            <ul class="b-soc-list clearfix dib">
+                                <li class="b-soc-list__item">
+                                    <a class="b-soc-list__link ic1" href="#"></a>
+                                </li>
+                                <li class="b-soc-list__item">
+                                    <a class="b-soc-list__link ic2" href="#"></a>
+                                </li>
+                                <li class="b-soc-list__item">
+                                    <a class="b-soc-list__link ic3" href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b-characteristics">
+                <p class="mb25 fz13 ff_cl ttu">
+                    <span class="txt_gray">Ширина:</span> 3 мм
+                    <span class="txt_gray">Высота:</span> 1,5 мм
+                </p>
+                <p class="fz28 mb15 ">Характеристики</p>
+                <p class="fz17 mb25">Кольцо обручальное из красного золота с белыми бриллиантами (арт. 32435)</p>
+                <div class="img-m100 mb25">
+                    <img src="img/characteristics_img1.jpg" alt="">
+                </div>
+                <div class="fz15 lh1-5em mb40">Украшения из колекции «Бесконечность» попадают в наши ювелирные салоны после прохождения строгого контроля качества, что позволяет нам быть уверенными в том, что украшения, купленные в KARATOV, будут радовать своих обладателей долгие годы.</div>
+                <ul class='b-characteristics-table fz16'>
+                    <li class="b-characteristics-table__item clearfix">
+                        <span class="f_l"><a class="tdu" href="#">Ширина</a> / <a class="tdu" href="#">Высота</a></span>
+                        <span class="f_r">3 мм / 1.5 мм</span>
+                    </li>
+                    <li class="b-characteristics-table__item clearfix">
+                        <span class="f_l">Высота</span>
+                        <span class="f_r">1.5 мм</span>
+                    </li>
+                    <li class="b-characteristics-table__item clearfix">
+                        <span class="f_l"><a class="tdu" href="#">Приблизительный вес</a></span>
+                        <span class="f_r">1.12 г.</span>
+                    </li>
+                    <li class="b-characteristics-table__item clearfix">
+                        <span class="f_l">Металл</span>
+                        <span class="f_r"><a class="tdu" href="#">Золото (Красное)</a></span>
+                    </li>
+                    <li class="b-characteristics-table__item clearfix">
+                        <span class="f_l">Проба</span>
+                        <span class="f_r"><a class="tdu" href="#">585</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% include "widgets/feedbacks.twig" with {add_review: true, title: "Отзывы об этом изделии"} %}
+
+    <div class='b-section-wrapper p65 bb'>
+        <div class="b-containter">
+            <p class="fz28 ff_cl mb45 tac">Идеальный комплект</p>
+            <div class='b-set clearfix'>
+                <div class="b-set__right f_r">
+                    <p class="mb20 mt60">
+                        <a class="btn lh60 ff_cr ttu fz21 bg_y txt_white" href="#">Где купить?</a>
+                    </p>
+                    <p class="fz40 ff_cl tac">41 000 Р</p>
+                </div>
+                <div class="b-set__left ovh">
+                    <div class="b-set-products clearfix">
+                        <div class="b-set-products__item">
+                            <span class="b-set-products__item-check"></span>
+                            <div class="b-set-products__item-preview">
+                                <img src="img/products/product-img1.jpg" alt="">
+                            </div>
+                            <p class="fz20 ff_cr mb10">55 000 р</p>
+                            <p class="fz12 ff_cl txt_gray">Кольцо из красного золота 585 пробы с белыми бриллиантами из коллекции Graphik</p>
+                        </div>
+                        <div class="b-set-products__item">
+                            <span class="b-set-products__item-check"></span>
+                            <div class="b-set-products__item-preview">
+                                <img src="img/products/product-img1.jpg" alt="">
+                            </div>
+                            <p class="fz20 ff_cr mb10">55 000 р</p>
+                            <p class="fz12 ff_cl txt_gray">Кольцо из красного золота 585 пробы с белыми бриллиантами из коллекции Graphik</p>
+                        </div>
+                        <div class="b-set-products__item">
+                            <span class="b-set-products__item-check"></span>
+                            <div class="b-set-products__item-preview">
+                                <img src="img/products/product-img1.jpg" alt="">
+                            </div>
+                            <p class="fz20 ff_cr mb10">55 000 р</p>
+                            <p class="fz12 ff_cl txt_gray">Кольцо из красного золота 585 пробы с белыми бриллиантами из коллекции Graphik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-section-wrapper p40 bb">
+        <div class="b-container">
+            <div class="b-similar">
+                <div class="b-similar__item">
+                    <p class="b-similar__item-title">Это украшение в другом металле:</p>
+                    <ul class="b-similar-units">
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img1.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img2.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img3.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-similar__item">
+                    <p class="b-similar__item-title">Это украшение с другой вставкой:</p>
+                    <ul class="b-similar-units">
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img1.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img2.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img3.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img1.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img2.jpg" alt="">
+                        </li>
+                        <li class="b-similar-units__item">
+                            <img src="img/products/product-img3.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-section-wrapper p55">
+        <div class="b-container">
+            <div class="tac">
+                <p class="mb15 fz28 ff_cl">Вам также понравится</p>
+            </div>
+
+            {% include "widgets/product_slider.twig" %}
+        </div>
+    </div>
+
+    {% include "widgets/same-categories.twig" %}
+{% endblock %}

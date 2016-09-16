@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+</head>
+<body>
+    <div class='up-site-btn'>
+        <span class="up-site-btn__text">Наверх</span>
+    </div>
+
+    <div class="b-site-wrapper">
+        {% block topPlate %}{% endblock %}
+        <!-- block header start -->
+        {% include "header.twig" %}
+        <!-- block header end -->
+        {% block menuBlock %}{% endblock %}
+
+        {% block submenuBlock %}{% endblock %}
+
+        <!-- block content start -->
+        <div class="b-main-content-wrapper">
+            {% block pageContent %}{% endblock %}
+        </div>
+        <!-- block content end -->
+
+        {% block product_slider %}{% endblock %}
+
+        {% block feedbacks %}{% endblock %}
+
+        {% block seoText %}{% endblock %}
+
+        {% block breadCrumbs %}{% endblock %}
+
+        {% block subscribe %}{% endblock %}
+
+        <!-- block footer start -->
+        {% include "footer.twig" %}
+        <!-- block footer end -->
+    </div>
+
+    <!-- Scripts -->
+    {% include "scripts.twig" %}
+    {% block pageScripts %}{% endblock %}
+</body>
+</html>
