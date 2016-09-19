@@ -1199,8 +1199,8 @@ a.tdu:hover {
 }
 .b-full-slider .owl-prev:before, .b-full-slider .owl-next:before, .b-product-slider .owl-prev:before, .b-product-slider .owl-next:before, .b-reviews-slider .owl-prev:before, .b-reviews-slider .owl-next:before {
   content: "";
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   border-left: 2px solid #b2b4b6;
   border-top: 2px solid #b2b4b6;
   -moz-transform: rotate(-45deg);
@@ -1213,7 +1213,7 @@ a.tdu:hover {
   position: absolute;
   top: 50%;
   right: 50%;
-  margin-top: -13px;
+  margin-top: -11px;
   margin-right: -20px;
 }
 .b-full-slider .owl-next, .b-product-slider .owl-next, .b-reviews-slider .owl-next {
@@ -1537,9 +1537,13 @@ a.tdu:hover {
   font-family: "circle";
 }
 
-.b-for-whom__item-input:checked + .b-for-whom__item {
+.b-for-whom__item-input + .b-for-whom__item {
   text-decoration: underline;
   color: #f2641a;
+}
+.b-for-whom__item-input:checked + .b-for-whom__item {
+  color: #090509;
+  text-decoration: none;
 }
 
 .b-filter-select__name {

@@ -730,15 +730,15 @@ a.tdu
         left: 0
         &:before
             content: ''
-            width: 26px
-            height: 26px
+            width: 22px
+            height: 22px
             border-left: 2px solid #b2b4b6
             border-top: 2px solid #b2b4b6
             +rotate(-45)
             position: absolute
             top: 50%
             right: 50%
-            margin-top: -13px
+            margin-top: -11px
             margin-right: -20px
     .owl-next
         right: 0
@@ -907,10 +907,13 @@ a.tdu
     font-family: $cr
 
 .b-for-whom__item-input
+    + .b-for-whom__item
+        text-decoration: underline
+        color: #f2641a
     &:checked
         + .b-for-whom__item
-            text-decoration: underline
-            color: #f2641a
+            color: #090509
+            text-decoration: none
 
 .b-filter-select__name
     cursor: pointer
