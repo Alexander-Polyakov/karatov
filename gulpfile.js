@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     pug = require('gulp-pug'),
     twig = require('gulp-twig'),
     sftp = require('gulp-sftp'),
-    prettify = require('gulp-html-prettify'),
+    htmlbeautify = require('gulp-html-beautify'),
     callback = require('gulp-callback'),
     connect = require('gulp-connect');
 
@@ -57,6 +57,7 @@ gulp.task('pug', function () {
         .pipe(connect.reload());
 });
 
+
 /* TWIG --------------------------------------------------------------------- */
 gulp.task('twig', function () {
     gulp.src(sources.twig.src)
@@ -64,17 +65,19 @@ gulp.task('twig', function () {
         .pipe(gulp.dest(sources.twig.temp_dist))
         .pipe(callback(function () {
             gulp.src(sources.twig.temp_dist_html)
-                .pipe(prettify({
-                    indent_char: ' ',
-                    indent_size: 4
-                }))
+                .pipe(htmlbeautify())
                 .pipe(gulp.dest(sources.html.dist))
-                .on('end', function () {
-                    gulp.src(sources.twig.temp_dist, {read: false})
-                        .pipe(clean());
-                });
+                .pipe(callback(function () {
+                    setTimeout(function () {
+                        gulp.src(sources.twig.temp_dist, {read: false})
+                            .pipe(clean());
+                    }, 1000);
+                }));
         }))
         .pipe(connect.reload());
+
+
+    // return null;
 });
 
 /* COMPASS ------------------------------------------------------------------ */
@@ -124,7 +127,7 @@ gulp.task('sftp', function () {
 
 /* CLEAN -------------------------------------------------------------------- */
 gulp.task('clean', function () {
-    gulp.src('dist', {read: false})
+    gulp.src('dist')
         .pipe(clean());
 });
 
