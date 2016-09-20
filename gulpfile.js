@@ -133,13 +133,24 @@ gulp.task('clean', function () {
 
 /* BUILD -------------------------------------------------------------------- */
 gulp.task('build', ["clean"], function () {
+    setTimeout(function () {
+        gulp.src("app/*.html")
+            .pipe(useref())
+            .pipe(gulpif('*.js', uglify()))
+            .pipe(gulpif('*.css', minifyCss()))
+            // .pipe("app/fonts/**/*")
+            .pipe(useref())
+            .pipe(gulp.dest('dist'));
 
-    gulp.src(sources.html.src)
-        .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', minifyCss()))
-        .pipe(useref())
-        .pipe(gulp.dest('dist'));
+        gulp.src("app/fonts/**/*")
+            .pipe(gulp.dest('dist/fonts'));
+
+        gulp.src("app/images/**/*")
+            .pipe(gulp.dest('dist/images'));
+
+        gulp.src("app/img/**/*")
+            .pipe(gulp.dest('dist/img'));
+    }, 500);
 });
 
 /* DEFAULT AND GULP WATCHER ----------------------------------------------------
