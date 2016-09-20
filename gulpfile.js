@@ -61,20 +61,7 @@ gulp.task('pug', function () {
 gulp.task('twig', function () {
     gulp.src(sources.twig.src)
         .pipe(twig())
-        .pipe(gulp.dest(sources.twig.temp_dist))
-        .pipe(callback(function () {
-            gulp.src(sources.twig.temp_dist_html)
-                .pipe(prettify({
-                    indent_char: ' ',
-                    indent_size: 4
-                }))
-                .pipe(gulp.dest(sources.html.dist))
-                .on('end', function () {
-                    gulp.src(sources.twig.temp_dist, {read: false})
-                        .pipe(clean());
-                });
-        }))
-        .pipe(connect.reload());
+        .pipe(gulp.dest(sources.html.dist));
 });
 
 /* COMPASS ------------------------------------------------------------------ */
@@ -123,8 +110,13 @@ gulp.task('sftp', function () {
 });
 
 /* CLEAN -------------------------------------------------------------------- */
-gulp.task('clean', function () {
+/*gulp.task('clean', function () {
     gulp.src('dist', {read: false})
+        .pipe(clean());
+});*/
+
+gulp.task('cleanTwig', function () {
+    gulp.src(sources.twig.temp_dist, {read: false})
         .pipe(clean());
 });
 
@@ -145,7 +137,7 @@ gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
     gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
-    gulp.watch(sources.twig.watch, ["twig"]);
+    gulp.watch(sources.twig.watch, ["twig", "cleanTwig"]);
 
     // function swallowError(error) {
     //     console.log(error.toString());
