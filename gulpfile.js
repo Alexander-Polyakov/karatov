@@ -30,7 +30,9 @@ var sources = {
     twig: {
         src: 'app/twig/*.twig',
         watch: 'app/twig/**/*.twig',
-        dist: 'app/'
+        temp_dist: 'app/twig_html/',
+        temp_dist_html: 'app/twig_html/*.html',
+        dist: 'app/twig'
     },
     sass: {
         src: 'app/sass/*.sass',
@@ -59,18 +61,20 @@ gulp.task('pug', function () {
 gulp.task('twig', function () {
     gulp.src(sources.twig.src)
         .pipe(twig())
-        .pipe(gulp.dest(sources.twig.dist))
-        .pipe(callback(function(){
-            gulp.src(sources.html.src)
+        .pipe(gulp.dest(sources.twig.temp_dist))
+        .pipe(callback(function () {
+            gulp.src(sources.twig.temp_dist_html)
                 .pipe(prettify({
                     indent_char: ' ',
                     indent_size: 4
                 }))
                 .pipe(gulp.dest(sources.html.dist))
-                .pipe(connect.reload());
-        }));
-
-
+                .on('end', function () {
+                    gulp.src(sources.twig.temp_dist, {read: false})
+                        .pipe(clean());
+                });
+        }))
+        .pipe(connect.reload());
 });
 
 /* COMPASS ------------------------------------------------------------------ */
@@ -139,14 +143,14 @@ gulp.task('build', ["clean"], function () {
  ---------------------------------------------------------------------------- */
 gulp.task('watch', function () {
     // gulp.watch('bower.json', ["bower"]);
-    gulp.watch(sources.sass.watch, ['compass']).on('error', swallowError);
+    gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
-    gulp.watch(sources.twig.watch, ["twig"]).on('error', swallowError);
+    gulp.watch(sources.twig.watch, ["twig"]);
 
-    function swallowError(error) {
-        console.log(error.toString())
-        this.emit('end')
-    }
+    // function swallowError(error) {
+    //     console.log(error.toString());
+    //     this.emit('end');
+    // }
 });
 
 gulp.task('default', ['connect', 'twig', 'compass', 'watch']);
