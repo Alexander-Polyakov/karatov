@@ -1315,6 +1315,14 @@ a.tdu:hover {
   position: relative;
 }
 
+.header-orange-sep.sep-fix {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 250;
+}
+
 .b-header-teaser__close {
   position: absolute;
   right: 10px;
@@ -2242,6 +2250,10 @@ a.tdu:hover {
 
 .b-footer__contacts {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.b-footer__nav-wrapper {
+  padding-left: 30px;
 }
 
 .b-footer-nav {
@@ -3371,7 +3383,7 @@ a.tdu:hover {
 }
 
 .b-sliders-tabs__content {
-  height: 300px;
+  height: 330px;
   position: relative;
 }
 
@@ -3643,7 +3655,7 @@ a.tdu:hover {
 }
 .b-catalog-fix-filter.fixed {
   position: fixed;
-  top: 0;
+  top: 6px;
   width: 100%;
   left: 0;
   z-index: 200;

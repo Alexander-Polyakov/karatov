@@ -810,6 +810,14 @@ a.tdu
     color: #fff
     position: relative
 
+.header-orange-sep
+    &.sep-fix
+        position: fixed
+        left: 0
+        width: 100%
+        top: 0
+        z-index: 250
+
 .b-header-teaser__close
     position: absolute
     right: 10px
@@ -1394,6 +1402,9 @@ a.tdu
 
 .b-footer__contacts
     color: rgba(0, 0, 0, 0.8)
+
+.b-footer__nav-wrapper
+    padding-left: 30px
 
 .b-footer-nav
     display: inline-block
@@ -2065,7 +2076,7 @@ a.tdu
         color: #fff
 
 .b-sliders-tabs__content
-    height: 300px
+    height: 330px
     position: relative
 
 .b-sliders-tabs__content__item
@@ -2262,7 +2273,7 @@ a.tdu
     +trans(box-shadow, 0.5s, ease, 0s)
     &.fixed
         position: fixed
-        top: 0
+        top: 6px
         width: 100%
         left: 0
         z-index: 200
@@ -2374,3 +2385,7 @@ a.tdu
     img
         min-width: 100%
         min-height: 100%
+
+
+
+@media screen and (max-width: 450px)
