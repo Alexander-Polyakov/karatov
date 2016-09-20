@@ -9,10 +9,12 @@ var gulp = require('gulp'),
     pug = require('gulp-pug'),
     twig = require('gulp-twig'),
     sftp = require('gulp-sftp'),
+    prettify = require('gulp-html-prettify'),
+    callback = require('gulp-callback'),
     connect = require('gulp-connect');
 
 /* SOURCES --------------------------------------------------------------------
----------------------------------------------------------------------------- */
+ ---------------------------------------------------------------------------- */
 var sources = {
     html: {
         src: 'app/*.html',
@@ -45,42 +47,43 @@ var sources = {
 
 /* PUG ---------------------------------------------------------------------- */
 gulp.task('pug', function () {
-  gulp.src(sources.pug.src)
-      .pipe(pug({
-        pretty: true
-      }))
-      .pipe(gulp.dest(sources.pug.dist))
-      .pipe(connect.reload());
+    gulp.src(sources.pug.src)
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(gulp.dest(sources.pug.dist))
+        .pipe(connect.reload());
 });
 
 /* TWIG --------------------------------------------------------------------- */
 gulp.task('twig', function () {
     gulp.src(sources.twig.src)
-        .pipe(twig({
-            data: {
-                title: 'Gulp and Twig',
-                benefits: [
-                    'Fast',
-                    'Flexible',
-                    'Secure'
-                ]
-            }
-        }))
+        .pipe(twig())
         .pipe(gulp.dest(sources.twig.dist))
-        .pipe(connect.reload());
+        .pipe(callback(function(){
+            gulp.src(sources.html.src)
+                .pipe(prettify({
+                    indent_char: ' ',
+                    indent_size: 4
+                }))
+                .pipe(gulp.dest(sources.html.dist))
+                .pipe(connect.reload());
+        }));
+
+
 });
 
 /* COMPASS ------------------------------------------------------------------ */
 gulp.task('compass', function () {
-  gulp.src(sources.sass.watch)
-      .pipe(compass({
-          sass: sources.sass.dist,
-          css: sources.css.dist,
-          js: sources.js.dist,
-          image: sources.sass.image_dist
-      }))
-      .pipe(gulp.dest(sources.css.dist))
-      .pipe(connect.reload());
+    gulp.src(sources.sass.watch)
+        .pipe(compass({
+            sass: sources.sass.dist,
+            css: sources.css.dist,
+            js: sources.js.dist,
+            image: sources.sass.image_dist
+        }))
+        .pipe(gulp.dest(sources.css.dist))
+        .pipe(connect.reload());
 });
 
 /* BOWER --------------------------------------------------------------------- */
@@ -105,7 +108,7 @@ gulp.task('connect', function () {
  ---------------------------------------------------------------------------- */
 
 /* SFTP --------------------------------------------------------------------- */
-gulp.task('sftp', function(){
+gulp.task('sftp', function () {
     gulp.src("dist/**/*")
         .pipe(sftp({
             host: "",
@@ -116,15 +119,15 @@ gulp.task('sftp', function(){
 });
 
 /* CLEAN -------------------------------------------------------------------- */
-gulp.task('clean', function(){
+gulp.task('clean', function () {
     gulp.src('dist', {read: false})
         .pipe(clean());
 });
 
 /* BUILD -------------------------------------------------------------------- */
-gulp.task('build',["clean"], function(){
+gulp.task('build', ["clean"], function () {
 
-    return gulp.src(sources.html.src)
+    gulp.src(sources.html.src)
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
@@ -140,9 +143,10 @@ gulp.task('watch', function () {
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]).on('error', swallowError);
 
-    function swallowError (error) {
+    function swallowError(error) {
         console.log(error.toString())
-        this.emit('end') }
+        this.emit('end')
+    }
 });
 
 gulp.task('default', ['connect', 'twig', 'compass', 'watch']);
