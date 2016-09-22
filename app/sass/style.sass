@@ -290,6 +290,7 @@ a.tdu
 .b-phone
     &.header
         position: relative
+        margin-right: 50px
         &:hover
             .b-phone__bottom
                 display: block
@@ -397,7 +398,6 @@ a.tdu
         color: #fff
 
 .btn-address-open
-    margin-left: 50px
     position: relative
     color: #111
     font-size: 15px
@@ -522,9 +522,6 @@ a.tdu
             border-color: #a49f9a
             color: #a49f9a
 
-.b-containter
-    max-width: 1200px
-    margin: 0 auto
 
 .b-site-header-wrapper
     border-bottom: 1px solid #e0e1e1
@@ -534,12 +531,12 @@ a.tdu
     padding-bottom: 30px
 
 .b-site-header__contacts
-    width: 410px
+    width: 35%
     text-align: left
     margin-top: 50px
 
 .b-site-header__events
-    width: 410px
+    width: 35%
     text-align: right
     margin-top: 50px
 
@@ -668,6 +665,11 @@ a.tdu
 .b-main-slider__item-content
     position: relative
     z-index: 10
+    &:before
+        content: ''
+        height: 100%
+        display: inline-block
+        vertical-align: middle
 
 .b-header-products__item-preview
     display: inline-block
@@ -746,7 +748,6 @@ a.tdu
             right: auto
             left: 50%
             margin-left: -20px
-
 
 .b-full-slider
     .owl-dots
@@ -843,8 +844,12 @@ a.tdu
         margin-top: -1px
         background: #fff
 
+.b-teaser
+    font-size: 0
+
 .b-teaser__item
-    float: left
+    display: inline-block
+    vertical-align: top
     width: 25%
     font-family: $rr
     font-size: 14px
@@ -1177,7 +1182,6 @@ a.tdu
             +sprite(map-icon)
             margin-bottom: 20px
 
-
 .b-product-slider.browsing
     .b-product-item
         padding: 60px 15px 15px
@@ -1373,7 +1377,7 @@ a.tdu
     max-width: 920px
     margin: 0 auto
 
-.b-subscribe__left 
+.b-subscribe__left
     width: 220px
     padding-right: 20px
     color: rgba(0, 0, 0, 0.78)
@@ -1415,6 +1419,13 @@ a.tdu
 .b-search
     position: relative
     width: 180px
+    height: 34px
+    overflow: hidden
+    &.main-search
+        position: absolute
+        right: 0
+        top: 50%
+        margin-top: -17px
 
 .b-search__input
     width: 100%
@@ -1450,8 +1461,11 @@ a.tdu
     &.bb
         border-bottom: 1px solid #e0e1e1
 
+.b-main-nav-wrapper
+    position: relative
+
 .b-main-nav__item
-    margin-right: 75px
+    margin-right: 6%
     font-size: 15px
     text-transform: uppercase
     font-family: $cr
@@ -1592,8 +1606,6 @@ a.tdu
                 &:before
                     display: none
 
-
-
 .b-bread-crumbs__item
     display: inline-block
     vertical-align: middle
@@ -1631,7 +1643,6 @@ a.tdu
         &:before
             border-left: 1px solid #f45302
             border-top: 1px solid #f45302
-
 
 .b-product-cart-wrapper
     padding: 35px 0 60px
@@ -1706,7 +1717,6 @@ a.tdu
         position: absolute
         left: 50%
         top: 50%
-
 
 .b-presentation-slider__nav-item
     width: 95px
@@ -1876,7 +1886,6 @@ a.tdu
         &:hover
             background: #f7f7f7
 
-
 .b-characteristics-table__item
     border-bottom: 1px solid #eff0f0
     padding: 13px 0
@@ -1894,7 +1903,6 @@ a.tdu
     margin-right: 12%
     &:nth-child(3n+3)
         margin-right: 0
-
 
 .b-set-products__item-check.active
     border-color: transparent
@@ -2391,4 +2399,88 @@ a.tdu
 
 
 
-@media screen and (max-width: 450px)
+
+
+@media screen and (max-width: 1400px)
+    .up-site-btn
+        display: none
+
+
+
+
+
+
+@media screen and (max-width: 1150px)
+    .b-main-nav__item
+        margin-right: 3%
+
+@media screen and (max-width: 1170px)
+    .b-filter
+        padding: 15px 0
+
+    .b-filter-section
+        text-align: center
+        width: 100%
+        float: none
+        padding: 15px 0
+
+    .b-for-whom.br
+        border-right: none
+
+    .b-full-slider
+        .owl-dots
+            margin-left: 0
+            width: 100%
+            padding: 0 60px
+            left: 0
+    .b-main-slider__item-content
+        padding: 0 60px
+        max-width: 100%
+
+@media screen and (max-width: 992px)
+    .b-teaser__item-content
+        width: auto
+        max-width: 150px
+
+    .b-teaser__item
+        padding: 0 10px
+        text-align: center
+
+    .b-teaser__item-icon
+        margin: 0 0 10px
+
+    .b-main-nav__item
+        font-size: 12px
+        margin-right: 40px
+
+    .b-search__input
+        left: 100%
+        position: absolute
+        +trans
+
+    .b-search
+        &.open
+            .b-search__input
+                left: 0
+
+    .b-phone__number
+        font-size: 18px
+
+    .b-phone__number-info
+        font-size: 14px
+
+    .btn-address-open
+        font-size: 14px
+        margin-top: 15px
+
+    .b-phone
+        &.header
+            margin-right: 35px
+
+    .b-events-list__item
+        font-size: 14px
+
+
+@media screen and (max-width: 768px)
+    .b-header-teaser
+        display: none
