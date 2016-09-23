@@ -21,3 +21,11 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'circle-bold';
+    src: url('../fonts/CRC65_0.eot');
+    src: url('../fonts/CRC65_0.eot?#iefix') format('embedded-opentype'), url('../fonts/CRC65_0.woff') format('woff'), url('../fonts/CRC65_0.ttf') format('truetype'), url('../fonts/CRC65_0.svg#circle') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}

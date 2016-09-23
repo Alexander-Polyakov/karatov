@@ -1,6 +1,7 @@
 $rr: "Roboto-Regular"
 $cl: "circle-light"
 $cr: "circle"
+$cb: "circle-bold"
 $blue: #3c5568
 $gray: #fafafa
 
@@ -221,19 +222,6 @@ a.tdu
 
 .ff_cl
     font-family: $cl
-
-.title17px
-    text-transform: uppercase
-    font-family: $cl
-    font-size: 17px
-    margin-bottom: 5px
-    line-height: 1.2em
-
-.title28px
-    font-size: 28px
-    font-family: $cl
-    margin-bottom: 15px
-    line-height: 1.2em
 
 .b-m-grid__item__title
     line-height: 1.2em
@@ -762,7 +750,6 @@ a.tdu
 
 .b-main-slider__item
     background-size: cover
-
 
 .b-full-slider, .b-product-slider, .b-reviews-slider
     .owl-prev, .owl-next
@@ -2470,18 +2457,35 @@ a.tdu
         min-width: 100%
         min-height: 100%
 
+.b-footer__copy
+    margin-top: 40px
+    font-size: 14px
+    color: #383438
+    font-family: $cb
 
+    &-link
+        color: #989898
+        &:hover
+            text-decoration: underline
 
+.tab-visible
+    @media screen and (max-width: 992px) and (min-width: 769px)
+        display: block
+.mobile-visible
+    @media screen and (max-width: 768px)
+        display: block
 
+.tab-hidden
+    @media screen and (max-width: 992px) and (min-width: 769px)
+        display: none
+
+.mobile-hidden
+    @media screen and (max-width: 768px)
+        display: none
 
 @media screen and (max-width: 1400px)
     .up-site-btn
         display: none
-
-
-
-
-
 
 @media screen and (max-width: 1150px)
     .b-main-nav__item
@@ -2554,6 +2558,20 @@ a.tdu
 
     .b-m-grid__item__descr
         font-size: 13px
+
+    .b-footer
+        padding: 50px 0
+
+    .b-footer__copy
+        &.tab-visible
+            margin-top: 30px
+
+    .b-footer-nav
+        width: 48%
+        margin-bottom: 20px
+
+        &:nth-child(3), &:nth-child(4)
+            margin-bottom: 0
 
     .b-m-grid__item__btn
         line-height: 26px
@@ -2685,6 +2703,11 @@ a.tdu
         .owl-nav
             display: none
 
+    .b-footer__contacts
+        float: none
+        text-align: center
+    .b-soc-list
+        display: inline-block
     .b-m-grid__item__title
         font-size: 14px
         margin-bottom: 0
