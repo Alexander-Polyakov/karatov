@@ -1,6 +1,7 @@
 $rr: "Roboto-Regular"
 $cl: "circle-light"
 $cr: "circle"
+$cb: "circle-bold"
 $blue: #3c5568
 $gray: #fafafa
 
@@ -2456,18 +2457,35 @@ a.tdu
         min-width: 100%
         min-height: 100%
 
+.b-footer__copy
+    margin-top: 40px
+    font-size: 14px
+    color: #383438
+    font-family: $cb
 
+    &-link
+        color: #989898
+        &:hover
+            text-decoration: underline
 
+.tab-visible
+    @media screen and (max-width: 992px) and (min-width: 769px)
+        display: block
+.mobile-visible
+    @media screen and (max-width: 768px)
+        display: block
 
+.tab-hidden
+    @media screen and (max-width: 992px) and (min-width: 769px)
+        display: none
+
+.mobile-hidden
+    @media screen and (max-width: 768px)
+        display: none
 
 @media screen and (max-width: 1400px)
     .up-site-btn
         display: none
-
-
-
-
-
 
 @media screen and (max-width: 1150px)
     .b-main-nav__item
@@ -2506,6 +2524,20 @@ a.tdu
 @media screen and (max-width: 992px)
     .b-m-grid__item__descr
         font-size: 13px
+
+    .b-footer
+        padding: 50px 0
+
+    .b-footer__copy
+        &.tab-visible
+            margin-top: 30px
+
+    .b-footer-nav
+        width: 48%
+        margin-bottom: 20px
+
+        &:nth-child(3), &:nth-child(4)
+            margin-bottom: 0
 
     .b-m-grid__item__btn
         line-height: 26px
@@ -2574,6 +2606,11 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-footer__contacts
+        float: none
+        text-align: center
+    .b-soc-list
+        display: inline-block
     .b-m-grid__item__title
         font-size: 14px
         margin-bottom: 0
