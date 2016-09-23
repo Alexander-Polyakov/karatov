@@ -365,21 +365,6 @@ a.tdu:hover {
   font-family: "circle-light";
 }
 
-.title17px {
-  text-transform: uppercase;
-  font-family: "circle-light";
-  font-size: 17px;
-  margin-bottom: 5px;
-  line-height: 1.2em;
-}
-
-.title28px {
-  font-size: 28px;
-  font-family: "circle-light";
-  margin-bottom: 15px;
-  line-height: 1.2em;
-}
-
 .b-m-grid__item__title {
   line-height: 1.2em;
   margin-bottom: 20px;
@@ -3913,6 +3898,43 @@ a.tdu:hover {
   min-height: 100%;
 }
 
+.b-footer__copy {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #383438;
+  font-family: "circle-bold";
+}
+.b-footer__copy-link {
+  color: #989898;
+}
+.b-footer__copy-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .tab-visible {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-visible {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+  .tab-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .up-site-btn {
     display: none;
@@ -4005,6 +4027,22 @@ a.tdu:hover {
 
   .b-m-grid__item__descr {
     font-size: 13px;
+  }
+
+  .b-footer {
+    padding: 50px 0;
+  }
+
+  .b-footer__copy.tab-visible {
+    margin-top: 30px;
+  }
+
+  .b-footer-nav {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .b-footer-nav:nth-child(3), .b-footer-nav:nth-child(4) {
+    margin-bottom: 0;
   }
 
   .b-m-grid__item__btn {
@@ -4165,6 +4203,15 @@ a.tdu:hover {
 
   .b-product-slider .owl-nav {
     display: none;
+  }
+
+  .b-footer__contacts {
+    float: none;
+    text-align: center;
+  }
+
+  .b-soc-list {
+    display: inline-block;
   }
 
   .b-m-grid__item__title {
