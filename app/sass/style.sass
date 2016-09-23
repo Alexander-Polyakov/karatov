@@ -38,6 +38,9 @@ body
     font-family: $cl
     color: #000
 
+.b-site-wrapper
+    min-width: 320px
+
 .b-container
     max-width: 1230px
     margin: 0 auto
@@ -219,9 +222,12 @@ a.tdu
 .ff_cl
     font-family: $cl
 
-.st-title
+.b-m-grid__item__title
     line-height: 1.2em
     margin-bottom: 20px
+    font-family: $cl
+    text-transform: uppercase
+    font-size: 31px
     &.brush-icon
         padding-top: 60px
         position: relative
@@ -230,6 +236,21 @@ a.tdu
             +sprite(brush-icon, "abs_middle")
             top: 0 !important
             margin-top: 0 !important
+    &.map-icon
+        padding-top: 80px
+        margin-bottom: 0
+        display: inline-block
+        vertical-align: middle
+        position: relative
+        &:before
+            content: ''
+            +sprite(map-icon, "abs_middle")
+            top: 0 !important
+            margin-top: 0 !important
+    &.txt_white
+        color: #fff
+    &.mb0
+        margin-bottom: 0
 
 .pad_40
     padding: 40px
@@ -523,6 +544,21 @@ a.tdu
             color: #a49f9a
 
 
+.b-m-grid__item__btn
+    border: 1px solid #ececec
+    border-top: none
+    color: #000
+    background: #fff
+    line-height: 40px
+    padding: 0 33px
+    text-transform: uppercase
+    font-size: 13px
+    &:hover
+        border-color: transparent
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2)
+
+
+
 .b-site-header-wrapper
     border-bottom: 1px solid #e0e1e1
 
@@ -778,6 +814,8 @@ a.tdu
 
 .b-m-grid__item
     position: relative
+    &.desctop-dn
+        display: none
     &:hover
         .b-m-grid__item__preview
             +scale(1.2)
@@ -853,14 +891,24 @@ a.tdu
     width: 25%
     font-family: $rr
     font-size: 14px
+    position: relative
+    padding-left: 65px
+    height: 56px
+    &:after
+        content: ''
+        height: 100%
+        display: inline-block
+        vertical-align: middle
 
 .b-teaser__item-icon
     display: inline-block
     vertical-align: middle
-    margin-right: 10px
-    width: 55px
-    height: 55px
-    position: relative
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -28px
+    width: 56px
+    height: 56px
     border-radius: 50%
     border: 1px solid #9d9d9d
     &.ic1:after
@@ -914,7 +962,6 @@ a.tdu
 .b-teaser__item-content
     display: inline-block
     vertical-align: middle
-    width: 150px
     font-family: $cr
 
 .b-for-whom__item-input
@@ -1131,13 +1178,27 @@ a.tdu
     height: 100%
     z-index: 5
     +trans(all, 5s, ease, 0s)
+    -webkit-background-size: cover !important
+    background-size: cover !important
     img
         min-width: 100%
         min-height: 100%
-    &.orange-bg
+        max-width: 110%
+        max-height: 110%
+    &.bg1
+        background: url(../img/grid-img1.jpg) no-repeat center center
+    &.bg2
         background: url(../img/grid-img2.jpg) no-repeat center center
-        -webkit-background-size: cover
-        background-size: cover
+    &.bg3
+        background: url(../img/grid-img3.jpg) no-repeat center center
+    &.bg4
+        background: url(../img/grid-img4.jpg) no-repeat center center
+    &.bg5
+        background: url(../img/grid-img5.jpg) no-repeat center center
+    &.bg6
+        background: url(../img/grid-img6.jpg) no-repeat center center
+    &.bg7
+        background: url(../img/grid-img7.jpg) no-repeat center center
 
 .b-m-grid__item__content
     position: relative
@@ -1167,20 +1228,18 @@ a.tdu
         left: 40%
     &.map_circle
         position: absolute
-        width: 260px
-        height: 260px
-        left: 50%
-        top: 50%
-        margin-left: -130px
-        margin-top: -130px
-        padding-top: 60px
+        top: 15%
+        right: 15%
+        left: 15%
+        bottom: 15%
         text-align: center
         background: #fff
         border-radius: 50%
         &:before
             content: ''
-            +sprite(map-icon)
-            margin-bottom: 20px
+            height: 100%
+            display: inline-block
+            vertical-align: middle
 
 .b-product-slider.browsing
     .b-product-item
@@ -2418,6 +2477,13 @@ a.tdu
     .b-filter
         padding: 15px 0
 
+    .b-m-grid__item__title
+        font-size: 26px
+
+    .b-m-grid__item__content
+        &.middle
+            padding: 30px 10px 10px
+
     .b-filter-section
         text-align: center
         width: 100%
@@ -2438,16 +2504,42 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-m-grid__item__descr
+        font-size: 13px
+
+    .b-m-grid__item__btn
+        line-height: 26px
+        padding: 0 16px
+        text-transform: uppercase
+        font-size: 8px
+
+    .b-m-grid__item__title
+        font-size: 19px
+        margin-bottom: 13px
+        &.brush-icon
+            padding-top: 36px
+
+    .b-m-grid__item__content
+        &.bottom
+            left: 20px
+            right: 20px
+            bottom: 20px
+        &.middle
+            left: 13px
+            right: 13px
+            top: 13px
+            bottom: 13px
+        &.pad_40
+            padding: 20px
+
+    .b-main-slider__item-content
+        height: 400px
+
     .b-teaser__item-content
         width: auto
-        max-width: 150px
 
     .b-teaser__item
-        padding: 0 10px
-        text-align: center
-
-    .b-teaser__item-icon
-        margin: 0 0 10px
+        font-size: 12px
 
     .b-main-nav__item
         font-size: 12px
@@ -2482,5 +2574,69 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-m-grid__item__title
+        font-size: 14px
+        margin-bottom: 0
+        &.map-icon
+            padding-top: 35px
+            width: 95%
+            margin-bottom: 15px
+            &:before
+                +sprite(map-icon20px, "abs_middle")
+        &.brush-icon
+            display: inline-block
+            vertical-align: middle
+            width: 90%
+
     .b-header-teaser
         display: none
+    .b-m-grid__item
+        &.mobile-w100
+            width: 100%
+        &.mobile-w50
+            width: 49%
+        &.mobile-mr0
+            margin-right: 0
+        &.mobile-dn
+            display: none
+        &.mobile-db
+            display: block
+        &.mobile-fl
+            float: left
+
+    .b-m-grid__item__descr
+        display: none
+
+    .b-m-grid__item__btn
+        display: none
+
+    .b-m-grid__item__content
+        &.middle
+            padding: 10px
+            top: 7px
+            right: 7px
+            left: 7px
+            bottom: 7px
+            &:before
+                content: ''
+                height: 100%
+                display: inline-block
+                vertical-align: middle
+        &.bottom
+            left: 10px
+            right: 10px
+            bottom: 10px
+        &.pad_40
+            padding: 10px
+        &.top
+            top: 10px
+            right: 10px
+            left: 10px
+        br
+            display: none
+        &.map_circle
+            right: 8%
+            top: 8%
+            left: 8%
+            bottom: 8%
+
