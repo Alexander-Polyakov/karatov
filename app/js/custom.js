@@ -61,6 +61,13 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    doc.on('click', '.mobile-menu-btn', function (e) {
+        $(this).toggleClass("active");
+        $("body").toggleClass("x-ovh");
+        doc.find(".b-site-wrapper").toggleClass("menu-open");
+        e.preventDefault();
+    });
+
 
     doc.on('click', '.accordion-toggle', function (e) {
         $(this).toggleClass("active");

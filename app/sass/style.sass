@@ -38,9 +38,16 @@ body
     font-size: 17px
     font-family: $cl
     color: #000
+    &.x-ovh
+        overflow-x: hidden
 
 .b-site-wrapper
     min-width: 320px
+    position: relative
+    +trans()
+    left: 0
+    &.menu-open
+        left: 270px
 
 .b-container
     max-width: 1230px
@@ -223,6 +230,78 @@ a.tdu
 .ff_cl
     font-family: $cl
 
+.b-login-icon
+    +sprite(login-icon-white)
+    vertical-align: middle
+    margin-right: 10px
+
+.b-saved-icon
+    +sprite(saved-white)
+    vertical-align: middle
+    margin-right: 10px
+
+.b-mobile-menu__contacts
+    padding: 20px
+
+.b-mobile-menu__contacts-section
+    margin-bottom: 15px
+
+.b-mobile-menu__contacts__title
+    font-size: 11px
+    text-transform: uppercase
+    font-family: $cr
+    margin-bottom: 8px
+
+.b-mobile-menu__contacts__phone
+    font-size: 24px
+    font-family: $cr
+    line-height: 1.2em
+
+.b-mobile-menu
+    display: block
+    position: absolute
+    width: 270px
+    left: -270px
+    top: 0
+    z-index: 9999
+    background: #999
+    bottom: 0
+    color: #fff
+    font-size: 15px
+
+.b-mobile-menu__address
+    padding: 0 20px
+    position: relative
+    line-height: 44px
+    &:after
+        content: ''
+        width: 8px
+        height: 8px
+        top: 50%
+        right: 10px
+        margin-top: -4px
+        border-right: 1px solid #fff
+        border-bottom:  1px solid #fff
+        +rotate(45)
+        position: absolute
+
+.b-menu__item
+    line-height: 48px
+    padding: 0 20px
+    border-bottom: 1px solid #d7d7d7
+    display: block
+    &.white
+        background: #efefef
+        text-transform: uppercase
+        color: #666
+
+
+.b-mobile-phone-icon
+    +sprite(phone-icon)
+    vertical-align: middle
+    margin-left: 15px
+    cursor: pointer
+
 .b-m-grid__item__title
     line-height: 1.2em
     margin-bottom: 20px
@@ -298,12 +377,19 @@ a.tdu
     img
         max-width: 100%
 
+.b-site-header__mobile-section
+    display: none
+
 .b-phone__number
     font-family: $cr
     font-size: 26px
     line-height: 1em
     letter-spacing: 0.4px
     color: rgba(0, 0, 0, 0.8)
+
+.b-filter-btn-wrapper
+    display: inline-block
+    vertical-align: middle
 
 .b-phone__number-info
     font-size: 15px
@@ -332,6 +418,7 @@ a.tdu
     z-index: 10
     box-shadow: 0 2px 3px 0 #ccc
     display: none
+
 
 .reset-all-btn
     font-size: 14px
@@ -387,6 +474,7 @@ a.tdu
     height: 20px
     position: relative
     display: inline-block
+    cursor: pointer
     &.pos_l
         left: 0
         top: 50%
@@ -406,6 +494,20 @@ a.tdu
         margin-top: -1px
     &.bottom
         bottom: 0
+
+.mobile-menu-btn
+    display: inline-block
+    vertical-align: middle
+    &.active
+        .hamburger__line
+            top: 50%
+            margin-top: -1px
+            &.top
+                +rotate(45)
+            &.middle
+                display: none
+            &.bottom
+                +rotate(-45)
 
 .gray-more-btn
     padding: 2px 20px
@@ -1476,6 +1578,7 @@ a.tdu
     &:last-child
         margin-right: 0
 
+
 .b-search
     position: relative
     width: 180px
@@ -1486,6 +1589,12 @@ a.tdu
         right: 0
         top: 50%
         margin-top: -17px
+    &.mobile-search
+        width: 100%
+        margin-bottom: 20px
+        .b-search__input
+            left: 0
+            border-radius: 5px
 
 .b-search__input
     width: 100%
@@ -2678,6 +2787,55 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-filter-select
+        margin: 0 4px
+
+    .b-filter-select__name
+        font-size: 15px
+
+    .b-for-whom__title
+        font-size: 13px
+
+    .b-for-whom__item
+        margin-right: 20px
+
+    .b-filter-section:first-child
+        border-bottom: 1px dotted #000
+
+    .b-filter-select__units
+        display: block
+        &.mr50
+            margin-right: 0
+
+    .b-filter-btn-wrapper
+        margin-top: 15px
+        .btn
+            width: 300px
+
+    .b-site-header__mobile-section
+        display: block
+
+    .b-site-header__contacts
+        line-height: 62px
+        margin-top: 0
+
+    .b-site-header
+        padding-bottom: 0
+
+    .b-header-contacts
+        display: none
+
+    .b-logo
+        width: 80px
+        margin-top: 10px
+
+    .b-site-header__events
+        margin-top: 0
+
+    .b-events-list__item-default
+        padding: 0 5px
+    .b-header-login__item-text
+        display: none
     .b-feedbacks.p60
         padding: 20px 0 40px
     .b-reviews__title
