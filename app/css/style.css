@@ -4367,6 +4367,10 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  .b-filter-select__dropdown {
+    display: none !important;
+  }
+
   .b-filter-select {
     margin: 0 4px;
   }
