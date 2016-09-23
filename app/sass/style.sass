@@ -222,6 +222,19 @@ a.tdu
 .ff_cl
     font-family: $cl
 
+.title17px
+    text-transform: uppercase
+    font-family: $cl
+    font-size: 17px
+    margin-bottom: 5px
+    line-height: 1.2em
+
+.title28px
+    font-size: 28px
+    font-family: $cl
+    margin-bottom: 15px
+    line-height: 1.2em
+
 .b-m-grid__item__title
     line-height: 1.2em
     margin-bottom: 20px
@@ -749,6 +762,7 @@ a.tdu
 
 .b-main-slider__item
     background-size: cover
+
 
 .b-full-slider, .b-product-slider, .b-reviews-slider
     .owl-prev, .owl-next
@@ -2504,6 +2518,40 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-main-slider__item-title
+        font-size: 33px
+        margin-bottom: 15px
+
+    .b-main-slider__item-descr
+        font-size: 15px
+
+    .title17px
+        font-size: 14px
+
+    .title28px
+        font-size: 24px
+
+    .b-product-slider
+        padding: 0 20px
+
+    .owl-carousel .owl-controls .owl-nav .owl-prev,
+    .owl-carousel .owl-controls .owl-nav .owl-next
+        width: 20px
+
+    .b-product-slider .owl-prev:before,
+    .b-product-slider .owl-next:before
+        width: 15px
+        height: 15px
+        margin-right: -12px
+        margin-top: -7px
+
+    .b-product-slider .owl-next:before
+        margin-right: auto
+        margin-left: -12px
+
+    .b-product-item__popup
+        display: none
+
     .b-m-grid__item__descr
         font-size: 13px
 
@@ -2574,6 +2622,69 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-main-slider__item-title
+        font-size: 20px
+        margin-bottom: 5px
+
+    .b-full-slider .owl-dots
+        bottom: 25px
+        padding: 0 10px
+
+    .b-main-slider__item-descr
+        font-size: 13px
+
+    .b-main-slider__item-btn-wrapper
+        display: none
+
+    .b-main-slider__item-content
+        height: 200px
+        padding: 0 10px
+        font-size: 0
+
+    .b-full-slider .owl-nav
+        display: none
+
+    .title28px
+        font-size: 20px
+
+    .title17px
+        font-size: 12px
+
+    .b-product-slider
+        padding: 0 0 60px
+        .owl-dots
+            position: absolute
+            bottom: 35px
+            width: 100%
+            text-align: center
+        .owl-dot
+            display: inline-block
+            vertical-align: middle
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background: #d2d2d2
+            margin-right: 15px
+            +trans
+            &.active
+                background: #f2641a
+
+    .b-product-slider-wrapper
+        &:before
+            bottom: 0
+
+    .b-product-slider.browsing
+        .b-product-item
+            .b-product-item__descr
+                padding-bottom: 0
+
+    .b-product-item__price
+        font-size: 18px
+
+    .b-product-slider
+        .owl-nav
+            display: none
+
     .b-m-grid__item__title
         font-size: 14px
         margin-bottom: 0

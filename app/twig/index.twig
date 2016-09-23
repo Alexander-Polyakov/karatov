@@ -15,7 +15,13 @@
 
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
-                items: 5,
+                responsive : {
+                    0 : {
+                        items: 2
+                    }, 768 : {
+                        items: 5
+                    }
+                },
                 loop: true,
                 nav: true,
                 dots: true,
@@ -64,8 +70,8 @@
     <div class="b-product-slider-wrapper">
         <div class="b-container">
             <div class="tac">
-                <p class="mb5 fz17 ttu	txt_gray ff_cl">140 клиентов онлайн</p>
-                <p class="mb15 fz28 ff_cl">Сейчас просматривают эти украшения</p>
+                <p class="title17px txt_gray">140 клиентов онлайн</p>
+                <p class="title28px">Сейчас просматривают эти украшения</p>
             </div>
             {% include "widgets/product_slider.twig" %}
         </div>
