@@ -2522,6 +2522,44 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-reviews-slider
+        padding: 0 20px
+        .owl-next, .owl-prev
+            right: -10px
+            width: 40px
+            &:before
+                width: 14px
+                height: 14px
+                margin-left: -10px
+                margin-top: -7px
+
+        .owl-prev
+            right: auto
+            left: -10px
+            &:before
+                margin-right: -10px
+                margin-left: auto
+
+    .b-feedbacks.p60
+        padding-left: 0
+        padding-right: 0
+
+    .b-subscribe__left
+        float: none
+        text-align: center
+        width: auto
+        padding-right: 0
+        margin-bottom: 15px
+
+    .b-subscribe-wrapper
+        background: url(../img/subscribe__tab-bg.jpg) no-repeat left center
+        background-size: cover
+        padding-left: 10px
+        padding-right: 10px
+
+    .b-subscribe__right
+        text-align: center
+
     .b-main-slider__item-title
         font-size: 33px
         margin-bottom: 15px
@@ -2640,6 +2678,44 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-feedbacks.p60
+        padding: 20px 0 40px
+    .b-reviews__title
+        font-size: 20px
+    .b-reviews-slider__item__descr
+        font-size: 13px
+    .b-reviews-slider
+        padding: 0
+        margin-bottom: 15px
+        .owl-next, .owl-prev
+            display: none !important
+        .owl-dots
+            margin-top: 15px
+            text-align: center
+
+        .owl-dot
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            margin: 0 5px
+            display: inline-block
+            background: #d2d2d2
+            +trans
+            &.active
+                background: #f2641a
+    .b-container
+        padding: 0 10px
+    .b-subscribe__title
+        font-size: 17px
+    .b-subscribe-wrapper
+        background-image: url(../img/subscribe__mobile-bg.jpg)
+    .b-subscribe-form__input, .b-subscribe-form__button
+        display: block
+        width: 100%
+        margin-bottom: 10px
+        &:last-child
+            margin-bottom: 0
+
     .b-main-slider__item-title
         font-size: 20px
         margin-bottom: 5px
