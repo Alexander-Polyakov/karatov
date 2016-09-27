@@ -15,11 +15,25 @@
 
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
-                items: 5,
+                responsive : {
+                    0 : {
+                        items: 2
+                    }, 768 : {
+                        items: 5
+                    }
+                },
                 loop: true,
                 nav: true,
                 dots: true,
-                mouseDrag: true
+                mouseDrag: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 5
+                    }
+                }
             });
         });
 
@@ -42,6 +56,14 @@
 
 {% block topPlate %}
     {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block filter %}
+    {% include "widgets/b-filter.twig" %}
+{% endblock %}
+
+{% block mainSlider %}
+    {% include "widgets/b-main-slider.twig" %}
 {% endblock %}
 
 {% block subscribe %}
@@ -67,7 +89,7 @@
 {% block pageContent %}
     <div class="b-section-wrapper p40">
         <div class="b-container">
-            <nav class="b-grid-nav">
+            <nav class="b-grid-nav mobile-grid-slider">
                 <a class="b-grid-nav__item" href="#">
                     <span class="b-grid-nav__item__text">Кольца</span>
                     <div class="b-grid-nav__item__bg">
@@ -95,6 +117,9 @@
             </nav>
         </div>
     </div>
+
+    {% block mainSlider %}{% endblock %}
+
 
     <div class="b-section-wrapper p55 bb">
         <div class="b-container">
@@ -146,7 +171,7 @@
                         <span class="b-best-collection__item__text txt_gray2">Karatov change</span>
                     </a>
                 </div>
-                <p class="tac pt30">
+                <p class="b-best-collection__btn-wrapper">
                     <a class="btn lh40 white ff_cr ttu fz13" href="#">все коллекции</a>
                 </p>
             </div>
@@ -156,7 +181,7 @@
     <div class="b-section-wrapper b-catalog bb pb60">
         <div id="b-catalog-header" class="b-catalog-header">
             <div class='b-container tac'>
-                <div class="b-filter-open f_l w300px">
+                <div class="b-filter-open f_l w220px">
 						<span class="filter-open-btn" data-filter-btn="toggle">
 							<span class="hamburger pos_l">
 								<span class="hamburger__line top"></span>
@@ -177,7 +202,7 @@
                         <span class="b-for-whom__item">В подарок</span>
                     </label>
                 </div>
-                <div class="w300px f_r tar">
+                <div class="w220px f_r tar">
                     <div class="b-filter-select ">
                         <div class="b-filter-select__name color-gray">Сначала популярные</div>
                         <div class="b-filter-select__dropdown">

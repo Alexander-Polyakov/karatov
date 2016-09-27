@@ -32,12 +32,21 @@ $(document).ready(function () {
         var this_data = $(this).data("tab"),
             this_block = $(this).closest(".tabs-wrapper");
 
-        this_block.find("[data-tab]").removeClass("active");
-        this_block.find("[data-tab=" + this_data + "]").addClass("active");
+        if ((doc.outerWidth() <= 768) && ($(this).hasClass("active"))) {
+            $(this).closest(".b-sliders-tabs__nav").addClass("selection");
 
-        this_block.find("[data-slide]").removeClass("active");
-        this_block.find("[data-slide=" + this_data + "]").addClass("active");
+        } else {
+            this_block.find("[data-tab]").removeClass("active");
+            this_block.find("[data-tab=" + this_data + "]").addClass("active");
+
+            this_block.find("[data-slide]").removeClass("active");
+            this_block.find("[data-slide=" + this_data + "]").addClass("active");
+
+            $(this).closest(".b-sliders-tabs__nav").removeClass("selection");
+        }
+
         e.preventDefault();
+
     });
 
     doc.on('click', '[data-filter-btn="toggle"]', function (e) {
@@ -222,7 +231,11 @@ $(document).ready(function () {
         }, 1000);
 
     }
-
+    var id;
+    $(window).resize(function(){
+        clearTimeout(id);
+        id = setTimeout(init_mobile_slider, 500);
+    });
 
     doc.scroll(function () {
         if (($("#b-sidebar-filter").length > 0) && (!$("#b-sidebar-filter").hasClass("active"))) {
@@ -247,6 +260,39 @@ $(document).ready(function () {
         increase_hover(percent_h, persent_w, offset);
     });
 
+    init_mobile_slider();
+
+    function init_mobile_slider() {
+        var grid_slider = $('.mobile-grid-slider'),
+            best_collection =  $(".b-best-collection__units");
+
+        if (doc.outerWidth() <= 769) {
+
+            grid_slider.owlCarousel({
+                items: 2,
+                loop: false,
+                nav: false,
+                dots: true,
+                mouseDrag: true,
+                margin: 10
+            });
+
+            best_collection.owlCarousel({
+                items: 1,
+                loop: false,
+                nav: false,
+                dots: true,
+                mouseDrag: true,
+            });
+
+        } else {
+            grid_slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+            grid_slider.find('.owl-stage-outer').children().unwrap();
+
+            best_collection.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+            best_collection.find('.owl-stage-outer').children().unwrap();
+        }
+    }
 
     sep_fix();
 
