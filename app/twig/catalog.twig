@@ -58,8 +58,8 @@
     {% include "widgets/top-plate.twig" %}
 {% endblock %}
 
-{% block filter %}
-    {% include "widgets/b-filter.twig" %}
+{% block catalog %}
+    {% include "widgets/b-catalog.twig" %}
 {% endblock %}
 
 {% block mainSlider %}
@@ -177,6 +177,8 @@
             </div>
         </div>
     </div>
+
+    {% block catalog %}{% endblock %}
 
     <div class="b-section-wrapper b-catalog bb pb60">
         <div id="b-catalog-header" class="b-catalog-header">

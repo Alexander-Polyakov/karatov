@@ -210,6 +210,32 @@ $(document).ready(function () {
 
         }
     }
+    block_changing();
+
+    function block_changing() {
+        $(".b-changing").each(function(){
+            var this_block = $(this),
+                this_bl_width = (($(this).outerWidth()) - 100),
+                num_elem = 0,
+                full_width = this_block.find('.b-changing__item:eq('+num_elem+')').outerWidth();
+
+
+
+            while (full_width < this_bl_width) {
+                full_width+= this_block.find('.b-changing__item:eq('+num_elem+')').outerWidth();
+
+                if (full_width < this_bl_width) {
+                    this_block.find('.b-changing__item:eq('+num_elem+')').addClass("visible");
+                    num_elem++
+                }
+            }
+
+        });
+    }
+
+
+
+
 
     function product_saved(this_click) {
         $("body").append("<span class='saved-animation'></span>");

@@ -1037,6 +1037,8 @@ a.tdu
     position: relative
     z-index: 100
     text-align: left
+    display: inline-block
+    vertical-align: middle
     &.open
         z-index: 150
         .b-filter-select__dropdown
@@ -1052,19 +1054,36 @@ a.tdu
             &:before
                 border-right: 2px solid #f26218
                 border-bottom: 2px solid #f26218
+    &.selected
+        padding-right: 32px
+        .b-filter-select__name
+            font-size: 15px
+            background: #9c9c9c
+            line-height: 32px
+            padding: 0 25px
+            color: #fff
+            position: relative
+            &:before
+                display: none
+        .b-filter-select__close
+            display: block
 
 .b-filter-select__units
     display: inline-block
     vertical-align: middle
 
-.b-filter-select
-    margin: 0 30px
+.b-changing__item
+    padding: 0 30px
     display: inline-block
     vertical-align: middle
     &:first-child
-        margin-left: 0
+        padding-left: 0
     &:last-child
-        margin-right: 0
+        padding-right: 0
+    &.visible
+        display: inline-block
+    &.immun
+        display: inline-block
 
 .b-teaser__item-content
     display: inline-block
@@ -2022,31 +2041,36 @@ a.tdu
         +arr(12, 6, #fff, b)
 
 .jq-selectbox.select
-    width: 270px
     cursor: pointer
+    z-index: 150 !important
     &.opened
         .jq-selectbox__select-text
             color: #f37136
+        .jq-selectbox__select
+            border: 1px solid #e1e0e0
         .jq-selectbox__trigger
             border-color: #f37136
 
+.jq-selectbox__select-text
+    width: auto !important
+
 .jq-selectbox__select
-    line-height: 42px
+    line-height: 38px
     font-size: 15px
     font-family: $cl
-    color: #aeaeae
-    border: 1px solid #e1e0e0
+    color: #5a5a5a
+    border: 1px solid transparent
     padding: 0 30px 0 15px
 
 .jq-selectbox__trigger
     position: absolute
     right: 15px
-    width: 10px
-    height: 10px
+    width: 6px
+    height: 6px
     top: 50%
-    margin-top: -5px
-    border-left: 2px solid #c8c5c4
-    border-bottom: 2px solid #c8c5c4
+    margin-top: -4px
+    border-left: 1px solid #c8c5c4
+    border-bottom: 1px solid #c8c5c4
     +rotate(-45)
 
 .jq-selectbox__dropdown
@@ -2058,8 +2082,9 @@ a.tdu
     color: #111111
     background: #fff
     max-height: 500px
+    line-height: 40px
     li
-        padding: 5px 15px
+        padding: 0 15px
         +trans
         &.sel
             color: #a1a0a0
@@ -2331,11 +2356,20 @@ a.tdu
     letter-spacing: -0.5px
 
 .b-catalog-header
-    line-height: 70px
+    padding: 10px 0
     border-bottom: 1px solid #333
 
-.b-catalog-content
+.b-catalog-header__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.b-catalog-body
     padding: 25px 0
+
+.b-catalog-body__select
+    display: inline-block
+    vertical-align: middle
 
 .b-catalog-units
     font-size: 0
@@ -2477,7 +2511,7 @@ a.tdu
         background: #fff
         box-shadow: 0px 0px 5px 0px #ccc
 
-.b-catalog-filter
+.b-catalog-body__filter
     position: relative
     padding-right: 240px
 
@@ -2495,7 +2529,7 @@ a.tdu
     &:hover
         color: #f47736
 
-.more-filters-btn
+.b-changing__more-btn
     color: #a8a7a6
     cursor: pointer
     +trans
@@ -2519,48 +2553,44 @@ a.tdu
         &:after
             display: none
 
-.b-filter-select-selected
-    font-size: 15px
-    background: #9c9c9c
-    line-height: 32px
-    padding: 0 60px 0 20px
-    color: #fff
-    position: relative
-    .close-btn
+.b-filter-select__close
+    position: absolute
+    height: 100%
+    width: 32px
+    top: 0
+    right: 0
+    cursor: pointer
+    background: #efefef
+    display: none
+
+.b-filter-select__cross
+    position: absolute
+    width: 16px
+    height: 16px
+    top: 50%
+    left: 50%
+    margin-left: -9px
+    margin-top: -9px
+    +rotate(45)
+    &:before
+        content: ''
+        width: 100%
+        height: 2px
         position: absolute
-        height: 100%
-        width: 32px
-        top: 0
-        right: 0
-        cursor: pointer
-        background: #efefef
-    .close-btn__cross
-        position: absolute
-        width: 16px
-        height: 16px
+        left: 0
         top: 50%
+        margin-top: -1px
+        background: #9c9c9c
+    &:after
+        content: ''
+        height: 100%
+        width: 2px
+        position: absolute
+        top: 0
         left: 50%
-        margin-left: -9px
-        margin-top: -9px
-        +rotate(45)
-        &:before
-            content: ''
-            width: 100%
-            height: 2px
-            position: absolute
-            left: 0
-            top: 50%
-            margin-top: -1px
-            background: #9c9c9c
-        &:after
-            content: ''
-            height: 100%
-            width: 2px
-            position: absolute
-            top: 0
-            left: 50%
-            margin-left: -1px
-            background: #9c9c9c
+        margin-left: -1px
+        background: #9c9c9c
+
 
 .b-banner
     padding: 40px
@@ -2598,9 +2628,36 @@ a.tdu
 .b-filter-select__native
     display: none
 
+.b-search-selection__title
+    color: #a7a9ac
+    text-transform: uppercase
+    font-family: $cr
+    font-size: 15px
 
+.b-search-selection__item
+    display: inline-block
+    vertical-align: middle
+    margin: 0 25px
+    position: relative
+.b-search-selection__radio-input
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    cursor: pointer
+    &:checked +
+        .b-search-selection__item-text
+            color: #333
+            border-color: #333
 
-
+.b-search-selection__item-text
+    color: #f58146
+    border-bottom: 1px dotted #f58146
+    line-height: 1em
+    font-size: 17px
+    +trans()
 
 
 .tab-visible
@@ -2625,6 +2682,7 @@ a.tdu
 @media screen and (max-width: 1150px)
     .b-main-nav__item
         margin-right: 3%
+
 
 @media screen and (max-width: 1170px)
     .b-filter
