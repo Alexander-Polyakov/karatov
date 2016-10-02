@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     sftp = require('gulp-sftp'),
     htmlbeautify = require('gulp-html-beautify'),
     callback = require('gulp-callback'),
+    plumber = require('gulp-plumber'),
     connect = require('gulp-connect');
 
 /* SOURCES --------------------------------------------------------------------
@@ -61,6 +62,7 @@ gulp.task('pug', function () {
 /* TWIG --------------------------------------------------------------------- */
 gulp.task('twig', function () {
     gulp.src(sources.twig.src)
+        .pipe(plumber())
         .pipe(twig())
         .pipe(gulp.dest(sources.twig.temp_dist))
         .pipe(callback(function () {
