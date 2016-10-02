@@ -483,6 +483,16 @@ a.tdu
         top: 50%
         margin-top: -10px
         position: absolute
+    &.active
+        .hamburger__line
+            top: 50%
+            margin-top: -1px
+            &.top
+                +rotate(45)
+            &.middle
+                display: none
+            &.bottom
+                +rotate(-45)
 
 .hamburger__line
     position: absolute
@@ -501,16 +511,6 @@ a.tdu
 .mobile-menu-btn
     display: inline-block
     vertical-align: middle
-    &.active
-        .hamburger__line
-            top: 50%
-            margin-top: -1px
-            &.top
-                +rotate(45)
-            &.middle
-                display: none
-            &.bottom
-                +rotate(-45)
 
 .gray-more-btn
     padding: 2px 20px
@@ -667,6 +667,8 @@ a.tdu
 
 .b-site-header-wrapper
     border-bottom: 1px solid #e0e1e1
+    position: relative
+    z-index: 20
 
 .b-site-header
     text-align: center
@@ -1030,8 +1032,23 @@ a.tdu
         content: ''
         +sprite(teaser-icon4, "abs_middle")
 
-.b-filter
+.b-index-filter
     padding: 30px 0
+    line-height: 52px
+
+.b-index-filter__section
+    &:first-child
+        border-right: 1px dotted #a1a1a1
+        padding-right: 60px
+        margin-right: 60px
+
+
+.b-index-filter__select-item
+    display: inline-block
+    vertical-align: middle
+    margin-right: 60px
+    &:last-child
+        margin-right: 0
 
 .b-filter-select
     position: relative
@@ -1039,6 +1056,7 @@ a.tdu
     text-align: left
     display: inline-block
     vertical-align: middle
+    line-height: 1.25em
     &.open
         z-index: 150
         .b-filter-select__dropdown
@@ -1072,18 +1090,28 @@ a.tdu
     display: inline-block
     vertical-align: middle
 
+
+
 .b-changing__item
-    padding: 0 30px
+    padding: 0 20px
     display: inline-block
     vertical-align: middle
+    margin-top: 25px
     &:first-child
         padding-left: 0
     &:last-child
         padding-right: 0
-    &.visible
-        display: inline-block
-    &.immun
-        display: inline-block
+    &.hidden
+        display: none
+
+
+.b-changing
+    &.see-all
+        .b-changing__item
+            display: inline-block
+            vertical-align: middle
+            margin-right: 40px
+            padding: 0
 
 .b-teaser__item-content
     display: inline-block
@@ -1368,26 +1396,31 @@ a.tdu
             vertical-align: middle
 
 .b-product-slider.browsing
+
+    .b-fade-slider
+        position: relative
+        height: 180px
+        width: 100%
+
     .b-product-item
         padding: 60px 15px 15px
         +trans
-        .b-fade-slider
-            position: relative
-            height: 180px
-            width: 100%
         &:hover
             box-shadow: 0 2px 3px 0 #ccc
             background: #fff
             .b-product-item__popup, .b-fade-slider__nav
                 opacity: 1
-        .b-product-item__preview
-            margin-bottom: 10px
-        .b-product-item__descr
-            padding-bottom: 90px
-            position: relative
-            margin-bottom: 0
+
     .owl-next, .owl-prev
         bottom: 160px
+
+    .b-product-item__preview
+        margin-bottom: 10px
+
+    .b-product-item__descr
+        padding-bottom: 90px
+        position: relative
+        margin-bottom: 0
 
 .b-product-item__popup
     position: absolute
@@ -1479,7 +1512,7 @@ a.tdu
         z-index: 0
 
 .b-reviews-slider
-    padding: 0 80px
+    padding: 0 40px
     margin-bottom: 30px
 
 .b-product-slider
@@ -1640,6 +1673,8 @@ a.tdu
 .b-section-wrapper
     &.pb60
         padding-bottom: 60px
+    &.pt55
+        padding-top: 55px
     &.p13
         padding: 13px 0
     &.p40
@@ -1654,12 +1689,20 @@ a.tdu
         border-bottom: 1px solid #e0e1e1
     &.no-padding
         padding: 0 !important
+    &.b-feedbacks
+        padding-top: 5px
+        padding-bottom: 60px
 
 .b-main-nav-wrapper
     position: relative
+    padding-right: 180px
+
+.b-main-nav
+    position: relative
+    z-index: 10
 
 .b-main-nav__item
-    margin-right: 6%
+    margin-right: 7%
     font-size: 15px
     text-transform: uppercase
     font-family: $cr
@@ -1851,11 +1894,11 @@ a.tdu
     margin-bottom: 100px
 
 .b-product-m-screen__left
-    width: 700px
+    width: 57%
 
 .b-product-m-screen__right
     padding: 0 50px
-    width: 500px
+    width: 40%
 
 .b-presentation-slider
     position: relative
@@ -2040,9 +2083,54 @@ a.tdu
         margin-left: -6px
         +arr(12, 6, #fff, b)
 
+
+.b-catalog-header__open
+    width: 220px
+
+.b-catalog-header__sequence-selection
+    .jq-selectbox__select-text
+        text-align: right
+
 .jq-selectbox.select
     cursor: pointer
     z-index: 150 !important
+    .jq-selectbox__select-text
+        width: auto !important
+    .jq-selectbox__select
+        line-height: 38px
+        font-size: 15px
+        font-family: $cl
+        color: #5a5a5a
+        border: 1px solid transparent
+        padding: 0 30px 0 15px
+    .jq-selectbox__trigger
+        position: absolute
+        right: 15px
+        width: 6px
+        height: 6px
+        top: 50%
+        margin-top: -4px
+        border-left: 1px solid #c8c5c4
+        border-bottom: 1px solid #c8c5c4
+        +rotate(-45)
+    .jq-selectbox__dropdown
+        font-size: 15px
+        width: 100%
+        margin-top: -1px
+        border: 1px solid #e1e0e0
+        border-top: none
+        color: #111111
+        background: #fff
+        max-height: 500px
+        line-height: 40px
+        li
+            padding: 0 15px
+            +trans
+            &.sel
+                color: #a1a0a0
+            &:hover
+                background: #f7f7f7
+
     &.opened
         .jq-selectbox__select-text
             color: #f37136
@@ -2050,46 +2138,6 @@ a.tdu
             border: 1px solid #e1e0e0
         .jq-selectbox__trigger
             border-color: #f37136
-
-.jq-selectbox__select-text
-    width: auto !important
-
-.jq-selectbox__select
-    line-height: 38px
-    font-size: 15px
-    font-family: $cl
-    color: #5a5a5a
-    border: 1px solid transparent
-    padding: 0 30px 0 15px
-
-.jq-selectbox__trigger
-    position: absolute
-    right: 15px
-    width: 6px
-    height: 6px
-    top: 50%
-    margin-top: -4px
-    border-left: 1px solid #c8c5c4
-    border-bottom: 1px solid #c8c5c4
-    +rotate(-45)
-
-.jq-selectbox__dropdown
-    font-size: 15px
-    width: 100%
-    margin-top: -1px
-    border: 1px solid #e1e0e0
-    border-top: none
-    color: #111111
-    background: #fff
-    max-height: 500px
-    line-height: 40px
-    li
-        padding: 0 15px
-        +trans
-        &.sel
-            color: #a1a0a0
-        &:hover
-            background: #f7f7f7
 
 .b-characteristics-table__item
     border-bottom: 1px solid #eff0f0
@@ -2167,6 +2215,8 @@ a.tdu
     display: inline-block
     vertical-align: top
     margin-right: 115px
+    &:last-child
+        margin-right: 0
 
 .b-similar-units__item
     display: inline-block
@@ -2180,6 +2230,12 @@ a.tdu
         max-width: 90%
         max-height: 90%
         vertical-align: middle
+
+
+.b-sumilar-units__link
+    display: block
+    width: 100%
+    height: 100%
 
 .b-product-item__preview
     height: 180px
@@ -2364,8 +2420,17 @@ a.tdu
     justify-content: space-between
     align-items: center
 
-.b-catalog-body
-    padding: 25px 0
+.b-catalog-body-header
+    padding: 0 0 25px
+    +trans(box-shadow, 0.5s, ease, 0s)
+    &.fixed
+        position: fixed
+        top: 6px
+        width: 100%
+        left: 0
+        z-index: 200
+        background: #fff
+        box-shadow: 0px 0px 5px 0px #ccc
 
 .b-catalog-body__select
     display: inline-block
@@ -2377,11 +2442,9 @@ a.tdu
 .b-catalog-units__item
     display: inline-block
     vertical-align: middle
-    width: 20%
-    margin-right: 6.66%
+    width: 25%
     margin-bottom: 40px
-    &:nth-child(4n+4)
-        margin-right: 0
+    padding: 0 20px
 
 .b-sidebar-filter
     position: absolute
@@ -2389,21 +2452,16 @@ a.tdu
     background: #fff
     width: 300px
     border: 1px solid #e8e8e8
-    padding-top: 95px
+    padding-top: 80px
     color: #7f7d7f
     font-family: $cl
     font-size: 14px
     padding-bottom: 70px
     top: -95px
-    filter: blur(20px)
-    -webkit-filter: blur(20px)
     opacity: 0
     z-index: -1
-    +trans()
     &.active
         opacity: 1
-        filter: blur(0)
-        -webkit-filter: blur(0)
         z-index: 130
 
 .b-filter-ul__li
@@ -2496,28 +2554,17 @@ a.tdu
 .b-catalog-m-content
     position: relative
     padding-bottom: 120px
+    padding-top: 45px
     min-height: 1px
     +trans()
 
-.b-catalog-fix-filter
-    padding-top: 25px
-    +trans(box-shadow, 0.5s, ease, 0s)
-    &.fixed
-        position: fixed
-        top: 6px
-        width: 100%
-        left: 0
-        z-index: 200
-        background: #fff
-        box-shadow: 0px 0px 5px 0px #ccc
-
 .b-catalog-body__filter
     position: relative
-    padding-right: 240px
+    padding-right: 160px
 
 .clear-filters-btn
     position: absolute
-    top: 5px
+    top: 30px
     right: 0px
     font-size: 17px
     color: #a8a7a6
@@ -2542,15 +2589,6 @@ a.tdu
             margin: 0
     .b-filter-select
         &.hidden
-            display: none
-    &.see-all
-        text-align: left
-        .b-filter-select
-            margin: 0 53px 20px 0
-            &.hidden
-                display: inline-block
-                vertical-align: middle
-        &:after
             display: none
 
 .b-filter-select__close
@@ -2634,11 +2672,19 @@ a.tdu
     font-family: $cr
     font-size: 15px
 
+.b-sidebar-filter__mobile-content
+    display: none
+
 .b-search-selection__item
     display: inline-block
     vertical-align: middle
     margin: 0 25px
     position: relative
+    &:last-child
+        margin-right: 0px
+    &:first-child
+        margin-left: 0px
+
 .b-search-selection__radio-input
     position: absolute
     left: 0
@@ -2659,6 +2705,26 @@ a.tdu
     font-size: 17px
     +trans()
 
+.b-selects-list__item
+    padding: 0 10px
+    line-height: 42px
+    border-bottom: 1px solid #e1e0e0
+    position: relative
+
+.b-selects-list__item__select
+    position: absolute !important
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    padding: 0 10px
+    .jq-selectbox__select-text
+        float: right
+
+.b-selects-list__item__name
+    font-size: 15px
+    color: #333
+    float: left
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
@@ -2685,6 +2751,33 @@ a.tdu
 
 
 @media screen and (max-width: 1170px)
+    .b-index-filter__section
+        display: inline-block
+        vertical-align: middle
+        float: none
+        &.btn-wrapper
+            margin-top: 15px
+
+    .b-index-filter
+        text-align: center
+
+    .b-similar-wrapper
+        padding: 0 !important
+        border-bottom: none !important
+        .b-container
+            padding: 0
+
+    .b-similar__item
+        width: 100%
+        margin-right: 0
+        padding: 40px 15px
+        border-bottom: 1px solid #e0e1e1
+
+    .b-similar-units
+        overflow: auto
+        white-space: nowrap
+        padding-bottom: 15px
+
     .b-filter
         padding: 15px 0
 
@@ -2716,6 +2809,52 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-bread-crumbs-wrapper
+        display: none
+
+    .b-main-nav-wrapper
+        padding-right: 30px
+
+    .b-product-slider-wrapper
+        &:before
+            bottom: 0
+
+    .b-product-slider.browsing
+        .b-product-item:hover
+            box-shadow: none
+            background: transparent
+
+        .b-product-item__descr
+            padding-bottom: 0
+
+    .b-m-grid
+        margin-bottom: 40px
+
+    .b-index-filter__section
+        &:first-child
+            margin-right: 30px
+            padding-right: 30px
+
+    .b-index-filter__select-item
+        margin-right: 30px
+
+    .b-index-filter
+        line-height: 45px
+
+    .b-filter-open
+        padding-left: 10px
+
+    .b-sidebar-filter
+        left: 0
+
+    .b-sidebar-filter__section
+        padding: 20px
+
+    .b-catalog-m-content
+        padding-top: 0
+
+    .b-search-selection__item
+        margin: 0 10px
     .b-for-whom
         font-size: 16px
 
@@ -2729,7 +2868,6 @@ a.tdu
         height: 130px
     .b-best-collection__item__text
         font-size: 13px
-
 
     .b-grid-nav__item__bg
         width: 70px
@@ -2747,24 +2885,6 @@ a.tdu
 
     .b-product-nav__item
         margin-right: 30px
-
-    .b-reviews-slider
-        padding: 0 20px
-        .owl-next, .owl-prev
-            right: -10px
-            width: 40px
-            &:before
-                width: 14px
-                height: 14px
-                margin-left: -10px
-                margin-top: -7px
-
-        .owl-prev
-            right: auto
-            left: -10px
-            &:before
-                margin-right: -10px
-                margin-left: auto
 
     .b-feedbacks.p60
         padding-left: 0
@@ -2882,6 +3002,7 @@ a.tdu
 
     .b-search
         &.open
+            z-index: 20
             .b-search__input
                 left: 0
 
@@ -2902,8 +3023,102 @@ a.tdu
     .b-events-list__item
         font-size: 14px
 
+    .b-changing__item
+        padding: 0 10px
+        &.tablet-hidden
+            display: none
+
+    .b-changing.see-all
+        .b-changing__item
+            margin-right: 20px
+
+    .b-product-slider-wrapper
+        padding-bottom: 40px
 
 @media screen and (max-width: 768px)
+    .b-reviews-slider
+        padding: 0 10px 30px
+        margin-bottom: 10px
+
+    .b-m-grid
+        margin-bottom: 20px
+
+    .b-index-filter
+        padding: 0 0 20px
+
+    .b-index-filter__select-item
+        margin-right: 5px
+
+    .b-index-filter__section
+        width: 100%
+        &:first-child
+            margin-bottom: 15px
+            margin-right: 0
+            padding-right: 0
+            border-right: none
+            border-bottom: 1px dotted #a1a1a1
+
+    .b-sidebar-filter__desctop-content
+        display: none
+
+    .b-sidebar-filter__mobile-content
+        display: block
+
+    .b-sidebar-filter
+        top: 0 !important
+        width: 100%
+        padding: 0
+
+    .b-catalog-units__item
+        width: 50%
+        margin-bottom: 20px
+        padding: 0 10px
+
+    .b-product-item__preview
+        margin-bottom: 10px
+        height: 140px
+        line-height: 140px
+
+    .b-product-slider.browsing
+        .b-fade-slider__slide
+            line-height: 140px
+        .b-fade-slider
+            height: 140px
+
+    .b-catalog-header__search-selection
+        display: none
+
+    .b-catalog-header__open
+        width: auto
+
+    .b-catalog-body-header
+        display: none
+
+    .b-catalog-m-content
+        padding-bottom: 45px
+        padding-top: 25px
+
+    .btn
+        &.lh40
+            width: 300px
+
+    .b-similar__item
+        padding: 30px 10px
+
+    .b-similar__item-title
+        font-size: 16px
+        margin-bottom: 15px
+
+    .b-similar-units
+        padding-bottom: 25px
+        text-align: center
+
+    .b-similar-units__item
+        margin-right: 0
+        height: 60px
+        width: 60px
+        line-height: 60px
+
     .b-best-collection__btn-wrapper
         margin-top: 15px
     .owl-carousel
@@ -2924,6 +3139,8 @@ a.tdu
             background: #d2d2d2
             &.active
                 background: #f2641a
+        .owl-nav
+            display: none
 
 
     .b-best-collection__item__text
@@ -2973,7 +3190,6 @@ a.tdu
     .b-section-wrapper
         padding: 20px 0 !important
 
-
     .mobile-grid-slider
         padding-bottom: 18px
 
@@ -3011,9 +3227,6 @@ a.tdu
         opacity: 0
         z-index: 50
 
-    .b-filter-select
-        margin: 0 4px
-
     .b-filter-select__name
         font-size: 15px
 
@@ -3030,11 +3243,6 @@ a.tdu
         display: block
         &.mr50
             margin-right: 0
-
-    .b-filter-btn-wrapper
-        margin-top: 15px
-        .btn
-            width: 300px
 
     .b-site-header__mobile-section
         display: block
@@ -3064,39 +3272,26 @@ a.tdu
         padding: 20px 0 40px
     .b-reviews__title
         font-size: 20px
+
     .b-reviews-slider__item__descr
         font-size: 13px
-    .b-reviews-slider
-        padding: 0
-        margin-bottom: 15px
-        .owl-next, .owl-prev
-            display: none !important
-        .owl-dots
-            margin-top: 15px
-            text-align: center
 
-        .owl-dot
-            width: 8px
-            height: 8px
-            border-radius: 50%
-            margin: 0 5px
-            display: inline-block
-            background: #d2d2d2
-            +trans
-            &.active
-                background: #f2641a
     .b-container
         padding: 0 10px
+
     .b-subscribe__title
         font-size: 17px
+
     .b-subscribe-wrapper
         background-image: url(../img/subscribe__mobile-bg.jpg)
-    .b-subscribe-form__input, .b-subscribe-form__button
-        display: block
-        width: 100%
-        margin-bottom: 10px
-        &:last-child
-            margin-bottom: 0
+
+    .b-subscribe-form
+        .b-subscribe-form__input, .b-subscribe-form__button
+            display: block
+            width: 100%
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
 
     .b-main-slider__item-title
         font-size: 20px
@@ -3134,10 +3329,6 @@ a.tdu
         &:before
             bottom: 0
 
-    .b-product-slider.browsing
-        .b-product-item
-            .b-product-item__descr
-                padding-bottom: 0
 
     .b-product-item__price
         font-size: 18px
@@ -3149,8 +3340,10 @@ a.tdu
     .b-footer__contacts
         float: none
         text-align: center
+
     .b-soc-list
         display: inline-block
+
     .b-m-grid__item__title
         font-size: 14px
         margin-bottom: 0
