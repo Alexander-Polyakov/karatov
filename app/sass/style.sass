@@ -1957,6 +1957,7 @@ a.tdu
     height: 100%
     width: 100%
     cursor: crosshair
+    background: #fff
     img
         position: absolute
         left: 50%
@@ -2076,12 +2077,6 @@ a.tdu
     font-family: $cl
     display: none
     line-height: 1.2em
-    &.pos_r
-        left: auto
-        margin-left: 0px
-        right: -10px
-        &:before , &:after
-            display: none
     &:before
         content: ""
         position: absolute
@@ -2096,6 +2091,28 @@ a.tdu
         left: 50%
         margin-left: -6px
         +arr(12, 6, #fff, b)
+
+    &.left
+        left: 0
+        margin-left: 0
+        &:before
+            margin-left: 0
+            left: 20px
+        &:after
+            margin-left: 0
+            left: 21px
+    &.right
+        right: 0
+        left: auto
+        margin-left: 0
+        &:before
+            margin-left: 0
+            left: auto
+            right: 20px
+        &:after
+            margin-left: 0
+            left: auto
+            right: 21px
 
 
 .b-catalog-header__open
@@ -3156,30 +3173,6 @@ a.tdu
         padding-bottom: 40px
 
 @media screen and (max-width: 768px)
-    .b-clarification__popup
-        &.mobile-left
-            left: 0
-            margin-left: 0
-            &:before
-                margin-left: 0
-                left: 20px
-            &:after
-                margin-left: 0
-                left: 21px
-        &.mobile-right
-            right: 0
-            left: auto
-            margin-left: 0
-            &:before
-                margin-left: 0
-                left: auto
-                right: 20px
-            &:after
-                margin-left: 0
-                left: auto
-                right: 21px
-
-
     .b-similar-categories__left
         float: none
         margin-bottom: 15px
