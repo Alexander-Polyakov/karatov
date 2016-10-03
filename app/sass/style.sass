@@ -1118,12 +1118,12 @@ a.tdu
 
 .b-for-whom__item-input
     + .b-for-whom__item
-        text-decoration: underline
         color: #f2641a
+        text-decoration: none
+
     &:checked
         + .b-for-whom__item
             color: #090509
-            text-decoration: none
 
 .b-filter-select__name
     cursor: pointer
@@ -2751,12 +2751,12 @@ a.tdu
     cursor: pointer
     &:checked +
         .b-search-selection__item-text
-            color: #333
-            border-color: #333
+            color: #f58146
+            border-bottom: 1px dotted #f58146
 
 .b-search-selection__item-text
-    color: #f58146
-    border-bottom: 1px dotted #f58146
+    color: #333
+    border-color: transparent
     line-height: 1em
     font-size: 17px
     +trans()
