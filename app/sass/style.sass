@@ -1628,9 +1628,11 @@ a.tdu
     display: inline-block
     vertical-align: top
     padding-right: 10px
-    width: 20%
+    width: 25%
     &:last-child
         margin-right: 0
+        width: auto
+        padding-right: 0
 
 
 .b-search
@@ -3055,7 +3057,7 @@ a.tdu
         &.tab-visible
             margin-top: 30px
 
-    .b-footer-nav
+    .b-footer-nav:nth-child(n)
         width: 48%
         margin-bottom: 20px
 
@@ -3303,7 +3305,11 @@ a.tdu
 
     .btn
         &.lh40
+            max-width: 100%
             width: 300px
+            box-sizing: border-box
+            margin-left: 0
+            margin-right: 0
 
     .b-similar__item
         padding: 30px 10px
