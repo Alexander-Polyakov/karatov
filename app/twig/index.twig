@@ -71,7 +71,7 @@
 {% endblock %}
 
 {% block feedbacks %}
-    {% include "widgets/feedbacks.twig" %}
+    {% include "widgets/feedbacks.twig" with {wrapper_class: "index-reviews"} %}
 {% endblock %}
 
 {% block seoText %}

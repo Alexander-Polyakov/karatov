@@ -298,7 +298,8 @@ $(document).ready(function () {
     function init_mobile_slider() {
         var grid_slider = $('.mobile-grid-slider'),
             best_collection =  $(".b-best-collection__units"),
-            similar = $(".b-similar-units");
+            similar = $(".b-similar-units"),
+            set_slider =  $(".b-set-products");
 
 
         if (doc.outerWidth() <= 769) {
@@ -328,6 +329,14 @@ $(document).ready(function () {
                 margin: 30
             });
 
+            set_slider.owlCarousel({
+                items: 2,
+                loop: false,
+                nav: false,
+                dots: true,
+                mouseDrag: true,
+            });
+
 
         } else {
             grid_slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
@@ -338,6 +347,9 @@ $(document).ready(function () {
 
             similar.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
             similar.find('.owl-stage-outer').children().unwrap();
+
+            set_slider.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+            set_slider.find('.owl-stage-outer').children().unwrap();
         }
     }
 
