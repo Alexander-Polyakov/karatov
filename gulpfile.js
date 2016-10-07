@@ -85,6 +85,7 @@ gulp.task('twig', function () {
 /* COMPASS ------------------------------------------------------------------ */
 gulp.task('compass', function () {
     gulp.src(sources.sass.watch)
+        .pipe(plumber())
         .pipe(compass({
             sass: sources.sass.dist,
             css: sources.css.dist,

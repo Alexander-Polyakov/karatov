@@ -97,6 +97,11 @@ body
         vertical-align: middle
         width: 100%
 
+.title26px
+    font-family: $cl
+    font-size: 26px
+    line-height: 1.2em
+
 .ml10
     margin-left: 10px
 
@@ -614,6 +619,8 @@ a.tdu
     &.lh40
         line-height: 40px
         padding: 0 33px
+    &.lh50
+        line-height: 50px
     &.lh66
         line-height: 66px
         padding: 0
@@ -1510,7 +1517,7 @@ a.tdu
         z-index: 0
 
 .b-reviews-slider
-    padding: 0 40px
+    padding: 0 60px
     margin-bottom: 30px
 
 .b-product-slider
@@ -1652,6 +1659,34 @@ a.tdu
             left: 0
             border-radius: 5px
 
+.input-popup
+    font-size: 17px
+    width: 100%
+    font-family: $cl
+    +phc(#666)
+    color: #666
+    border: 1px solid #e1e0e0
+    padding: 0 13px
+    &.lh50
+        line-height: 50px
+    &.region-input
+        padding: 0 60px
+
+.textarea-popup
+    font-size: 17px
+    width: 100%
+    font-family: $cl
+    +phc(#666)
+    color: #666
+    border: 1px solid #e1e0e0
+    padding: 13px
+    resize: none
+    &.h120
+        height: 120px
+    &.h90
+        height: 90px
+
+
 .b-search__input
     width: 100%
     height: 34px
@@ -1669,6 +1704,8 @@ a.tdu
     outline: none
     border: none
     background-color: transparent
+    &.r15
+        right: 15px
 
 .b-section-wrapper
     &.pb60
@@ -2123,6 +2160,7 @@ a.tdu
     cursor: pointer
     z-index: 150 !important
     text-align: left
+    background: #fff
     .jq-selectbox__select-text
         width: auto !important
     .jq-selectbox__select
@@ -2150,7 +2188,6 @@ a.tdu
         color: #111111
         background: #fff
         max-height: 500px
-        line-height: 40px
         line-height: 1.2em
         li
             padding: 12px 15px
@@ -2160,6 +2197,7 @@ a.tdu
             &:hover
                 background: #f7f7f7
     &.opened
+        z-index: 160 !important
         .jq-selectbox__select-text
             color: #f37136
         .jq-selectbox__select
@@ -2169,6 +2207,12 @@ a.tdu
     &.lh44
         .jq-selectbox__select
             line-height: 44px
+    &.lh50
+        .jq-selectbox__select
+            line-height: 50px
+        .jq-selectbox__dropdown
+            li
+                padding: 16px 15px
     &.w270
         width: 270px
     &.border-gray
@@ -2873,16 +2917,31 @@ a.tdu
     -moz-transform: translateX(-50%)
     -o-transform: translateX(-50%)
     +trans()
-    z-index: 200
+    z-index: 100
     opacity: 0
     &.w730
-        max-width: 730px
+        width: 730px
+    &.w640
+        width: 640px
     &.w520
-        max-width: 520px
+        width: 520px
+    &.w500
+        width: 500px
+    &.w800
+        width: 800px
     &.active
         top: 135px
         opacity: 1
-
+        z-index: 250
+    .draw-bg-left__content
+        width: 330px
+        float: right
+    &.draw-bg-left
+        padding: 75px 40px
+        background: url('../img/draw-bg1.png') no-repeat -15px top, #f8f9fe
+    &.draw-bg-top
+        padding: 375px 40px 40px
+        background: url('../img/draw-bg1.png') no-repeat left top, #f8f9fe
 
 .b-site-overlay
     position: absolute
@@ -2928,11 +2987,15 @@ a.tdu
     color: #000
     font-family: $cl
     text-transform: uppercase
+    line-height: 1.2em
 
 .b-popup__content
     padding: 45px 60px
+    color: #666
     &.pt20
         padding-top: 20px
+    &.p0
+        padding: 0
 
 .b-text
     font-family: $cl
@@ -2957,6 +3020,66 @@ a.tdu
 .b-popup__header
     padding: 25px 0
     border-bottom: 1px solid #e1e0e0
+
+
+.b-flag-select
+    width: 24px
+    height: 16px
+    border: 1px solid #e1e1e1
+    position: relative
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        width: 6px
+        height: 6px
+        border-right: 1px solid #787878
+        border-bottom: 1px solid #787878
+        left: -15px
+        top: 50%
+        margin-top: -3px
+        +rotate(45)
+    &.open
+        .b-flag-select__content
+            display: block
+
+
+.b-flag-select__selected
+    position: relative
+    font-size: 0
+    overflow: hidden
+    img
+        width: 100%
+
+.b-phone-region
+    position: relative
+    .b-flag-select
+        position: absolute
+        left: 25px
+        top: 50%
+        margin-top: -8px
+        z-index: 10
+    .b-clarification
+        right: 10px
+        top: 50%
+        margin-top: -11px
+        position: absolute
+
+.b-flag-select__content
+    display: none
+    border: 1px solid #e1e1e1
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    margin-top: 2px
+    background: #fff
+    font-size: 0
+
+.b-flag-select__item
+    margin-bottom: 2px
+    img
+        width: 100%
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)

@@ -9,8 +9,12 @@ $(document).ready(function () {
         $(".filter-radio").styler();
     }
 
-    if ($(".select").length > 0) {
-        $(".select").styler();
+    if ($("select").length > 0) {
+        $("select").styler();
+    }
+
+    if($('.inputmask').length > 0) {
+        $('.inputmask').mask("+7 (999) 999-99-99");
     }
 
     if ($(".b-selects-list__item__select").length > 0) {
@@ -32,6 +36,21 @@ $(document).ready(function () {
         }
     });
 
+    doc.on('click', '.b-flag-select__selected', function (e) {
+        $(this).closest(".b-flag-select").toggleClass("open");
+    });
+
+    doc.on('click', '.b-flag-select__item', function (e) {
+        var img_src = $(this).find("img").attr("src"),
+            region_wrapper = $(this).closest(".b-phone-region");
+        $(this).closest(".b-flag-select").toggleClass("open");
+        $(this).closest(".b-flag-select").find(".b-flag-select__selected img").attr("src", img_src);
+
+        if (region_wrapper.length) {
+            var data_mask =  $(this).data("mask");
+            region_wrapper.find(".region-input").mask(data_mask).attr("placeholder", data_mask);
+        }
+    });
 
     doc.on('click', '[data-tab]', function (e) {
         var this_data = $(this).data("tab"),

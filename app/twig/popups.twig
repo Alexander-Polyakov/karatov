@@ -8,10 +8,23 @@
         <div class="b-container">
             <div class="b-popups-opening">
                 <div class="b-popups-opening__item" data-open-popup="test">Тестовый попап</div>
-                <div class="b-popups-opening__item" data-open-popup="recall">Отзыв 1</div>
-                <div class="b-popups-opening__item" data-open-popup="1"></div>
-                <div class="b-popups-opening__item" data-open-popup="1"></div>
-                <div class="b-popups-opening__item" data-open-popup="1"></div>
+                <div class="b-popups-opening__item" data-open-popup="review">Отзыв отправлен</div>
+                <div class="b-popups-opening__item" data-open-popup="review2">Оставить отзыв</div>
+                <div class="b-popups-opening__item" data-open-popup="feedback">Обратный звонок</div>
+                <div class="b-popups-opening__item" data-open-popup="select_size">Как выбрать размер?</div>
+                <div class="b-popups-opening__item" data-open-popup="application_submitted">
+                    заявка отправлена
+                </div>
+                <div class="b-popups-opening__item" data-open-popup="draw">
+                    Розыгрыш 1
+                </div>
+
+                <div class="b-popups-opening__item" data-open-popup="draw2">Розыгрыш 2</div>
+
+                <div class="b-popups-opening__item" data-open-popup="search">Поиск</div>
+
+                <div class="b-popups-opening__item" data-open-popup="personal_data">личные данные</div>
+
             </div>
         </div>
     </div>
@@ -19,8 +32,9 @@
 
     <div class="b-popups-wrapper">
         <div class="b-site-overlay" data-close="popups"></div>
+
         <div class="b-popup w730" data-popup="test">
-            <i class="b-popup__close"></i>
+            <i class="b-popup__close" data-close="popups"></i>
             <div class="b-popup__header">
                 <p class="b-popup__title">Текст</p>
             </div>
@@ -33,17 +47,231 @@
                 </div>
             </div>
         </div>
-        <div class="b-popup w520" data-popup="recall">
+
+        <div class="b-popup w520" data-popup="review">
             <i class="b-popup__close" data-close="popups"></i>
             <div class="b-popup__header">
                 <p class="b-popup__title">Отзыв отправлен</p>
             </div>
             <div class="b-popup__content pt20 tac">
-                <div class="b-text check70px">
+                <div class="b-text check70px mb20">
                     <p>Поздравляем, ваш отзыв отправлен. <br> После модерации мы выложим ваш отзыв на наш сайт.
                     </p>
                 </div>
+                <p>
+                    <a class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Продолжить покупки</a>
+                </p>
             </div>
+        </div>
+
+        <div class="b-popup w520" data-popup="review2">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Оставить отзыв</p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="mb20">
+                    <input placeholder="Ваше имя" class="input-popup lh50" type="text">
+                </div>
+                <div class="mb20">
+                    <input placeholder="Ваше e-mail" class="input-popup lh50" type="text">
+                </div>
+                <div class="mb20">
+                    <textarea placeholder="Отзыв" class="textarea-popup h120"></textarea>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Добавить отзыв</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="b-popup w520" data-popup="feedback">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">обратный звонок</p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="mb20 b-phone-region">
+                    <div class="b-flag-select">
+                        <div class="b-flag-select__selected">
+                            <img src="img/region-flag1.jpg" alt="">
+                        </div>
+                        <ul class="b-flag-select__content">
+                            <li class="b-flag-select__item" data-mask="+6 (___) ___-__-__">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+9 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+6 (999) 999-99-99">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+5 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <input placeholder="+7 (___) ___-__-__" class="input-popup lh50 inputmask region-input" type="text">
+                    <div class="b-clarification">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div class="mb20">
+                    <textarea placeholder="Комментарий" class="textarea-popup h90"></textarea>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">перезвонить мне</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="b-popup w520" data-popup="select_size">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Как выбрать размер?</p>
+            </div>
+            <form class="b-popup__content pt20">
+                <div class="b-text mb20">
+                    <p>Измерьте размер окружности кольца и размер окружности пальца для получения результата
+                    </p>
+                </div>
+                <div class="mb20">
+                    <select class="select border-gray lh50 full_w">
+                        <option>Измерьте окружность кольца (мм)</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                    </select>
+                </div>
+                <div class="mb20">
+                    <select class="select border-gray lh50 full_w">
+                        <option>Измерьте окружность пальца (мм)</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                    </select>
+                </div>
+                <p class="mb20 tac">Ваш результат: 15</p>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">продолжить</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="b-popup w520" data-popup="application_submitted">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">заявка отправлена</p>
+            </div>
+            <div class="b-popup__content pt20 tac">
+                <div class="b-text check70px mb20">
+                    <p>Поздравляем, ваш отзыв отправлен. <br> После модерации мы выложим ваш отзыв на наш сайт.
+                    </p>
+                </div>
+                <p>
+                    <a class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Продолжить покупки</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="b-popup w800 draw-bg-left" data-popup="draw">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="draw-bg-left__content">
+                <p class="title26px tac mb20">Розыгрыш для подписчиков
+                    Каратов</p>
+                <form class="b-popup__content p0">
+                    <div class="mb20">
+                        <input placeholder="Имя" class="input-popup lh50" type="text">
+                    </div>
+                    <div class="mb20">
+                        <input placeholder="Email" class="input-popup lh50" type="text">
+                    </div>
+                    <div>
+                        <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Продолжить покупки</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="b-popup w500 draw-bg-top" data-popup="draw2">
+            <i class="b-popup__close" data-close="popups"></i>
+            <p class="title26px tac mb20">Розыгрыш для подписчиков
+                Каратов</p>
+            <form class="b-popup__content p0">
+                <div class="mb20">
+                    <input placeholder="Имя" class="input-popup lh50" type="text">
+                </div>
+                <div class="mb20">
+                    <input placeholder="Email" class="input-popup lh50" type="text">
+                </div>
+                <div class="mb20">
+                    <input placeholder="Телефон" class="input-popup lh50" type="text">
+                </div>
+                <div class="mb20">
+                    <select class="select border-gray lh50 full_w">
+                        <option>Дата рождения</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">получить подарок</button>
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="b-popup w640" data-popup="search">
+            <i class="b-popup__close" data-close="popups"></i>
+            <form class="rel">
+                <input class="input-popup lh50" type="text" placeholder="Поиск по сайту">
+                <button class="b-search__submit r15"></button>
+            </form>
+
+        </div>
+
+        <div class="b-popup w520" data-popup="personal_data">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Укажите личные <br>
+                    данные и получите <br>
+                    персональную скидку
+                </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="mb20 b-phone-region">
+                    <div class="b-flag-select">
+                        <div class="b-flag-select__selected">
+                            <img src="img/region-flag1.jpg" alt="">
+                        </div>
+                        <ul class="b-flag-select__content">
+                            <li class="b-flag-select__item" data-mask="+6 (___) ___-__-__">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+9 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+6 (999) 999-99-99">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+5 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <input placeholder="+7 (___) ___-__-__" class="input-popup lh50 inputmask region-input" type="text">
+                    <div class="b-clarification">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Зарегистрироваться</button>
+                </div>
+            </form>
         </div>
     </div>
 
