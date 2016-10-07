@@ -368,9 +368,7 @@ $(document).ready(function () {
         } else if ($(".b-header-teaser").hasClass("hidden_el")) {
             $(".header-orange-sep").addClass("sep-fix");
         }
-
-
-    };
+    }
 
     function increase_hover(percent_h, persent_w, offset) {
 
