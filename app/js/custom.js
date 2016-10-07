@@ -36,7 +36,6 @@ $(document).ready(function () {
     doc.on('click', '[data-tab]', function (e) {
         var this_data = $(this).data("tab"),
             this_block = $(this).closest(".tabs-wrapper");
-
         if ((doc.outerWidth() <= 768) && ($(this).hasClass("active"))) {
             $(this).closest(".b-sliders-tabs__nav").addClass("selection");
 
@@ -388,5 +387,17 @@ $(document).ready(function () {
         });
     }
 
+
+    doc.on('click', '[data-open-popup]', function () {
+        var popup = $(this).data("open-popup");
+
+        doc.find(".b-popups-wrapper").fadeIn(400);
+        doc.find("[data-popup="+popup+"]").addClass("active");
+    });
+
+    doc.on('click', '[data-close="popups"]', function () {
+        doc.find(".b-popups-wrapper").fadeOut(400);
+        doc.find("[data-popup]").removeClass("active");
+    });
 
 });

@@ -1,0 +1,51 @@
+{% extends "layouts/main.twig" %}
+{% block pageTitle %} popups {% endblock %}
+
+
+{% block pageContent %}
+
+    <div class="b-section-wrapper">
+        <div class="b-container">
+            <div class="b-popups-opening">
+                <div class="b-popups-opening__item" data-open-popup="test">Тестовый попап</div>
+                <div class="b-popups-opening__item" data-open-popup="recall">Отзыв 1</div>
+                <div class="b-popups-opening__item" data-open-popup="1"></div>
+                <div class="b-popups-opening__item" data-open-popup="1"></div>
+                <div class="b-popups-opening__item" data-open-popup="1"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="b-popups-wrapper">
+        <div class="b-site-overlay" data-close="popups"></div>
+        <div class="b-popup w730" data-popup="test">
+            <i class="b-popup__close"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Текст</p>
+            </div>
+            <div class="b-popup__content">
+                <div class="b-text h390">
+                    <p>Магазин ювелирных украшений КАРАТОВ.ру – настоящий гипермаркет изделий, где каждый сможет найти для себя подходящее украшение. Широчайший выбор, разнообразие дизайна и доступные цены — то, что мы предлагаем каждому нашему клиенту. Большой ассортимент женских, мужских и детских ювелирных изделий из золота выгодно выделяет магазин ювелирных украшений KARATOV. В каталоге представлено более 40 тысяч ювелирных изделий, выполненных в различных стилистических решениях – от классика до авангарда.
+                    </p>
+                    <p>Высочайшее качество украшений, которые предлагает магазин золотых изделий KARATOV, подтверждено авторитетом крупнейших российских производителей, входящих в число лидеров отрасли, с которыми мы сотрудничаем напрямую. Большой ассортимент женских, мужских и детских ювелирных изделий из золота выгодно выделяет магазин ювелирных украшений KARATOV. В каталоге представлено более 40 тысяч ювелирных изделий, выполненных в различных стилистических решениях – от классика до авангарда. Высочайшее качество
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="b-popup w520" data-popup="recall">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Отзыв отправлен</p>
+            </div>
+            <div class="b-popup__content pt20 tac">
+                <div class="b-text check70px">
+                    <p>Поздравляем, ваш отзыв отправлен. <br> После модерации мы выложим ваш отзыв на наш сайт.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
