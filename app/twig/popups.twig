@@ -15,15 +15,25 @@
                 <div class="b-popups-opening__item" data-open-popup="application_submitted">
                     заявка отправлена
                 </div>
-                <div class="b-popups-opening__item" data-open-popup="draw">
-                    Розыгрыш 1
-                </div>
+                <div class="b-popups-opening__item" data-open-popup="draw">Розыгрыш 1 </div>
 
                 <div class="b-popups-opening__item" data-open-popup="draw2">Розыгрыш 2</div>
 
                 <div class="b-popups-opening__item" data-open-popup="search">Поиск</div>
 
                 <div class="b-popups-opening__item" data-open-popup="personal_data">личные данные</div>
+                <div class="b-popups-opening__item" data-open-popup="registration">Зарегистрироваться</div>
+
+                <div class="b-popups-opening__item" data-open-popup="login">Войти</div>
+
+                <div class="b-popups-opening__item" data-open-popup="login2">Войти 2</div>
+
+                <div class="b-popups-opening__item" data-open-popup="login3">Войти ошибка</div>
+
+
+                <div class="b-popups-opening__item" data-open-popup="login4">Войти об. состояние</div>
+
+                <div class="b-popups-opening__item" data-open-popup="select_city">Выбрать город</div>
 
             </div>
         </div>
@@ -128,35 +138,37 @@
 
         <div class="b-popup w520" data-popup="select_size">
             <i class="b-popup__close" data-close="popups"></i>
-            <div class="b-popup__header">
-                <p class="b-popup__title">Как выбрать размер?</p>
+            <div class="ova">
+                <div class="b-popup__header">
+                    <p class="b-popup__title">Как выбрать размер?</p>
+                </div>
+                <form class="b-popup__content pt20">
+                    <div class="b-text mb20">
+                        <p>Измерьте размер окружности кольца и размер окружности пальца для получения результата
+                        </p>
+                    </div>
+                    <div class="mb20">
+                        <select class="select border-gray lh50 full_w">
+                            <option>Измерьте окружность кольца (мм)</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                        </select>
+                    </div>
+                    <div class="mb20">
+                        <select class="select border-gray lh50 full_w">
+                            <option>Измерьте окружность пальца (мм)</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                        </select>
+                    </div>
+                    <p class="mb20 tac">Ваш результат: 15</p>
+                    <div>
+                        <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">продолжить</button>
+                    </div>
+                </form>
             </div>
-            <form class="b-popup__content pt20">
-                <div class="b-text mb20">
-                    <p>Измерьте размер окружности кольца и размер окружности пальца для получения результата
-                    </p>
-                </div>
-                <div class="mb20">
-                    <select class="select border-gray lh50 full_w">
-                        <option>Измерьте окружность кольца (мм)</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                    </select>
-                </div>
-                <div class="mb20">
-                    <select class="select border-gray lh50 full_w">
-                        <option>Измерьте окружность пальца (мм)</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                    </select>
-                </div>
-                <p class="mb20 tac">Ваш результат: 15</p>
-                <div>
-                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">продолжить</button>
-                </div>
-            </form>
         </div>
 
         <div class="b-popup w520" data-popup="application_submitted">
@@ -273,6 +285,430 @@
                 </div>
             </form>
         </div>
+
+
+        <div class="b-popup w520" data-popup="registration">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Зарегистрироваться </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="b-popup-soc clearfix mb20">
+                    <p class="b-popup-soc__title f_l">Через социальную сеть:</p>
+                    <ul class="b-soc-login f_r">
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link vk"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link odn"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link fb"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-or-sep tac mb20">
+                    <span class="b-or-sep__text">или</span>
+                </div>
+                <div class="mb20 rel">
+                    <input placeholder="Email" class="input-popup lh50 error" type="text">
+                    <div class="b-clarification abs_input">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div class="mb20 b-phone-region">
+                    <div class="b-flag-select">
+                        <div class="b-flag-select__selected">
+                            <img src="img/region-flag1.jpg" alt="">
+                        </div>
+                        <ul class="b-flag-select__content">
+                            <li class="b-flag-select__item" data-mask="+6 (___) ___-__-__">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+9 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+6 (999) 999-99-99">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </li>
+                            <li class="b-flag-select__item" data-mask="+5 (999) 999-99-99">
+                                <img src="img/region-flag2.jpg" alt="">
+                            </li>
+
+                        </ul>
+                    </div>
+                    <input placeholder="+7 (___) ___-__-__" class="input-popup lh50 inputmask region-input success" type="text">
+                    <div class="b-clarification abs_input">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div class="mb20 rel">
+                    <input placeholder="ФИО" class="input-popup lh50" type="text">
+                    <div class="b-clarification abs_input">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="b-popup w520" data-popup="login">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Войти </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="b-popup-soc clearfix mb20">
+                    <p class="b-popup-soc__title f_l">Через социальную сеть:</p>
+                    <ul class="b-soc-login f_r">
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link vk"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link odn"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link fb"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-or-sep tac mb35">
+                    <span class="b-or-sep__text">или</span>
+                </div>
+                <div class="mb20 rel">
+                    <input placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                    <div class="b-clarification abs_input">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div class="mb20 rel clearfix lh50">
+                    <input placeholder="Пароль" class="input-popup lh50 w50p f_l" type="text">
+                    <a href="" class="fz15 color-yellow f_r">Напомнить пароль по СМС</a>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Войти</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div class="b-popup w520" data-popup="login2">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Войти </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="b-popup-soc clearfix mb20">
+                    <p class="b-popup-soc__title f_l">Через социальную сеть:</p>
+                    <ul class="b-soc-login f_r">
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link vk"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link odn"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link fb"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-or-sep tac mb35">
+                    <span class="b-or-sep__text">или</span>
+                </div>
+                <div class="mb20 rel">
+                    <input placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                    <div class="b-clarification abs_input">
+                        <span class="b-clarification__icon"></span>
+                        <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                    </div>
+                </div>
+                <div class="mb20">
+                    <p class="ff_cl fz13 color-gray tal mb5">Вы зарегистрированный пользователь, пожалуйста авторизуйтесь</p>
+                    <div class="lh50 clearfix rel">
+                        <input placeholder="Пароль" class="input-popup lh50 w50p f_l" type="text">
+                        <a href="" class="fz15 color-yellow f_r">Напомнить пароль по СМС</a>
+                    </div>
+
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Войти</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="b-popup w520" data-popup="login3">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Войти </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="b-popup-soc clearfix mb20">
+                    <p class="b-popup-soc__title f_l">Через социальную сеть:</p>
+                    <ul class="b-soc-login f_r">
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link vk"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link odn"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link fb"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-or-sep tac mb35">
+                    <span class="b-or-sep__text">или</span>
+                </div>
+                <div class="mb20">
+                    <div class="rel mb5">
+                        <input placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                        <div class="b-clarification abs_input">
+                            <span class="b-clarification__icon"></span>
+                            <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                        </div>
+                    </div>
+                    <p class="ff_cl fz13 color-yellow tal">Email введен не корректно</p>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Войти</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="b-popup w520" data-popup="login4">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Войти </p>
+            </div>
+            <form class="b-popup__content pt20 tac">
+                <div class="b-popup-soc clearfix mb20">
+                    <p class="b-popup-soc__title f_l">Через социальную сеть:</p>
+                    <ul class="b-soc-login f_r">
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link vk"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link odn"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link fb"></a>
+                        </li>
+                        <li class="b-soc-login__item">
+                            <a href="#" class="b-soc-login__link google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-or-sep tac mb35">
+                    <span class="b-or-sep__text">или</span>
+                </div>
+                <div class="mb20">
+                    <div class="rel mb5">
+                        <input placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                        <div class="b-clarification abs_input">
+                            <span class="b-clarification__icon"></span>
+                            <span class="b-clarification__popup bottom w260 right">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Войти</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="b-popup w700" data-popup="select_city">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">выбрать город </p>
+            </div>
+            <div class="b-popup__content pt20">
+                <div class="b-select-region">
+                    <ul class="b-country-list mb20">
+                        <li class="b-country-list__item active">Россия</li>
+                        <li class="b-country-list__item">Казахстан</li>
+                    </ul>
+                    <div class="mb15">
+                        <div class="b-selected-city">Кострома</div>
+                    </div>
+                    <div class="mb20">
+                        <div class="b-search-region rel mb5">
+                            <input id="search-region" placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                            <div class="b-clarification abs_input">
+                                <span class="b-clarification__icon"></span>
+                                <span class="b-clarification__popup bottom w260 right">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
+                            </div>
+                        </div>
+                        <p class="ff_cl fz13 color-gray tal">Например Москва или Санкт-Петербург</p>
+                    </div>
+                    <div class="b-result-search-city clearfix">
+                        <div class="b-result-region">
+                            <p class="fz20 ff_cl mb10 color-gray">Регион</p>
+                            <div class="b-scroll-result h320">
+                                <ul class="b-st-list">
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                    <li class="b-st-list__item">
+                                        <p class="b-st-list__text">Архангельская область</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="b-result-city">
+                            <p class="fz20 ff_cl mb10 color-gray">Населенный пункт</p>
+                            <div class="b-scroll-result h320">
+                                <div class="b-city-list clearfix">
+                                    <ul class="b-city-list__section">
+                                        <li class="b-city-list__item">
+                                            <span class="b-city-list__item__letter">К</span>
+                                            <ul class="b-st-list">
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="b-city-list__item">
+                                            <span class="b-city-list__item__letter">К</span>
+                                            <ul class="b-st-list">
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="b-city-list__section">
+                                        <li class="b-city-list__item">
+                                            <span class="b-city-list__item__letter">К</span>
+                                            <ul class="b-st-list">
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="b-city-list__item">
+                                            <span class="b-city-list__item__letter">К</span>
+                                            <ul class="b-st-list">
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                                <li class="b-st-list__item">
+                                                    <p class="b-st-list__text">Кострома</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 {% endblock %}

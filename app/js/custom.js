@@ -22,6 +22,21 @@ $(document).ready(function () {
     }
 
 
+    var options = {
+        url: "json/region.json",
+        getValue: "city_name",
+
+        template: {
+            type: "description",
+            fields: {
+                description: "region_name"
+            }
+        }
+
+    };
+
+    $("#search-region").easyAutocomplete(options);
+
 
     doc.on('click', '.b-search__submit', function (e) {
         var value_input = $(this).closest(".b-search").find(".b-search__input").val(),
@@ -406,10 +421,21 @@ $(document).ready(function () {
 
 
     doc.on('click', '[data-open-popup]', function () {
-        var popup = $(this).data("open-popup");
-
         doc.find(".b-popups-wrapper").fadeIn(400);
-        doc.find("[data-popup="+popup+"]").addClass("active");
+
+        var data_val = $(this).data("open-popup"),
+            need_popup = doc.find("[data-popup="+data_val+"]"),
+            popup_height = need_popup.outerHeight();
+
+        doc.find(".b-site-overlay").css("height", popup_height + 235);
+        need_popup.addClass("active");
+
+        setTimeout(function(){
+            if ($(".b-scroll-result").length) {
+                $(".b-scroll-result").jScrollPane();
+            }
+        },500);
+
     });
 
     doc.on('click', '[data-close="popups"]', function () {

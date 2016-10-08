@@ -63,6 +63,9 @@ body
 .lh30
     line-height: 30px
 
+.lh50
+    line-height: 50px
+
 .lh1-2em
     line-height: 1.2em
 
@@ -96,6 +99,12 @@ body
         display: inline-block
         vertical-align: middle
         width: 100%
+
+.color-yellow
+    color: #f05007
+
+.color-gray
+    color: #999
 
 .title26px
     font-family: $cl
@@ -1667,10 +1676,17 @@ a.tdu
     color: #666
     border: 1px solid #e1e0e0
     padding: 0 13px
+    cursor: pointer
     &.lh50
         line-height: 50px
     &.region-input
         padding: 0 60px
+    &.error
+        border-color: #f05007
+    &.success
+        border-color: #94d57b
+    &.w50p
+        width: 50%
 
 .textarea-popup
     font-size: 17px
@@ -1804,6 +1820,38 @@ a.tdu
         +sprite(soc-icon4)
         &:hover
             +sprite(soc-icon4-hover)
+
+.b-popup-soc
+    line-height: 30px
+
+.b-popup-soc__title
+    color: #111
+    font-size: 17px
+    font-family: $cl
+
+.b-soc-login
+    font-size: 0
+
+.b-soc-login__item
+    display: inline-block
+    vertical-align: middle
+    margin-right: 4px
+    line-height: 0
+    &:last-child
+        margin-right: 0
+
+
+.b-soc-login__link
+    &.vk
+        +sprite(soc-login-vk)
+    &.odn
+        +sprite(soc-login-odn)
+    &.fb
+        +sprite(soc-login-fb)
+    &.google
+        +sprite(soc-login-google)
+
+
 
 .up-site-btn
     cursor: pointer
@@ -2075,6 +2123,11 @@ a.tdu
     position: relative
     width: 23px
     height: 23px
+    &.abs_input
+        right: 10px
+        top: 50%
+        margin-top: -11px
+        position: absolute
     &:hover
         .b-clarification__popup
             display: block
@@ -2128,7 +2181,6 @@ a.tdu
         left: 50%
         margin-left: -6px
         +arr(12, 6, #fff, b)
-
     &.left
         left: 0
         margin-left: 0
@@ -2139,7 +2191,7 @@ a.tdu
             margin-left: 0
             left: 21px
     &.right
-        right: 0
+        right: -15px
         left: auto
         margin-left: 0
         &:before
@@ -2150,6 +2202,8 @@ a.tdu
             margin-left: 0
             left: auto
             right: 21px
+    &.w260
+        width: 260px
 
 
 .b-catalog-header__open
@@ -2905,6 +2959,7 @@ a.tdu
     left: 0
     top: 0
     z-index: 250
+    overflow-y: auto
 
 .b-popup
     margin: 0 auto
@@ -2921,6 +2976,8 @@ a.tdu
     opacity: 0
     &.w730
         width: 730px
+    &.w700
+        width: 700px
     &.w640
         width: 640px
     &.w520
@@ -2944,11 +3001,12 @@ a.tdu
         background: url('../img/draw-bg1.png') no-repeat left top, #f8f9fe
 
 .b-site-overlay
-    position: absolute
+    position: relative
     left: 0
     top: 0
     width: 100%
     height: 100%
+    min-height: 100%
     background: rgba(240,240,240, 0.9)
     z-index: 150
 
@@ -3080,6 +3138,137 @@ a.tdu
     margin-bottom: 2px
     img
         width: 100%
+
+.b-or-sep
+    position: relative
+    &:before
+        top: 50%
+        content: ''
+        width: 100%
+        height: 1px
+        background: #f0efef
+        left: 0
+        position: absolute
+        margin-top: 1px
+
+.b-or-sep__text
+    display: inline-block
+    padding: 2px 10px
+    background: #fff
+    text-transform: uppercase
+    color: #ccc
+    font-size: 10px
+    font-family: $cl
+    position: relative
+    z-index: 10
+
+.b-country-list
+    font-size: 17px
+    font-family: $cl
+    color: #111
+
+.b-country-list__item
+    display: inline-block
+    vertical-align: middle
+    margin-right: 35px
+    border-bottom: 2px solid transparent
+    border-top: 2px solid transparent
+    line-height: 1.2em
+    cursor: pointer
+    &.active
+        color: #f05007
+        border-bottom: 2px solid #f05007
+
+.b-selected-city
+    color: #999
+    font-size: 20px
+    font-family: $cl
+    padding-left: 25px
+    position: relative
+    &:before
+        content: ''
+        +sprite(map-marker-gray, "abs_middle")
+        left: 1px !important
+        margin-left: 1px !important
+
+.b-scroll-result
+    width: 100%
+    overflow: auto
+    &.h320
+        height: 320px
+
+.b-search-region
+    .easy-autocomplete
+        width: 100% !important
+    .easy-autocomplete-container
+        ul
+            display: none
+            width: 100%
+            background: #fff
+            border: 1px solid #e1e0e0
+            position: absolute
+            left: 0
+            top: 100%
+            margin-top: -1px
+            z-index: 100
+            cursor: pointer
+        .eac-item
+            padding: 13px
+            font-size: 13px
+            color: #999
+        li
+            border-bottom: 1px solid #e1e0e0
+        li:last-child
+            border-bottom: none
+        span
+            display: block
+        b
+            color: #333
+
+.b-result-search-city
+    .b-result-region
+        width: 235px
+        float: left
+        border-right: 1px solid #eaeaea
+    .b-result-city
+        width: calc(100% - 265px)
+        float: right
+
+.b-city-list__section
+    float: left
+    width: 48%
+    margin-right: 4%
+    &:last-child
+        margin-right: 0
+
+.b-st-list
+    font-size: 15px
+    font-family: $cl
+
+.b-st-list__item
+    padding: 5px 0
+
+.b-st-list__text
+    display: inline-block
+    vertical-align: middle
+    border-bottom: 1px dotted #666
+    line-height: 1.2em
+    cursor: pointer
+
+.b-city-list__item
+    position: relative
+    padding-left: 25px
+    margin-bottom: 20px
+
+.b-city-list__item__letter
+    position: absolute
+    color: #000
+    font-size: 20px
+    font-family: $cl
+    top: 5px
+    left: 0
+    line-height: 1.2em
+    text-transform: uppercase
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
