@@ -2157,6 +2157,7 @@ a.tdu
     position: absolute
     right: 0
     bottom: 100%
+    text-align: left
     margin-bottom: 15px
     z-index: 10
     background: #fff
@@ -2244,7 +2245,7 @@ a.tdu
         max-height: 500px
         line-height: 1.2em
         li
-            padding: 12px 15px
+            padding: 11px 15px
             +trans
             &.sel
                 color: #a1a0a0
@@ -2267,6 +2268,15 @@ a.tdu
         .jq-selectbox__dropdown
             li
                 padding: 16px 15px
+    &.lh24
+        .jq-selectbox__select
+            line-height: 24px
+            padding: 0 20px 0 8px
+        .jq-selectbox__trigger
+            right: 7px
+        .jq-selectbox__dropdown
+            li
+                padding: 4px 8px
     &.w270
         width: 270px
     &.border-gray
@@ -2978,6 +2988,8 @@ a.tdu
         width: 730px
     &.w700
         width: 700px
+    &.w600
+        width: 600px
     &.w640
         width: 640px
     &.w520
@@ -2999,6 +3011,9 @@ a.tdu
     &.draw-bg-top
         padding: 375px 40px 40px
         background: url('../img/draw-bg1.png') no-repeat left top, #f8f9fe
+
+.b-popup-section
+    padding: 25px 40px
 
 .b-site-overlay
     position: relative
@@ -3074,6 +3089,9 @@ a.tdu
             +sprite(check70px, "abs_middle")
             top: 0 !important
             margin-top: 0 !important
+
+.b-text__content
+    padding-right: 30px
 
 .b-popup__header
     padding: 25px 0
@@ -3197,6 +3215,16 @@ a.tdu
     &.h320
         height: 320px
 
+.jScrollPane
+    .jspVerticalBar
+        width: 4px
+        background: transparent
+    .jspTrack
+        background: transparent
+    .jspDrag
+        background: #e4e4e4
+        border-radius: 5px
+
 .b-search-region
     .easy-autocomplete
         width: 100% !important
@@ -3230,9 +3258,11 @@ a.tdu
         width: 235px
         float: left
         border-right: 1px solid #eaeaea
+        padding-right: 15px
     .b-result-city
-        width: calc(100% - 265px)
+        width: calc(100% - 235px)
         float: right
+        padding-left: 30px
 
 .b-city-list__section
     float: left
@@ -3269,6 +3299,35 @@ a.tdu
     left: 0
     line-height: 1.2em
     text-transform: uppercase
+
+
+.b-product-list__item
+    padding-left: 90px
+    position: relative
+
+.b-product-list__item__preview
+    position: absolute
+    width: 64px
+    height: 64px
+    top: 50%
+    margin-top: -32px
+    left: 0
+    font-size: 0
+    line-height: 64px
+    img
+        max-width: 100%
+        max-height: 100%
+        vertical-align: middle
+
+.b-product-list__item__descr
+    font-size: 14px
+    margin-bottom: 10px
+
+.b-product-list__item__price
+    line-height: 1.2em
+    font-size: 20px
+    font-family: $cr
+    margin-bottom: 5px
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)

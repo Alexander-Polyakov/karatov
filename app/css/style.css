@@ -3600,6 +3600,7 @@ a.tdu:hover {
   position: absolute;
   right: 0;
   bottom: 100%;
+  text-align: left;
   margin-bottom: 15px;
   z-index: 10;
   background: #fff;
@@ -3715,7 +3716,7 @@ a.tdu:hover {
   line-height: 1.2em;
 }
 .jq-selectbox.select .jq-selectbox__dropdown li {
-  padding: 12px 15px;
+  padding: 11px 15px;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
@@ -3747,6 +3748,16 @@ a.tdu:hover {
 }
 .jq-selectbox.select.lh50 .jq-selectbox__dropdown li {
   padding: 16px 15px;
+}
+.jq-selectbox.select.lh24 .jq-selectbox__select {
+  line-height: 24px;
+  padding: 0 20px 0 8px;
+}
+.jq-selectbox.select.lh24 .jq-selectbox__trigger {
+  right: 7px;
+}
+.jq-selectbox.select.lh24 .jq-selectbox__dropdown li {
+  padding: 4px 8px;
 }
 .jq-selectbox.select.w270 {
   width: 270px;
@@ -4664,6 +4675,9 @@ a.tdu:hover {
 .b-popup.w700 {
   width: 700px;
 }
+.b-popup.w600 {
+  width: 600px;
+}
 .b-popup.w640 {
   width: 640px;
 }
@@ -4692,6 +4706,10 @@ a.tdu:hover {
 .b-popup.draw-bg-top {
   padding: 375px 40px 40px;
   background: url("../img/draw-bg1.png") no-repeat left top, #f8f9fe;
+}
+
+.b-popup-section {
+  padding: 25px 40px;
 }
 
 .b-site-overlay {
@@ -4812,6 +4830,10 @@ a.tdu:hover {
     margin-top: -35px;
     margin-left: -35px;
   }
+}
+
+.b-text__content {
+  padding-right: 30px;
 }
 
 .b-popup__header {
@@ -4986,6 +5008,18 @@ a.tdu:hover {
   height: 320px;
 }
 
+.jScrollPane .jspVerticalBar {
+  width: 4px;
+  background: transparent;
+}
+.jScrollPane .jspTrack {
+  background: transparent;
+}
+.jScrollPane .jspDrag {
+  background: #e4e4e4;
+  border-radius: 5px;
+}
+
 .b-search-region .easy-autocomplete {
   width: 100% !important;
 }
@@ -5023,10 +5057,12 @@ a.tdu:hover {
   width: 235px;
   float: left;
   border-right: 1px solid #eaeaea;
+  padding-right: 15px;
 }
 .b-result-search-city .b-result-city {
-  width: calc(100% - 265px);
+  width: calc(100% - 235px);
   float: right;
+  padding-left: 30px;
 }
 
 .b-city-list__section {
@@ -5070,6 +5106,39 @@ a.tdu:hover {
   left: 0;
   line-height: 1.2em;
   text-transform: uppercase;
+}
+
+.b-product-list__item {
+  padding-left: 90px;
+  position: relative;
+}
+
+.b-product-list__item__preview {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  margin-top: -32px;
+  left: 0;
+  font-size: 0;
+  line-height: 64px;
+}
+.b-product-list__item__preview img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.b-product-list__item__descr {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.b-product-list__item__price {
+  line-height: 1.2em;
+  font-size: 20px;
+  font-family: "circle";
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px) {

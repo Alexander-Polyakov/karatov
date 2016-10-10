@@ -431,10 +431,10 @@ $(document).ready(function () {
         need_popup.addClass("active");
 
         setTimeout(function(){
-            if ($(".b-scroll-result").length) {
-                $(".b-scroll-result").jScrollPane();
+            if ($(".jScrollPane").length) {
+                $(".jScrollPane").jScrollPane();
             }
-        },500);
+        },100);
 
     });
 
