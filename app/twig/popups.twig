@@ -37,6 +37,9 @@
 
                 <div class="b-popups-opening__item" data-open-popup="order_sent">заказ оформлен</div>
 
+                <div class="b-popups-opening__item" data-open-popup="checkout">Оформить заказ</div>
+
+                <div class="b-popups-opening__item" data-open-popup="map_popup">Где купить в Москве?</div>
             </div>
         </div>
     </div>
@@ -782,40 +785,374 @@
         </div>
 
 
-        <div class="b-popup w600 b-pop-order" data-popup="order_sent">
+        <div class="b-popup w600 b-pop-order" data-popup="checkout">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <a href="#" class="b-popup__header__back">
+                    <span class="arrow"></span>
+                </a>
+                <p class="b-popup__title">Оформить заказ</p>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__header">
+                    <p class="color-gray fz20">Вы выбрали</p>
+                </div>
+                <div class="b-popup-section__content">
+                    <div class="b-product-list">
+                        <div class="b-product-list__item">
+                            <div class="b-product-list__item__preview">
+                                <img src="img/products/product-img2.jpg" alt="">
+                            </div>
+                            <div class="b-product-list__item__content">
+                                <div>
+                                    <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами <i class="b-product-list__item_delete"></i>
+                                    </div>
+                                </div>
+                                <p class="b-product-list__item__price">55 000 р</p>
+                                <div class="b-product-list__item__size-wrap">
+                                    <span class="fz12 mr50 dib">Размер</span>
+                                    <select class="select border-gray lh24">
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-product-list__item">
+                            <div class="b-product-list__item__preview">
+                                <img src="img/products/product-img2.jpg" alt="">
+                            </div>
+                            <div class="b-product-list__item__content">
+                                <div>
+                                    <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами <i class="b-product-list__item_delete"></i>
+                                    </div>
+                                </div>
+                                <p class="b-product-list__item__price">55 000 р</p>
+                                <div class="b-product-list__item__size-wrap">
+                                    <span class="fz12 mr50 dib">Размер</span>
+                                    <select class="select border-gray lh24">
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__header">
+                    <p class="color-gray fz20 dib mr30">Магазин</p>
+                    <a href="#" class="fz14 dib yellow-link">Изменить магазин</a>
+                </div>
+                <div class="b-popup-section__content">
+                    <p class="fz15 ff_cr mb10">Бронницкий Ювелир</p>
+                    <p class="fz14 ff_cl mb10">г. Москва, ул. Вавилова, 3</p>
+                    <p class="fz14 ff_cl mb10">Режим работы: Пн.-Пт. 13:00–22:00, Сб.-Вс. 16:00–20:00</p>
+                    <p class="fz14 ff_cl mb10">Телефон: +7 (499) 323-22-44</p>
+                    <p class="fz14 ff_cl mb10">Планируемая дата доставки: 16 сентября</p>
+                </div>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__header">
+                    <p class="color-gray fz20 dib mr30">Контактная информация</p>
+                </div>
+                <div class="b-popup-section__content">
+                    <div class="mb15">
+                        <input placeholder="Имя" class="input-popup lh50" type="text">
+                    </div>
+                    <div class="mb15">
+                        <input placeholder="Email" class="input-popup lh50" type="text">
+                    </div>
+                    <div class="mb15 b-phone-region">
+                        <div class="b-flag-select">
+                            <div class="b-flag-select__selected">
+                                <img src="img/region-flag1.jpg" alt="">
+                            </div>
+                            <ul class="b-flag-select__content">
+                                <li class="b-flag-select__item" data-mask="+6 (___) ___-__-__">
+                                    <img src="img/region-flag1.jpg" alt="">
+                                </li>
+                                <li class="b-flag-select__item" data-mask="+9 (999) 999-99-99">
+                                    <img src="img/region-flag2.jpg" alt="">
+                                </li>
+                                <li class="b-flag-select__item" data-mask="+6 (999) 999-99-99">
+                                    <img src="img/region-flag1.jpg" alt="">
+                                </li>
+                                <li class="b-flag-select__item" data-mask="+5 (999) 999-99-99">
+                                    <img src="img/region-flag2.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <input placeholder="+7 (___) ___-__-__" class="input-popup lh50 inputmask region-input" type="text">
+                    </div>
+                    <p>
+                        <a href="#" class="dib fz14 b_d_link">Добавить комментарий</a>
+                    </p>
+                </div>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__header">
+                    <p class="color-gray fz20 dib mr30">Итоговая сумма</p>
+                </div>
+                <div class="b-popup-section__content">
+                    <div class="mb20">
+                        <span class="fz26 ff_cr mr20">55 000 р</span>
+                        <span href="#" class="b-buy-gray-bonus dib">+ за покупку начислим 323 руб.</span>
+                    </div>
+                    <div class="mb20">
+                        <a href="#" class="dib fz14 b_d_link mr30">Знаете промокод?</a>
+                        <a href="#" class="dib fz14 b_d_link">Потратить бонусы</a>
+                    </div>
+                    <div class="mb10">
+                        <a href="#" class="btn lh45 ff_cr ttu fz16 bg_y txt_white ">отправить заказ</a>
+                    </div>
+                    <p class="fz12 color-gray">Нажимая на кнопку вы соглашаетесь с <a href="#" class="yellow-link">условиями оферты</a> </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="b-popup w600" data-popup="order_sent">
             <i class="b-popup__close" data-close="popups"></i>
             <div class="b-popup__header">
                 <p class="b-popup__title">заказ оформлен </p>
             </div>
             <div class="b-popup-section">
                 <div class="b-popup-section__header">
-                    <p class="color-gray fz20 mb15">Вы выбрали</p>
+                    <p class="color-gray fz20 dib mr30">Ваш заказ №1231411</p>
+                    <span class="fz12 color-gray ">Принят 20.08.16</span>
                 </div>
-                <div class="b-product-list">
+                <div class="b-popup-section__content">
                     <div class="b-product-list__item">
                         <div class="b-product-list__item__preview">
-                            <img src="" alt="">
+                            <img src="img/products/product-img2.jpg" alt="">
                         </div>
                         <div class="b-product-list__item__content">
                             <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами</div>
                             <p class="b-product-list__item__price">55 000 р</p>
-                            <div class="b-product-list__item__size-wrap">
-                                <span class="fz12 mr50 dib">Размер</span>
-                                <select class="select border-gray lh24">
-                                    <option>15</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__content">
+                    <div class="fz14 color-gray mb10 ">
+                        <span class="dib w85px">Доставка:</span>
+                        <span class="dib">1 000 р</span>
+                    </div>
+                    <div>
+                        <span class="dib w85px">Итого:</span>
+                        <span class="dib fz26 ff_cr">55 000 р</span>
+                    </div>
+                </div>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__header">
+                    <p class="color-gray fz20 dib">Информация о заказе</p>
+                </div>
+                <div class="b-popup-section__content ">
+                    <div class="b-order-info fz14 mb20">
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Номер заказа</div>
+                            <div class="w50p f_l">123412443</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Имя и фамилия</div>
+                            <div class="w50p f_l">Иван Петров</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Телефон</div>
+                            <div class="w50p f_l">+7 (921) 321-32-12</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Способ доставки</div>
+                            <div class="w50p f_l">До магазина</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Электронная почта</div>
+                            <div class="w50p f_l">info@mail.ru</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Адрес доставки</div>
+                            <div class="w50p f_l">г. Москва ул. 1905 года д.123</div>
+                        </div>
+                        <div class="b-order-info__item clearfix">
+                            <div class="w50p f_l">Дата доставки</div>
+                            <div class="w50p f_l">22.09.16</div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="btn lh45 ff_cr ttu fz16 bg_y txt_white ">продолжить покупки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-popup full_w no_bg" data-popup="map_popup">
+            <div class="b-map-popup clearfix">
+                <div class="clearfix">
+                    <div class="f_r w50p">
+                        <div class="b-map-content__header">
+                            <p class="fz28">Где купить в <a href="#" class="yellow-link">Москве?</a></p>
+                            <i class="b-map-popup__close" data-close="popups"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="b-map-popup__section">
+                        <div id="map-popup"></div>
+                    </div>
+                    <div class="b-map-popup__section">
+                        <div class="b-map-popup__content">
+                            <div class="b-popup-map-content__header">
+                                <span class="fz12 ttu mr25 dib">Доступные размеры:</span>
+                                <div class="b-size-grid dib">
+                                    <div class="b-size-grid__item">
+                                        <input class="b-size-grid__checkbox" type="checkbox">
+                                        <div class="b-size-grid__item__content">17.5</div>
+                                    </div>
+                                    <div class="b-size-grid__item">
+                                        <input class="b-size-grid__checkbox" type="checkbox">
+                                        <div class="b-size-grid__item__content">17</div>
+                                    </div>
+                                    <div class="b-size-grid__item">
+                                        <input class="b-size-grid__checkbox" type="checkbox">
+                                        <div class="b-size-grid__item__content">16</div>
+                                    </div>
+                                    <div class="b-size-grid__item">
+                                        <input class="b-size-grid__checkbox" type="checkbox">
+                                        <div class="b-size-grid__item__content">18</div>
+                                    </div>
+                                    <div class="b-size-grid__item">
+                                        <input class="b-size-grid__checkbox" type="checkbox">
+                                        <div class="b-size-grid__item__content">18.5</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-popup-map-content__content">
+                                <div class="b-shops-list-wrapper jScrollPane">
+                                    <div class="b-shops-list">
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                        <div class="b-shops-list__item clearfix">
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz18 mb10">Бронницкий Ювелир</p>
+                                                <p class="fz13 color-gray">ул. Вавилова, 3</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <p class="fz22 mb10 lh1-2em">41 000 р</p>
+                                                <p class="fz13 color-gray">16 размер в наличии</p>
+                                            </div>
+                                            <div class="b-shops-list__item__section">
+                                                <a href="#" class="map-popup-buy-btn"">купить</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>
+
+
+
+
+
+
+    {% block pageScripts %}
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    {% endblock %}
+
 
 {% endblock %}
 
