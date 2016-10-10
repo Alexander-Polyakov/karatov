@@ -2139,6 +2139,27 @@ a.tdu:hover {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+.filter-checkbox.jq-checkbox input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+}
+.filter-checkbox.jq-checkbox input:checked {
+  border-color: #f9b897;
+}
+.filter-checkbox.jq-checkbox input:checked + .jq-checkbox__div {
+  opacity: 1;
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
 
 .filter-radio.jq-radio {
   display: inline-block;
@@ -2177,6 +2198,27 @@ a.tdu:hover {
   border-color: #f9b897;
 }
 .filter-radio.jq-radio.checked .jq-radio__div {
+  opacity: 1;
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.filter-radio.jq-radio input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+}
+.filter-radio.jq-radio input:checked {
+  border-color: #f9b897;
+}
+.filter-radio.jq-radio input:checked + .jq-radio__div {
   opacity: 1;
   -moz-transform: scale(1);
   -o-transform: scale(1);
@@ -3368,6 +3410,7 @@ a.tdu:hover {
   height: 100%;
   opacity: 0;
   text-align: center;
+  font-size: 0;
   line-height: 560px;
   border: 2px solid transparent;
   -webkit-transition: all 0.5s ease 0s;
@@ -3409,7 +3452,7 @@ a.tdu:hover {
   height: 100%;
   width: 100%;
   cursor: crosshair;
-  background: #000;
+  background: #fff;
 }
 .b-increase-hover img {
   position: absolute;

@@ -1297,6 +1297,22 @@ a.tdu
             opacity: 1
             +scale(1)
 
+    input
+        position: absolute
+        margin: 0
+        padding: 0
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        opacity: 0
+
+        &:checked
+            border-color: #f9b897
+            & + .jq-checkbox__div
+                opacity: 1
+                +scale(1)
+
 .filter-radio.jq-radio
     display: inline-block
     vertical-align: middle
@@ -1323,6 +1339,22 @@ a.tdu
         .jq-radio__div
             opacity: 1
             +scale(1)
+
+    input
+        position: absolute
+        margin: 0
+        padding: 0
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        opacity: 0
+
+        &:checked
+            border-color: #f9b897
+            & + .jq-radio__div
+                opacity: 1
+                +scale(1)
 
 .filter-radio.active-black.checked + .b-filter-label__text,
 .filter-checkbox.active-black.checked + .b-filter-label__text
@@ -2061,6 +2093,7 @@ a.tdu
     height: 100%
     opacity: 0
     text-align: center
+    font-size: 0
     line-height: 560px
     border: 2px solid transparent
     +trans
@@ -2090,7 +2123,7 @@ a.tdu
     height: 100%
     width: 100%
     cursor: crosshair
-    background: #000
+    background: #fff
     img
         position: absolute
         //left: 50%

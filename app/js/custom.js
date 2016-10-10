@@ -2,11 +2,23 @@ $(document).ready(function () {
     var doc = $(document);
 
     if ($(".filter-checkbox").length > 0) {
-        $(".filter-checkbox").styler();
+        // $(".filter-checkbox").styler();
+        $('.filter-checkbox').each(function () {
+            var cls = $(this).attr('class');
+            $(this).wrap('<div class="jq-checkbox"></div>');
+            $(this).after('<div class="jq-checkbox__div"></div>');
+            $(this).parent().addClass(cls);
+        })
     }
 
     if ($(".filter-radio").length > 0) {
-        $(".filter-radio").styler();
+        // $(".filter-radio").styler();
+        $('.filter-radio').each(function () {
+            var cls = $(this).attr('class');
+            $(this).wrap('<div class="jq-radio"></div>');
+            $(this).after('<div class="jq-radio__div"></div>');
+            $(this).parent().addClass(cls);
+        })
     }
 
     if ($("select").length > 0) {
