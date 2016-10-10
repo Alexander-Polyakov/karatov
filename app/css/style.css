@@ -3409,12 +3409,10 @@ a.tdu:hover {
   height: 100%;
   width: 100%;
   cursor: crosshair;
-  background: #fff;
+  background: #000;
 }
 .b-increase-hover img {
   position: absolute;
-  left: 50%;
-  top: 50%;
 }
 
 .b-presentation-slider__nav-item {
@@ -4586,13 +4584,13 @@ a.tdu:hover {
   cursor: pointer;
 }
 .b-search-selection__radio-input:checked + .b-search-selection__item-text {
-  color: #f58146;
-  border-bottom: 1px dotted #f58146;
+  color: #333;
+  border-bottom: 1px dotted transparent;
 }
 
 .b-search-selection__item-text {
-  color: #333;
-  border-color: transparent;
+  color: #f58146;
+  border-bottom: 1px dotted #f58146;
   line-height: 1em;
   font-size: 17px;
   -webkit-transition: all 0.5s ease 0s;

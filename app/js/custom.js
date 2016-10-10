@@ -313,19 +313,6 @@ $(document).ready(function () {
         }
     });
 
-
-    doc.on('mouseenter', '.b-increase-hover', function (e) {
-        var img_h = $(this).find("img").outerHeight(),
-            img_w = $(this).find("img").outerWidth(),
-            this_h = $(this).outerHeight(),
-            this_w = $(this).outerHeight(),
-            percent_h = img_h / this_h,
-            persent_w = img_w / this_w,
-            offset = $(this).offset();
-
-        increase_hover(percent_h, persent_w, offset);
-    });
-
     init_mobile_slider();
 
     function init_mobile_slider() {
@@ -404,16 +391,39 @@ $(document).ready(function () {
         }
     }
 
-    function increase_hover(percent_h, persent_w, offset) {
+    doc.on('mouseenter', '.b-increase-hover', function (e) {
+        var bl = $(this),
+            img = $(this).find('img'),
+            img_h = img.outerHeight(),
+            img_w = img.outerWidth(),
+            this_h = bl.outerHeight(),
+            this_w = bl.outerHeight(),
+            offset = bl.offset();
+
+        increase_hover(img_h, img_w, this_h, this_w, offset);
+    });
+
+    function increase_hover(img_h, img_w, this_h, this_w, offset) {
 
         doc.on('mousemove', '.b-increase-hover', function (e) {
-            var this_elem = $(this);
+            // var this_elem = $(this);
+            //     pos_x = (e.pageX - offset.left),
+            //     pos_y = (e.pageY - offset.top),
+            //     need_pers_x = pos_x * persent_w,
+            //     need_pers_y = pos_y * persent_h;
+
+            var delta_x = img_w - this_w,
+                need_pers_x = delta_x/this_w,
+                delta_y = img_h - this_h,
+                need_pers_y = delta_y/this_h;
+
+            var this_elem = $(this),
                 pos_x = (e.pageX - offset.left),
                 pos_y = (e.pageY - offset.top),
-                need_pers_x = pos_x * persent_w,
-                need_pers_y = pos_y * percent_h;
+                pers_x = pos_x*need_pers_x,
+                pers_y = pos_y*need_pers_y;
 
-            this_elem.find("img").css({"margin-top": -need_pers_y, "margin-left": -need_pers_x});
+            this_elem.find("img").css({"top": -pers_y, "left": -pers_x});
 
             e.preventDefault();
         });
