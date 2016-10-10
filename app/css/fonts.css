@@ -29,3 +29,8 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'rouble';
+    src: url('../fonts/rouble.ttf');
+}
