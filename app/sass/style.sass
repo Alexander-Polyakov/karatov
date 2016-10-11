@@ -48,9 +48,12 @@ body
     min-width: 320px
     position: relative
     +trans()
-    left: 0
     &.menu-open
-        left: 270px
+        transform: translateX(270px)
+        -webkit-transform: translateX(270px)
+        -moz-transform: translateX(270px)
+        -o-transform: translateX(270px)
+        -ms-transform: translateX(270px)
 
 .b-container
     max-width: 1230px
@@ -2468,11 +2471,11 @@ a.tdu
 .b-similar-units__item
     display: inline-block
     vertical-align: top
-    width: 90px
-    height: 90px
-    line-height: 90px
+    width: 70px
+    height: 70px
+    line-height: 70px
     text-align: center
-    margin-right: 10px
+    margin-right: 20px
     img
         max-width: 90%
         max-height: 90%
@@ -2790,7 +2793,7 @@ a.tdu
 .b-pagination__link
     display: block
     border-radius: 100%
-    border: 1px solid transparent
+    border: 2px solid transparent
     width: 38px
     height: 38px
     text-align: center
