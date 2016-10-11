@@ -765,9 +765,14 @@ a.tdu
         max-width: 100%
 
 .b-saved
+    &.opened
+        @media screen and (max-width: 992px)
+            .b-saved__popup
+                display: block
     &:hover
-        .b-saved__popup
-            display: block
+        @media screen and (min-width: 992px)
+            .b-saved__popup
+                display: block
 
 .b-saved__default
     position: relative
@@ -1032,6 +1037,13 @@ a.tdu
         width: 100%
         top: 0
         z-index: 250
+
+.mobile-header-orange-sep
+    position: fixed
+    left: 0
+    width: 100%
+    top: 0
+    z-index: 250
 
 .b-header-teaser__close
     position: absolute
@@ -1929,7 +1941,6 @@ a.tdu
     line-height: 0
     &:last-child
         margin-right: 0
-
 
 .b-soc-login__link
     &.vk
@@ -3632,7 +3643,8 @@ a.tdu
         width: 23%
         text-align: right
 
-
+.mobile-header-orange-sep
+    display: none
 
 
 .tab-visible
@@ -3988,6 +4000,9 @@ a.tdu
         padding-bottom: 40px
 
 @media screen and (max-width: 768px)
+    .mobile-header-orange-sep
+        display: block
+
     .b-events-list__item
         margin-right: 5px
         

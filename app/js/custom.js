@@ -110,11 +110,10 @@ $(document).ready(function () {
         }
 
         $(".b-sidebar-filter").toggleClass("active");
-
         $(this).find(".hamburger").toggleClass("active");
-
         e.preventDefault();
     });
+
 
     doc.on('click', '.b-set-products__item-check', function (e) {
         $(this).toggleClass("active");
@@ -154,7 +153,6 @@ $(document).ready(function () {
         } else {
             $(this).closest(".b-accordion-item").find(".b-accordion-item__popup").stop().slideToggle(400);
         }
-
         e.preventDefault();
     });
 
@@ -221,8 +219,13 @@ $(document).ready(function () {
             select = target.closest(".b-filter-select"),
             search = target.closest(".b-search"),
             filter = target.closest("#b-sidebar-filter"),
-            filter_btn = target.closest(".b-filter-open");
+            filter_btn = target.closest(".b-filter-open"),
+            b_saved = target.closest(".b-saved");
 
+
+        if (!b_saved.length > 0) {
+            doc.find(".b-saved").removeClass("opened");
+        }
 
         if (!select.length > 0) {
             $(".b-filter-select").removeClass("open");
@@ -235,12 +238,17 @@ $(document).ready(function () {
             doc.find(".b-search").removeClass("open");
         }
 
-        if ((filter.length == 0) && (filter_btn.length == 0)) {
-           doc.find("#b-sidebar-filter").removeClass("active");
+        if ((filter.length == 0) && (filter_btn.length == 0) && (doc.find("#b-sidebar-filter").hasClass("active"))) {
+            doc.find("#b-sidebar-filter").removeClass("active");
             doc.find(".filter-open-btn .hamburger").removeClass("active");
+            doc.find("#b-catalog-content").css("min-height", "1px");
         }
     });
 
+    doc.on('click', '.b-events-list__item.b-saved', function (e) {
+        $(this).addClass("opened");
+        e.preventDefault();
+    });
 
     doc.on('click', '.b-changing__more-btn', function (e) {
         $(this).closest(".b-changing").toggleClass("see-all");
@@ -351,7 +359,7 @@ $(document).ready(function () {
             filter_fix();
         }
 
-        if ($(".header-orange-sep").length > 0) {
+        if (($(".header-orange-sep").length > 0) && (doc.outerWidth() > 768) ) {
             sep_fix();
         }
     });

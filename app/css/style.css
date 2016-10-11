@@ -1204,8 +1204,15 @@ a.tdu:hover {
   max-width: 100%;
 }
 
-.b-saved:hover .b-saved__popup {
-  display: block;
+@media screen and (max-width: 992px) {
+  .b-saved.opened .b-saved__popup {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .b-saved:hover .b-saved__popup {
+    display: block;
+  }
 }
 
 .b-saved__default {
@@ -1655,6 +1662,14 @@ a.tdu:hover {
 }
 
 .header-orange-sep.sep-fix {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  z-index: 250;
+}
+
+.mobile-header-orange-sep {
   position: fixed;
   left: 0;
   width: 100%;
@@ -5515,6 +5530,10 @@ a.tdu:hover {
   text-align: right;
 }
 
+.mobile-header-orange-sep {
+  display: none;
+}
+
 @media screen and (max-width: 992px) and (min-width: 769px) {
   .tab-visible {
     display: block;
@@ -5958,6 +5977,10 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  .mobile-header-orange-sep {
+    display: block;
+  }
+
   .b-events-list__item {
     margin-right: 5px;
   }
