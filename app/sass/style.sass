@@ -21,6 +21,9 @@ h1, h2, h3, h4, h5, h6
 .ovh
     overflow: hidden
 
+.x-ovh
+    overflow-x: hidden
+
 .dib
     display: inline-block
     vertical-align: middle
@@ -41,12 +44,12 @@ body
     font-size: 17px
     font-family: $cl
     color: #000
-    &.x-ovh
-        overflow-x: hidden
 
 .b-site-wrapper
     min-width: 320px
-    position: relative
+
+
+.b-site-wrapper__content
     +trans()
     &.menu-open
         transform: translateX(270px)
@@ -824,16 +827,15 @@ a.tdu
             +sprite(save-orange, "abs_middle")
             opacity: 0
             +trans
-    &.login-icon
-        +sprite(login-icon)
-        background: none !important
-        position: relative
 
+    &.login-icon
+        width: 22px
+        height: 26px
+        position: relative
         &:before
             content: ''
             +trans
             +sprite(login-icon, 'abs_middle')
-
         &:after
             content: ''
             opacity: 0
@@ -3077,9 +3079,9 @@ a.tdu
     -webkit-transform: translateX(-50%)
     -moz-transform: translateX(-50%)
     -o-transform: translateX(-50%)
-    +trans()
-    z-index: 100
-    opacity: 0
+    z-index: 250
+    +trans(top, 0.5s, ease, 0s)
+    display: none
     &.w730
         width: 730px
     &.w700
@@ -3094,13 +3096,11 @@ a.tdu
         width: 500px
     &.w800
         width: 800px
-    &.active
-        top: 135px
-        opacity: 1
-        z-index: 250
     .draw-bg-left__content
         width: 330px
         float: right
+    &.active
+        top: 135px
     &.draw-bg-left
         padding: 75px 40px
         background: url('../img/draw-bg1.png') no-repeat -15px top, #f8f9fe
@@ -3660,6 +3660,10 @@ a.tdu
 
 
 @media screen and (max-width: 1170px)
+    .b-product-item__popup
+        .btn
+            width: 100%
+            padding: 0
     .b-filter-select__dropdown
         &.mobile-right
             left: auto
@@ -3733,6 +3737,23 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-popup
+        left: 40px
+        right: 40px
+        width: auto !important
+        transform: translateX(0)
+        -webkit-transform: translateX(0)
+        -moz-transform: translateX(0)
+        -o-transform: translateX(0)
+        &.active
+            top: 60px
+        .b-text
+            height: auto
+
+
+    .b-fade-slider__nav
+        display: none
+
     .b-presentation-slider
         height: 400px
         margin-bottom: 40px
@@ -3967,6 +3988,12 @@ a.tdu
         padding-bottom: 40px
 
 @media screen and (max-width: 768px)
+    .b-events-list__item
+        margin-right: 5px
+        
+    .b-header-login__item-icon
+        margin-right: 0
+
     .b-similar-categories__left
         float: none
         margin-bottom: 15px

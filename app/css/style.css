@@ -101,6 +101,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.x-ovh {
+  overflow-x: hidden;
+}
+
 .dib {
   display: inline-block;
   vertical-align: middle;
@@ -126,19 +130,18 @@ body {
   font-family: "circle-light";
   color: #000;
 }
-body.x-ovh {
-  overflow-x: hidden;
-}
 
 .b-site-wrapper {
   min-width: 320px;
-  position: relative;
+}
+
+.b-site-wrapper__content {
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.b-site-wrapper.menu-open {
+.b-site-wrapper__content.menu-open {
   transform: translateX(270px);
   -webkit-transform: translateX(270px);
   -moz-transform: translateX(270px);
@@ -1325,24 +1328,9 @@ a.tdu:hover {
   }
 }
 .b-header-login__item-icon.login-icon {
-  background-image: url('../img/icons-s759a7e6cd6.png');
-  background-position: 0 -341px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  height: 28px;
-  width: 23px;
-  background: none !important;
+  width: 22px;
+  height: 26px;
   position: relative;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
-  .b-header-login__item-icon.login-icon {
-    background-image: url('../img/icons-2x-s45e9cc6b51.png');
-    background-size: 72px auto;
-    background-position: 0 -338px;
-    height: 28px;
-    width: 23px;
-  }
 }
 .b-header-login__item-icon.login-icon:before {
   content: "";
@@ -4783,12 +4771,12 @@ a.tdu:hover {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  z-index: 100;
-  opacity: 0;
+  z-index: 250;
+  -webkit-transition: top 0.5s ease 0s;
+  -moz-transition: top 0.5s ease 0s;
+  -o-transition: top 0.5s ease 0s;
+  transition: top 0.5s ease 0s;
+  display: none;
 }
 .b-popup.w730 {
   width: 730px;
@@ -4811,14 +4799,12 @@ a.tdu:hover {
 .b-popup.w800 {
   width: 800px;
 }
-.b-popup.active {
-  top: 135px;
-  opacity: 1;
-  z-index: 250;
-}
 .b-popup .draw-bg-left__content {
   width: 330px;
   float: right;
+}
+.b-popup.active {
+  top: 135px;
 }
 .b-popup.draw-bg-left {
   padding: 75px 40px;
@@ -5564,6 +5550,11 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 1170px) {
+  .b-product-item__popup .btn {
+    width: 100%;
+    padding: 0;
+  }
+
   .b-filter-select__dropdown.mobile-right {
     left: auto;
     right: 0;
@@ -5653,6 +5644,26 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 992px) {
+  .b-popup {
+    left: 40px;
+    right: 40px;
+    width: auto !important;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  .b-popup.active {
+    top: 60px;
+  }
+  .b-popup .b-text {
+    height: auto;
+  }
+
+  .b-fade-slider__nav {
+    display: none;
+  }
+
   .b-presentation-slider {
     height: 400px;
     margin-bottom: 40px;
@@ -5947,6 +5958,14 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  .b-events-list__item {
+    margin-right: 5px;
+  }
+
+  .b-header-login__item-icon {
+    margin-right: 0;
+  }
+
   .b-similar-categories__left {
     float: none;
     margin-bottom: 15px;
