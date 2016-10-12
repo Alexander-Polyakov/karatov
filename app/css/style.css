@@ -1577,7 +1577,7 @@ a.tdu:hover {
   margin-left: -20px;
 }
 
-.b-full-slider .owl-dots {
+.b-full-slider .owl-pagination {
   position: absolute;
   bottom: 35px;
   width: 1070px;
@@ -3917,9 +3917,9 @@ a.tdu:hover {
 }
 
 .b-set-products__item {
-  width: 25%;
-  float: left;
+  width: 100%;
   text-align: center;
+  display: block;
   position: relative;
 }
 
@@ -5662,7 +5662,7 @@ a.tdu:hover {
     border-right: none;
   }
 
-  .b-full-slider .owl-dots {
+  .b-full-slider .owl-pagination {
     margin-left: 0;
     width: 100%;
     padding: 0 60px;
@@ -6311,14 +6311,14 @@ a.tdu:hover {
     margin-top: 15px;
   }
 
-  .owl-carousel .owl-controls {
+  .owl-carousel .owl-pagination {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
     text-align: center;
   }
-  .owl-carousel .owl-dot {
+  .owl-carousel .owl-page {
     display: inline-block;
     vertical-align: middle;
     margin: 0 3px;
@@ -6331,10 +6331,10 @@ a.tdu:hover {
     transition: all 0.5s ease 0s;
     background: #d2d2d2;
   }
-  .owl-carousel .owl-dot.active {
+  .owl-carousel .owl-page.active {
     background: #f2641a;
   }
-  .owl-carousel .owl-nav {
+  .owl-carousel .owl-buttons {
     display: none;
   }
   .owl-carousel.b-card-mobile-slider, .owl-carousel.b-set-products {
@@ -6344,7 +6344,7 @@ a.tdu:hover {
     position: static;
     font-size: 0;
   }
-  .owl-carousel.b-card-mobile-slider .owl-dots, .owl-carousel.b-set-products .owl-dots {
+  .owl-carousel.b-card-mobile-slider .owl-pagination, .owl-carousel.b-set-products .owl-pagination {
     display: table;
     width: 100%;
   }
@@ -6542,7 +6542,7 @@ a.tdu:hover {
     margin-bottom: 5px;
   }
 
-  .b-full-slider .owl-dots {
+  .b-full-slider .owl-pagination {
     bottom: 25px;
     padding: 0 10px;
     text-align: left;

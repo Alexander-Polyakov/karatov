@@ -7,10 +7,11 @@
             $(".b-card-mobile-slider").owlCarousel({
                 items: 1,
                 loop: true,
-                nav: false,
+                navigation: false,
                 dots: true,
                 mouseDrag: true,
-                autoplay: true
+                autoplay: true,
+                responsive: true
             });
         });
 
@@ -18,7 +19,7 @@
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
                 loop: true,
-                nav: true,
+                navigation: true,
                 dots: true,
                 mouseDrag: true,
                 responsive: {
@@ -37,13 +38,14 @@
             $(".b-reviews-slider").owlCarousel({
                 items: 2,
                 loop: true,
-                nav: true,
+                navigation: true,
                 dots: true,
                 mouseDrag: true,
                 margin: 30,
                 responsive: {
                     0: {
-                        items: 1
+                        items: 1,
+                        navigation: false
                     },
                     768: {
                         items: 2

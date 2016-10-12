@@ -970,7 +970,7 @@ a.tdu
             margin-left: -20px
 
 .b-full-slider
-    .owl-dots
+    .owl-pagination
         position: absolute
         bottom: 35px
         width: 1070px
@@ -2415,9 +2415,10 @@ a.tdu
     font-size: 17px
 
 .b-set-products__item
-    width: 25%
-    float: left
+    width: 100%
+    //float: left
     text-align: center
+    display: block
     position: relative
 
 .b-set-products__item__content
@@ -3751,7 +3752,7 @@ a.tdu
         border-right: none
 
     .b-full-slider
-        .owl-dots
+        .owl-pagination
             margin-left: 0
             width: 100%
             padding: 0 60px
@@ -4257,13 +4258,13 @@ a.tdu
     .b-best-collection__btn-wrapper
         margin-top: 15px
     .owl-carousel
-        .owl-controls
+        .owl-pagination
             position: absolute
             width: 100%
             bottom: 0
             left: 0
             text-align: center
-        .owl-dot
+        .owl-page
             display: inline-block
             vertical-align: middle
             margin: 0 3px
@@ -4274,14 +4275,14 @@ a.tdu
             background: #d2d2d2
             &.active
                 background: #f2641a
-        .owl-nav
+        .owl-buttons
             display: none
         &.b-card-mobile-slider, &.b-set-products
             text-align: center
             .owl-controls
                 position: static
                 font-size: 0
-            .owl-dots
+            .owl-pagination
                 display: table
                 width: 100%
             .owl-dot
@@ -4432,7 +4433,7 @@ a.tdu
         font-size: 20px
         margin-bottom: 5px
 
-    .b-full-slider .owl-dots
+    .b-full-slider .owl-pagination
         bottom: 25px
         padding: 0 10px
         text-align: left
