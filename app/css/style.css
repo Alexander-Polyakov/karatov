@@ -508,6 +508,11 @@ a.tdu:hover {
   line-height: 1.2em;
 }
 
+.owl-carousel .owl-item img {
+  width: auto;
+  display: inline-block;
+}
+
 .b-mobile-menu {
   display: block;
   position: absolute;

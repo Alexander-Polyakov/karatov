@@ -388,7 +388,7 @@ $(document).ready(function () {
 
 
         // if (doc.outerWidth() <= 769) {
-            /*grid_slider.owlCarousel({
+            grid_slider.owlCarousel({
                 items: 2,
                 loop: false,
                 navigation: false,
@@ -434,7 +434,7 @@ $(document).ready(function () {
                         items: 4
                     }
                 }
-            });*/
+            });
 
 
         // } else {
