@@ -1582,7 +1582,7 @@ a.tdu:hover {
   margin-left: -20px;
 }
 
-.b-full-slider .owl-pagination {
+.b-full-slider .owl-dots {
   position: absolute;
   bottom: 35px;
   width: 1070px;
@@ -3978,6 +3978,7 @@ a.tdu:hover {
   top: 0;
   border: 1px solid #cdcccd;
   cursor: pointer;
+  z-index: 5;
 }
 .b-set-products__item-check:before {
   content: "";
@@ -4097,7 +4098,7 @@ a.tdu:hover {
   font-size: 17px;
   display: inline-block;
   vertical-align: middle;
-  width: 24%;
+  width: 100%;
   margin-right: 1.25%;
   position: relative;
   padding: 0 105px 0 20px;
@@ -5667,7 +5668,7 @@ a.tdu:hover {
     border-right: none;
   }
 
-  .b-full-slider .owl-pagination {
+  .b-full-slider .owl-dots {
     margin-left: 0;
     width: 100%;
     padding: 0 60px;
@@ -6316,14 +6317,14 @@ a.tdu:hover {
     margin-top: 15px;
   }
 
-  .owl-carousel .owl-pagination {
+  .owl-carousel .owl-dots {
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
     text-align: center;
   }
-  .owl-carousel .owl-page {
+  .owl-carousel .owl-dot {
     display: inline-block;
     vertical-align: middle;
     margin: 0 3px;
@@ -6336,10 +6337,10 @@ a.tdu:hover {
     transition: all 0.5s ease 0s;
     background: #d2d2d2;
   }
-  .owl-carousel .owl-page.active {
+  .owl-carousel .owl-dot.active {
     background: #f2641a;
   }
-  .owl-carousel .owl-buttons {
+  .owl-carousel .owl-nav {
     display: none;
   }
   .owl-carousel.b-card-mobile-slider, .owl-carousel.b-set-products {
@@ -6349,7 +6350,7 @@ a.tdu:hover {
     position: static;
     font-size: 0;
   }
-  .owl-carousel.b-card-mobile-slider .owl-pagination, .owl-carousel.b-set-products .owl-pagination {
+  .owl-carousel.b-card-mobile-slider .owl-dots, .owl-carousel.b-set-products .owl-dots {
     display: table;
     width: 100%;
   }
@@ -6547,7 +6548,7 @@ a.tdu:hover {
     margin-bottom: 5px;
   }
 
-  .b-full-slider .owl-pagination {
+  .b-full-slider .owl-dots {
     bottom: 25px;
     padding: 0 10px;
     text-align: left;

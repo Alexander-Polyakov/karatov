@@ -7,7 +7,7 @@
             $(".b-full-slider").owlCarousel({
                 items: 1,
                 loop: true,
-                navigation: true,
+                nav: true,
                 dots: true,
                 mouseDrag: true
             });
@@ -16,17 +16,20 @@
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
                 loop: true,
-//                navigation: true,
+//                nav: true,
                 dots: true,
                 mouseDrag: true,
                 responsive: {
                     0: {
                         items: 2,
-                        navigation: false
+                        nav: false
                     },
                     768: {
                         items: 5,
-                        navigation: true
+                        nav: true
+                    },
+                    992: {
+                        nav: true
                     }
                 }
             });
@@ -37,7 +40,7 @@
             $(".b-reviews-slider").owlCarousel({
                 items: 2,
                 loop: true,
-                navigation: true,
+                nav: true,
                 dots: true,
                 mouseDrag: true,
                 margin: 30,
