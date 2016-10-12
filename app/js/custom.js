@@ -43,6 +43,20 @@ $(document).ready(function () {
             fields: {
                 description: "region_name"
             }
+        },
+
+        list: {
+            showAnimation: {
+                type: "fade", //normal|slide|fade
+                time: 400,
+                callback: function() {}
+            },
+
+            hideAnimation: {
+                type: "sgylide", //normal|slide|fade
+                time: 400,
+                callback: function() {alert("hi");}
+            }
         }
 
     };
@@ -488,7 +502,11 @@ $(document).ready(function () {
             need_popup = doc.find("[data-popup="+data_val+"]"),
             popup_height = need_popup.outerHeight();
 
-        doc.find(".b-site-overlay").css("height", popup_height + 235);
+        if (doc.outerWidth() > 992) {
+            doc.find(".b-site-overlay").css("height", popup_height + 235);
+        } else {
+            doc.find(".b-site-overlay").css("height", popup_height + 130);
+        }
         need_popup.fadeIn(500).addClass("active");
         $("body").addClass("ovh");
 

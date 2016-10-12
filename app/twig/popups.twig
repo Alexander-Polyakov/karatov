@@ -2,8 +2,9 @@
 {% block pageTitle %} popups {% endblock %}
 
 
-{% block pageContent %}
 
+
+{% block pageContent %}
     <div class="b-section-wrapper">
         <div class="b-container">
             <div class="b-popups-opening">
@@ -562,7 +563,7 @@
                     </div>
                     <div class="mb20">
                         <div class="b-search-region rel mb5">
-                            <input id="search-region" placeholder="Номер телефона или email" class="input-popup lh50" type="text">
+                            <input id="search-region" placeholder="Город" class="input-popup lh50" type="text">
                             <div class="b-clarification abs_input">
                                 <span class="b-clarification__icon"></span>
                                 <span class="b-clarification__popup bottom w260 right">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
@@ -573,7 +574,15 @@
                     <div class="b-result-search-city clearfix">
                         <div class="b-result-region">
                             <p class="fz20 ff_cl mb10 color-gray">Регион</p>
-                            <div class="b-scroll-result h320 jScrollPane">
+                            <div class="mobile-visible">
+                                <select class="select border-gray lh50 full_w">
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                </select>
+                            </div>
+                            <div class="b-scroll-result h320 jScrollPane mobile-hidden">
                                 <ul class="b-st-list">
                                     <li class="b-st-list__item">
                                         <p class="b-st-list__text">Архангельская область</p>
@@ -634,7 +643,15 @@
                         </div>
                         <div class="b-result-city">
                             <p class="fz20 ff_cl mb10 color-gray">Населенный пункт</p>
-                            <div class="b-scroll-result h320 jScrollPane">
+                            <div class="mobile-visible">
+                                <select class="select border-gray lh50 full_w">
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                    <option>Архангельская область</option>
+                                </select>
+                            </div>
+                            <div class="b-scroll-result h320 jScrollPane mobile-hidden">
                                 <div class="b-city-list clearfix">
                                     <ul class="b-city-list__section">
                                         <li class="b-city-list__item">
@@ -942,7 +959,7 @@
             <div class="b-popup-section">
                 <div class="b-popup-section__header">
                     <p class="color-gray fz20 dib mr30">Ваш заказ №1231411</p>
-                    <span class="fz12 color-gray ">Принят 20.08.16</span>
+                    <span class="fz12 color-gray dib">Принят 20.08.16</span>
                 </div>
                 <div class="b-popup-section__content">
                     <div class="b-product-list__item">
@@ -1142,6 +1159,7 @@
         </div>
 
     </div>
+
 
 
 

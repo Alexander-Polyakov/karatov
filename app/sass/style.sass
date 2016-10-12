@@ -123,6 +123,7 @@ body
 .b_d_link
     border-bottom: 1px dotted
     line-height: 1.2em
+    margin: 5px
     &:hover
         border-bottom: none
 
@@ -2321,6 +2322,9 @@ a.tdu
     background: #fff
     .jq-selectbox__select-text
         width: auto !important
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
     .jq-selectbox__select
         line-height: 38px
         font-size: 15px
@@ -3079,6 +3083,7 @@ a.tdu
     top: 0
     z-index: 250
     overflow-y: auto
+    min-width: 320px
 
 .b-popup
     margin: 0 auto
@@ -3148,6 +3153,7 @@ a.tdu
     height: 30px
     cursor: pointer
     +rotate(45)
+    z-index: 50
     &:before
         content: ''
         width: 20px
@@ -3205,11 +3211,12 @@ a.tdu
             top: 0 !important
             margin-top: 0 !important
 
-.b-text__content
-    padding-right: 30px
+.jspScrollable
+    .b-text__content
+        padding-right: 30px
 
 .b-popup__header
-    padding: 25px 0
+    padding: 25px 10px
     border-bottom: 1px solid #e1e0e0
     position: relative
 
@@ -3379,7 +3386,7 @@ a.tdu
             left: 0
             top: 100%
             margin-top: -1px
-            z-index: 100
+            z-index: 200
             cursor: pointer
         .eac-item
             padding: 13px
@@ -3509,6 +3516,8 @@ a.tdu
     margin-bottom: 15px
     &:last-child
         margin-bottom: 0
+    > div:first-child
+        padding-right: 20px
 
 .b-map-popup__section
     width: 50%
@@ -3646,6 +3655,10 @@ a.tdu
 .mobile-header-orange-sep
     display: none
 
+.mobile-visible
+    display: none
+
+
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
@@ -3749,19 +3762,27 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-text
+        font-size: 16px
     .b-popup
-        left: 40px
-        right: 40px
-        width: auto !important
+        left: 10px
+        right: 10px
         transform: translateX(0)
         -webkit-transform: translateX(0)
         -moz-transform: translateX(0)
         -o-transform: translateX(0)
-        &.active
-            top: 60px
         .b-text
             height: auto
+        &.active
+            top: 60px
+        &.w800
+            width: auto
 
+    .b-popup__content
+        padding: 20px
+
+    .b-popup__close
+        right: 0
 
     .b-fade-slider__nav
         display: none
@@ -4000,6 +4021,45 @@ a.tdu
         padding-bottom: 40px
 
 @media screen and (max-width: 768px)
+    .b-popup__header__back
+        margin-top: 0
+        top: -24px
+        left: 10px
+    .b-product-list__item
+        padding-left: 80px
+    .b-popup-section
+        padding: 20px
+    .b-result-search-city
+        .b-result-region
+            width: 100%
+            float: none
+            padding-right: 0
+            margin-bottom: 20px
+            border: none
+        .b-result-city
+            width: 100%
+            float: none
+            padding-left: 0
+    .input-popup
+        &.w50p
+            width: 100%
+    .b-popup-soc
+        text-align: center
+    .b-popup-soc__title, .b-soc-login
+        float: none
+    .b-popup__header
+        padding: 15px 10px
+    .b-popup__title
+        font-size: 20px
+    .b-popup
+        width: auto !important
+        &.draw-bg-left, &.draw-bg-top
+            background: #fff
+            padding: 20px
+        .draw-bg-left__content
+            width: auto
+            float: none
+
     .mobile-header-orange-sep
         display: block
 
