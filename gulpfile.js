@@ -32,7 +32,7 @@ var sources = {
         src: 'app/twig/*.twig',
         watch: 'app/twig/**/*.twig',
         temp_dist: 'app/.temp_twig_html/',
-        temp_dist_html: 'app/twig_html/*.html',
+        temp_dist_html: 'app/.temp_twig_html/*.html',
         dist: 'app/twig'
     },
     sass: {
