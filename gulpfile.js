@@ -31,7 +31,7 @@ var sources = {
     twig: {
         src: 'app/twig/*.twig',
         watch: 'app/twig/**/*.twig',
-        temp_dist: 'app/twig_html/',
+        temp_dist: 'app/.temp_twig_html/',
         temp_dist_html: 'app/twig_html/*.html',
         dist: 'app/twig'
     },
@@ -69,12 +69,12 @@ gulp.task('twig', function () {
             gulp.src(sources.twig.temp_dist_html)
                 .pipe(htmlbeautify())
                 .pipe(gulp.dest(sources.html.dist))
-                .pipe(callback(function () {
-                    setTimeout(function () {
-                        gulp.src(sources.twig.temp_dist, {read: false})
-                            .pipe(clean());
-                    }, 1000);
-                }));
+                // .pipe(callback(function () {
+                //     setTimeout(function () {
+                //         gulp.src(sources.twig.temp_dist, {read: false})
+                //             .pipe(clean());
+                //     }, 2000);
+                // }));
         }))
         .pipe(connect.reload());
 

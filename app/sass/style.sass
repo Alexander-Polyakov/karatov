@@ -120,6 +120,18 @@ body
     &:hover
         text-decoration: underline
 
+.more-value
+    background: #f05007
+    border-radius: 20px
+    font-size: 11px
+    font-family: $cr
+    line-height: 16px
+    color: #fff
+    position: absolute
+    padding: 0 5px
+    top: 0
+    right: 0
+
 .b_d_link
     border-bottom: 1px dotted
     line-height: 1.2em
@@ -463,7 +475,6 @@ a.tdu
 .b-phone__top
     position: relative
     z-index: 50
-    margin-top: 10px
 
 .b-phone__bottom
     padding: 80px 35px 40px
@@ -471,7 +482,7 @@ a.tdu
     position: absolute
     width: 290px
     left: -35px
-    top: 0
+    top: -10px
     z-index: 10
     box-shadow: 0 2px 3px 0 #ccc
     display: none
@@ -584,7 +595,6 @@ a.tdu
     font-size: 15px
     cursor: pointer
     padding-right: 15px
-    margin-top: 22px
     &:before
         content: ''
         width: 8px
@@ -747,25 +757,18 @@ a.tdu
     z-index: 20
 
 .b-site-header
-    text-align: center
-    padding-bottom: 30px
-
-.b-site-header__contacts
-    width: 35%
-    text-align: left
-    margin-top: 50px
-
-.b-site-header__events
-    width: 35%
-    text-align: right
-    margin-top: 50px
+    padding: 30px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
 
 .b-logo
     display: inline-block
     vertical-align: middle
     width: 170px
     font-size: 0
-    margin-top: 30px
+    &.logo-expert
+        width: 192px
     img
         max-width: 100%
 
@@ -786,8 +789,8 @@ a.tdu
 .b-saved__popup
     position: absolute
     width: 200px
-    top: 0
-    right: 0
+    top: -10px
+    right: -20px
     padding-top: 62px
     background: #fff
     z-index: 10
@@ -799,14 +802,19 @@ a.tdu
     vertical-align: middle
     font-size: 15px
     position: relative
-
-.b-events-list__item-default
-    line-height: 62px
-    padding: 0 13px
+    margin-right: 40px
     cursor: pointer
-
+    &:last-child
+        margin-right: 0
     &:hover
         .login-icon
+            &:after
+                opacity: 1
+
+            &:before
+                opacity: 0
+
+        .feedback-icon
             &:after
                 opacity: 1
 
@@ -835,6 +843,20 @@ a.tdu
         &:after
             content: ''
             +sprite(save-orange, "abs_middle")
+            opacity: 0
+            +trans
+
+    &.feedback-icon
+        width: 26px
+        height: 26px
+        position: relative
+        &:before
+            content: ''
+            +sprite(feedback-icon, "abs_middle")
+            +trans
+        &:after
+            content: ''
+            +sprite(feedback-icon-orange, "abs_middle")
             opacity: 0
             +trans
 
@@ -1058,6 +1080,7 @@ a.tdu
     width: 16px
     height: 16px
     +rotate(45)
+    z-index: 50
     &:after
         content: ''
         width: 2px
@@ -1858,6 +1881,8 @@ a.tdu
 .b-main-nav-wrapper
     position: relative
     padding-right: 180px
+    &.pr0
+        padding-right: 0
 
 .b-main-nav
     position: relative
@@ -1868,9 +1893,10 @@ a.tdu
     font-size: 15px
     text-transform: uppercase
     font-family: $cr
-    line-height: 34px
+    padding: 6px 0
     display: inline-block
     vertical-align: middle
+    position: relative
     +trans
     &:last-child
         margin-right: 0
@@ -4027,6 +4053,8 @@ a.tdu
         padding-bottom: 40px
 
 @media screen and (max-width: 768px)
+    .b-site-wrapper__content
+        padding-top: 6px
     .b-popup__header__back
         margin-top: 0
         top: -24px
@@ -4388,22 +4416,14 @@ a.tdu
     .b-site-header__mobile-section
         display: block
 
-    .b-site-header__contacts
-        line-height: 62px
-        margin-top: 0
-
     .b-site-header
-        padding-bottom: 0
+        padding: 20px 0
 
     .b-header-contacts
         display: none
 
     .b-logo
         width: 80px
-        margin-top: 10px
-
-    .b-site-header__events
-        margin-top: 0
 
     .b-events-list__item-default
         padding: 0 5px

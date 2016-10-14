@@ -1,6 +1,7 @@
 .idea
 /index2.html
 /.sass-cache/
+.temp_twig_html
 *.rar
 *.html
 app/.sass-cache
