@@ -153,6 +153,9 @@ gulp.task('build', ["clean"], function () {
 
         gulp.src("app/img/**/*")
             .pipe(gulp.dest('dist/img'));
+
+        gulp.src("app/json/*.json")
+            .pipe(gulp.dest('dist/json'));
     }, 500);
 });
 
