@@ -25,6 +25,13 @@ $(document).ready(function () {
         $("select").styler();
     }
 
+    if ($(".tooltip").length > 0) {
+        $('.tooltip').tooltipster({
+            trigger: 'click',
+            maxWidth: 190
+        });
+    }
+
     if($('.inputmask').length > 0) {
         $('.inputmask').mask("+7 (999) 999-99-99");
     }
@@ -285,11 +292,17 @@ $(document).ready(function () {
     function filter_fix() {
         var doc_pos = doc.scrollTop(),
             cat_body_pos = $("#b-catalog-body").offset().top,
-            fix_filt_h = $("#b-fix-filter").outerHeight();
+            fix_filt_h = $("#b-fix-filter").outerHeight(),
+            cat_body_h = $("#b-catalog-body").outerHeight();
 
         if (doc_pos > cat_body_pos) {
-            $("#b-fix-filter").addClass("fixed");
-            $("#b-catalog-body").css("padding-top", fix_filt_h);
+            if ((cat_body_h + cat_body_pos) < doc_pos) {
+                $("#b-fix-filter").addClass("fixed invisible");
+                $("#b-catalog-body").css("padding-top", fix_filt_h);
+            } else {
+                $("#b-fix-filter").addClass("fixed").removeClass("invisible");
+                $("#b-catalog-body").css("padding-top", fix_filt_h);
+            }
         } else if ($("#b-fix-filter").hasClass("fixed") && (doc_pos < cat_body_pos)) {
             $("#b-fix-filter").removeClass("fixed");
             $("#b-catalog-body").css("padding-top", 0);

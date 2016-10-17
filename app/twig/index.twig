@@ -16,20 +16,15 @@
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
                 loop: true,
-//                nav: true,
+                nav: true,
                 dots: true,
                 mouseDrag: true,
                 responsive: {
                     0: {
                         items: 2,
-                        nav: false
                     },
                     768: {
                         items: 5,
-                        nav: true
-                    },
-                    992: {
-                        nav: true
                     }
                 }
             });

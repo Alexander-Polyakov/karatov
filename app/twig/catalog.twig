@@ -30,10 +30,27 @@
             }
         });
 
+        $('.b-best-collection__units').owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            mouseDrag: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 3
+                }
+            }
+        });
+
+
         $(document).ready(function () {
             $(".b-product-slider").owlCarousel({
                 loop: true,
-                navigation: true,
+                nav: true,
                 dots: true,
                 mouseDrag: true,
                 responsive: {
@@ -47,17 +64,6 @@
             });
         });
 
-
-        $(document).ready(function () {
-            $(".b-reviews-slider").owlCarousel({
-                items: 2,
-                loop: true,
-                navigation: true,
-                dots: true,
-                mouseDrag: true,
-                margin: 30
-            });
-        });
 
 
     </script>

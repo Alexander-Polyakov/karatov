@@ -173,9 +173,9 @@
                                     <span class="b-buy-form__price-value">41 000 <span class="rouble">&#8381;</span></span>
                                     <div class="b-buy-form__price-info f_r">
                                         <span class='fz14 ff_cr dib mr10'>Средняя цена</span>
-                                        <div class="b-clarification dib">
+
+                                        <div class="b-clarification dib tooltip" data-tooltip-content="#tooltip_content">
                                             <span class="b-clarification__icon"></span>
-                                            <span class="b-clarification__popup right">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -236,14 +236,12 @@
                         <ul class='b-characteristics-table'>
                             <li class="b-characteristics-table__item clearfix">
                                 <div class="f_l">
-                                    <div class="b-clarification dib text dib">
+                                    <div class="b-clarification text dib tooltip" data-tooltip-content="#tooltip_content">
                                         <span class="border-dotted dib">Ширина</span>
-                                        <span class="b-clarification__popup left">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                     </div>
                                     <span class="dib">/</span>
-                                    <div class="b-clarification dib text dib">
+                                    <div class="b-clarification dib text tooltip" data-tooltip-content="#tooltip_content2">
                                         <span class="border-dotted dib">Высота</span>
-                                        <span class="b-clarification__popup left">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                     </div>
                                 </div>
                                 <span class="f_r">3 мм / 1.5 мм</span>
@@ -254,9 +252,8 @@
                             </li>
                             <li class="b-characteristics-table__item clearfix">
                                 <div class="f_l">
-                                    <div class="b-clarification dib text dib">
+                                    <div class="b-clarification dib text tooltip" data-tooltip-content="#tooltip_content">
                                         <span class="border-dotted dib">Приблизительный вес</span>
-                                        <span class="b-clarification__popup left">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                     </div>
                                 </div>
                                 <span class="f_r">1.12 г.</span>
@@ -264,9 +261,8 @@
                             <li class="b-characteristics-table__item clearfix">
                                 <span class="f_l">Металл</span>
                                 <div class="f_r">
-                                    <div class="b-clarification dib text dib">
+                                    <div class="b-clarification dib text tooltip" data-tooltip-content="#tooltip_content">
                                         <span class="border-dotted dib">Золото (Красное)</span>
-                                        <span class="b-clarification__popup right">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                     </div>
                                 </div>
                             </li>
@@ -284,9 +280,8 @@
                             <span class="b-buy-form__price-value">41 000 <span class="rouble">&#8381;</span></span>
                             <div class="b-buy-form__price-info">
                                 <span class='fz14 ff_cr dib mr10'>Средняя цена</span>
-                                <div class="b-clarification dib">
+                                <div class="b-clarification dib tooltip" data-tooltip-content="#tooltip_content">
                                     <span class="b-clarification__icon"></span>
-                                    <span class="b-clarification__popup">Цена не является публичной офертой. Фактическая стоимость украшения в магазине может отличаться от указанной на сайте в зависимости от массы ювелирного изделия и ценовой политики ювелирного магазина.</span>
                                 </div>
                             </div>
                         </div>
@@ -439,4 +434,7 @@
     </div>
 
     {% include "widgets/same-categories.twig" %}
+
+
+
 {% endblock %}
