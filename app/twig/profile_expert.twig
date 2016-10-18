@@ -11,74 +11,158 @@
 {% endblock %}
 
 {% block pageContent %}
-    <div class="b-expert-profile">
-        <div class="b-container">
-            <div class="b-expert-profile__left-section">
-                <ul class="b-bread-crumbs clearfix">
+    <div class="b-expert-page">
+        <div class="b-container clearfix">
+            <div class="b-expert-page__content">
+                <ul class="b-bread-crumbs clearfix mb20">
                     <li class="b-bread-crumbs__item">
-                        <a class="b-bread-crumbs__link" href="#">Каталог</a>
+                        <a class="b-bread-crumbs__link" href="#">Главная</a>
                     </li>
                     <li class="b-bread-crumbs__item">
-                        <a class="b-bread-crumbs__link" href="#">Женщинам</a>
+                        <a class="b-bread-crumbs__link" href="#">Профиль</a>
                     </li>
                     <li class="b-bread-crumbs__item">
-                        <span class="b-bread-crumbs__link hover-hide">...</span>
-                        <ul class="hover-show">
-                            <li class="b-bread-crumbs__item">
-                                <a class="b-bread-crumbs__link" href="#">Коллекции</a>
-                            </li>
-                            <li class="b-bread-crumbs__item">
-                                <a class="b-bread-crumbs__link" href="#">Коллекции</a>
-                            </li>
-                            <li class="b-bread-crumbs__item">
-                                <a class="b-bread-crumbs__link" href="#">Коллекции</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="b-bread-crumbs__item">
-                        <a class="b-bread-crumbs__link" href="#">Коллекции</a>
-                    </li>
-                    <li class="b-bread-crumbs__item">
-                        <a class="b-bread-crumbs__link" href="#">Императрица</a>
+                        <a class="b-bread-crumbs__link" href="#">Анкета</a>
                     </li>
                 </ul>
-                <p class="fz28-title">Профиль</p>
+
+
+                <div class="b-section-wrapper bb pb60">
+                    <h2 class="fz28-title mb10 tal">Профиль</h2>
+                    <div class="b-profile">
+                        <ul class="b-profile-nav">
+                            <li class="b-profile-nav__item">
+                                <a href="#" class="b-profile-nav__link">Анкета</a>
+                            </li>
+                            <li class="b-profile-nav__item">
+                                <a href="#" class="b-profile-nav__link">Бонусы</a>
+                            </li>
+                            <li class="b-profile-nav__item">
+                                <a href="#" class="b-profile-nav__link">Штрихкоды</a>
+                            </li>
+                        </ul>
+                        <div class="b-questionnaire clearfix">
+                            <div class="b-questionnaire-photo">
+
+                            </div>
+                            <div class="b-questionnaire-data">
+                                <div class="mb30">
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left"></div>
+                                        <div class="b-questionnaire-data__right">
+                                            <p class="fz17 ff_cr">Основные данные</p>
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Фамилия</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Имя</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Отчество</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Дата рождения</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Мобильный телефон</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Старый пароль</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                    <div class='b-questionnaire-data__row clearfix'>
+                                        <div class="b-questionnaire-data__left">Новый пароль</div>
+                                        <div class="b-questionnaire-data__right">
+                                            <input type="text" class="st-input lh40">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="b-expert-profile__right-section">
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="b-section-wrapper pt55 pb100">
-        <div class="b-container">
-            <p class="fz28-title">С командой у вас появятся новые возможности:</p>
-            <div class="b-infographics">
-                <div class="b-infographics__item">
-                    <div class="b-infographics__item__icon icon1"></div>
-                    <div class="b-infographics__item__descr">Повышать профессиональный
-                        уровень, получая новые знания
-                        и увеличивая продажи</div>
-                </div>
-                <div class="b-infographics__item">
-                    <div class="b-infographics__item__icon icon2"></div>
-                    <div class="b-infographics__item__descr">Получить признание
-                        в профессиональных конкурсах
-                        и стать Продавцом года
-                        KARATOV</div>
-                </div>
-                <div class="b-infographics__item">
-                    <div class="b-infographics__item__icon icon3"></div>
-                    <div class="b-infographics__item__descr">Зарабатывать бонусы
-                        и выигрывать подарки от бренда,
-                        выполняя повседневную работу</div>
-                </div>
-                <div class="b-infographics__item">
-                    <div class="b-infographics__item__icon icon4"></div>
-                    <div class="b-infographics__item__descr">Пройти образовательный
-                        тренинг и получить именной
-                        сертификат KARATOV</div>
+            <div class="b-expert-page__sidebar">
+                <form action="#" class="b-sale-registration mb25">
+                    <div class="b-sale-registration__content">
+                        <p class="fz24-title tac ttu">Регистрация
+                            продажи</p>
+                        <div class="mb10 rel">
+                            <input placeholder="Введите штрих-код" class="st-input lh40" type="text">
+                            <div class="b-clarification abs_input tooltip tooltipstered" data-tooltip-content="#tooltip_content">
+                                <span class="b-clarification__icon"></span>
+                            </div>
+                        </div>
+                        <div class="mb10">
+                            <input placeholder="Введите артикул" class="st-input lh40" type="text">
+                        </div>
+                        <div>
+                            <button class="btn lh45 ff_cr ttu fz14 bg_y txt_white full_w ">Зарегистрировать</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="b-leaders-sells">
+                    <div class="fz28-title tal mb10">Лидеры продаж</div>
+                    <div class="b-grid-leaders">
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img1.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Алексей Иванов</p>
+                                <p class="fz15 color-yellow">1 728 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon gold_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img2.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Юлия Елизарова</p>
+                                <p class="fz15 color-yellow">1 431 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon silver_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img3.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon bronze_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img4.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -263,6 +263,9 @@ body
 .fz16
     font-size: 16px
 
+.fz17
+    font-size: 17px
+
 .fz18
     font-size: 18px
 
@@ -277,6 +280,9 @@ body
 
 .fz22
     font-size: 22px
+
+.fz24
+    font-size: 24px
 
 .fz26
     font-size: 26px
@@ -450,6 +456,18 @@ a.tdu
     font-family: $cl
     text-align: center
     margin-bottom: 30px
+    line-height: 1.2em
+    &.tal
+        text-align: left
+    &.mb10
+        margin-bottom: 10px
+
+.fz24-title
+    font-size: 24px
+    font-family: $cl
+    margin-bottom: 20px
+    line-height: 1.2em
+
 
 .width300px
     width: 300px
@@ -706,6 +724,12 @@ a.tdu
         padding: 0
     &.lh60
         line-height: 60px
+    &.gray
+        color: #aaa
+        border: 1px solid #aaa
+        &:hover
+            color: #000
+            border-color: #000
     &.white
         border: 1px solid #000
         color: #000
@@ -1646,8 +1670,10 @@ a.tdu
         .b-product-item__overlay
             box-shadow: 0 2px 3px 0 #ccc
             opacity: 1
-        .b-product-item__popup
+            z-index: 45
+        .b-product-item__popup, .b-fade-slider__nav
             opacity: 1
+
 
 .b-product-item__overlay
     content: ''
@@ -1842,6 +1868,19 @@ a.tdu
     &.w50p
         width: 50%
 
+
+.st-input
+    padding: 0 10px
+    +phc(#ccc)
+    color: #ccc
+    width: 100%
+    font-size: 15px
+    font-family: $cl
+    border: 1px solid #ccc
+    &.lh40
+        height: 42px
+
+
 .textarea-popup
     font-size: 17px
     width: 100%
@@ -1880,6 +1919,10 @@ a.tdu
 .b-section-wrapper
     &.p110_0
         padding: 110px 0
+    &.pt45
+        padding-top: 45px
+    &.pb80
+        padding-bottom: 80px
     &.pb60
         padding-bottom: 60px
     &.pt55
@@ -2021,6 +2064,7 @@ a.tdu
     width: 100px
     text-align: center
     padding: 25px 0
+    display: none
     &:before
         content: ''
         width: 100%
@@ -2030,7 +2074,6 @@ a.tdu
         position: absolute
         background: rgba(246, 246, 247, 0.8)
         +trans
-
     &.dark
         &:before
             background: rgba(200, 200, 200, 0.6)
@@ -2313,7 +2356,7 @@ a.tdu
 .tooltip_templates
     display: none
 
-.tooltipster-base
+.tooltipster-sidetip
     z-index: 300 !important
     .tooltipster-box
         background: #fff
@@ -2329,6 +2372,12 @@ a.tdu
         border-top-color: #e1e1e1 !important
     .tooltipster-arrow-background
         border-top-color: #fff !important
+    &.tooltipster-bottom
+        .tooltipster-arrow-border
+            border-bottom-color: #e1e1e1 !important
+        .tooltipster-arrow-background
+            border-bottom-color: #fff !important
+
 
 
 .b-catalog-header__open
@@ -2853,6 +2902,7 @@ a.tdu
         left: 0
         bottom: 0
         width: 100%
+        z-index: 40
 
 .b-catalog-m-content
     position: relative
@@ -3744,6 +3794,146 @@ a.tdu
     &:hover
         color: #f45302
 
+.b-expert-page
+    padding: 45px 0 80px
+
+.b-expert-page__content
+    float: left
+    width: calc(100% - 315px)
+
+.b-expert-page__sidebar
+    width: 280px
+    float: right
+
+.b-st-grid
+    font-size: 0
+    margin-left: -12px
+    margin-right: -12px
+
+.b-st-grid__item
+    padding: 0 12px
+    display: inline-block
+    vertical-align: top
+    width: 33.33%
+
+.b-st-grid__item__preview
+    display: block
+    font-size: 0
+    line-height: 0
+    margin-bottom: 15px
+    overflow: hidden
+    text-align: center
+    img
+        min-width: 100%
+        min-height: 100%
+        max-width: 120%
+        max-height: 120%
+
+
+.b-contest__item
+    height: 220px
+    padding: 20px 40px
+    position: relative
+    margin-bottom: 30px
+    &:last-child
+        margin-bottom: 0
+    &:before
+        content: ''
+        display: inline-block
+        vertical-align: middle
+        height: 100%
+
+.b-contest__item__bg
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    img
+        max-width: 120%
+        max-height: 120%
+        min-width: 100%
+        min-height: 100%
+
+.b-contest__item__content
+    text-align: left
+    position: relative
+    z-index: 20
+    display: inline-block
+    vertical-align: middle
+
+.b-sale-registration
+    background: url(../img/grid-img2.jpg) no-repeat center center
+    -webkit-background-size: cover
+    background-size: cover
+    padding: 10px
+
+.b-sale-registration__content
+    background: #fff
+    padding: 30px 24px
+
+.b-grid-leaders__item
+    position: relative
+    height: 72px
+    border: 1px solid #ccc
+    margin-bottom: 20px
+    overflow: hidden
+    &:last-child
+        margin-bottom: 0
+
+.b-grid-leaders__item__photo
+    width: 70px
+    height: 70px
+    display: inline-block
+    vertical-align: middle
+    overflow: hidden
+    img
+        max-width: 120%
+        max-height: 120%
+        min-width: 100%
+        min-height: 100%
+
+.b-grid-leaders__item__content
+    display: inline-block
+    vertical-align: middle
+    padding-left: 10px
+    width: 160px
+
+.b-grid-leaders__item__icon
+    &.gold_medal
+        +sprite(gold-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+    &.silver_medal
+        +sprite(silver-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+    &.bronze_medal
+        +sprite(bronze-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+
+.b-questionnaire-data__left
+    width: 230px
+    float: left
+    font-size: 15px
+    line-height: 42px
+    text-align: right
+
+.b-questionnaire-data__right
+    width: calc(100% - 240px)
+    float: right
+
+.b-questionnaire-data__row
+    margin-bottom: 15px
+    &:last-child
+        margin-bottom: 0
+
+
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
         display: block
@@ -3846,6 +4036,14 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-product-slider
+        .owl-stage-outer
+            padding-bottom: 0
+    .b-presentation-slider__slide
+        .hover-preview
+            display: none !important
+        .standard-preview
+            display: block !important
     .b-product-item__overlay
         display: none !important
     .b-text
@@ -3876,6 +4074,9 @@ a.tdu
     .b-presentation-slider
         height: 400px
         margin-bottom: 40px
+        .b-product-infographics
+            left: 100px
+            z-index: 200
 
     .b-presentation-slider__slide
         line-height: 400px
