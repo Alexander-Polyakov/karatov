@@ -230,6 +230,9 @@ body
 .mt60
     margin-top: 60px
 
+.m0_5
+    margin: 0 5px
+
 .txt_white
     color: #fff
 
@@ -1262,6 +1265,8 @@ a.tdu
         padding-right: 0
     &.hidden
         display: none
+    &.mt0
+        margin-top: 0
 
 
 .b-changing
@@ -1597,6 +1602,12 @@ a.tdu
 
     .b-product-item__preview
         margin-bottom: 10px
+
+.b-products-item
+    .b-fade-slider
+        position: relative
+        height: 180px
+        width: 100%
 
 .b-product-item__popup
     position: absolute
@@ -4074,6 +4085,61 @@ a.tdu
             z-index: 200
             opacity: 0.8
             background: #fff
+
+
+.b-expert-catalog-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid #e0e1e1
+
+
+.b-products-grid
+    margin-left: -15px
+    margin-right: -15px
+    font-size: 0
+
+.b-products-grid__item
+    padding: 0 15px
+    display: inline-block
+    vertical-align: top
+    width: 33.33%
+    font-size: 17px
+    text-align: center
+
+.b-products-item__descr
+    font-size: 12px
+    color: #999
+    margin-bottom: 10px
+    line-height: 1.2em
+
+.b-products-item__price
+    font-size: 20px
+    font-family: $cr
+    line-height: 1.2em
+    margin-bottom: 15px
+
+.b-products-item__section
+    padding: 0 15px
+    &.popup
+        visibility: hidden
+        opacity: 0
+        +trans()
+        position: absolute
+        top: 100%
+        left: 0
+
+.b-products-item__cont-wrap
+    max-width: 200px
+    margin: 0 auto
+
+.b-products-item
+    position: relative
+    &:hover
+        .b-products-item__section
+            &.popup
+                visibility: visible
+                opacity: 1
 
 
 .tab-visible
