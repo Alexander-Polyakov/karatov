@@ -170,6 +170,9 @@ body
 .w85px
     width: 85px
 
+.w100px
+    width: 100px
+
 .w220px
     width: 220px
 
@@ -1608,6 +1611,10 @@ a.tdu
         position: relative
         height: 180px
         width: 100%
+    &:hover
+        .b-fade-slider__nav
+            opacity: 1
+
 
 .b-product-item__popup
     position: absolute
@@ -3356,6 +3363,14 @@ a.tdu
             +sprite(check70px, "abs_middle")
             top: 0 !important
             margin-top: 0 !important
+    &.plus85px
+        position: relative
+        padding-left: 105px
+        &:before
+            content: ''
+            +sprite(plus85px, "abs_middle")
+            left: 0 !important
+            margin-left: 0 !important
 
 .jspScrollable
     .b-text__content
@@ -3594,20 +3609,21 @@ a.tdu
     line-height: 1.2em
     text-transform: uppercase
 
+.b-product-list
+    margin-bottom: 20px
 
 .b-product-list__item
     padding-left: 90px
     position: relative
     margin-bottom: 20px
-    &:lastc-child
+    &:last-child
         margin-bottom: 0
 
 .b-product-list__item__preview
     position: absolute
     width: 64px
     height: 64px
-    top: 50%
-    margin-top: -32px
+    top: 10px
     left: 0
     font-size: 0
     line-height: 64px
@@ -3656,7 +3672,6 @@ a.tdu
     line-height: 1.2em
     font-size: 20px
     font-family: $cr
-    margin-bottom: 5px
 
 .b-order-info__item
     margin-bottom: 15px
@@ -4093,6 +4108,8 @@ a.tdu
     align-items: center
     border-bottom: 1px solid #e0e1e1
 
+.b-expert-catalog-content
+    padding-top: 40px
 
 .b-products-grid
     margin-left: -15px
@@ -4106,21 +4123,28 @@ a.tdu
     width: 33.33%
     font-size: 17px
     text-align: center
+    margin-bottom: 40px
+
+.b-product-size__link
+    color: #111111
+    &:hover
+        text-decoration: underline
 
 .b-products-item__descr
     font-size: 12px
     color: #999
-    margin-bottom: 10px
+    padding-bottom: 10px
     line-height: 1.2em
 
 .b-products-item__price
     font-size: 20px
     font-family: $cr
     line-height: 1.2em
-    margin-bottom: 15px
+    padding-bottom: 15px
 
 .b-products-item__section
     padding: 0 15px
+    +trans()
     &.popup
         visibility: hidden
         opacity: 0
@@ -4128,6 +4152,9 @@ a.tdu
         position: absolute
         top: 100%
         left: 0
+        width: 100%
+        background: #fff
+        z-index: 10
 
 .b-products-item__cont-wrap
     max-width: 200px
@@ -4135,11 +4162,27 @@ a.tdu
 
 .b-products-item
     position: relative
+    max-width: 255px
+    margin: 0 auto
     &:hover
+        z-index: 100
         .b-products-item__section
+            box-shadow: 0px 5px 5px 0px #ccc
             &.popup
                 visibility: visible
                 opacity: 1
+
+.b-product-size
+    font-size: 14px
+
+.b-product-size__item
+    margin: 0 7px 10px
+    display: inline-block
+    vertical-align: top
+    line-height: 1.2em
+
+.b-products-item__preview
+    padding-bottom: 13px
 
 
 .tab-visible

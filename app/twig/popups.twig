@@ -40,7 +40,15 @@
 
                 <div class="b-popups-opening__item" data-open-popup="checkout">Оформить заказ</div>
 
+                <div class="b-popups-opening__item" data-open-popup="checkout2">Оформить заказ2</div>
+
+                <div class="b-popups-opening__item" data-open-popup="checkout3">Заказ оформлен</div>
+
                 <div class="b-popups-opening__item" data-open-popup="map_popup">Где купить в Москве?</div>
+
+                <div class="b-popups-opening__item" data-open-popup="no_bonuses">Нет бонусов</div>
+
+                <div class="b-popups-opening__item" data-open-popup="no_bonuses">Заказ оформлен</div>
             </div>
         </div>
     </div>
@@ -63,6 +71,22 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="b-popup w520" data-popup="no_bonuses">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Не хватает бонусов</p>
+            </div>
+            <div class="b-popup__content pt20">
+                <div class="b-text plus85px mb20">
+                    <p>Вам не хватает бонус для заказа. Вы можете узнать как заработать больше, кликнув по кнопке ниже.
+                    </p>
+                </div>
+                <p>
+                    <a class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Продолжить</a>
+                </p>
             </div>
         </div>
 
@@ -815,7 +839,7 @@
                                     <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами <i class="b-product-list__item_delete"></i>
                                     </div>
                                 </div>
-                                <p class="b-product-list__item__price">55 000 р</p>
+                                <p class="b-product-list__item__price mb5">55 000 р</p>
                                 <div class="b-product-list__item__size-wrap">
                                     <span class="fz12 mr50 dib">Размер</span>
                                     <select class="select border-gray lh24">
@@ -836,7 +860,7 @@
                                     <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами <i class="b-product-list__item_delete"></i>
                                     </div>
                                 </div>
-                                <p class="b-product-list__item__price">55 000 р</p>
+                                <p class="b-product-list__item__price mb5">55 000 р</p>
                                 <div class="b-product-list__item__size-wrap">
                                     <span class="fz12 mr50 dib">Размер</span>
                                     <select class="select border-gray lh24">
@@ -939,6 +963,58 @@
             </div>
         </div>
 
+
+        <div class="b-popup w500 b-pop-order" data-popup="checkout2">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Оформить заказ</p>
+            </div>
+            <div class="b-popup-section">
+                <div class="b-popup-section__content">
+                    <div class="b-product-list">
+                        <div class="b-product-list__item">
+                            <div class="b-product-list__item__preview">
+                                <img src="img/products/product-img2.jpg" alt="">
+                            </div>
+                            <div class="b-product-list__item__content">
+                                <div>
+                                    <div class="b-product-list__item__descr">Кольцо из белого золота с 20 бриллиантами и фианитами</div>
+                                </div>
+                                <p class="b-product-list__item__price mb20">300 баллов</p>
+                                <ul class="color-gray fz12">
+                                    <li class="mb10">
+                                        <span class="dib w100px">Металл</span>
+                                        <span class="dib">Золото</span>
+                                    </li>
+                                    <li class="mb10">
+                                        <span class="dib w100px">Вставка</span>
+                                        <span class="dib">Бриллиант</span>
+                                    </li>
+                                    <li class="mb10">
+                                        <span class="dib w100px">Размер</span>
+                                        <span class="dib">-</span>
+                                    </li>
+                                    <li class="mb10">
+                                        <span class="dib w100px">Количество</span>
+                                        <span class="dib">1</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fz12 mb20">Оформитье заказ и наш менеджер свяжется с вами в ближайшее время, уточнит все детяли оплаты и получения заказа. Пожалуйста укажите свой телефон для связи</div>
+                    <div class="mb20 rel">
+                        <input placeholder="Номер телефона" class="input-popup lh50 inputmask" type="text">
+                        <div class="b-clarification tooltip abs_input" data-tooltip-content="#tooltip_content">
+                            <span class="b-clarification__icon"></span>
+                        </div>
+                    </div>
+                    <div class="mb20">
+                        <a href="#" class="btn lh45 ff_cr ttu fz16 bg_y txt_white full_w">отправить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div class="b-popup w600" data-popup="order_sent">
