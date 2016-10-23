@@ -1,4 +1,4 @@
-{% extends "layouts/main_expert.twig" %}
+{% extends "layouts/main_expert_not_activated.twig" %}
 
 {% block pageScripts %}
 
@@ -41,13 +41,13 @@
                                 <a href="#" class="b-profile-nav__link">Штрихкоды</a>
                             </li>
                         </ul>
+                        <div class="b-profile-warning">
+                            Пока анкета находится на проверке модератора Вы не можете просматривать другие страницы. По всем вопросам обращайтесь на горячую линию или свяжитесь с нами при помощи «обратной связи». Уведомление о прохождении модерации Вы получите по СМС и электронной почте.
+                        </div>
                         <div class="b-questionnaire clearfix">
                             <div class="b-questionnaire-photo">
                                 <div class="b-big-avatar">
-                                    <i class="b-big-avatar__delete"></i>
-                                    <div class="b-big-avatar__photo">
-                                        <img src="img/expert_img/bg-avatar-img1.jpg" alt="">
-                                    </div>
+                                    <div class="b-big-avatar__photo"></div>
                                     <p>
                                         <a class="btn lh40 white ff_cr fz15 full_w" href="#">Загрузить фото</a>
                                     </p>
@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b-expert-page__sidebar">
+            <div class="b-expert-page__sidebar expert_overlay">
                 <form action="#" class="b-sale-registration mb25">
                     <div class="b-sale-registration__content">
                         <p class="fz24-title tac ttu">Регистрация

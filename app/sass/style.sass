@@ -170,6 +170,9 @@ body
 .w85px
     width: 85px
 
+.w100px
+    width: 100px
+
 .w220px
     width: 220px
 
@@ -230,6 +233,9 @@ body
 .mt60
     margin-top: 60px
 
+.m0_5
+    margin: 0 5px
+
 .txt_white
     color: #fff
 
@@ -263,6 +269,9 @@ body
 .fz16
     font-size: 16px
 
+.fz17
+    font-size: 17px
+
 .fz18
     font-size: 18px
 
@@ -277,6 +286,9 @@ body
 
 .fz22
     font-size: 22px
+
+.fz24
+    font-size: 24px
 
 .fz26
     font-size: 26px
@@ -450,6 +462,18 @@ a.tdu
     font-family: $cl
     text-align: center
     margin-bottom: 30px
+    line-height: 1.2em
+    &.tal
+        text-align: left
+    &.mb10
+        margin-bottom: 10px
+
+.fz24-title
+    font-size: 24px
+    font-family: $cl
+    margin-bottom: 20px
+    line-height: 1.2em
+
 
 .width300px
     width: 300px
@@ -706,6 +730,12 @@ a.tdu
         padding: 0
     &.lh60
         line-height: 60px
+    &.gray
+        color: #aaa
+        border: 1px solid #aaa
+        &:hover
+            color: #000
+            border-color: #000
     &.white
         border: 1px solid #000
         color: #000
@@ -1238,6 +1268,8 @@ a.tdu
         padding-right: 0
     &.hidden
         display: none
+    &.mt0
+        margin-top: 0
 
 
 .b-changing
@@ -1574,6 +1606,16 @@ a.tdu
     .b-product-item__preview
         margin-bottom: 10px
 
+.b-products-item
+    .b-fade-slider
+        position: relative
+        height: 180px
+        width: 100%
+    &:hover
+        .b-fade-slider__nav
+            opacity: 1
+
+
 .b-product-item__popup
     position: absolute
     top: 100%
@@ -1646,8 +1688,10 @@ a.tdu
         .b-product-item__overlay
             box-shadow: 0 2px 3px 0 #ccc
             opacity: 1
-        .b-product-item__popup
+            z-index: 45
+        .b-product-item__popup, .b-fade-slider__nav
             opacity: 1
+
 
 .b-product-item__overlay
     content: ''
@@ -1842,6 +1886,19 @@ a.tdu
     &.w50p
         width: 50%
 
+
+.st-input
+    padding: 0 10px
+    +phc(#ccc)
+    color: #ccc
+    width: 100%
+    font-size: 15px
+    font-family: $cl
+    border: 1px solid #ccc
+    &.lh40
+        height: 42px
+
+
 .textarea-popup
     font-size: 17px
     width: 100%
@@ -1880,6 +1937,10 @@ a.tdu
 .b-section-wrapper
     &.p110_0
         padding: 110px 0
+    &.pt45
+        padding-top: 45px
+    &.pb80
+        padding-bottom: 80px
     &.pb60
         padding-bottom: 60px
     &.pt55
@@ -2021,6 +2082,7 @@ a.tdu
     width: 100px
     text-align: center
     padding: 25px 0
+    display: none
     &:before
         content: ''
         width: 100%
@@ -2030,7 +2092,6 @@ a.tdu
         position: absolute
         background: rgba(246, 246, 247, 0.8)
         +trans
-
     &.dark
         &:before
             background: rgba(200, 200, 200, 0.6)
@@ -2313,7 +2374,7 @@ a.tdu
 .tooltip_templates
     display: none
 
-.tooltipster-base
+.tooltipster-sidetip
     z-index: 300 !important
     .tooltipster-box
         background: #fff
@@ -2329,10 +2390,72 @@ a.tdu
         border-top-color: #e1e1e1 !important
     .tooltipster-arrow-background
         border-top-color: #fff !important
+    &.tooltipster-bottom
+        .tooltipster-arrow-border
+            border-bottom-color: #e1e1e1 !important
+        .tooltipster-arrow-background
+            border-bottom-color: #fff !important
+
 
 
 .b-catalog-header__open
     width: 220px
+
+
+.questionnaire-select.jqselect
+    cursor: pointer
+    z-index: 150 !important
+    text-align: left
+    background: #fff
+    width: 100%
+    .jq-selectbox__select-text
+        width: auto !important
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+    .jq-selectbox__select
+        line-height: 40px
+        font-size: 15px
+        font-family: $cl
+        color: #ccc
+        border: 1px solid #ccc
+        padding: 0 30px 0 15px
+    .jq-selectbox__trigger
+        position: absolute
+        right: 15px
+        width: 6px
+        height: 6px
+        top: 50%
+        margin-top: -4px
+        border-left: 1px solid #c8c5c4
+        border-bottom: 1px solid #c8c5c4
+        +rotate(-45)
+    .jq-selectbox__dropdown
+        font-size: 15px
+        width: 100%
+        margin-top: -1px
+        border: 1px solid #e1e0e0
+        color: #111111
+        background: #fff
+        line-height: 1.2em
+        ul
+            max-height: 500px
+        li
+            padding: 11px 15px
+            +trans
+            &.sel
+                color: #a1a0a0
+            &:hover
+                background: #f7f7f7
+    &.opened
+        z-index: 160 !important
+        .jq-selectbox__select-text
+            color: #f37136
+        .jq-selectbox__select
+            border: 1px solid #e1e0e0
+        .jq-selectbox__trigger
+            border-color: #f37136
+
 
 
 .jq-selectbox.select
@@ -2853,6 +2976,7 @@ a.tdu
         left: 0
         bottom: 0
         width: 100%
+        z-index: 40
 
 .b-catalog-m-content
     position: relative
@@ -3239,6 +3363,14 @@ a.tdu
             +sprite(check70px, "abs_middle")
             top: 0 !important
             margin-top: 0 !important
+    &.plus85px
+        position: relative
+        padding-left: 105px
+        &:before
+            content: ''
+            +sprite(plus85px, "abs_middle")
+            left: 0 !important
+            margin-left: 0 !important
 
 .jspScrollable
     .b-text__content
@@ -3477,20 +3609,21 @@ a.tdu
     line-height: 1.2em
     text-transform: uppercase
 
+.b-product-list
+    margin-bottom: 20px
 
 .b-product-list__item
     padding-left: 90px
     position: relative
     margin-bottom: 20px
-    &:lastc-child
+    &:last-child
         margin-bottom: 0
 
 .b-product-list__item__preview
     position: absolute
     width: 64px
     height: 64px
-    top: 50%
-    margin-top: -32px
+    top: 10px
     left: 0
     font-size: 0
     line-height: 64px
@@ -3539,7 +3672,6 @@ a.tdu
     line-height: 1.2em
     font-size: 20px
     font-family: $cr
-    margin-bottom: 5px
 
 .b-order-info__item
     margin-bottom: 15px
@@ -3744,6 +3876,315 @@ a.tdu
     &:hover
         color: #f45302
 
+.b-expert-page
+    padding: 45px 0 80px
+
+.b-expert-page__content
+    float: left
+    width: calc(100% - 315px)
+
+.b-expert-page__sidebar
+    width: 280px
+    float: right
+
+.b-st-grid
+    font-size: 0
+    margin-left: -12px
+    margin-right: -12px
+
+.b-st-grid__item
+    padding: 0 12px
+    display: inline-block
+    vertical-align: top
+    width: 33.33%
+
+.b-st-grid__item__preview
+    display: block
+    font-size: 0
+    line-height: 0
+    margin-bottom: 15px
+    overflow: hidden
+    text-align: center
+    img
+        min-width: 100%
+        min-height: 100%
+        max-width: 120%
+        max-height: 120%
+
+
+.b-contest__item
+    height: 220px
+    padding: 20px 40px
+    position: relative
+    margin-bottom: 30px
+    &:last-child
+        margin-bottom: 0
+    &:before
+        content: ''
+        display: inline-block
+        vertical-align: middle
+        height: 100%
+
+.b-contest__item__bg
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    img
+        max-width: 120%
+        max-height: 120%
+        min-width: 100%
+        min-height: 100%
+
+.b-contest__item__content
+    text-align: left
+    position: relative
+    z-index: 20
+    display: inline-block
+    vertical-align: middle
+
+.b-sale-registration
+    background: url(../img/grid-img2.jpg) no-repeat center center
+    -webkit-background-size: cover
+    background-size: cover
+    padding: 10px
+
+.b-sale-registration__content
+    background: #fff
+    padding: 30px 24px
+
+.b-grid-leaders__item
+    position: relative
+    height: 72px
+    border: 1px solid #ccc
+    margin-bottom: 20px
+    overflow: hidden
+    &:last-child
+        margin-bottom: 0
+
+.b-grid-leaders__item__photo
+    width: 70px
+    height: 70px
+    display: inline-block
+    vertical-align: middle
+    overflow: hidden
+    img
+        max-width: 120%
+        max-height: 120%
+        min-width: 100%
+        min-height: 100%
+
+.b-grid-leaders__item__content
+    display: inline-block
+    vertical-align: middle
+    padding-left: 10px
+    width: 160px
+
+.b-grid-leaders__item__icon
+    &.gold_medal
+        +sprite(gold-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+    &.silver_medal
+        +sprite(silver-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+    &.bronze_medal
+        +sprite(bronze-medal, "abs_middle")
+        left: auto !important
+        margin-left: 0 !important
+        right: 10px !important
+
+.b-questionnaire-data__left
+    width: 230px
+    float: left
+    font-size: 15px
+    line-height: 42px
+    text-align: right
+    &.lh26
+        line-height: 26px
+
+.b-questionnaire-data__right
+    width: calc(100% - 240px)
+    float: right
+
+.b-questionnaire-data__row
+    margin-bottom: 15px
+    &:last-child
+        margin-bottom: 0
+
+.b-profile-nav
+    font-size: 15px
+    border-bottom: 1px solid #ccc
+    margin-bottom: 25px
+
+.b-profile-nav__item
+    margin-right: 35px
+    display: inline-block
+    vertical-align: middle
+    +trans()
+    &.active
+        color: #f05007
+        .b-profile-nav__link
+            &:before
+                content: ''
+                height: 2px
+                width: 100%
+                position: absolute
+                bottom: -1px
+                background: #f05007
+    &:hover
+        color: #f05007
+
+.b-profile-nav__link
+    line-height: 28px
+    display: block
+    position: relative
+
+.b-questionnaire-photo
+    float: left
+    width: 200px
+
+.b-questionnaire-data
+    float: right
+    width: calc(100% - 220px)
+
+.b-big-avatar
+    position: relative
+
+.b-big-avatar__delete
+    position: absolute
+    +sprite(delete)
+    right: 0
+    top: 0
+    cursor: pointer
+
+.b-big-avatar__photo
+    overflow: hidden
+    background: url(../img/expert_img/big-avatar-bg.jpg) no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    width: 100%
+    height: 200px
+    margin-bottom: 20px
+    img
+        min-width: 100%
+        min-height: 100%
+        max-height: 120%
+        max-height: 120%
+
+.b-profile-warning
+    padding: 15px
+    text-align: center
+    color: #999
+    background: #f7f7f7
+    font-size: 13px
+    line-height: 1.5em
+    margin-bottom: 20px
+
+
+.expert_not_activated
+    .expert_overlay
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            z-index: 200
+            opacity: 0.8
+            background: #fff
+
+
+.b-expert-catalog-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid #e0e1e1
+
+.b-expert-catalog-content
+    padding-top: 40px
+
+.b-products-grid
+    margin-left: -15px
+    margin-right: -15px
+    font-size: 0
+
+.b-products-grid__item
+    padding: 0 15px
+    display: inline-block
+    vertical-align: top
+    width: 33.33%
+    font-size: 17px
+    text-align: center
+    margin-bottom: 40px
+
+.b-product-size__link
+    color: #111111
+    &:hover
+        text-decoration: underline
+
+.b-products-item__descr
+    font-size: 12px
+    color: #999
+    padding-bottom: 10px
+    line-height: 1.2em
+
+.b-products-item__price
+    font-size: 20px
+    font-family: $cr
+    line-height: 1.2em
+    padding-bottom: 15px
+
+.b-products-item__section
+    padding: 0 15px
+    +trans()
+    &.popup
+        visibility: hidden
+        opacity: 0
+        +trans()
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        background: #fff
+        z-index: 10
+
+.b-products-item__cont-wrap
+    max-width: 200px
+    margin: 0 auto
+
+.b-products-item
+    position: relative
+    max-width: 255px
+    margin: 0 auto
+    &:hover
+        z-index: 100
+        .b-products-item__section
+            box-shadow: 0px 5px 5px 0px #ccc
+            &.popup
+                visibility: visible
+                opacity: 1
+
+.b-product-size
+    font-size: 14px
+
+.b-product-size__item
+    margin: 0 7px 10px
+    display: inline-block
+    vertical-align: top
+    line-height: 1.2em
+
+.b-products-item__preview
+    padding-bottom: 13px
+
+
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
         display: block
@@ -3846,11 +4287,14 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-product-slider
+        .owl-stage-outer
+            padding-bottom: 0
     .b-presentation-slider__slide
-        .standard-preview
-            display: block !important
         .hover-preview
             display: none !important
+        .standard-preview
+            display: block !important
     .b-product-item__overlay
         display: none !important
     .b-text
@@ -3881,6 +4325,9 @@ a.tdu
     .b-presentation-slider
         height: 400px
         margin-bottom: 40px
+        .b-product-infographics
+            left: 100px
+            z-index: 200
 
     .b-presentation-slider__slide
         line-height: 400px

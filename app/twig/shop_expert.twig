@@ -1,0 +1,977 @@
+{% extends "layouts/main_expert.twig" %}
+
+{% block pageScripts %}
+
+{% endblock %}
+
+
+
+{% block menuBlock %}
+    {% include "widgets/b-menu-expert.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+    <div class="b-expert-page">
+        <div class="b-container clearfix">
+            <div class="b-expert-page__content">
+                <ul class="b-bread-crumbs clearfix mb20">
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Профиль</a>
+                    </li>
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Анкета</a>
+                    </li>
+                </ul>
+
+
+                <div class="b-section-wrapper pb60">
+                    <h2 class="fz28-title mb10 tal">Профиль</h2>
+                    <div class="b-section-wrapper pb60">
+                        <div class="b-expert-catalog">
+                            <div class="b-expert-catalog-header fz15">
+                                <div class="b-changing">
+                                    <div class="b-changing__item mt0">
+                                        <div class="b-filter-select">
+                                            <div class="b-filter-select__name">Категория</div>
+                                            <div class="b-filter-select__dropdown">
+                                                <ul class="b-nesting">
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input type="checkbox" class="filter-checkbox">
+                                                                <span class='b-filter-label__text'>Золото</span>
+                                                            </label>
+                                                        </div>
+                                                        <ul class="b-nesting__list">
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Красное</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Желтое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Белое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Мультицвет</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Платина</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Серебро</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="b-changing__item mt0">
+                                        <div class="b-filter-select">
+                                            <div class="b-filter-select__name">Вид</div>
+                                            <div class="b-filter-select__dropdown">
+                                                <ul class="b-nesting">
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input type="checkbox" class="filter-checkbox">
+                                                                <span class='b-filter-label__text'>Золото</span>
+                                                            </label>
+                                                        </div>
+                                                        <ul class="b-nesting__list">
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Красное</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Желтое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Белое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Мультицвет</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Платина</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Серебро</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="b-changing__item mt0">
+                                        <div class="b-filter-select">
+                                            <div class="b-filter-select__name">Материал</div>
+                                            <div class="b-filter-select__dropdown">
+                                                <ul class="b-nesting">
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input type="checkbox" class="filter-checkbox">
+                                                                <span class='b-filter-label__text'>Золото</span>
+                                                            </label>
+                                                        </div>
+                                                        <ul class="b-nesting__list">
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Красное</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Желтое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Белое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Мультицвет</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Платина</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Серебро</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="b-changing__item mt0">
+                                        <div class="b-filter-select">
+                                            <div class="b-filter-select__name">Вставка</div>
+                                            <div class="b-filter-select__dropdown">
+                                                <ul class="b-nesting">
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input type="checkbox" class="filter-checkbox">
+                                                                <span class='b-filter-label__text'>Золото</span>
+                                                            </label>
+                                                        </div>
+                                                        <ul class="b-nesting__list">
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Красное</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Желтое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Белое</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="b-nesting__list__item">
+                                                                <label class="b-filter-label">
+                                                                    <input type="checkbox" class="filter-checkbox">
+                                                                    <span class='b-filter-label__text'>Мультицвет</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Платина</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li class='b-nesting__item'>
+                                                        <div class='b-nesting__item-content'>
+                                                            <label class="b-filter-label">
+                                                                <input name="1" type="radio" class="filter-radio">
+                                                                <span class='b-filter-label__text'>Серебро</span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <select class='select'>
+                                    <option >Сначала популярные</option>
+                                    <option >Сначала дешевое</option>
+                                    <option >Сначала дорогое</option>
+                                    <option >Сначала не популярное</option>
+                                </select>
+                            </div>
+
+                            <div class="b-expert-catalog-content">
+                                <div class="b-products-grid">
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="b-products-grid__item">
+                                        <div class="b-products-item">
+                                            <div class="b-products-item__section">
+                                                <div class="b-products-item__preview">
+                                                    <div class="b-fade-slider">
+                                                        <div class="b-fade-slider__slides">
+                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                <img src="img/products/product-img1.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                <img src="img/products/product-img2.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                <img src="img/products/product-img3.jpg" alt="">
+                                                            </div>
+                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                <img src="img/products/product-img4.jpg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        <ul class="b-fade-slider__nav clearfix">
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
+                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
+                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__cont-wrap">
+                                                    <div class="b-products-item__descr">
+                                                        <p>Кольцо из серебра с фианитами</p>
+                                                    </div>
+                                                    <p class="b-products-item__price">899 баллов</p>
+                                                </div>
+                                            </div>
+                                            <div class="b-products-item__section popup">
+                                                <div class="b-products-item__cont-wrap">
+                                                    <p class="mb10">
+                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                    </p>
+                                                    <div>
+                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                        <ul class="b-product-size">
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">16,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">17,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">18,5</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">19</a>
+                                                            </li>
+                                                            <li class="b-product-size__item">
+                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-pagination-wrapper tac">
+                                    <p class="mb35">
+                                        <a class="btn lh40 white ff_cr ttu fz13" href="#">Показать еще</a>
+                                    </p>
+                                    <ul class="b-pagination dib  mobile-hidden">
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">1</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">2</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">...</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">5</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">6</a>
+                                        </li>
+                                        <li class="b-pagination__item active">
+                                            <a class='b-pagination__link' href="#">7</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">8</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">9</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">...</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">79</a>
+                                        </li>
+                                        <li class="b-pagination__item">
+                                            <a class='b-pagination__link' href="#">80</a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-expert-page__sidebar">
+                <form action="#" class="b-sale-registration mb25">
+                    <div class="b-sale-registration__content">
+                        <p class="fz24-title tac ttu">Регистрация
+                            продажи</p>
+                        <div class="mb10 rel">
+                            <input placeholder="Введите штрих-код" class="st-input lh40" type="text">
+                            <div class="b-clarification abs_input tooltip tooltipstered" data-tooltip-content="#tooltip_content">
+                                <span class="b-clarification__icon"></span>
+                            </div>
+                        </div>
+                        <div class="mb10">
+                            <input placeholder="Введите артикул" class="st-input lh40" type="text">
+                        </div>
+                        <div>
+                            <button class="btn lh45 ff_cr ttu fz14 bg_y txt_white full_w ">Зарегистрировать</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="b-leaders-sells">
+                    <div class="fz28-title tal mb10">Лидеры продаж</div>
+                    <div class="b-grid-leaders">
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img1.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Алексей Иванов</p>
+                                <p class="fz15 color-yellow">1 728 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon gold_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img2.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Юлия Елизарова</p>
+                                <p class="fz15 color-yellow">1 431 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon silver_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img3.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon bronze_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img4.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
