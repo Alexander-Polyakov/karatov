@@ -61,22 +61,28 @@ gulp.task('pug', function () {
 
 /* TWIG --------------------------------------------------------------------- */
 gulp.task('twig', function () {
-    gulp.src(sources.twig.src)
-        .pipe(plumber())
-        .pipe(twig())
-        .pipe(gulp.dest(sources.twig.temp_dist))
-        .pipe(callback(function () {
-            gulp.src(sources.twig.temp_dist_html)
-                .pipe(htmlbeautify())
-                .pipe(gulp.dest(sources.html.dist))
+    // gulp.src(sources.twig.temp_dist, {read: false})
+    //     .pipe(clean());
+
+    setTimeout(function () {
+        gulp.src(sources.twig.src)
+            .pipe(plumber())
+            .pipe(twig())
+            .pipe(gulp.dest(sources.twig.temp_dist))
+            .pipe(callback(function () {
+                gulp.src(sources.twig.temp_dist_html)
+                    .pipe(htmlbeautify())
+                    .pipe(gulp.dest(sources.html.dist))
                 // .pipe(callback(function () {
                 //     setTimeout(function () {
                 //         gulp.src(sources.twig.temp_dist, {read: false})
                 //             .pipe(clean());
                 //     }, 2000);
                 // }));
-        }))
-        .pipe(connect.reload());
+            }))
+            .pipe(connect.reload());
+    }, 1500);
+
 
 
     // return null;
@@ -109,7 +115,7 @@ gulp.task('bower', function () {
 gulp.task('connect', function () {
     connect.server({
         root: 'app',
-        port: 3000,
+        port: 3002,
         livereload: true
     });
 });
