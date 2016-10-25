@@ -11,6 +11,75 @@ $(document).ready(function () {
         })
     }
 
+    if($('.b-st-grid').length > 0) {
+        $('.b-st-grid').owlCarousel({
+            items: 3,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                769: {
+                    items: 2,
+                    margin: 10
+                },
+                992: {
+                    items: 3,
+                    margin: 20
+                }
+            }
+        });
+    }
+
+    $(function(){
+        var contest = $('.b-contest');
+        var width;
+        var type;
+        if(contest.length > 0) {
+            width = doc.outerWidth();
+            $(window).resize(function () {
+                width = doc.outerWidth();
+                detect_contest();
+            });
+
+            detect_contest();
+        }
+
+        function detect_contest() {
+            if(type == 'mobile' && width > 768) {
+                contest.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+                contest.find('.owl-stage-outer').children().unwrap();
+
+                type = 'not_mobile';
+            } else if(type == 'not_mobile' && width <= 768) {
+                type = 'mobile';
+                contest.owlCarousel({
+                    items: 1,
+                    responsive: {
+                        0: {
+                            items: 1
+                        }
+                    }
+                });
+            } else {
+                if(doc.outerWidth() <= 768) {
+                    type = 'mobile';
+
+                    contest.owlCarousel({
+                        items: 1,
+                        responsive: {
+                            0: {
+                                items: 1
+                            }
+                        }
+                    });
+                } else {
+                    type = 'not_mobile';
+                }
+            }
+        }
+    });
+
     if ($(".filter-radio").length > 0) {
         // $(".filter-radio").styler();
         $('.filter-radio').each(function () {

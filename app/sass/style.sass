@@ -3893,14 +3893,12 @@ a.tdu
 
 .b-st-grid
     font-size: 0
-    margin-left: -12px
-    margin-right: -12px
 
 .b-st-grid__item
-    padding: 0 12px
-    display: inline-block
-    vertical-align: top
-    width: 33.33%
+    //padding: 0 12px
+    //display: inline-block
+    //vertical-align: top
+    //width: 33.33%
 
 .b-st-grid__item__preview
     display: block
@@ -3929,18 +3927,23 @@ a.tdu
         vertical-align: middle
         height: 100%
 
-.b-contest__item__bg
-    position: absolute
-    overflow: hidden
-    left: 0
-    top: 0
-    right: 0
-    bottom: 0
-    z-index: 10
-    img
-        width: 100%
-        height: 100%
-        object-fit: cover
+.b-contest__item
+    .b-contest__item__bg
+        position: absolute
+        overflow: hidden
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 10
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.b-contest
+    .owl-stage-outer
+        padding-bottom: 30px
 
 .b-contest__item__content
     text-align: left
@@ -4209,7 +4212,7 @@ a.tdu
         display: none
 
 @media screen and (max-width: 1150px)
-    .b-main-nav__item
+    .b-main-nav__item:not(.expert-menu)
         margin-right: 3%
 
 
@@ -4341,14 +4344,12 @@ a.tdu
     .b-sale-registration__content
         padding: 20px
 
-    .b-st-grid
-        margin-left: -5px
-        margin-right: -5px
+    //.b-st-grid
+    //    margin-left: -5px
+    //    margin-right: -5px
     .b-st-grid__item
-        padding: 0 5px
-        width: 50%
-        &:last-child
-            display: none
+        //padding: 0 5px
+        //width: 50%
 
     .b-grid-leaders__item__content
         width: 120px
@@ -4594,7 +4595,7 @@ a.tdu
     .b-teaser__item
         font-size: 12px
 
-    .b-main-nav__item
+    .b-main-nav__item:not(.expert-menu)
         font-size: 12px
         margin-right: 40px
 
@@ -4641,6 +4642,44 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-phone
+        display: block
+        float: none
+        margin: 0 auto 15px
+        text-align: center
+    .b-footer-expert
+        text-align: center
+        padding: 15px 0 0
+
+    .b-expert-page
+        padding-top: 0
+        padding-bottom: 20px
+    .b-logo.logo-expert
+        width: 100px
+        position: relative
+        top: 5px
+    .b-expert-page__sidebar
+        display: block
+        float: none
+        width: 100%
+        clear: both
+
+    .b-soc
+        transform-origin: center top
+        -moz-transform-origin: center top
+        -o-transform-origin: center top
+        -ms-transform-origin: center top
+        -webkit-transform-origin: center top
+        margin-bottom: -40px
+
+    .b-expert-page__content
+        width: 100%
+        float: none
+
+    .b-footer-exp-nav
+        display: none
+    .b-st-grid
+        padding-bottom: 20px
     .b-site-wrapper__content
         padding-top: 6px
     .b-popup__header__back
