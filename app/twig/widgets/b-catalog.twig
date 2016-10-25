@@ -1080,46 +1080,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="b-pagination-wrapper tac pos_b">
-                            <ul class="b-pagination dib mb35 mobile-hidden">
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">1</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">2</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">...</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">5</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">6</a>
-                                </li>
-                                <li class="b-pagination__item active">
-                                    <a class='b-pagination__link' href="#">7</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">8</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">9</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">...</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">79</a>
-                                </li>
-                                <li class="b-pagination__item">
-                                    <a class='b-pagination__link' href="#">80</a>
-                                </li>
-                            </ul>
-                            <p>
-                                <a class="btn lh40 white ff_cr ttu fz13" href="#">Показать еще</a>
-                            </p>
-                        </div>
+                        {% include 'b-pagination.twig' with {'class': 'pos_b'} %}
                     </div>
                 </div>
             </div>

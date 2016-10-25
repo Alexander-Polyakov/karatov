@@ -614,6 +614,8 @@ a.tdu
     &.bottom
         bottom: 0
 
+    // TODO поправить гамбургер, он кривой
+
 .mobile-menu-btn
     display: inline-block
     vertical-align: middle
@@ -1964,6 +1966,14 @@ a.tdu
         padding-bottom: 60px
     &.index-reviews
         padding-top: 5px
+
+    &.tab-no-pb
+        @media screen and (max-width: 992px)
+            padding-bottom: 0
+
+    &.mobile-no-pb
+        @media screen and (max-width: 768px)
+            padding-bottom: 0
 
 .b-main-nav-wrapper
     position: relative
@@ -4295,6 +4305,47 @@ a.tdu
 
 @media screen and (max-width: 992px)
 
+    .b-questionnaire-data
+        width: 100%
+        float: none
+
+    .b-questionnaire-data__left
+        width: 145px
+
+    .b-questionnaire-data__right
+        width: calc(100% - 160px)
+
+    .b-questionnaire-photo
+        margin-left: 160px
+        float: none
+        width: auto
+
+    .b-big-avatar
+        font-size: 0
+        margin-bottom: 20px
+
+    .b-big-avatar__photo
+        width: 120px
+        height: 120px
+        display: inline-block
+        vertical-align: middle
+        margin-bottom: 0
+
+    .upload-profile-ava-button
+        display: inline-block
+        vertical-align: middle
+        width: calc(100% - 120px)
+        text-align: right
+        padding-left: 10px
+
+    .b-big-avatar__delete
+        left: 120px
+        transform: translateX(-100%)
+        -moz-transform: translateX(-100%)
+        -webkit-transform: translateX(-100%)
+        -o-transform: translateX(-100%)
+        -ms-transform: translateX(-100%)
+
     .b-soc
         display: inline-block
         +scale(0.7)
@@ -4640,8 +4691,36 @@ a.tdu
         padding-bottom: 40px
 
 
+    .b-expert-catalog-content
+        .b-products-grid
+            margin-left: -10px
+            margin-right: -10px
+        .b-products-grid__item
+            width: 50%
+            padding-left: 10px
+            padding-right: 10px
+            box-sizing: border-box
+
+    .b-expert-catalog-header
+        .b-filter-select__name
+            padding-left: 0
+
+        .b-changing__item
+            padding-left: 5px
+            padding-right: 5px
+
 
 @media screen and (max-width: 768px)
+    .b-questionnaire-photo
+        margin-left: 0
+    .b-questionnaire-data__left
+        width: 100%
+        float: none
+        text-align: left
+        line-height: normal
+    .b-questionnaire-data__right
+        width: 100%
+        float: none
     .b-phone
         display: block
         float: none
@@ -4659,7 +4738,6 @@ a.tdu
         position: relative
         top: 5px
     .b-expert-page__sidebar
-        display: block
         float: none
         width: 100%
         clear: both

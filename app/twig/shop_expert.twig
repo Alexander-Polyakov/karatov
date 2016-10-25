@@ -4,7 +4,7 @@
 
 {% endblock %}
 
-
+{# TODO разобраться с фильтром на мобилках и на планшетах с кнопкой ЕЩЕ #}
 
 {% block menuBlock %}
     {% include "widgets/b-menu-expert.twig" %}
@@ -14,7 +14,7 @@
     <div class="b-expert-page">
         <div class="b-container clearfix">
             <div class="b-expert-page__content">
-                <ul class="b-bread-crumbs clearfix mb20">
+                <ul class="b-bread-crumbs mobile-hidden tab-hidden clearfix mb20">
                     <li class="b-bread-crumbs__item">
                         <a class="b-bread-crumbs__link" href="#">Главная</a>
                     </li>
@@ -28,7 +28,7 @@
 
 
                 <div class="b-section-wrapper pb60">
-                    <h2 class="fz28-title mb10 tal">Профиль</h2>
+                    <h2 class="fz28-title mb10 tal">Магазин</h2>
                     <div class="b-section-wrapper pb60">
                         <div class="b-expert-catalog">
                             <div class="b-expert-catalog-header fz15">
@@ -861,53 +861,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="b-pagination-wrapper tac">
-                                    <p class="mb35">
-                                        <a class="btn lh40 white ff_cr ttu fz13" href="#">Показать еще</a>
-                                    </p>
-                                    <ul class="b-pagination dib  mobile-hidden">
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">1</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">2</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">...</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">5</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">6</a>
-                                        </li>
-                                        <li class="b-pagination__item active">
-                                            <a class='b-pagination__link' href="#">7</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">8</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">9</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">...</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">79</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">80</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
+                                {% include 'widgets/b-pagination.twig' %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="b-expert-page__sidebar">
+            <div class="b-expert-page__sidebar mobile-hidden">
                 <form action="#" class="b-sale-registration mb25">
                     <div class="b-sale-registration__content">
                         <p class="fz24-title tac ttu">Регистрация
