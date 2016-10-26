@@ -27,12 +27,21 @@
                 </ul>
 
 
-                <div class="b-section-wrapper pb60">
+                <div class="b-section-wrapper">
                     <h2 class="fz28-title mb10 tal">Магазин</h2>
-                    <div class="b-section-wrapper pb60">
-                        <div class="b-expert-catalog">
+                    <div class="b-expert-catalog">
                             <div class="b-expert-catalog-header fz15">
-                                <div class="b-changing">
+                                <div class="b-filter-open pl0 tab-visible mobile-visible hidden" >
+                                    <span class="filter-open-btn" data-filter-btn="toggle">
+                                        <span class="hamburger pos_l">
+                                            <span class="hamburger__line top"></span>
+                                            <span class="hamburger__line middle"></span>
+                                            <span class="hamburger__line bottom"></span>
+                                        </span>
+                                        Фильтр
+                                    </span>
+                                </div>
+                                <div class="b-changing tab-hidden mobile-hidden">
                                     <div class="b-changing__item mt0">
                                         <div class="b-filter-select">
                                             <div class="b-filter-select__name">Категория</div>
@@ -283,6 +292,66 @@
                             </div>
 
                             <div class="b-expert-catalog-content">
+                                <div id="b-sidebar-filter" class="b-sidebar-filter expert-filter">
+                                    <div class="b-sidebar-filter__mobile-content">
+                                        <ul class="b-selects-list">
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Тип товара</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Вид украшения</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Металл</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Вставка</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Цена</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Наличие</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="b-products-grid">
                                     <div class="b-products-grid__item">
                                         <div class="b-products-item">
@@ -864,7 +933,6 @@
                                 {% include 'widgets/b-pagination.twig' %}
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
             <div class="b-expert-page__sidebar mobile-hidden">

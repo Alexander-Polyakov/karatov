@@ -35,6 +35,11 @@ h1, h2, h3, h4, h5, h6
     display: table
     width: 100%
     height: 100%
+    &.vat
+        .b-td
+            vertical-align: top
+.b-tr
+    display: table-row
 
 .b-td
     display: table-cell
@@ -48,6 +53,15 @@ body
 .b-site-wrapper
     min-width: 320px
 
+.m-icon
+    display: inline-block
+    vertical-align: middle
+    &.brown
+        +sprite(m-icon-brown)
+    &.blue
+        +sprite(m-icon-blue)
+    &.red
+        +sprite(m-icon-red)
 
 .b-site-wrapper__content
     +trans()
@@ -172,6 +186,9 @@ body
 
 .w100px
     width: 100px
+
+.w140px
+    width: 140px
 
 .w220px
     width: 220px
@@ -444,6 +461,9 @@ a.tdu
 
 .pt20
     padding-top: 20px
+
+.pb10
+    padding-bottom: 10px
 
 .pb20
     padding-bottom: 20px
@@ -772,6 +792,8 @@ a.tdu
             color: #a49f9a
     &.p0_75
         padding: 0 75px
+    &.full_w
+        padding: 0
 
 .map-popup-buy-btn
     outline: none
@@ -885,7 +907,7 @@ a.tdu
             &:before
                 opacity: 0
 
-.b-header-login__item-icon
+.event-icon
     display: inline-block
     vertical-align: middle
     margin-right: 5px
@@ -902,7 +924,6 @@ a.tdu
             +sprite(save-orange, "abs_middle")
             opacity: 0
             +trans
-
     &.feedback-icon
         width: 26px
         height: 26px
@@ -916,7 +937,6 @@ a.tdu
             +sprite(feedback-icon-orange, "abs_middle")
             opacity: 0
             +trans
-
     &.login-icon
         width: 22px
         height: 26px
@@ -945,10 +965,6 @@ a.tdu
     line-height: 18px
     top: -4px
     right: -7px
-
-.b-header-login__item-text
-    display: inline-block
-    vertical-align: middle
 
 .b-header-products__item
     padding: 15px
@@ -1260,7 +1276,7 @@ a.tdu
 
 
 .b-changing__item
-    padding: 0 20px
+    padding: 0 15px
     display: inline-block
     vertical-align: middle
     margin-top: 25px
@@ -1901,6 +1917,7 @@ a.tdu
         height: 42px
 
 
+
 .textarea-popup
     font-size: 17px
     width: 100%
@@ -1937,6 +1954,8 @@ a.tdu
         right: 15px
 
 .b-section-wrapper
+    &.map-wrapper
+        height: 700px
     &.p110_0
         padding: 110px 0
     &.pt45
@@ -3377,6 +3396,16 @@ a.tdu
             +sprite(check70px, "abs_middle")
             top: 0 !important
             margin-top: 0 !important
+    &.check70px__left
+        position: relative
+        padding-left: 100px
+        &:before
+            content: ''
+            +sprite(check70px, "abs_middle")
+            left: 0 !important
+            margin-left: 0 !important
+            top: 0 !important
+            margin-top: 0 !important
     &.plus85px
         position: relative
         padding-left: 105px
@@ -3386,9 +3415,6 @@ a.tdu
             left: 0 !important
             margin-left: 0 !important
 
-.jspScrollable
-    .b-text__content
-        padding-right: 30px
 
 .b-popup__header
     padding: 25px 10px
@@ -3540,13 +3566,14 @@ a.tdu
 
 .jScrollPane
     .jspVerticalBar
-        width: 4px
+        width: 15px
         background: transparent
     .jspTrack
         background: transparent
     .jspDrag
         background: #e4e4e4
         border-radius: 5px
+        left: 10px
 
 .b-search-region
     .easy-autocomplete
@@ -3700,13 +3727,15 @@ a.tdu
     height: 530px
     background: #f7f7f7
 
-#map-popup
+#map
     height: 100%
 
 .b-map-content__header
     position: relative
     padding: 10px 0
-    max-width: 600px
+    float: right
+    width: 50%
+    font-size: 28px
 
 .b-map-popup__close
     width: 30px
@@ -3714,7 +3743,7 @@ a.tdu
     position: absolute
     top: 50%
     margin-top: -15px
-    right: -2px
+    right: 10px
     cursor: pointer
     +rotate(45)
     &:before
@@ -3786,6 +3815,7 @@ a.tdu
 
 .b-shops-list-wrapper
     height: 400px
+    padding-right: 20px
 
 .b-shops-list
     max-width: 600px
@@ -3891,7 +3921,7 @@ a.tdu
         color: #f45302
 
 .b-expert-page
-    padding: 45px 0 80px
+    padding: 45px 0 140px
 
 .b-expert-page__content
     float: left
@@ -4036,24 +4066,33 @@ a.tdu
 
 .b-profile-nav
     font-size: 15px
-    border-bottom: 1px solid #ccc
     margin-bottom: 25px
+    position: relative
+    &:before
+        content: ''
+        height: 2px
+        width: 100%
+        position: absolute
+        bottom: 0px
+        background: #ccc
+
 
 .b-profile-nav__item
     margin-right: 35px
     display: inline-block
     vertical-align: middle
+    padding: 6px 0 7px
+    position: relative
     +trans()
     &.active
         color: #f05007
-        .b-profile-nav__link
-            &:before
-                content: ''
-                height: 2px
-                width: 100%
-                position: absolute
-                bottom: -1px
-                background: #f05007
+        &:before
+            content: ''
+            height: 2px
+            width: 100%
+            position: absolute
+            bottom: 0px
+            background: #f05007
     &:hover
         color: #f05007
 
@@ -4079,12 +4118,14 @@ a.tdu
     right: 0
     top: 0
     cursor: pointer
+    z-index: 10
 
 .b-big-avatar__photo
     overflow: hidden
     background: url(../img/expert_img/big-avatar-bg.jpg) no-repeat
     -webkit-background-size: cover
     background-size: cover
+    position: relative
     width: 100%
     height: 200px
     margin-bottom: 20px
@@ -4127,6 +4168,7 @@ a.tdu
 
 .b-expert-catalog-content
     padding-top: 40px
+    position: relative
 
 .b-products-grid
     margin-left: -15px
@@ -4201,6 +4243,44 @@ a.tdu
 .b-products-item__preview
     padding-bottom: 13px
 
+.b-logged
+    position: relative
+    padding-right: 20px
+    &.there-arrow
+        &:before
+            content: ''
+            width: 7px
+            height: 7px
+            position: absolute
+            top: 9px
+            right: 5px
+            border-right: 1px solid #231f23
+            border-bottom: 1px solid #231f23
+            +rotate(45)
+
+.b-logged__photo
+    width: 52px
+    height: 52px
+    overflow: hidden
+    display: inline-block
+    vertical-align: top
+    img
+        width: 100%
+
+.b-logged__content
+    display: inline-block
+    vertical-align: top
+    margin-left: 10px
+    padding-top: 5px
+
+.b-logged__name
+    font-size: 15px
+    color: #231f23
+    line-height: 1.2em
+    margin-bottom: 5px
+
+.b-logged__points
+    color: #f05007
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
@@ -4219,7 +4299,7 @@ a.tdu
 
 @media screen and (max-width: 1400px)
     .up-site-btn
-        display: none
+        display: none !important
 
 @media screen and (max-width: 1150px)
     .b-main-nav__item:not(.expert-menu)
@@ -4227,6 +4307,18 @@ a.tdu
 
 
 @media screen and (max-width: 1170px)
+    .b-map-popup__section
+        width: 100%
+        float: none
+        height: 450px
+    .b-map-content__header
+        width: 100%
+        float: none
+        padding: 10px
+    .b-shops-list-wrapper
+        height: 330px
+    .b-shops-list
+        max-width: 100%
     .b-product-item__popup
         .btn
             width: 100%
@@ -4304,6 +4396,13 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-sidebar-filter
+        &.expert-filter
+            top: 0 !important
+            width: 100%
+            padding: 0
+            .b-sidebar-filter__mobile-content
+                display: block
 
     .b-questionnaire-data
         width: 100%
@@ -4498,6 +4597,10 @@ a.tdu
 
     .b-filter-open
         padding-left: 10px
+
+    .b-expert-catalog
+        .b-filter-open
+            padding-left: 0
 
     .b-sidebar-filter
         left: 0
@@ -4711,6 +4814,56 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .map-popup-buy-btn
+        width: 100%
+    .b-shops-list__item__section
+        &:first-child
+            width: 50%
+        &:nth-child(2n+2)
+            width: 50%
+            padding-left: 20px
+        &:last-child
+            width: 100%
+            margin-top: 10px
+        .fz18
+            font-size: 14px
+        .fz13
+            font-size: 12px
+        .fz22
+            font-size: 14px
+    .b-map-popup__section
+        &.map-section
+            height: 300px
+    .b-shops-list__item
+        padding: 13px 0
+    .b-popup-map-content__header
+        padding: 15px 0
+    .b-popup-map-content__content
+        padding: 10px 0
+    .b-map-content__header
+        padding: 0
+        font-size: 20px
+    .b-text
+        &.check70px__left
+            padding-left: 0
+            padding-top: 100px
+            &:before
+                left: 50% !important
+                margin-left: -35px !important
+    .b-products-item
+        .b-fade-slider
+            height: 100px
+        .b-fade-slider__slide
+            line-height: 100px
+    .b-logged
+        padding-right: 0
+        &:before
+            display: none
+    .b-logged__content
+        display: none
+    .b-logged__photo
+        width: 28px
+        height: 28px
     .b-questionnaire-photo
         margin-left: 0
     .b-questionnaire-data__left
@@ -4805,7 +4958,7 @@ a.tdu
     .b-events-list__item
         margin-right: 5px
         
-    .b-header-login__item-icon
+    .event-icon
         margin-right: 0
 
     .b-similar-categories__left
@@ -5132,8 +5285,7 @@ a.tdu
 
     .b-events-list__item-default
         padding: 0 5px
-    .b-header-login__item-text
-        display: none
+
     .b-feedbacks.p60
         padding: 20px 0 40px
     .b-reviews__title

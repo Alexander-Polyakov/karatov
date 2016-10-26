@@ -1,0 +1,73 @@
+{% extends "layouts/main.twig" %}
+
+{% block pageScripts %}
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+{% endblock %}
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block subscribe %}
+    {% include "widgets/subscribe.twig" %}
+{% endblock %}
+
+{% block seoText %}
+    {% include "widgets/seo-text.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu.twig" %}
+{% endblock %}
+
+
+
+{% block pageContent %}
+    <div class="b-section-wrapper b-map">
+        <div class="b-map__content">
+            <div class="b-where-buy">
+                <div class="b-where-buy__header">
+                    <p class="b-where-buy__title">Где купить в <a class="yellow-link" href="#">Москве</a></p>
+                    <div class="b-where-buy__search">
+                        <div class="b-where-buy__search__input"><input placeholder="Поиск по названию, адресу, телефону" class="st-input lh40" type="text"></div>
+                        <div class="b-where-buy__search__select">
+                            <select class="select border-gray lh45 full_w">
+                                <option>Измерьте окружность кольца (мм)</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-where-buy__content">
+                    <div class="b-scroll-pane">
+                        <div class="b-scroll-pane__item">
+                            <p class="fz16 mb5">Бронницкий Ювелир</p>
+                            <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                                +7 (495) 544-23-12 <br>
+                                Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                            </p>
+                            <p class="color-gray">
+                                <span class="dib mr20">
+                                    <i class="m-icon brown"></i>
+                                    <i class="m-icon blue"></i>
+                                    <span class="dib fz13">Киевская</span>
+                                </span>
+                                <span class="dib mr20">
+                                    <i class="m-icon brown"></i>
+                                    <i class="m-icon blue"></i>
+                                    <span class="dib fz13">Киевская</span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+
+{% endblock %}

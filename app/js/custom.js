@@ -594,13 +594,36 @@ $(document).ready(function () {
         need_popup.fadeIn(500).addClass("active");
         $("body").addClass("ovh");
 
-        if (doc.outerWidth() > 992) {
-            setTimeout(function(){
-                if ($(".jScrollPane").length) {
-                    $(".jScrollPane").jScrollPane();
-                }
-            },100);
-        }
+        setTimeout(function(){
+            google.maps.event.trigger(map, 'resize');
+            if ($(".jScrollPane").length) {
+                $('.jScrollPane').each(
+                    function()
+                    {
+                        $(this).jScrollPane();
+                        var api = $(this).data('jsp');
+                        var throttleTimeout;
+                        $(window).bind(
+                            'resize',
+                            function()
+                            {
+                                if (!throttleTimeout) {
+                                    throttleTimeout = setTimeout(
+                                        function()
+                                        {
+                                            api.reinitialise();
+                                            throttleTimeout = null;
+                                        },
+                                        50
+                                    );
+                                }
+                            }
+                        );
+                    }
+                )
+            }
+        },100);
+
     });
 
     doc.on('click', '[data-close="popups"]', function () {
@@ -611,16 +634,14 @@ $(document).ready(function () {
 
 
 
-
-
-    if ($("#map-popup").length){
+    if ($("#map").length){
         initLandMap();
     }
 
     var map;
 
     function initLandMap() {
-        map = new google.maps.Map(document.getElementById('map-popup'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 55.750701, lng: 37.617047},
             scrollwheel: false,
             zoom: 7,
