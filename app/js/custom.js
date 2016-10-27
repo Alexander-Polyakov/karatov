@@ -577,7 +577,18 @@ $(document).ready(function () {
             e.preventDefault();
         });
     }
+    doc.on('click', '.b-map [data-accordion-tab]', function () {
+        var this_data = $(this).data("accordion-tab"),
+            this_map_ac = $(this).closest(".b-map");
+        this_map_ac.find('[data-accordion-item]').removeClass("active");
+        this_map_ac.find('[data-accordion-item='+this_data+']').addClass("active");
 
+        this_map_ac.find('[data-accordion-tab]').removeClass("active");
+        $(this).addClass("active");
+        setTimeout(function(){
+            $(window).resize();
+        },100);
+    });
 
     doc.on('click', '[data-open-popup]', function () {
         doc.find(".b-popups-wrapper").fadeIn(400);
