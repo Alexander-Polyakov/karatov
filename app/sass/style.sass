@@ -52,6 +52,7 @@ body
 
 .b-site-wrapper
     min-width: 320px
+    overflow: hidden
 
 .m-icon
     display: inline-block
@@ -385,6 +386,13 @@ a.tdu
     padding: 0 20px
     position: relative
     line-height: 44px
+    width: 100%
+    background: transparent
+    color: #fff
+    text-align: left
+    outline: none
+    border: none
+    font-size: 15px
     &:after
         content: ''
         width: 8px
@@ -783,6 +791,14 @@ a.tdu
         &:hover
             background: #f05007
             color: #fff
+    &.bb-white
+        text-transform: uppercase
+        font-size: 12px
+        border: 1px solid #fff
+        color: #fff
+        &:hover
+            background: #fff
+            color: #000
     &.bg_y
         &:hover
             background: #f48451
@@ -802,6 +818,8 @@ a.tdu
         padding: 0 75px
     &.full_w
         padding: 0
+
+
 
 .map-popup-buy-btn
     outline: none
@@ -872,6 +890,7 @@ a.tdu
         background: #e4e4e4
         border-radius: 5px
         left: 10px
+        width: 5px
 
 .b-scroll-pane__item
     margin-bottom: 25px
@@ -1936,7 +1955,7 @@ a.tdu
 .st-input
     padding: 0 10px
     +phc(#ccc)
-    color: #ccc
+    color: #333
     width: 100%
     font-size: 15px
     font-family: $cl
@@ -3639,6 +3658,7 @@ a.tdu
         background: #e4e4e4
         border-radius: 5px
         left: 10px
+        width: 5px
 
 .b-search-region
     .easy-autocomplete
@@ -4012,12 +4032,32 @@ a.tdu
     margin-bottom: 15px
     overflow: hidden
     text-align: center
+    position: relative
     img
         min-width: 100%
         min-height: 100%
         max-width: 120%
         max-height: 120%
+    &:hover
+        .b-st-grid__item__preview-popup
+            opacity: 1
 
+.b-st-grid__item__preview-popup
+    +trans()
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: 20
+    background: rgba(0, 0, 0, 0.6)
+    text-align: center
+    &:before
+        content: ''
+        height: 100%
+        display: inline-block
+        vertical-align: middle
 
 .b-contest__item
     height: 220px
