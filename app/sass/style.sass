@@ -532,11 +532,13 @@ a.tdu
 .b-phone__number-info
     font-size: 15px
     color: #9b9fa1
+    line-height: 1.2em
 
 .b-phone
     &.header
         position: relative
         margin-right: 50px
+        max-width: 230px
         &:hover
             .b-phone__bottom
                 display: block
@@ -1955,13 +1957,17 @@ a.tdu
 .st-input
     padding: 0 10px
     +phc(#ccc)
-    color: #333
+    color: #ccc
     width: 100%
     font-size: 15px
     font-family: $cl
     border: 1px solid #ccc
+    +trans()
+    &:focus
+        color: #333
     &.lh40
         height: 42px
+
 
 .st-select
     width: 100%
@@ -1973,6 +1979,9 @@ a.tdu
         width: 100%
         border: 1px solid #ccc
         position: relative
+    &.changed
+        .jq-selectbox__select
+            color: #333
     .jq-selectbox__select-text
         overflow: hidden
         padding: 0 20px 0 10px
@@ -2001,8 +2010,7 @@ a.tdu
             &:last-child
                 border-bottom: none
             &:hover
-                background: #ccc
-                color: #333
+                color: #f45302
 
 .textarea-popup
     font-size: 17px
@@ -3663,6 +3671,8 @@ a.tdu
 .b-search-region
     .easy-autocomplete
         width: 100% !important
+
+.input-search-region +
     .easy-autocomplete-container
         ul
             display: none
@@ -4064,6 +4074,7 @@ a.tdu
     padding: 20px 40px
     position: relative
     margin-bottom: 30px
+    display: block
     &:last-child
         margin-bottom: 0
     &:before

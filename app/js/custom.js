@@ -105,39 +105,31 @@ $(document).ready(function () {
         $('.inputmask').mask("+7 (999) 999-99-99");
     }
 
+    if($('.dobmask').length > 0) {
+        $('.dobmask').mask("9999 99 99");
+    }
+
+
     if ($(".b-selects-list__item__select").length > 0) {
         $(".b-selects-list__item__select").styler();
     }
 
 
-    var options = {
+    var options_autocomplete = {
         url: "json/region.json",
         getValue: "city_name",
+
 
         template: {
             type: "description",
             fields: {
                 description: "region_name"
             }
-        },
-
-        list: {
-            showAnimation: {
-                type: "fade", //normal|slide|fade
-                time: 400,
-                callback: function() {}
-            },
-
-            hideAnimation: {
-                type: "sgylide", //normal|slide|fade
-                time: 400,
-                callback: function() {alert("hi");}
-            }
         }
 
     };
 
-    $("#search-region").easyAutocomplete(options);
+    $(".input-search-region").easyAutocomplete(options_autocomplete);
 
 
     doc.on('click', '.b-search__submit', function (e) {

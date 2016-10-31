@@ -896,11 +896,13 @@ a.tdu:hover {
 .b-phone__number-info {
   font-size: 15px;
   color: #9b9fa1;
+  line-height: 1.2em;
 }
 
 .b-phone.header {
   position: relative;
   margin-right: 50px;
+  max-width: 230px;
 }
 .b-phone.header:hover .b-phone__bottom {
   display: block;
@@ -3111,11 +3113,15 @@ a.tdu:hover {
 
 .st-input {
   padding: 0 10px;
-  color: #333;
+  color: #ccc;
   width: 100%;
   font-size: 15px;
   font-family: "circle-light";
   border: 1px solid #ccc;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .st-input::-webkit-input-placeholder {
   color: #ccc !important;
@@ -3133,6 +3139,9 @@ a.tdu:hover {
   color: #ccc !important;
   opacity: 1 !important;
 }
+.st-input:focus {
+  color: #333;
+}
 .st-input.lh40 {
   height: 42px;
 }
@@ -3148,6 +3157,9 @@ a.tdu:hover {
   width: 100%;
   border: 1px solid #ccc;
   position: relative;
+}
+.st-select.changed .jq-selectbox__select {
+  color: #333;
 }
 .st-select .jq-selectbox__select-text {
   overflow: hidden;
@@ -3188,8 +3200,7 @@ a.tdu:hover {
   border-bottom: none;
 }
 .st-select.lh40 li:hover {
-  background: #ccc;
-  color: #333;
+  color: #f45302;
 }
 
 .textarea-popup {
@@ -5738,7 +5749,8 @@ a.tdu:hover {
 .b-search-region .easy-autocomplete {
   width: 100% !important;
 }
-.b-search-region .easy-autocomplete-container ul {
+
+.input-search-region + .easy-autocomplete-container ul {
   display: none;
   width: 100%;
   background: #fff;
@@ -5750,21 +5762,21 @@ a.tdu:hover {
   z-index: 200;
   cursor: pointer;
 }
-.b-search-region .easy-autocomplete-container .eac-item {
+.input-search-region + .easy-autocomplete-container .eac-item {
   padding: 13px;
   font-size: 13px;
   color: #999;
 }
-.b-search-region .easy-autocomplete-container li {
+.input-search-region + .easy-autocomplete-container li {
   border-bottom: 1px solid #e1e0e0;
 }
-.b-search-region .easy-autocomplete-container li:last-child {
+.input-search-region + .easy-autocomplete-container li:last-child {
   border-bottom: none;
 }
-.b-search-region .easy-autocomplete-container span {
+.input-search-region + .easy-autocomplete-container span {
   display: block;
 }
-.b-search-region .easy-autocomplete-container b {
+.input-search-region + .easy-autocomplete-container b {
   color: #333;
 }
 
@@ -6322,6 +6334,7 @@ a.tdu:hover {
   padding: 20px 40px;
   position: relative;
   margin-bottom: 30px;
+  display: block;
 }
 .b-contest__item:last-child {
   margin-bottom: 0;
