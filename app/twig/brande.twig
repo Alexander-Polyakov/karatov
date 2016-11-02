@@ -1,0 +1,208 @@
+{% extends "layouts/main.twig" %}
+
+{% block pageScripts %}
+
+    <script>
+        $(document).ready(function () {
+            $(".b-values-slider").owlCarousel({
+                items: 3,
+                loop: true,
+                nav: true,
+                dots: true
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+
+{% block seoText %}
+    {% include "widgets/seo-text.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu.twig" %}
+{% endblock %}
+
+
+
+{% block pageContent %}
+    <div class="b-bread-crumbs-wrapper pt10 pb20">
+        <div class="b-container">
+            <ul class="b-bread-crumbs clearfix">
+                <li class="b-bread-crumbs__item">
+                    <a class="b-bread-crumbs__link" href="#">Каталог</a>
+                </li>
+                <li class="b-bread-crumbs__item">
+                    <a class="b-bread-crumbs__link" href="#">Женщинам</a>
+                </li>
+                <li class="b-bread-crumbs__item">
+                    <span class="b-bread-crumbs__link hover-hide">...</span>
+                    <ul class="hover-show">
+                        <li class="b-bread-crumbs__item">
+                            <a class="b-bread-crumbs__link" href="#">Коллекции</a>
+                        </li>
+                        <li class="b-bread-crumbs__item">
+                            <a class="b-bread-crumbs__link" href="#">Коллекции</a>
+                        </li>
+                        <li class="b-bread-crumbs__item">
+                            <a class="b-bread-crumbs__link" href="#">Коллекции</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="b-bread-crumbs__item">
+                    <a class="b-bread-crumbs__link" href="#">Коллекции</a>
+                </li>
+                <li class="b-bread-crumbs__item">
+                    <a class="b-bread-crumbs__link" href="#">Императрица</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="b-banners-section">
+        <div class="b-section-wrapper">
+            <div class="b-container">
+                <h1 class="fz28-title ff_cr ttu tal mb10">о бренде</h1>
+            </div>
+        </div>
+        <div class="b-banners-full-wrapper">
+            <div class="b-banner-full bg-gray">
+                <div class="b-container b-banner-full__container tar">
+                    <div class="b-banner-full__preview pos_l m_l_60">
+                        <img src="img/banners/banner-img1.png" alt="">
+                    </div>
+                    <div class="b-banner-full__content">
+                        <p class="b-banner-full__content-title">Отечественный <br> бренд</p>
+                        <div class="b-banner-full__content-descr">
+                            <p>KARATOV — это российский ювелирный бренд,созданный на базе Костромского ювелирного завода «Топаз» — предприятия, существующего уже 25 лет и входящего в ТОП-3 производителей украшений в России. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-banner-full" style="background-image: url('img/banners/banner-bg1.jpg'); ">
+                <div class="b-container b-banner-full__container">
+                    <div class="b-banner-full__content txt_white">
+                        <p class="b-banner-full__content-title">Драгоценные <br> мгновения</p>
+                        <div class="b-banner-full__content-descr">
+                            <p>Ювелирные изделия бренда помогут выразить самые нежные чувства, запечатлев события личной жизни в благородном металле. Признание в любви, поздравление с новой должностью, рождение ребёнка и многое другое — для каждого из этих событий вы найдёте подходящее украшение.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-banner-full" style="background-image: url('img/banners/banner-bg2.jpg');">
+                <div class="b-container b-banner-full__container tar">
+                    <div class="b-banner-full__preview pos_l m_l_60">
+                        <img src="img/banners/banner-img2.png" alt="">
+                    </div>
+                    <div class="b-banner-full__content">
+                        <p class="b-banner-full__content-title">Под знаком <br>красоты</p>
+                        <div class="b-banner-full__content-descr">
+                            <p>Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. Она воплощает в себе главные ценности бренда: тёплые чувства, важные события и русское ювелирное искусство.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-banner-full" style="background-image: url('img/banners/banner-bg3.jpg'); ">
+                <div class="b-container b-banner-full__container">
+                    <div class="b-banner-full__content">
+                        <p class="b-banner-full__content-title">Для важных <br>моментов</p>
+                        <div class="b-banner-full__content-descr mb35">
+                           <p>Коллекции украшений KARATOV — словно собрание удивительных историй, в котором каждый найдёт что-то своё. KARATOV — это счастливые моменты вашей жизни, воплощённые в удивительных украшениях.</p>
+                        </div>
+                        <p>
+                            <a href="#" class="b-m-grid__item__btn btn">перейти в каталог</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="b-section-wrapper">
+        <div class="b-container">
+            <div class="b-values-slider">
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_03.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">ответственность</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Мы уважаем наших покупателей, поэтому даём заводскую гарантию на все изделия</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_04.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">вдохновение</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>для всех украшений разрабатывается оригинальный авторский дизайн.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_05.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">Качество</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Самые высокие стандарты при закупке материалов и производстве украшений.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_06.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">Амбиции</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Мы вернём русскому ювелирному искусству высокие позиции на мировом рынке.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_07.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">радость</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Украшения KARATOV предназначены для самых счастливых моментов вашей жизни.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_08.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">альтернатива</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Мы всегда даём покупателю выбор, предлагая как роскошные, так и доступные модели.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-values-slider__item">
+                    <div class="b-values-slider__item-preview">
+                        <img src="img/value-slider/brande_2_09.jpg" alt="">
+                    </div>
+                    <div class="b-values-slider__item-content">
+                        <p class="b-values-slider__item-title">традиции</p>
+                        <div class="b-values-slider__item-descr">
+                            <p>Производство изделий ведётся в Костроме, известной ювелирными промыслами с XVI века.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

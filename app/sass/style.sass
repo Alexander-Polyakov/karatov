@@ -458,6 +458,9 @@ a.tdu
 .pt5
     padding-top: 5px
 
+.pt10
+    padding-top: 10px
+
 .pt30
     padding-top: 30px
 
@@ -495,6 +498,15 @@ a.tdu
         text-align: left
     &.mb10
         margin-bottom: 10px
+    &.ff_cr
+        font-family: $cr
+
+.fz20-title
+    font-size: 20px
+    font-family: $cl
+    margin-bottom: 10px
+    line-height: 1.2em
+
 
 .fz24-title
     font-size: 24px
@@ -749,6 +761,9 @@ a.tdu
             border-color: #000
     &.m7
         margin: 7px
+    &.lh32
+        line-height: 32px
+        padding: 0 20px
     &.lh40
         line-height: 40px
         padding: 0 33px
@@ -820,6 +835,8 @@ a.tdu
         padding: 0 75px
     &.full_w
         padding: 0
+    &.fz11
+        font-size: 11px
 
 
 
@@ -4186,7 +4203,7 @@ a.tdu
     position: relative
     &:before
         content: ''
-        height: 2px
+        height: 1px
         width: 100%
         position: absolute
         bottom: 0px
@@ -4204,7 +4221,7 @@ a.tdu
         color: #f05007
         &:before
             content: ''
-            height: 2px
+            height: 1px
             width: 100%
             position: absolute
             bottom: 0px
@@ -4443,6 +4460,103 @@ a.tdu
     background: #fff
     padding: 25px
     z-index: 25
+
+.b-banner-full__preview
+    width: 650px
+    text-align: center
+    position: absolute
+    left: 0
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+    img
+        max-width: 100%
+        vertical-align: middle
+    &.m_l_60
+        left: -60px
+
+
+.b-banner-full__container
+    height: 575px
+    position: relative
+    &:before
+        content: ''
+        height: 100%
+        display: inline-block
+        vertical-align: middle
+
+.b-banner-full__content
+    width: 40%
+    display: inline-block
+    vertical-align: middle
+    text-align: left
+
+.b-banner-full__content-title
+    font-size: 43px
+    margin-bottom: 30px
+    text-transform: uppercase
+    line-height: 1.2em
+
+.b-banner-full__content-descr
+    font-size: 19px
+    line-height: 1.5em
+
+.b-banner-full
+    background-position: center center
+    -webkit-background-size: cover
+    background-size: cover
+
+.b-values-slider__item
+    padding: 0 15px
+    width: 370px
+
+.b-values-slider__item-preview
+    img
+        width: 100% !important
+
+.b-values-slider
+    margin: 0 auto
+
+.b-history-orders
+    font-size: 12px
+    color: #111
+
+.b-orders-table__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 12px
+
+.b-orders-table__content
+    padding: 15px 25px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.b-history-orders-item
+    border: 1px solid #eae9e9
+
+.b-orders-table__tr
+    border-bottom: 1px solid #eae9e9
+    &:last-child
+        border-bottom: none
+
+.b-orders-table__content-item
+    &.preview
+        width: 70px
+        height: 70px
+        line-height: 70px
+        text-align: center
+        img
+            max-width: 100%
+            max-height: 100%
+            vertical-align: middle
+
+.b-dropdown__content
+    display: none
 
 
 .tab-visible
