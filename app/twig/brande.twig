@@ -7,8 +7,19 @@
             $(".b-values-slider").owlCarousel({
                 items: 3,
                 loop: true,
-                nav: true,
-                dots: true
+                dots: false,
+                margin: 30,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1100: {
+                        nav: true
+                    }
+                }
             });
         });
     </script>
@@ -65,7 +76,7 @@
     </div>
 
     <div class="b-banners-section">
-        <div class="b-section-wrapper">
+        <div class="b-section-wrapper tab-hidden mobile-hidden">
             <div class="b-container">
                 <h1 class="fz28-title ff_cr ttu tal mb10">о бренде</h1>
             </div>
@@ -79,7 +90,8 @@
                     <div class="b-banner-full__content">
                         <p class="b-banner-full__content-title">Отечественный <br> бренд</p>
                         <div class="b-banner-full__content-descr">
-                            <p>KARATOV — это российский ювелирный бренд,созданный на базе Костромского ювелирного завода «Топаз» — предприятия, существующего уже 25 лет и входящего в ТОП-3 производителей украшений в России. </p>
+                            <p class="mobile-hidden">KARATOV — это российский ювелирный бренд,созданный на базе Костромского ювелирного завода «Топаз» — предприятия, существующего уже 25 лет и входящего в ТОП-3 производителей украшений в России. </p>
+                            <p class="mobile-visible">KARATOV — это российский ювелирный бренд, входящий в ТОП-3 производителей украшений в России. </p>
                         </div>
                     </div>
                 </div>
@@ -89,20 +101,22 @@
                     <div class="b-banner-full__content txt_white">
                         <p class="b-banner-full__content-title">Драгоценные <br> мгновения</p>
                         <div class="b-banner-full__content-descr">
-                            <p>Ювелирные изделия бренда помогут выразить самые нежные чувства, запечатлев события личной жизни в благородном металле. Признание в любви, поздравление с новой должностью, рождение ребёнка и многое другое — для каждого из этих событий вы найдёте подходящее украшение.</p>
+                            <p class="mobile-hidden">Ювелирные изделия бренда помогут выразить самые нежные чувства, запечатлев события личной жизни в благородном металле. Признание в любви, поздравление с новой должностью, рождение ребёнка и многое другое — для каждого из этих событий вы найдёте подходящее украшение.</p>
+                            <p class="mobile-visible">Ювелирные изделия бренда помогут выразить самые нежные чувства.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="b-banner-full" style="background-image: url('img/banners/banner-bg2.jpg');">
                 <div class="b-container b-banner-full__container tar">
-                    <div class="b-banner-full__preview pos_l m_l_60">
+                    <div class="b-banner-full__preview pos_l img-logo">
                         <img src="img/banners/banner-img2.png" alt="">
                     </div>
                     <div class="b-banner-full__content">
                         <p class="b-banner-full__content-title">Под знаком <br>красоты</p>
                         <div class="b-banner-full__content-descr">
-                            <p>Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. Она воплощает в себе главные ценности бренда: тёплые чувства, важные события и русское ювелирное искусство.</p>
+                            <p class="mobile-hidden">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. Она воплощает в себе главные ценности бренда: тёплые чувства, важные события и русское ювелирное искусство.</p>
+                            <p class="mobile-visible">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. </p>
                         </div>
                     </div>
                 </div>
@@ -111,10 +125,13 @@
                 <div class="b-container b-banner-full__container">
                     <div class="b-banner-full__content">
                         <p class="b-banner-full__content-title">Для важных <br>моментов</p>
-                        <div class="b-banner-full__content-descr mb35">
-                           <p>Коллекции украшений KARATOV — словно собрание удивительных историй, в котором каждый найдёт что-то своё. KARATOV — это счастливые моменты вашей жизни, воплощённые в удивительных украшениях.</p>
+                        <div class="b-banner-full__content-descr mb35 mobile-hidden">
+                            <p>Коллекции украшений KARATOV — словно собрание удивительных историй, в котором каждый найдёт что-то своё. KARATOV — это счастливые моменты вашей жизни, воплощённые в удивительных украшениях.</p><p></p>
                         </div>
-                        <p>
+                        <div class="b-banner-full__content-descr mobile-visible">
+                            <p >KARATOV — это счастливые моменты вашей жизни,воплощённые в удивительных украшениях.</p>
+                        </div>
+                        <p class="mobile-hidden">
                             <a href="#" class="b-m-grid__item__btn btn">перейти в каталог</a>
                         </p>
                     </div>
@@ -122,7 +139,8 @@
             </div>
         </div>
     </div>
-    <div class="b-section-wrapper">
+    <div class="b-section-wrapper bb p60">
+        <p class="title-section-fz43 tac">ценности karatov</p>
         <div class="b-container">
             <div class="b-values-slider">
                 <div class="b-values-slider__item">

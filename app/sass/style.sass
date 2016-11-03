@@ -488,6 +488,14 @@ a.tdu
 .pr30
     padding-right: 30px
 
+
+
+.title-section-fz43
+    font-size: 43px
+    font-family: $cl
+    text-transform: uppercase
+    margin-bottom: 60px
+
 .fz28-title
     font-size: 28px
     font-family: $cl
@@ -859,7 +867,7 @@ a.tdu
         color: #fff
         background: #f05007
         box-shadow: none
-    
+
 .b-m-grid__item__btn
     border: 1px solid #ececec
     border-top: none
@@ -2082,7 +2090,7 @@ a.tdu
     &.p55
         padding: 55px 0
     &.p60
-        padding: 60px
+        padding: 60px 0
     &.p65
         padding: 65px 0
     &.bb
@@ -2999,7 +3007,7 @@ a.tdu
             -ms-transform: translateY(-100%)
             -o-transform: translateY(-100%)
             transform: translateY(-100%)
-    
+
 .b-catalog-body__select
     display: inline-block
     vertical-align: middle
@@ -4509,16 +4517,56 @@ a.tdu
     -webkit-background-size: cover
     background-size: cover
 
-.b-values-slider__item
-    padding: 0 15px
-    width: 370px
-
 .b-values-slider__item-preview
+    overflow: hidden
+    margin-bottom: 40px
     img
         width: 100% !important
 
+
+.b-values-slider__item
+    text-align: center
+
+.b-values-slider__item-title
+    font-size: 17px
+    text-transform: uppercase
+    margin-bottom: 10px
+
+.b-values-slider__item-descr
+    font-size: 17px
+    line-height: 1.2em
+
+
 .b-values-slider
     margin: 0 auto
+    .owl-prev, .owl-next
+        font-size: 0
+        height: 220px
+        position: absolute
+        width: 50px
+        top: 0
+        +trans()
+        &:hover
+            background: rgba(170, 170, 170, 0.6)
+        &:before
+            content: ''
+            width: 20px
+            height: 20px
+            border-right: 2px solid #999
+            border-bottom: 2px solid #999
+            position: absolute
+            top: 50%
+            margin-top: -5px
+            left: 50%
+            margin-left: -7px
+            +rotate(135)
+    .owl-prev
+        left: 0
+    .owl-next
+        right: 0
+        &:before
+            +rotate(-45)
+            margin-left: -14px
 
 .b-history-orders
     font-size: 12px
@@ -4788,6 +4836,29 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .title-section-fz43
+        font-size: 33px
+        margin-bottom: 40px
+    .b-banner-full__container
+        height: 400px
+    .b-banner-full__content
+        width: 50%
+    .b-banner-full__preview
+        width: 50%
+        height: 330px
+        line-height: 330px
+        img
+            max-height: 100%
+        &.m_l_60
+            left: 0
+    .b-banner-full__content-title
+        font-size: 33px
+        margin-bottom: 25px
+
+    .b-banner-full__content-descr
+        font-size: 17px
+
+
     .b-expert-page
         padding: 35px 0 60px
 
@@ -5279,6 +5350,31 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .title-section-fz43
+        font-size: 22px
+        margin-bottom: 25px
+    .b-values-slider__item-title,
+    .b-values-slider__item-descr
+        font-size: 13px
+    .b-banner-full__content
+        width: 60%
+    .b-banner-full__content-title
+        font-size: 20px
+        margin-bottom: 12px
+    .b-banner-full__content-descr
+        font-size: 13px
+    .b-banner-full__preview
+        height: 190px
+        line-height: 190px
+        &.m_l_60
+            left: -30px
+        &.img-logo
+            height: 50px
+            width: 40%
+            line-height: 50px
+            left: 0
+    .b-banner-full__container
+        height: 200px
     .b-expert-page
         .fz28-title
             font-size: 20px
@@ -5301,8 +5397,8 @@ a.tdu
         width: 100% !important
         text-align: left !important
         padding: 5px 0 !important
-            
-            
+
+
     .b-soc
         &.expert
             margin-left: 0
@@ -5494,7 +5590,7 @@ a.tdu
 
     .b-events-list__item
         margin-right: 5px
-        
+
     .event-icon
         margin-right: 0
 
