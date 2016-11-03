@@ -6959,9 +6959,12 @@ a.tdu:hover {
 
 .b-values-slider__item-preview {
   overflow: hidden;
+  height: 220px;
   margin-bottom: 40px;
 }
 .b-values-slider__item-preview img {
+  height: 100%;
+  object-fit: cover;
   width: 100% !important;
 }
 
