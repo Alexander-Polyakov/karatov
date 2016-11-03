@@ -308,6 +308,15 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    doc.on('click', '.b-dropdown__toggle', function (e) {
+        var this_dropdown = $(this).closest(".b-dropdown");
+        this_dropdown.find(".b-dropdown__content").stop().slideToggle(400);
+        this_dropdown.toggleClass("open");
+        $(this).toggleClass("active");
+        e.preventDefault();
+    });
+
+
 
     doc.click(function (e) {
         var target = $(e.target),
