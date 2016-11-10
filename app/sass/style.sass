@@ -166,7 +166,7 @@ body
     line-height: 1.2em
     margin: 5px
     &:hover
-        border-bottom: none
+        border-bottom: 1px solid transparent
 
 .title26px
     font-family: $cl
@@ -343,6 +343,9 @@ a.tdu
     +sprite(login-icon-white)
     vertical-align: middle
     margin-right: 10px
+
+.b-event-saved
+    position: relative
 
 .b-saved-icon
     +sprite(saved-white)
@@ -893,10 +896,20 @@ a.tdu
     display: flex
     justify-content: space-between
     align-items: center
+    min-height: 150px
+
+.b-site-header__contacts,
+.b-site-header__events
+    width: calc(50% - 85px)
 
 .b-logo
-    display: inline-block
-    vertical-align: middle
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -webkit-transform: translate(-50%, -50%)
+    -moz-transform: translate(-50%, -50%)
+    -o-transform: translate(-50%, -50%)
     width: 170px
     font-size: 0
     &.logo-expert
@@ -1693,7 +1706,7 @@ a.tdu
         width: 100%
 
     .owl-next, .owl-prev
-        bottom: 160px
+        bottom: 150px
 
     .b-product-item__preview
         margin-bottom: 10px
@@ -1733,21 +1746,26 @@ a.tdu
     height: 100%
     z-index: 10
     opacity: 0
+    display: table
     +trans
 
 .b-fade-slider__nav-item
-    width: 24%
-    float: left
-    height: 100%
+    display: table-cell
     position: relative
-    margin-right: 1.33%
-    border-bottom: 1px solid #d5d5d5
     cursor: pointer
-    +trans
-    &:last-child
-        margin-right: 0
+    &:before
+        content: ''
+        position: absolute
+        bottom: 0
+        height: 1px
+        left: 0
+        right: 1px
+        background: #d5d5d5
+        +trans
     &.active
-        border-bottom: 1px solid #f26417
+        &:before
+            background: #f26417
+
 
 .b-fade-slider__slide
     position: absolute
@@ -4839,6 +4857,14 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-product-slider
+        &.browsing
+            .owl-next, .owl-prev
+                bottom: 0
+    .b-site-header
+        min-height: 130px
+    .b-logo
+        width: 130px
     .title-section-fz43
         font-size: 33px
         margin-bottom: 40px
@@ -4998,9 +5024,8 @@ a.tdu
     .b-footer-expert
         display: block
 
-    .b-phone
-        margin-bottom: 10px
-        display: inline-block
+    .b-phone__bottom
+        padding: 60px 35px 40px
 
     .b-footer-exp-nav
         width: calc(100% - 200px)
@@ -5311,7 +5336,6 @@ a.tdu
 
     .btn-address-open
         font-size: 14px
-        margin-top: 15px
 
     .b-phone
         &.header
@@ -5353,6 +5377,8 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-main-slider__item-descr
+        width: 180px
     .title-section-fz43
         font-size: 22px
         margin-bottom: 25px
@@ -5592,7 +5618,7 @@ a.tdu
         display: block
 
     .b-events-list__item
-        margin-right: 5px
+        margin-right: 15px
 
     .event-icon
         margin-right: 0
@@ -5911,7 +5937,8 @@ a.tdu
         display: block
 
     .b-site-header
-        padding: 20px 0
+        padding: 15px 0
+        min-height: 60px
 
     .b-header-contacts
         display: none
