@@ -1412,7 +1412,7 @@ a.tdu:hover {
 
 .b-site-header__contacts,
 .b-site-header__events {
-  width: calc(50% - 85px);
+  width: calc(50% - 100px);
 }
 
 .b-logo {
@@ -2767,10 +2767,6 @@ a.tdu:hover {
   width: 100%;
   opacity: 0;
   padding: 0 15px;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 
 .b-fade-slider__slides {
@@ -2856,24 +2852,22 @@ a.tdu:hover {
   position: relative;
   z-index: 1;
 }
-.b-product-item:hover {
+.b-product-item.pop-open {
   z-index: 50;
 }
-.b-product-item:hover .b-product-item__overlay {
+.b-product-item.pop-open .b-product-item__overlay {
   box-shadow: 0 2px 3px 0 #ccc;
   opacity: 1;
   z-index: 45;
 }
-.b-product-item:hover .b-product-item__popup, .b-product-item:hover .b-fade-slider__nav {
+.b-product-item.pop-open .b-product-item__popup, .b-product-item.pop-open .b-fade-slider__nav {
   opacity: 1;
+}
+.b-product-item.touch-open .b-fade-slider__nav {
+  display: none;
 }
 
 .b-product-item__overlay {
-  content: "";
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
   background: #fff;
   position: absolute;
   left: 0;
@@ -6757,18 +6751,10 @@ a.tdu:hover {
 
 .b-products-item__section {
   padding: 0 15px;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 .b-products-item__section.popup {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
   position: absolute;
   top: 100%;
   left: 0;
@@ -6813,11 +6799,11 @@ a.tdu:hover {
   padding-bottom: 13px;
 }
 
-.b-logged {
+.b-event-logged {
   position: relative;
   padding-right: 20px;
 }
-.b-logged.there-arrow:before {
+.b-event-logged.there-arrow:before {
   content: "";
   width: 7px;
   height: 7px;
@@ -6835,32 +6821,32 @@ a.tdu:hover {
   zoom: 1;
 }
 
-.b-logged__photo {
+.b-event-logged__photo {
   width: 52px;
   height: 52px;
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
 }
-.b-logged__photo img {
+.b-event-logged__photo img {
   width: 100%;
 }
 
-.b-logged__content {
+.b-event-logged__content {
   display: inline-block;
   vertical-align: top;
   margin-left: 10px;
   padding-top: 5px;
 }
 
-.b-logged__name {
+.b-event-logged__name {
   font-size: 15px;
   color: #231f23;
   line-height: 1.2em;
   margin-bottom: 5px;
 }
 
-.b-logged__points {
+.b-event-logged__points {
   color: #f05007;
 }
 
@@ -7407,8 +7393,13 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 992px) {
-  .b-product-slider.browsing .owl-next, .b-product-slider.browsing .owl-prev {
-    bottom: 0;
+  .b-product-slider.browsing .owl-prev {
+    bottom: 30px;
+    left: -20px;
+  }
+  .b-product-slider.browsing .owl-next {
+    right: -20px;
+    bottom: 30px;
   }
 
   .b-site-header {
@@ -7687,19 +7678,11 @@ a.tdu:hover {
     width: calc(100% - 250px);
   }
 
-  .b-product-slider .owl-stage-outer {
-    padding-bottom: 0;
-  }
-
   .b-presentation-slider__slide .hover-preview {
     display: none !important;
   }
   .b-presentation-slider__slide .standard-preview {
     display: block !important;
-  }
-
-  .b-product-item__overlay {
-    display: none !important;
   }
 
   .b-text {
@@ -7755,10 +7738,6 @@ a.tdu:hover {
 
   .b-main-nav-wrapper {
     padding-right: 30px;
-  }
-
-  .b-product-slider-wrapper:before {
-    bottom: 0;
   }
 
   .b-product-slider.browsing .b-product-item:hover {
@@ -7914,10 +7893,6 @@ a.tdu:hover {
     margin-left: -12px;
   }
 
-  .b-product-item__popup {
-    display: none;
-  }
-
   .b-m-grid__item__descr {
     font-size: 13px;
   }
@@ -8030,10 +8005,6 @@ a.tdu:hover {
 
   .b-changing.see-all .b-changing__item {
     margin-right: 20px;
-  }
-
-  .b-product-slider-wrapper {
-    padding-bottom: 40px;
   }
 
   .b-expert-catalog-content .b-products-grid {
@@ -8911,10 +8882,6 @@ a.tdu:hover {
 
   .b-product-slider {
     padding: 0 0 20px;
-  }
-
-  .b-product-slider-wrapper:before {
-    bottom: 0;
   }
 
   .b-product-item__price {

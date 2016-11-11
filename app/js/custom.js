@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var doc = $(document);
 
+
     if ($(".filter-checkbox").length > 0) {
         // $(".filter-checkbox").styler();
         $('.filter-checkbox').each(function () {
@@ -119,7 +120,6 @@ $(document).ready(function () {
         url: "json/region.json",
         getValue: "city_name",
 
-
         template: {
             type: "description",
             fields: {
@@ -147,6 +147,14 @@ $(document).ready(function () {
 
     doc.on('click', '.b-flag-select__selected', function (e) {
         $(this).closest(".b-flag-select").toggleClass("open");
+    });
+
+
+    doc.on('mouseenter', '.b-product-item.slider-product', function (e) {
+        $(this).addClass("pop-open");
+    });
+    doc.on('mouseleave', '.b-product-item.slider-product', function (e) {
+        $(this).removeClass("pop-open");
     });
 
     doc.on('click', '.b-flag-select__item', function (e) {
@@ -293,20 +301,8 @@ $(document).ready(function () {
             this_slider.find("[data-fade-slide]").removeClass("active");
             this_slider.find("[data-fade-slide=" + this_elem + "]").addClass("active");
         }
-        e.preventDefault();
     });
 
-    doc.on('click', '[data-fade-nav]', function (e) {
-        if (doc.outerWidth() < 992) {
-            var this_elem = $(this).data("fade-nav"),
-                this_slider = $(this).closest(".b-fade-slider");
-            this_slider.find("[data-fade-nav]").removeClass("active");
-            $(this).addClass("active");
-            this_slider.find("[data-fade-slide]").removeClass("active");
-            this_slider.find("[data-fade-slide=" + this_elem + "]").addClass("active");
-        }
-        e.preventDefault();
-    });
 
     doc.on('click', '.b-dropdown__toggle', function (e) {
         var this_dropdown = $(this).closest(".b-dropdown");
@@ -314,6 +310,16 @@ $(document).ready(function () {
         this_dropdown.toggleClass("open");
         $(this).toggleClass("active");
         e.preventDefault();
+    });
+
+    doc.on('touchstart', '.b-product-item', function (e) {
+        if (doc.outerWidth() < 1024) {
+            if (!$(this).hasClass("pop-open")) {
+                doc.find(".b-product-item").removeClass("pop-open touch-open");
+                $(this).addClass("pop-open touch-open");
+                e.preventDefault();
+            }
+        }
     });
 
 

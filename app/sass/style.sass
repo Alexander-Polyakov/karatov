@@ -900,7 +900,7 @@ a.tdu
 
 .b-site-header__contacts,
 .b-site-header__events
-    width: calc(50% - 85px)
+    width: calc(50% - 100px)
 
 .b-logo
     position: absolute
@@ -1131,7 +1131,6 @@ a.tdu
         +trans
         &:hover
             background: #efefef
-
     .owl-prev, .owl-next
         left: 0
         &:before
@@ -1728,7 +1727,6 @@ a.tdu
     width: 100%
     opacity: 0
     padding: 0 15px
-    +trans
 
 .b-fade-slider__slides
     position: absolute
@@ -1793,7 +1791,7 @@ a.tdu
     text-align: center
     position: relative
     z-index: 1
-    &:hover
+    &.pop-open
         z-index: 50
         .b-product-item__overlay
             box-shadow: 0 2px 3px 0 #ccc
@@ -1801,11 +1799,13 @@ a.tdu
             z-index: 45
         .b-product-item__popup, .b-fade-slider__nav
             opacity: 1
+    &.touch-open
+        .b-fade-slider__nav
+            display: none
+
 
 
 .b-product-item__overlay
-    content: ''
-    +trans
     background: #fff
     position: absolute
     left: 0
@@ -4362,17 +4362,16 @@ a.tdu
 
 .b-products-item__section
     padding: 0 15px
-    +trans()
     &.popup
         visibility: hidden
         opacity: 0
-        +trans()
         position: absolute
         top: 100%
         left: 0
         width: 100%
         background: #fff
         z-index: 10
+
 
 .b-products-item__cont-wrap
     max-width: 200px
@@ -4402,7 +4401,7 @@ a.tdu
 .b-products-item__preview
     padding-bottom: 13px
 
-.b-logged
+.b-event-logged
     position: relative
     padding-right: 20px
     &.there-arrow
@@ -4417,7 +4416,7 @@ a.tdu
             border-bottom: 1px solid #231f23
             +rotate(45)
 
-.b-logged__photo
+.b-event-logged__photo
     width: 52px
     height: 52px
     overflow: hidden
@@ -4426,19 +4425,19 @@ a.tdu
     img
         width: 100%
 
-.b-logged__content
+.b-event-logged__content
     display: inline-block
     vertical-align: top
     margin-left: 10px
     padding-top: 5px
 
-.b-logged__name
+.b-event-logged__name
     font-size: 15px
     color: #231f23
     line-height: 1.2em
     margin-bottom: 5px
 
-.b-logged__points
+.b-event-logged__points
     color: #f05007
 
 .b-map
@@ -4859,8 +4858,12 @@ a.tdu
 @media screen and (max-width: 992px)
     .b-product-slider
         &.browsing
-            .owl-next, .owl-prev
-                bottom: 0
+            .owl-prev
+                bottom: 30px
+                left: -20px
+            .owl-next
+                right: -20px
+                bottom: 30px
     .b-site-header
         min-height: 130px
     .b-logo
@@ -5082,16 +5085,12 @@ a.tdu
     .b-expert-page__content
         width: calc(100% - 250px)
 
-    .b-product-slider
-        .owl-stage-outer
-            padding-bottom: 0
     .b-presentation-slider__slide
         .hover-preview
             display: none !important
         .standard-preview
             display: block !important
-    .b-product-item__overlay
-        display: none !important
+
     .b-text
         font-size: 16px
     .b-popup
@@ -5132,10 +5131,6 @@ a.tdu
 
     .b-main-nav-wrapper
         padding-right: 30px
-
-    .b-product-slider-wrapper
-        &:before
-            bottom: 0
 
     .b-product-slider.browsing
         .b-product-item:hover
@@ -5259,8 +5254,6 @@ a.tdu
         margin-right: auto
         margin-left: -12px
 
-    .b-product-item__popup
-        display: none
 
     .b-m-grid__item__descr
         font-size: 13px
@@ -5352,10 +5345,6 @@ a.tdu
     .b-changing.see-all
         .b-changing__item
             margin-right: 20px
-
-    .b-product-slider-wrapper
-        padding-bottom: 40px
-
 
     .b-expert-catalog-content
         .b-products-grid
@@ -6005,11 +5994,6 @@ a.tdu
 
     .b-product-slider
         padding: 0 0 20px
-
-    .b-product-slider-wrapper
-        &:before
-            bottom: 0
-
 
     .b-product-item__price
         font-size: 18px
