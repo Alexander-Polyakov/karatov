@@ -5,6 +5,9 @@
 {% endblock %}
 
 
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
 
 {% block menuBlock %}
     {% include "widgets/b-menu-expert.twig" %}
@@ -27,28 +30,26 @@
                 </ul>
 
 
-                <div class="b-section-wrapper pb60">
+                <div class="b-section-wrapper mobile-no-pb tab-no-pb">
                     <h2 class="fz28-title mb10 tal">Профиль</h2>
                     <div class="b-profile">
-                        <ul class="b-profile-nav">
-                            <li class="b-profile-nav__item active">
-                                <a href="#" class="b-profile-nav__link">Анкета</a>
-                            </li>
-                            <li class="b-profile-nav__item">
-                                <a href="#" class="b-profile-nav__link">Бонусы</a>
-                            </li>
-                            <li class="b-profile-nav__item">
-                                <a href="#" class="b-profile-nav__link">Штрихкоды</a>
-                            </li>
-                        </ul>
+                        <nav class="b-profile-nav">
+                            <a href="#" class="b-profile-nav__item active">Анкета
+                            </a>
+                            <a href="#" class="b-profile-nav__item">Бонусы
+                            </a>
+                            <a href="#" class="b-profile-nav__item">Штрихкоды
+                            </a>
+                        </nav>
                         <div class="b-questionnaire clearfix">
                             <div class="b-questionnaire-photo">
                                 <div class="b-big-avatar">
-                                    <i class="b-big-avatar__delete"></i>
+
                                     <div class="b-big-avatar__photo">
+                                        <i class="b-big-avatar__delete"></i>
                                         <img src="img/expert_img/bg-avatar-img1.jpg" alt="">
                                     </div>
-                                    <p>
+                                    <p class="upload-profile-ava-button">
                                         <a class="btn lh40 white ff_cr fz15 full_w" href="#">Загрузить фото</a>
                                     </p>
                                 </div>
@@ -82,13 +83,13 @@
                                     <div class='b-questionnaire-data__row clearfix'>
                                         <div class="b-questionnaire-data__left">Дата рождения</div>
                                         <div class="b-questionnaire-data__right">
-                                            <input type="text" class="st-input lh40">
+                                            <input type="text" class="st-input lh40 dobmask">
                                         </div>
                                     </div>
                                     <div class='b-questionnaire-data__row clearfix'>
                                         <div class="b-questionnaire-data__left">Мобильный телефон</div>
                                         <div class="b-questionnaire-data__right">
-                                            <input type="text" class="st-input lh40">
+                                            <input type="text" class="st-input lh40 inputmask">
                                         </div>
                                     </div>
                                     <div class='b-questionnaire-data__row clearfix'>
@@ -202,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div class="b-expert-page__sidebar">
+            <div class="b-expert-page__sidebar mobile-hidden">
                 <form action="#" class="b-sale-registration mb25">
                     <div class="b-sale-registration__content">
                         <p class="fz24-title tac ttu">Регистрация

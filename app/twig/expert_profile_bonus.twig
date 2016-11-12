@@ -1,0 +1,256 @@
+{% extends "layouts/main_expert.twig" %}
+
+{% block pageScripts %}
+
+{% endblock %}
+
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu-expert.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+    <div class="b-expert-page">
+        <div class="b-container clearfix">
+            <div class="b-expert-page__content">
+                <ul class="b-bread-crumbs clearfix mb20 tab-hidden mobile-hidden">
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Профиль</a>
+                    </li>
+                    <li class="b-bread-crumbs__item">
+                        <a class="b-bread-crumbs__link" href="#">Анкета</a>
+                    </li>
+                </ul>
+
+
+                <div class="b-section-wrapper mobile-no-pb tab-no-pb">
+                    <h2 class="fz28-title mb10 tal">Профиль</h2>
+                    <div class="b-profile">
+                        <nav class="b-profile-nav">
+                            <a href="#" class="b-profile-nav__item ">Анкета
+                            </a>
+                            <a href="#" class="b-profile-nav__item active">Бонусы
+                            </a>
+                            <a href="#" class="b-profile-nav__item">Штрихкоды
+                            </a>
+                        </nav>
+                        <div class="b-profile-bonuses">
+                            <div class="b-profile-bonuses-header clearfix">
+                                <div class="b-profile-bonuses-header__content">
+                                    <p class="b-profile-bonuses-header__title">Уважаемый участник Sellers Club</p>
+                                    <div class="b-profile-bonuses-header__descr">
+                                        <p>Все баллы, которые ты зарабатываешь за любую активность в Клубе, копятся в рейтинге конкурса "Продавец года". В то же время эти баллы отражаются в кошельке и их можно обменивать в магазине подарков. При этом в рейтинге они сохранятся.</p>
+                                    </div>
+                                </div>
+                                <div class="b-profile-bonuses-header__bonuses">
+                                    <div class="b-bonuses-units">
+                                        <div class="b-bonuses-units__item">
+                                            <p class="b-bonuses-units__item-title">Рейтинг продавца</p>
+                                            <p class="b-bonuses-units__item-value">1 400</p>
+                                            <p>
+                                                <span class="btn bb-orange lh32 fz11 full_w">Потратить бонусы</span>
+                                            </p>
+                                        </div>
+                                        <div class="b-bonuses-units__item">
+                                            <p class="b-bonuses-units__item-title">Бонусы в кошельке</p>
+                                            <p class="b-bonuses-units__item-value">145</p>
+                                            <p>
+                                                <span class="btn bb-orange lh32 fz11 full_w">Заработать баллы</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="b-history-orders-section">
+                            <p class="fz20-title">История заказов</p>
+                            <div class="b-history-orders">
+                                <div class="b-history-orders-item b-dropdown">
+                                    <div class="b-orders-table b-dropdown__header">
+                                        <div class="b-orders-table__header b-orders-table__tr">
+                                            <div class="b-orders-table__header-item">
+                                                <span class="dib b-dropdown__toggle">№ Заказа: 23234</span>
+                                            </div>
+                                            <div class="b-orders-table__header-item">Дата: 21.06.2016</div>
+                                            <div class="b-orders-table__header-item">Доставка: Курьером на дом</div>
+                                            <div class="b-orders-table__header-item">Статус доставки: На рассмотрении</div>
+                                            <div class="b-orders-table__header-item">Итого: 2 100 баллов</div>
+                                        </div>
+                                        <div class="b-orders-table__content b-orders-table__tr">
+                                            <div class="b-orders-table__content-item preview">
+                                                <img src="img/products/product-img1.jpg" alt="">
+                                            </div>
+                                            <div class="b-orders-table__content-item">Кольцо из серебра с фианитами</div>
+                                            <div class="b-orders-table__content-item">Количество: 1</div>
+                                            <div class="b-orders-table__content-item">Размер: 19</div>
+                                            <div class="b-orders-table__content-item">1 200 баллов</div>
+                                            <div class="b-orders-table__content-item">Итого: 1 200 баллов</div>
+                                        </div>
+                                        <div class="b-orders-table__content b-orders-table__tr">
+                                            <div class="b-orders-table__content-item preview">
+                                                <img src="img/products/product-img1.jpg" alt="">
+                                            </div>
+                                            <div class="b-orders-table__content-item">Кольцо из серебра с фианитами</div>
+                                            <div class="b-orders-table__content-item">Количество: 1</div>
+                                            <div class="b-orders-table__content-item">Размер: 19</div>
+                                            <div class="b-orders-table__content-item">1 200 баллов</div>
+                                            <div class="b-orders-table__content-item">Итого: 1 200 баллов</div>
+                                        </div>
+                                    </div>
+                                    <div class="b-orders-info b-dropdown__content">
+                                        <div class="b-orders-info-item">
+                                            <div class="b-orders-info-item__header">РЕКВИЗИТЫ ЗАКАЗА</div>
+                                            <div class="b-orders-info-item__content">
+                                                <div class="b-orders-info-table w550">
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Дата и время заказа</div>
+                                                        <div class="b-orders-info-table__td">18.08.2016 в 10:49</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Номера заказа</div>
+                                                        <div class="b-orders-info-table__td">120716</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Статус заказа</div>
+                                                        <div class="b-orders-info-table__td">На рассмотрении</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Дата перевода в статус</div>
+                                                        <div class="b-orders-info-table__td">18.08.2016 в 10:49</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Предпоследний статус
+                                                            заказа</div>
+                                                        <div class="b-orders-info-table__td">Не обработан</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Ответственный
+                                                            менеджер</div>
+                                                        <div class="b-orders-info-table__td">Петров Петр Петрович</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-orders-info-item">
+                                            <div class="b-orders-info-item__header">ДОСТАВКА</div>
+                                            <div class="b-orders-info-item__content">
+                                                <div class="b-orders-info-table w550">
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Страна</div>
+                                                        <div class="b-orders-info-table__td">Россия</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Город</div>
+                                                        <div class="b-orders-info-table__td">Москва</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Адрес доставки</div>
+                                                        <div class="b-orders-info-table__td">Баумнаская улица д.19
+                                                            кв.64</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-orders-info-item">
+                                            <div class="b-orders-info-item__header">РЕКВИЗИТЫ КЛИЕНТА</div>
+                                            <div class="b-orders-info-item__content">
+                                                <div class="b-orders-info-table w550">
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Страна</div>
+                                                        <div class="b-orders-info-table__td">Россия</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Город</div>
+                                                        <div class="b-orders-info-table__td">Москва</div>
+                                                    </div>
+                                                    <div class="b-orders-info-table__tr">
+                                                        <div class="b-orders-info-table__td">Адрес доставки</div>
+                                                        <div class="b-orders-info-table__td">Баумнаская улица д.19
+                                                            кв.64</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-expert-page__sidebar mobile-hidden">
+                <form action="#" class="b-sale-registration mb25">
+                    <div class="b-sale-registration__content">
+                        <p class="fz24-title tac ttu">Регистрация
+                            продажи</p>
+                        <div class="mb10 rel">
+                            <input placeholder="Введите штрих-код" class="st-input lh40" type="text">
+                            <div class="b-clarification abs_input tooltip tooltipstered" data-tooltip-content="#tooltip_content">
+                                <span class="b-clarification__icon"></span>
+                            </div>
+                        </div>
+                        <div class="mb10">
+                            <input placeholder="Введите артикул" class="st-input lh40" type="text">
+                        </div>
+                        <div>
+                            <button class="btn lh45 ff_cr ttu fz14 bg_y txt_white full_w ">Зарегистрировать</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="b-leaders-sells">
+                    <div class="fz28-title tal mb10">Лидеры продаж</div>
+                    <div class="b-grid-leaders">
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img1.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Алексей Иванов</p>
+                                <p class="fz15 color-yellow">1 728 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon gold_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img2.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Юлия Елизарова</p>
+                                <p class="fz15 color-yellow">1 431 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon silver_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img3.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                            <i class="b-grid-leaders__item__icon bronze_medal"></i>
+                        </div>
+                        <div class="b-grid-leaders__item">
+                            <div class="b-grid-leaders__item__photo">
+                                <img src="img/expert_img/avatar-img4.jpg" alt="">
+                            </div>
+                            <div class="b-grid-leaders__item__content lh1-2em">
+                                <p class="fz17 mb5 ">Александра Константиновская</p>
+                                <p class="fz15 color-yellow">1 122 баллов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

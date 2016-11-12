@@ -48,7 +48,7 @@
 
                 <div class="b-popups-opening__item" data-open-popup="no_bonuses">Нет бонусов</div>
 
-                <div class="b-popups-opening__item" data-open-popup="no_bonuses">Заказ оформлен</div>
+
             </div>
         </div>
     </div>
@@ -578,7 +578,7 @@
                     </div>
                     <div class="mb20">
                         <div class="b-search-region rel mb5">
-                            <input id="search-region" placeholder="Город" class="input-popup lh50" type="text">
+                            <input placeholder="Город" class="input-popup lh50 input-search-region" type="text">
                             <div class="b-clarification abs_input tooltip" data-tooltip-content="#tooltip_content">
                                 <span class="b-clarification__icon"></span>
                             </div>
@@ -1016,6 +1016,49 @@
             </div>
         </div>
 
+        <div class="b-popup w520" data-popup="checkout3">
+            <i class="b-popup__close" data-close="popups"></i>
+            <div class="b-popup__header">
+                <p class="b-popup__title">Заказ оформлен</p>
+            </div>
+            <div class="b-popup__content pt20">
+                <div class="b-text check70px__left  mb20">
+                    <p class="fz14">Заказ №121540 оформлен, всю необходимую информацию по отслеживания отправили вам на email. В течении ближайшего времени с вами свяжутся.
+                    </p>
+                    <div class="b-table vat fz12">
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Номер заказа: </div>
+                            <div class="b-td pb10">121540</div>
+                        </div>
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Имя и фамилия:</div>
+                            <div class="b-td pb10">Петр Петров</div>
+                        </div>
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Телефон:</div>
+                            <div class="b-td pb10">7 911 2312313</div>
+                        </div>
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Способ доставки: </div>
+                            <div class="b-td pb10">Доставка в магазин</div>
+                        </div>
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Электронная почта:</div>
+                            <div class="b-td pb10">ingo@mail.ru</div>
+                        </div>
+                        <div class="b-tr">
+                            <div class="b-td pb10 w140px">Адрес доставки: </div>
+                            <div class="b-td pb10">г. Москва, Сущевская улица д.1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <a class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Продолжить</a>
+                </p>
+            </div>
+        </div>
+
 
         <div class="b-popup w600" data-popup="order_sent">
             <i class="b-popup__close" data-close="popups"></i>
@@ -1096,16 +1139,14 @@
         <div class="b-popup full_w no_bg" data-popup="map_popup">
             <div class="b-map-popup clearfix">
                 <div class="clearfix">
-                    <div class="f_r w50p">
-                        <div class="b-map-content__header">
-                            <p class="fz28">Где купить в <a href="#" class="yellow-link">Москве?</a></p>
-                            <i class="b-map-popup__close" data-close="popups"></i>
-                        </div>
+                    <div class="b-map-content__header">
+                        <p>Где купить в <a href="#" class="yellow-link">Москве?</a></p>
+                        <i class="b-map-popup__close" data-close="popups"></i>
                     </div>
                 </div>
                 <div class="clearfix">
-                    <div class="b-map-popup__section">
-                        <div id="map-popup"></div>
+                    <div class="b-map-popup__section map-section">
+                        <div id="map"></div>
                     </div>
                     <div class="b-map-popup__section">
                         <div class="b-map-popup__content">

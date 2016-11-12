@@ -1,0 +1,249 @@
+{% extends "layouts/main.twig" %}
+
+{% block pageScripts %}
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            if ($(".b-scroll-pane").length) {
+                $('.b-scroll-pane').each(
+                    function()
+                    {
+                        $(this).jScrollPane();
+                        var api = $(this).data('jsp');
+                        var throttleTimeout;
+                        $(window).bind(
+                                'resize',
+                                function()
+                                {
+                                    if (!throttleTimeout) {
+                                        throttleTimeout = setTimeout(
+                                                function()
+                                                {
+                                                    api.reinitialise();
+                                                    throttleTimeout = null;
+                                                },
+                                                50
+                                        );
+                                    }
+                                }
+                        );
+                    }
+                )
+            }
+
+        });
+    </script>
+
+{% endblock %}
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block subscribe %}
+    {% include "widgets/subscribe.twig" %}
+{% endblock %}
+
+{% block seoText %}
+    {% include "widgets/seo-text.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu.twig" %}
+{% endblock %}
+
+
+
+{% block pageContent %}
+    <div class="b-section-wrapper b-map">
+        <div class="b-map-mobile-header mobile-visible">
+            <div class="b-where-buy__header">
+                <p class="b-where-buy__title">Где купить в <a class="yellow-link" href="#">Москве</a></p>
+                <div class="b-where-buy__search">
+                    <div class="b-where-buy__search__input">
+                        <input placeholder="Поиск по названию, адресу, телефону" class="st-input lh40 input-search-region" type="text">
+                    </div>
+                    <div class="b-where-buy__search__select">
+                        <select class="st-select lh40">
+                            <option>ТЦ</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="b-map-mobile-toggle clearfix">
+                <div class="b-map-mobile-toggle__item active" data-accordion-tab="1">на карте</div>
+                <div class="b-map-mobile-toggle__item" data-accordion-tab="2">списком</div>
+            </div>
+        </div>
+        <div class="b-map-infowindow mobile-hidden" style="top: 10px; position: absolute; right: 10px">
+            <p class="fz16 mb5">Бронницкий Ювелир</p>
+            <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                +7 (495) 544-23-12 <br>
+                Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+            </p>
+            <p class="color-gray mb10">
+                <span class="dib mr20">
+                    <i class="m-icon brown"></i>
+                    <i class="m-icon blue"></i>
+                    <span class="dib fz13">Киевская</span>
+                </span>
+                <span class="dib mr20">
+                    <i class="m-icon brown"></i>
+                    <i class="m-icon blue"></i>
+                    <span class="dib fz13">Киевская</span>
+                </span>
+            </p>
+            <p>
+                <a href="#" class="btn lh45 ff_cr bb-orange full_w">посмотреть ближайшие магазины</a>
+            </p>
+        </div>
+        <div class="b-where-buy b-accordion-item" data-accordion-item="2">
+            <div class="b-where-buy__header mobile-hidden">
+                <p class="b-where-buy__title">Где купить в <a class="yellow-link" href="#">Москве</a></p>
+                <div class="b-where-buy__search">
+                    <div class="b-where-buy__search__input">
+                        <input placeholder="Поиск по названию, адресу, телефону" class="st-input lh40 input-search-region" type="text">
+                    </div>
+                    <div class="b-where-buy__search__select">
+                        <select class="st-select lh40">
+                            <option>ТЦ</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="b-where-buy__content">
+                <div class="b-scroll-pane h450">
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon red"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon red"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="b-scroll-pane__item">
+                        <p class="fz16 mb5">Бронницкий Ювелир</p>
+                        <p class="color-gray fz13 mb5">ТЦ “Европейский”, Москва, Трубная площадь, 2
+                            +7 (495) 544-23-12 <br>
+                            Пн-Пт 9:00–20:00, Сб-Вс 11:00 — 23:00
+                        </p>
+                        <p class="color-gray">
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                            <span class="dib mr20">
+                                <i class="m-icon brown"></i>
+                                <i class="m-icon blue"></i>
+                                <span class="dib fz13">Киевская</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-map__map-wrapper b-accordion-item active" data-accordion-item="1">
+            <div id="map"></div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

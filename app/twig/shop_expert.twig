@@ -5,6 +5,9 @@
 {% endblock %}
 
 
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
 
 {% block menuBlock %}
     {% include "widgets/b-menu-expert.twig" %}
@@ -14,7 +17,7 @@
     <div class="b-expert-page">
         <div class="b-container clearfix">
             <div class="b-expert-page__content">
-                <ul class="b-bread-crumbs clearfix mb20">
+                <ul class="b-bread-crumbs mobile-hidden tab-hidden clearfix mb20">
                     <li class="b-bread-crumbs__item">
                         <a class="b-bread-crumbs__link" href="#">Главная</a>
                     </li>
@@ -27,12 +30,21 @@
                 </ul>
 
 
-                <div class="b-section-wrapper pb60">
-                    <h2 class="fz28-title mb10 tal">Профиль</h2>
-                    <div class="b-section-wrapper pb60">
-                        <div class="b-expert-catalog">
+                <div class="b-section-wrapper">
+                    <h2 class="fz28-title mb10 tal">Магазин</h2>
+                    <div class="b-expert-catalog">
                             <div class="b-expert-catalog-header fz15">
-                                <div class="b-changing">
+                                <div class="b-filter-open pl0 tab-visible mobile-visible hidden" >
+                                    <span class="filter-open-btn">
+                                        <span class="hamburger pos_l">
+                                            <span class="hamburger__line top"></span>
+                                            <span class="hamburger__line middle"></span>
+                                            <span class="hamburger__line bottom"></span>
+                                        </span>
+                                        Фильтр
+                                    </span>
+                                </div>
+                                <div class="b-changing tab-hidden mobile-hidden">
                                     <div class="b-changing__item mt0">
                                         <div class="b-filter-select">
                                             <div class="b-filter-select__name">Категория</div>
@@ -283,631 +295,149 @@
                             </div>
 
                             <div class="b-expert-catalog-content">
-                                <div class="b-products-grid">
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="b-products-grid__item">
-                                        <div class="b-products-item">
-                                            <div class="b-products-item__section">
-                                                <div class="b-products-item__preview">
-                                                    <div class="b-fade-slider">
-                                                        <div class="b-fade-slider__slides">
-                                                            <div class="b-fade-slider__slide" data-fade-slide="1">
-                                                                <img src="img/products/product-img1.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="2">
-                                                                <img src="img/products/product-img2.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide active" data-fade-slide="3">
-                                                                <img src="img/products/product-img3.jpg" alt="">
-                                                            </div>
-                                                            <div class="b-fade-slider__slide" data-fade-slide="4">
-                                                                <img src="img/products/product-img4.jpg" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <ul class="b-fade-slider__nav clearfix">
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="1"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="2"></li>
-                                                            <li class="b-fade-slider__nav-item active" data-fade-nav="3"></li>
-                                                            <li class="b-fade-slider__nav-item" data-fade-nav="4"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="b-products-item__cont-wrap">
-                                                    <div class="b-products-item__descr">
-                                                        <p>Кольцо из серебра с фианитами</p>
-                                                    </div>
-                                                    <p class="b-products-item__price">899 баллов</p>
-                                                </div>
-                                            </div>
-                                            <div class="b-products-item__section popup">
-                                                <div class="b-products-item__cont-wrap">
-                                                    <p class="mb10">
-                                                        <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
-                                                    </p>
-                                                    <div>
-                                                        <p class="mb10 fz12 color-gray">Выберите размер:</p>
-                                                        <ul class="b-product-size">
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">16,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">17,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">18,5</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">19</a>
-                                                            </li>
-                                                            <li class="b-product-size__item">
-                                                                <a href="#" class="b-product-size__link">Не знаю размер</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="b-sidebar-filter expert-filter">
+                                    <div class="b-sidebar-filter__mobile-content">
+                                        <ul class="b-selects-list">
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Тип товара</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Вид украшения</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Металл</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Вставка</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Цена</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                            <li class="b-selects-list__item clearfix">
+                                                <span class="b-selects-list__item__name">Наличие</span>
+                                                <select class="b-selects-list__item__select">
+                                                    <option>Значение 1</option>
+                                                    <option>Значение 2</option>
+                                                    <option>Значение 3</option>
+                                                    <option>Значение 4</option>
+                                                </select>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="b-pagination-wrapper tac">
-                                    <p class="mb35">
-                                        <a class="btn lh40 white ff_cr ttu fz13" href="#">Показать еще</a>
-                                    </p>
-                                    <ul class="b-pagination dib  mobile-hidden">
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">1</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">2</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">...</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">5</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">6</a>
-                                        </li>
-                                        <li class="b-pagination__item active">
-                                            <a class='b-pagination__link' href="#">7</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">8</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">9</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">...</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">79</a>
-                                        </li>
-                                        <li class="b-pagination__item">
-                                            <a class='b-pagination__link' href="#">80</a>
-                                        </li>
-                                    </ul>
+                                <div class="b-products-grid">
+                                    {% for i in 1..10 %}
+                                        <div class="b-products-grid__item">
+                                            <div class="b-products-item">
+                                                <div class="b-products-item__section">
+                                                    <div class="b-products-item__preview">
+                                                        <div class="b-fade-slider">
+                                                            <div class="b-fade-slider__slides">
+                                                                <div class="b-fade-slider__slide" data-fade-slide="1">
+                                                                    <img src="img/products/product-img1.jpg" alt="">
+                                                                </div>
+                                                                <div class="b-fade-slider__slide" data-fade-slide="2">
+                                                                    <img src="img/products/product-img2.jpg" alt="">
+                                                                </div>
+                                                                <div class="b-fade-slider__slide active" data-fade-slide="3">
+                                                                    <img src="img/products/product-img3.jpg" alt="">
+                                                                </div>
+                                                                <div class="b-fade-slider__slide" data-fade-slide="4">
+                                                                    <img src="img/products/product-img4.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="b-fade-slider__nav">
+                                                                <div class="b-fade-slider__nav-item" data-fade-nav="1"></div>
+                                                                <div class="b-fade-slider__nav-item" data-fade-nav="2"></div>
+                                                                <div class="b-fade-slider__nav-item active" data-fade-nav="3"></div>
+                                                                <div class="b-fade-slider__nav-item" data-fade-nav="4"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="b-products-item__cont-wrap">
+                                                        <div class="b-products-item__descr">
+                                                            <p>Кольцо из серебра с фианитами</p>
+                                                        </div>
+                                                        <p class="b-products-item__price">899 баллов</p>
+                                                    </div>
+                                                </div>
+                                                <div class="b-products-item__section popup">
+                                                    <div class="b-products-item__cont-wrap">
+                                                        <p class="mb10">
+                                                            <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white full_w" href="#">Заказать</a>
+                                                        </p>
+                                                        <div>
+                                                            <p class="mb10 fz12 color-gray">Выберите размер:</p>
+                                                            <ul class="b-product-size">
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">16</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">16,5</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">17</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">17,5</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">18</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">18,5</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">19</a>
+                                                                </li>
+                                                                <li class="b-product-size__item">
+                                                                    <a href="#" class="b-product-size__link">Не знаю размер</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
 
                                 </div>
+                                {% include 'widgets/b-pagination.twig' %}
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
-            <div class="b-expert-page__sidebar">
+            <div class="b-expert-page__sidebar mobile-hidden">
                 <form action="#" class="b-sale-registration mb25">
                     <div class="b-sale-registration__content">
                         <p class="fz24-title tac ttu">Регистрация
