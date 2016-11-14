@@ -95,8 +95,17 @@ body
 .bg-gray
     background-color: $gray
 
+.bg-dgray
+    background-color: #999
+
+.bg-orange
+    background-color: #f05007
+
 .lh1em
     line-height: 1em
+
+.lh20
+    line-height: 20px
 
 .lh30
     line-height: 30px
@@ -197,6 +206,9 @@ body
 .w66
     width: 66%
 
+.h450
+    height: 450px
+
 .mr2
     margin-right: 2%
 
@@ -272,6 +284,37 @@ body
 .bg_y
     background: #f26417
 
+.bg-cover
+    -webkit-background-size: cover
+    background-size: cover
+
+.bg-center
+    background-position: center center
+
+.br3
+    border-radius: 3px
+
+.b-max-w500
+    max-width: 500px
+
+.p60_0
+    padding: 60px 0
+
+.p35_30
+    padding: 35px 30px
+
+.p65_50
+    padding: 65px 50px
+
+.p0_5
+    padding: 0 5px
+
+.p0_10
+    padding: 0 10px
+
+.fz11
+    font-size: 11px
+
 .fz12
     font-size: 12px
 
@@ -338,6 +381,10 @@ a.tdu
 
 .ff_cl
     font-family: $cl
+
+.brush-icon
+    +sprite(brush-icon)
+
 
 .b-login-icon
     +sprite(login-icon-white)
@@ -498,6 +545,8 @@ a.tdu
     font-family: $cl
     text-transform: uppercase
     margin-bottom: 60px
+    &.mb20
+        margin-bottom: 20px
 
 .fz28-title
     font-size: 28px
@@ -897,10 +946,6 @@ a.tdu
     justify-content: space-between
     align-items: center
     min-height: 150px
-
-.b-site-header__contacts,
-.b-site-header__events
-    width: calc(50% - 100px)
 
 .b-logo
     position: absolute
@@ -4737,6 +4782,75 @@ a.tdu
     font-size: 30px
     margin-bottom: 10px
 
+.b-proportion
+    position: relative
+    overflow: hidden
+
+.b-proportion__content
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    &.gift
+        right: 20px
+        top: 20px
+        left: 20px
+        bottom: 20px
+        background: #fff
+        text-align: center
+        padding: 20px
+
+
+.b-proportion__size
+    &.size100
+        padding-top: 100%
+    &.size50
+        padding-top: 48.74%
+
+.b-grid-row
+    font-size: 0
+    margin: 0 -10px 20px
+    &:last-child
+        margin: 0 -10px 0px
+
+.b-grid-item
+    display: inline-block
+    vertical-align: top
+    &.d-w33
+        width: 33.33%
+    &.d-w66
+        width: 66.66%
+
+.b-competition-form
+    width: 375px
+    position: relative
+
+.b-competition-form__input
+    height: 42px
+    font-size: 15px
+    color: #111
+    +phc(#111)
+    width: 100%
+    padding: 0 10px
+    font-family: "circle-light"
+
+
+.b-competition-form__submit
+    background: #f05007
+    font-size: 13px
+    font-family: "circle-light"
+    text-transform: uppercase
+    height: 42px
+    padding: 0 10px
+    color: #fff
+    position: absolute
+    top: 0
+    right: 0
+    +trans()
+    &:hover
+        background: #f48451
+
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
         display: block
@@ -6074,4 +6188,6 @@ a.tdu
             top: 8%
             left: 8%
             bottom: 8%
+
+
 
