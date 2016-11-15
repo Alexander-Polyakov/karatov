@@ -795,41 +795,6 @@ a.tdu:hover {
   text-transform: uppercase;
   font-size: 31px;
 }
-.b-m-grid__item__title.brush-icon {
-  padding-top: 60px;
-  position: relative;
-}
-.b-m-grid__item__title.brush-icon:before {
-  content: "";
-  background-image: url('../img/icons-s765ff80a71.png');
-  background-position: 0 -32px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  height: 29px;
-  width: 72px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -14.5px;
-  margin-left: -36px;
-  top: 0 !important;
-  margin-top: 0 !important;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
-  .b-m-grid__item__title.brush-icon:before {
-    background-image: url('../img/icons-2x-s4045c74356.png');
-    background-size: 85px auto;
-    background-position: 0 -32px;
-    height: 29px;
-    width: 72px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -14.5px;
-    margin-left: -36px;
-  }
-}
 .b-m-grid__item__title.map-icon {
   padding-top: 80px;
   margin-bottom: 0;
@@ -9161,6 +9126,9 @@ a.tdu:hover {
     height: 100%;
     display: inline-block;
     vertical-align: middle;
+  }
+  .b-m-grid__item__content.middle .b-middle-content {
+    width: 90%;
   }
   .b-m-grid__item__content.bottom {
     left: 10px;

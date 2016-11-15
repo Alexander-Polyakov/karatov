@@ -478,14 +478,6 @@ a.tdu
     font-family: $cl
     text-transform: uppercase
     font-size: 31px
-    &.brush-icon
-        padding-top: 60px
-        position: relative
-        &:before
-            content: ''
-            +sprite(brush-icon, "abs_middle")
-            top: 0 !important
-            margin-top: 0 !important
     &.map-icon
         padding-top: 80px
         margin-bottom: 0
@@ -6171,6 +6163,8 @@ a.tdu
                 height: 100%
                 display: inline-block
                 vertical-align: middle
+            .b-middle-content
+                width: 90%
         &.bottom
             left: 10px
             right: 10px

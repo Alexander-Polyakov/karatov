@@ -1,7 +1,13 @@
 {% extends "layouts/main_expert.twig" %}
 
 {% block pageScripts %}
+    <script>
+        $(document).ready(function(){
+            var timer1 = new CountdownTimer('timer1', "Thu, 16 Nov 2016 19:36:00 GMT");
+            timer1.countDown();
 
+        });
+    </script>
 {% endblock %}
 
 
@@ -28,6 +34,9 @@
                 <p>
                     <a href="#" class="btn lh40 ff_cr ttu fz13 bb">Узнать подробнее</a>
                 </p>
+                <div>
+                    <div id="timer1" class="b-timer"></div>
+                </div>
             </div>
         </div>
     </div>
