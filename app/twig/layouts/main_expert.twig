@@ -28,7 +28,9 @@
     <div class="b-site-wrapper__content">
         {% block topPlate %}{% endblock %}
         <!-- block header start -->
-        {% include "header_expert.twig" %}
+
+        {% include "header_expert.twig" with {'page'} %}
+
         <!-- block header end -->
         {% block menuBlock %}{% endblock %}
 
