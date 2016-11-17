@@ -40,25 +40,35 @@
                 </div>
             </div>
 
-            <a class="b-logo logo-expert" href="#">
-                <img src="img/logo-expert.png" alt="">
-            </a>
+
+            {% if page != 'header_buyer' %}
+                <a class="b-logo logo-expert" href="#">
+                    <img src="img/logo-expert.png" alt="">
+                </a>
+            {% else %}
+                <a class="b-logo " href="#">
+                    <img src="img/logo.jpg" alt="">
+                </a>
+            {% endif %}
+
 
             <div class="b-site-header__events tar">
                 <div class="b-events-list tal dib">
                     <div class="b-events-list__item">
                         <div class="b-event-feedback">
-                            <span class="event-icon login-icon feedback-icon"></span>
-                            <span class="dib mobile-hidden">Обратная связь</span>
+                            <span class="event-icon feedback-icon"></span>
+                            <span class="dib tab-hidden mobile-hidden">Обратная связь</span>
                         </div>
                     </div>
                     <div class="b-events-list__item">
-                        <div class="b-event-logged there-arrow">
-                            <div class="b-event-logged__photo"><img src="img/expert_img/bg-avatar-img1.jpg" alt="">
+                        <div class="b-event-logged">
+                            <div class="b-event-logged__photo dib"><img src="img/expert_img/bg-avatar-img1.jpg" alt="">
                             </div>
-                            <div class="b-event-logged__content">
+                            <div class="b-event-logged__content dib mobile-hidden">
                                 <p class="b-event-logged__name">Алексей Иванов</p>
-                                <p class="b-event-logged__points">1 728 баллов</p>
+                                {% if page != 'header_buyer' %}
+                                    <p class="b-event-logged__points">1 728 баллов</p>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

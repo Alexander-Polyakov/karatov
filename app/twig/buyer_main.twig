@@ -1,0 +1,131 @@
+{% extends "layouts/main_expert.twig" %}
+
+{% block pageScripts %}
+    <script>
+        $(document).ready(function(){
+            var timer1 = new CountdownTimer('timer1', "Thu, 16 Nov 2017 19:36:00 GMT");
+            timer1.countDown();
+            var timer2 = new CountdownTimer('timer2', "Thu, 13 Nov 2017 19:36:00 GMT");
+            timer2.countDown();
+        });
+    </script>
+{% endblock %}
+
+{% set page = 'header_buyer' %}
+
+{% block topPlate %}
+    {% include "widgets/top-plate.twig" %}
+{% endblock %}
+
+{% block menuBlock %}
+    {% include "widgets/b-menu-expert.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+    <div class="b-section-wrapper mb30">
+        <div class="b-full-w-banner bg-cover h450 bg-center tac p60_0 mobile-p40_0 tablet-h_auto" style="background-image: url(img/banners/competition-bg1.jpg)">
+            <div class="b-container w520">
+                <p class="mb20">
+                    <span class="fz11 txt_white dib bg-orange lh20 p0_5 br3 ttu">участвую</span>
+                </p>
+                <p class="title-section-fz43 mb20">Основной конкурс</p>
+                <div class="b-text mb20">
+                    <p>Каждый из нас — уникальный, ни на кого  не похожий мир.
+                        Создайте неповторимое украшение и расскажите о себе.</p>
+                </div>
+                <p class="mb25 mobile-hidden">
+                    <a href="#" class="btn lh40 ff_cr ttu fz13 bb">Узнать подробнее</a>
+                </p>
+                <div>
+                    <div id="timer1" class="b-timer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-section-wrapper pb100">
+        <div class="b-container">
+            <div class="b-grid">
+                <div class="b-grid-row">
+                    <div class="b-grid-item p0_10 d-w66">
+                       <div class="b-content bg-cover bg-center p65_50 h400 tablet-h240 mobile-h150" style="background-image: url(img/banners/competition-bg2.jpg)">
+                           <p class="mb10">
+                               <span class="fz11 txt_white dib bg-dgray lh20 p0_5 br3 ttu">не участвую</span>
+                           </p>
+                           <p class="mb10 fz31 ff_cl ttu lh1-2em">европейские каникулы</p>
+                           <div class="b-text mb20">
+                               <p>Каждый из наших друзей уникальный, <br>ни на кого не похожий мир</p>
+                           </div>
+                           <div class="mb15">
+                               <form class="b-competition-form">
+                                   <input type="text" class="b-competition-form__input" placeholder="Введите email">
+                                   <button class="b-competition-form__submit">участвовать</button>
+                               </form>
+                           </div>
+                           <p class="fz12">Окончание акции</p>
+                           <p class="fz18">20 сентября 2016 г.</p>
+                       </div>
+                    </div>
+                    <div class="b-grid-item p0_10 d-w33">
+                        <div class="b-content p35_30 bg-cover bg-center h400 tablet-h240 mobile-h150" style="background-image: url(img/banners/competition-bg3.jpg)">
+                            <p class="mb10">
+                                <span class="fz11 txt_white dib bg-dgray lh20 p0_5 br3 ttu">не участвую</span>
+                            </p>
+                            <p class="mb10 fz31 ff_cl ttu lh1-2em">Подвеска за подписку</p>
+                            <div class="b-text mb20">
+                                <p>Получи подвеску бесплато <br>за регистрацию в нашем кабинете</p>
+                            </div>
+                            <p>
+                                <a href="#" class="btn lh40 ff_cr ttu fz13 bb">Принять участие</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-grid-row">
+                    <div class="b-grid-item p0_10 d-w33">
+                        <div class="b-content rel p10 bg-cover bg-center h400 tablet-h240 mobile-h150" style="background-image: url(img/grid-img2.jpg)">
+                            <div class="bg-white abs all-pos20 tac pt30">
+                                <p class="mb15">
+                                    <i class="brush-icon"></i>
+                                </p>
+                                <p class="mb10">
+                                    <span class="fz11 txt_white dib bg-dgray lh20 p0_5 br3 ttu">не участвую</span>
+                                </p>
+                                <p class="mb10 fz31 ff_cl ttu lh1-2em">подарок <br> за репост</p>
+                                <div class="b-text mb20">
+                                    <p>Каждый из наших друзей <br>
+                                        уникальный, ни на кого <br>
+                                        не похожий мир
+                                    </p>
+                                </div>
+                                <p>
+                                    <a href="#" class="btn lh40 white ff_cr ttu fz13">узнать подробнее</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-grid-item p0_10 d-w66">
+                        <div class="b-proportion">
+                            <div class="b-proportion__size size50 bg-cover bg-center " style="background-image: url(img/banners/competition-bg4.jpg)"></div>
+                            <div class="b-proportion__content p65_30">
+                                <p class="mb10">
+                                    <span class="fz11 txt_white dib bg-orange lh20 p0_5 br3 ttu">участвую</span>
+                                </p>
+                                <p class="mb10 fz31 ff_cl ttu lh1-2em">Каратов дарит <br> путешествие</p>
+                                <div class="b-text mb20">
+                                    <p>Каждый из наших друзей уникальный, <br>ни на кого не похожий мир</p>
+                                </div>
+                                <p class="mb15">
+                                    <a href="#" class="btn lh40 ff_cr ttu fz13 bb">Узнать подробнее</a>
+                                </p>
+                                <div>
+                                    <div id="timer2" class="b-timer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

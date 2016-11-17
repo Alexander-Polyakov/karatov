@@ -79,6 +79,8 @@ body
     padding: 0 15px
     &.w700
         max-width: 700px
+    &.w520
+        max-width: 520px
 
 .main-title
     font-size: 43px
@@ -92,11 +94,23 @@ body
     margin-bottom: 25px
     color: #666
 
+.bg-white
+    background: #fff
+
 .bg-gray
     background-color: $gray
 
+.bg-dgray
+    background-color: #999
+
+.bg-orange
+    background-color: #f05007
+
 .lh1em
     line-height: 1em
+
+.lh20
+    line-height: 20px
 
 .lh30
     line-height: 30px
@@ -115,6 +129,9 @@ body
 
 .f_r
     float: right
+
+.abs
+    position: absolute
 
 .rel
     position: relative
@@ -197,6 +214,18 @@ body
 .w66
     width: 66%
 
+.h400
+    height: 400px
+
+.h450
+    height: 450px
+
+.all-pos20
+    right: 20px
+    top: 20px
+    bottom: 20px
+    left: 20px
+
 .mr2
     margin-right: 2%
 
@@ -272,6 +301,43 @@ body
 .bg_y
     background: #f26417
 
+.bg-cover
+    -webkit-background-size: cover
+    background-size: cover
+
+.bg-center
+    background-position: center center
+
+.br3
+    border-radius: 3px
+
+.b-max-w500
+    max-width: 500px
+
+.p10
+    padding: 10px
+
+.p20
+    padding: 20px
+
+.p60_0
+    padding: 60px 0
+
+.p35_30
+    padding: 35px 30px
+
+.p65_50
+    padding: 65px 50px
+
+.p0_5
+    padding: 0 5px
+
+.p0_10
+    padding: 0 10px
+
+.fz11
+    font-size: 11px
+
 .fz12
     font-size: 12px
 
@@ -338,6 +404,10 @@ a.tdu
 
 .ff_cl
     font-family: $cl
+
+.brush-icon
+    +sprite(brush-icon)
+
 
 .b-login-icon
     +sprite(login-icon-white)
@@ -431,14 +501,6 @@ a.tdu
     font-family: $cl
     text-transform: uppercase
     font-size: 31px
-    &.brush-icon
-        padding-top: 60px
-        position: relative
-        &:before
-            content: ''
-            +sprite(brush-icon, "abs_middle")
-            top: 0 !important
-            margin-top: 0 !important
     &.map-icon
         padding-top: 80px
         margin-bottom: 0
@@ -498,6 +560,8 @@ a.tdu
     font-family: $cl
     text-transform: uppercase
     margin-bottom: 60px
+    &.mb20
+        margin-bottom: 20px
 
 .fz28-title
     font-size: 28px
@@ -897,10 +961,6 @@ a.tdu
     justify-content: space-between
     align-items: center
     min-height: 150px
-
-.b-site-header__contacts,
-.b-site-header__events
-    width: calc(50% - 100px)
 
 .b-logo
     position: absolute
@@ -4403,31 +4463,15 @@ a.tdu
 
 .b-event-logged
     position: relative
-    padding-right: 20px
-    &.there-arrow
-        &:before
-            content: ''
-            width: 7px
-            height: 7px
-            position: absolute
-            top: 9px
-            right: 5px
-            border-right: 1px solid #231f23
-            border-bottom: 1px solid #231f23
-            +rotate(45)
 
 .b-event-logged__photo
     width: 52px
     height: 52px
     overflow: hidden
-    display: inline-block
-    vertical-align: top
     img
         width: 100%
 
 .b-event-logged__content
-    display: inline-block
-    vertical-align: top
     margin-left: 10px
     padding-top: 5px
 
@@ -4436,6 +4480,18 @@ a.tdu
     color: #231f23
     line-height: 1.2em
     margin-bottom: 5px
+    position: relative
+    padding-right: 20px
+    &:before
+        content: ''
+        width: 7px
+        height: 7px
+        position: absolute
+        top: 4px
+        right: 5px
+        border-right: 1px solid #231f23
+        border-bottom: 1px solid #231f23
+        +rotate(45)
 
 .b-event-logged__points
     color: #f05007
@@ -4737,6 +4793,102 @@ a.tdu
     font-size: 30px
     margin-bottom: 10px
 
+.b-proportion
+    position: relative
+    overflow: hidden
+
+.b-proportion__content
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    &.gift
+        right: 20px
+        top: 20px
+        left: 20px
+        bottom: 20px
+        background: #fff
+        text-align: center
+        padding: 20px
+
+
+.b-proportion__size
+    &.size100
+        padding-top: 100%
+    &.size50
+        padding-top: 48.74%
+
+.b-grid-row
+    font-size: 0
+    margin: 0 -10px 20px
+    &:last-child
+        margin: 0 -10px 0px
+
+.b-grid-item
+    display: inline-block
+    vertical-align: top
+    &.d-w33
+        width: 33.33%
+    &.d-w66
+        width: 66.66%
+
+.b-competition-form
+    width: 375px
+    position: relative
+
+.b-competition-form__input
+    height: 42px
+    font-size: 15px
+    color: #111
+    +phc(#111)
+    width: 100%
+    padding: 0 10px
+    font-family: "circle-light"
+
+
+.b-competition-form__submit
+    background: #f05007
+    font-size: 13px
+    font-family: "circle-light"
+    text-transform: uppercase
+    height: 42px
+    padding: 0 10px
+    color: #fff
+    position: absolute
+    top: 0
+    right: 0
+    +trans()
+    &:hover
+        background: #f48451
+
+
+.b-timer
+    line-height: 1.2em
+    font-size: 14px
+    display: inline-block
+    text-align: center
+    & > div
+        display: inline-block
+        vertical-align: top
+        margin: 0 11px
+        position: relative
+        &:after
+            content: ':'
+            position: absolute
+            top: -1px
+            right: -15px
+            font-size: 20px
+        &:last-child
+            &:after
+                display: none
+    span
+        display: block
+    .digit
+        font-size: 20px
+    .digit_name
+        font-size: 14px
+
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
         display: block
@@ -4856,6 +5008,10 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .tablet-h_auto
+        height: auto
+    .b-events-list__item
+        margin-right: 20px
     .b-product-slider
         &.browsing
             .owl-prev
@@ -5366,6 +5522,8 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .mobile-p40_0
+        padding: 40px 0
     .b-main-slider__item-descr
         width: 180px
     .title-section-fz43
@@ -5514,13 +5672,7 @@ a.tdu
             height: 100px
         .b-fade-slider__slide
             line-height: 100px
-    .b-logged
-        padding-right: 0
-        &:before
-            display: none
-    .b-logged__content
-        display: none
-    .b-logged__photo
+    .b-event-logged__photo
         width: 28px
         height: 28px
     .b-questionnaire-photo
@@ -5545,10 +5697,9 @@ a.tdu
     .b-expert-page
         padding-top: 0
         padding-bottom: 20px
-    .b-logo.logo-expert
-        width: 100px
-        position: relative
-        top: 5px
+    .b-logo
+        &.logo-expert
+            width: 100px
     .b-expert-page__sidebar
         float: none
         width: 100%
@@ -5771,14 +5922,6 @@ a.tdu
     .b-catalog-m-content
         padding-bottom: 45px
         padding-top: 25px
-
-    .btn
-        &.lh40
-            max-width: 100%
-            width: 300px
-            box-sizing: border-box
-            margin-left: 0
-            margin-right: 0
 
     .b-similar__item
         padding: 30px 10px
@@ -6057,6 +6200,8 @@ a.tdu
                 height: 100%
                 display: inline-block
                 vertical-align: middle
+            .b-middle-content
+                width: 90%
         &.bottom
             left: 10px
             right: 10px
@@ -6074,4 +6219,6 @@ a.tdu
             top: 8%
             left: 8%
             bottom: 8%
+
+
 
