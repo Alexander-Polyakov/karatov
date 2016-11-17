@@ -3231,6 +3231,8 @@ a.tdu:hover {
   -moz-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  outline: none;
+  box-shadow: none;
 }
 .st-input::-webkit-input-placeholder {
   color: #ccc !important;
@@ -7472,6 +7474,9 @@ a.tdu:hover {
 @media screen and (max-width: 1150px) {
   .b-main-nav__item:not(.expert-menu) {
     margin-right: 3%;
+  }
+  .b-main-nav__item:not(.expert-menu):last-child {
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 1170px) {

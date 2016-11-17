@@ -107,7 +107,7 @@ $(document).ready(function () {
     }
 
     if($('.dobmask').length > 0) {
-        $('.dobmask').mask("9999 99 99");
+        $('.dobmask').mask("99 99 9999");
     }
 
 
