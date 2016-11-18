@@ -1781,12 +1781,10 @@ a.tdu
 
 
 .b-product-item__popup
-    position: absolute
-    top: 100%
-    left: 0
-    width: 100%
-    opacity: 0
-    padding: 0 15px
+    height: 0
+    position: relative
+    z-index: 50
+    overflow: hidden
 
 .b-fade-slider__slides
     position: absolute
@@ -1857,7 +1855,10 @@ a.tdu
             box-shadow: 0 2px 3px 0 #ccc
             opacity: 1
             z-index: 45
-        .b-product-item__popup, .b-fade-slider__nav
+        .b-product-item__popup
+            height: auto
+            padding-bottom: 20px
+        .b-fade-slider__nav
             opacity: 1
     &.touch-open
         .b-fade-slider__nav
@@ -1871,7 +1872,7 @@ a.tdu
     left: 0
     top: 0
     right: 0
-    bottom: -100px
+    bottom: 0
     opacity: 0
     z-index: 30
 
@@ -1909,11 +1910,8 @@ a.tdu
     margin-bottom: 30px
 
 .b-product-slider
-    padding: 0 40px
     position: relative
     z-index: 10
-    .owl-stage-outer
-        padding-bottom: 100px
 
 .b-reviews-slider__item
     padding-left: 115px

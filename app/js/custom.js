@@ -150,12 +150,7 @@ $(document).ready(function () {
     });
 
 
-    doc.on('mouseenter', '.b-product-item.slider-product', function (e) {
-        $(this).addClass("pop-open");
-    });
-    doc.on('mouseleave', '.b-product-item.slider-product', function (e) {
-        $(this).removeClass("pop-open");
-    });
+
 
     doc.on('click', '.b-flag-select__item', function (e) {
         var img_src = $(this).find("img").attr("src"),

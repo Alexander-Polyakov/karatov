@@ -12,11 +12,15 @@
                 mouseDrag: true
             });
 
-            $(".b-product-slider").owlCarousel({
+
+            var product_slider_owl = $(".b-product-slider");
+
+            product_slider_owl.owlCarousel({
                 loop: true,
                 nav: true,
                 dots: true,
                 mouseDrag: true,
+                autoHeight: true,
                 responsive: {
                     0: {
                         items: 2,
@@ -28,6 +32,15 @@
                         items: 5,
                     }
                 }
+            });
+
+            $(document).on('mouseenter', '.b-product-item.slider-product', function (e) {
+                $(this).addClass("pop-open");
+                product_slider_owl.trigger('refresh.owl.carousel');
+            });
+            $(document).on('mouseleave', '.b-product-item.slider-product', function (e) {
+                $(this).removeClass("pop-open");
+                product_slider_owl.trigger('refresh.owl.carousel');
             });
 
             $(".b-reviews-slider").owlCarousel({
