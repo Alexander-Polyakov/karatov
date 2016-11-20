@@ -13,9 +13,8 @@
             });
 
 
-            var product_slider_owl = $(".b-product-slider");
 
-            product_slider_owl.owlCarousel({
+            $(".b-product-slider").owlCarousel({
                 loop: true,
                 nav: true,
                 dots: true,
@@ -34,14 +33,6 @@
                 }
             });
 
-            $(document).on('mouseenter', '.b-product-item.slider-product', function (e) {
-                $(this).addClass("pop-open");
-                product_slider_owl.trigger('refresh.owl.carousel');
-            });
-            $(document).on('mouseleave', '.b-product-item.slider-product', function (e) {
-                $(this).removeClass("pop-open");
-                product_slider_owl.trigger('refresh.owl.carousel');
-            });
 
             $(".b-reviews-slider").owlCarousel({
                 items: 2,
@@ -87,11 +78,11 @@
 {% endblock %}
 
 {% block product_slider %}
-    <div class="b-product-slider-wrapper">
+    <div class="b-section-wrapper b-are-browsing" >
         <div class="b-container">
             <div class="tac mb15">
-                <p class="title17px ttu txt_gray">140 клиентов онлайн</p>
-                <p class="title28px">Сейчас просматривают эти украшения</p>
+                <p class="b-are-browsing__subtitle">140 клиентов онлайн</p>
+                <p class="b-are-browsing__title">Сейчас просматривают эти украшения</p>
             </div>
             {% include "widgets/product_slider.twig" %}
         </div>
@@ -105,7 +96,7 @@
 {% block pageContent %}
     {% block mainSlider %}{% endblock %}
 
-    <div class="b-section-wrapper">
+    <div class="b-section-wrapper mob-pad-0">
         <div class="b-container">
             <div class="b-index-filter clearfix">
                 <div class="b-index-filter__section f_l">
@@ -123,7 +114,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="b-index-filter__section f_l">
                     <div class="b-index-filter__select-item">
                         <div class="b-filter-select">
@@ -372,6 +362,12 @@
                     <button class='btn lh40 white ff_cr ttu fz13'>подобрать из 32 540</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="b-section-wrapper index-grid">
+        <div class="b-container">
             <div class="b-m-grid clearfix">
                 <a class="b-m-grid__item w32 f_l mr2 mb2 mobile-w50 " href="#">
                     <div class="prop-item__size h100"></div>

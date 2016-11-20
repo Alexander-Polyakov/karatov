@@ -49,6 +49,7 @@ body
     font-size: 17px
     font-family: $cl
     color: #000
+    line-height: 1.2em
 
 .b-site-wrapper
     min-width: 320px
@@ -177,6 +178,7 @@ body
     top: 0
     left: 100%
     margin-left: 5px
+    min-width: 20px
 
 .b_d_link
     border-bottom: 1px dotted
@@ -1190,7 +1192,7 @@ a.tdu
         z-index: 160
         +trans
         &:hover
-            background: #efefef
+            background: rgba(167,169,172,0.5)
     .owl-prev, .owl-next
         left: 0
         &:before
@@ -1237,9 +1239,6 @@ a.tdu
     height: 450px
     max-width: 1070px
     margin: 0 auto
-
-.b-m-grid
-    margin-bottom: 70px
 
 .b-m-grid__item
     position: relative
@@ -1758,17 +1757,19 @@ a.tdu
             display: inline-block
             vertical-align: middle
 
-.b-product-slider.browsing
-    .b-fade-slider
-        position: relative
-        height: 180px
-        width: 100%
-
-    .owl-next, .owl-prev
-        bottom: 150px
-
-    .b-product-item__preview
-        margin-bottom: 10px
+.b-product-slider
+    &.browsing
+        padding: 0 40px
+        .owl-stage-outer
+            z-index: 50
+        .b-fade-slider
+            position: relative
+            height: 180px
+            width: 100%
+        .b-product-item__preview
+            margin-bottom: 10px
+        .owl-prev, .owl-next
+            bottom: 40px
 
 .b-products-item
     .b-fade-slider
@@ -1781,10 +1782,14 @@ a.tdu
 
 
 .b-product-item__popup
-    height: 0
-    position: relative
+    bottom: 0
+    position: absolute
+    left: 0
+    width: 100%
     z-index: 50
     overflow: hidden
+    display: none
+    padding: 15px
 
 .b-fade-slider__slides
     position: absolute
@@ -1849,6 +1854,8 @@ a.tdu
     text-align: center
     position: relative
     z-index: 1
+    &.slider-product
+        padding-bottom: 110px
     &.pop-open
         z-index: 50
         .b-product-item__overlay
@@ -1856,8 +1863,7 @@ a.tdu
             opacity: 1
             z-index: 45
         .b-product-item__popup
-            height: auto
-            padding-bottom: 20px
+            display: block
         .b-fade-slider__nav
             opacity: 1
     &.touch-open
@@ -1877,7 +1883,7 @@ a.tdu
     z-index: 30
 
 .b-product-item__content
-    padding: 60px 15px 15px
+    padding: 60px 15px 0
     position: relative
     z-index: 50
 
@@ -1891,19 +1897,6 @@ a.tdu
     color: #bdbdbd
     font-size: 12px
     position: relative
-
-.b-product-slider-wrapper
-    margin-bottom: 25px
-    position: relative
-    &:before
-        content: ''
-        position: absolute
-        left: 0
-        width: 100%
-        height: 1px
-        background: #e0e1e1
-        bottom: 30px
-        z-index: 0
 
 .b-reviews-slider
     padding: 0 60px
@@ -2179,15 +2172,25 @@ a.tdu
         padding-top: 5px
         padding-bottom: 60px
     &.index-reviews
-        padding-top: 5px
-
+        padding-top: 20px
     &.tab-no-pb
         @media screen and (max-width: 992px)
             padding-bottom: 0
-
     &.mobile-no-pb
         @media screen and (max-width: 768px)
             padding-bottom: 0
+    &.index-grid
+        padding-bottom: 70px
+    &.b-are-browsing
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            width: 100%
+            left: 0
+            bottom: 40px
+            height: 1px
+            background: #e0e1e1
 
 .b-main-nav-wrapper
     position: relative
@@ -4132,11 +4135,19 @@ a.tdu
 .b-st-grid
     font-size: 0
 
-.b-st-grid__item
-    //padding: 0 12px
-    //display: inline-block
-    //vertical-align: top
-    //width: 33.33%
+.b-st-grid__item__title
+    font-size: 16px
+    text-transform: uppercase
+    margin-bottom: 13px
+    +trans()
+    display: block
+    &:hover
+        color: #f26417
+
+.b-st-grid__item__descr
+    font-size: 15px
+    color: #747474
+    line-height: 1.5em
 
 .b-st-grid__item__preview
     display: block
@@ -4146,11 +4157,12 @@ a.tdu
     overflow: hidden
     text-align: center
     position: relative
+    height: 220px
     img
         min-width: 100%
         min-height: 100%
         max-width: 120%
-        max-height: 120%
+        max-width: 120%
     &:hover
         .b-st-grid__item__preview-popup
             opacity: 1
@@ -4178,6 +4190,7 @@ a.tdu
     position: relative
     margin-bottom: 30px
     display: block
+    overflow: hidden
     &:last-child
         margin-bottom: 0
     &:before
@@ -4185,20 +4198,28 @@ a.tdu
         display: inline-block
         vertical-align: middle
         height: 100%
+    &:hover
+        .b-contest__item__bg
+            -moz-transform: scale(1.2)
+            -o-transform: scale(1.2)
+            -webkit-transform: scale(1.2)
+            -ms-transform: scale(1.2)
+            transform: scale(1.2)
 
-.b-contest__item
-    .b-contest__item__bg
-        position: absolute
-        overflow: hidden
-        left: 0
-        top: 0
-        right: 0
-        bottom: 0
-        z-index: 10
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
+
+.b-contest__item__bg
+    position: absolute
+    overflow: hidden
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+    +trans(all, 5s, ease, 0s)
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
 
 .b-contest
     .owl-stage-outer
@@ -4727,7 +4748,15 @@ a.tdu
 
 .b-orders-table
     color: #666
+    position: relative
     .b-dropdown__toggle
+        position: absolute
+        opacity: 0
+        width: 100%
+        left: 0
+        top: 0
+        height: 100%
+    .b-dropdown__arrow
         cursor: pointer
         color: #f05007
         border-bottom: 1px dotted #f05007
@@ -4747,36 +4776,41 @@ a.tdu
             +trans()
         &:hover
             border-bottom: 1px solid transparent
-        &.active
+
+
+.b-history-orders-item
+    &.open
+        .b-dropdown__arrow
             &:after
                 top: 5px
                 +rotate(-135)
 
 .b-profile-bonuses-header
-    display: flex
-    justify-content: space-between
-    align-items: center
+    position: relative
+    padding-right: 420px
+    min-height: 120px
 
+.b-profile-bonuses-header__bonuses
+    position: absolute
+    top: 20px
+    right: 0
 
 .b-profile-bonuses-header__title
     font-size: 16px
     text-transform: uppercase
     margin-bottom: 10px
 
-.b-profile-bonuses-header__content
-    padding-right: 60px
-
 .b-profile-bonuses-header__descr
     font-size: 15px
     color: #747474
 
-.b-bonuses-units
-    display: flex
 
 .b-bonuses-units__item
     width: 160px
     text-align: center
     margin-right: 50px
+    display: inline-block
+    vertical-align: top
     &:last-child
         margin-right: 0
 
@@ -4888,6 +4922,15 @@ a.tdu
         font-size: 20px
     .digit_name
         font-size: 14px
+
+.b-are-browsing__subtitle
+    font-size: 17px
+    color: #a7a9ac
+    text-transform: uppercase
+    margin-bottom: 15px
+
+.b-are-browsing__title
+    font-size: 28px
 
 .tab-visible
     @media screen and (max-width: 992px) and (min-width: 769px)
@@ -5010,6 +5053,11 @@ a.tdu
         max-width: 100%
 
 @media screen and (max-width: 992px)
+    .b-are-browsing__subtitle
+        font-size: 14px
+        margin-bottom: 8px
+    .b-are-browsing__title
+        font-size: 24px
     .tablet-h_auto
         height: auto
     .b-events-list__item
@@ -5017,11 +5065,9 @@ a.tdu
     .b-product-slider
         &.browsing
             .owl-prev
-                bottom: 30px
                 left: -20px
             .owl-next
                 right: -20px
-                bottom: 30px
     .b-site-header
         min-height: 130px
     .b-logo
@@ -5060,12 +5106,15 @@ a.tdu
         vertical-align: top
         width: auto
         max-width: 160px
-
+    .b-profile-bonuses-header__bonuses
+        position: static
+        top: 0
     .b-profile-bonuses-header__content
         padding-right: 0
         margin-bottom: 35px
     .b-profile-bonuses-header
         display: block
+        padding: 0
     .b-profile-bonuses-header__title
         font-size: 14px
     .b-profile-bonuses-header__descr
@@ -5290,17 +5339,6 @@ a.tdu
     .b-main-nav-wrapper
         padding-right: 30px
 
-    .b-product-slider.browsing
-        .b-product-item:hover
-            box-shadow: none
-            background: transparent
-
-        .b-product-item__descr
-            padding-bottom: 0
-
-    .b-m-grid
-        margin-bottom: 40px
-
     .b-index-filter__section
         &:first-child
             margin-right: 30px
@@ -5524,6 +5562,16 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-values-slider
+        padding-bottom: 40px
+    .b-st-grid__item__title
+        font-size: 14px
+    .b-st-grid__item__descr
+        font-size: 13px
+    .b-are-browsing__subtitle
+        font-size: 12px
+    .b-are-browsing__title
+        font-size: 20px
     .mobile-p40_0
         padding: 40px 0
     .b-main-slider__item-descr
@@ -5714,7 +5762,7 @@ a.tdu
     .b-footer-exp-nav
         display: none
     .b-st-grid
-        padding-bottom: 20px
+        padding-bottom: 40px
     .b-site-wrapper__content
         padding-top: 6px
     .b-popup__header__back
@@ -5867,11 +5915,8 @@ a.tdu
         padding: 0 10px 30px
         margin-bottom: 10px
 
-    .b-m-grid
-        margin-bottom: 20px
-
     .b-index-filter
-        padding: 0 0 20px
+        padding: 0
 
     .b-index-filter__select-item
         margin-right: 5px
@@ -5906,11 +5951,15 @@ a.tdu
         height: 140px
         line-height: 140px
 
-    .b-product-slider.browsing
-        .b-fade-slider__slide
-            line-height: 140px
-        .b-fade-slider
-            height: 140px
+    .b-product-slider
+        &.browsing
+            padding: 0
+            .owl-dots
+                bottom: 40px
+            .b-fade-slider__slide
+                line-height: 140px
+            .b-fade-slider
+                height: 140px
 
     .b-catalog-header__search-selection
         display: none
@@ -6024,6 +6073,8 @@ a.tdu
 
     .b-section-wrapper
         padding: 20px 0 !important
+        &.mob-pad-0
+            padding: 0 !important
 
     .mobile-grid-slider
         padding-bottom: 18px

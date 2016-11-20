@@ -20,9 +20,13 @@ $(document).ready(function () {
                 0: {
                     items: 1
                 },
-                769: {
+                450: {
                     items: 2,
                     margin: 10
+                },
+                768: {
+                    margin: 20,
+                    items: 2
                 },
                 992: {
                     items: 3,
@@ -131,6 +135,13 @@ $(document).ready(function () {
 
     $(".input-search-region").easyAutocomplete(options_autocomplete);
 
+    $(document).on('mouseenter', '.b-product-item.slider-product', function (e) {
+        $(this).addClass("pop-open");
+
+    });
+    $(document).on('mouseleave', '.b-product-item.slider-product', function (e) {
+        $(this).removeClass("pop-open");
+    });
 
     doc.on('click', '.b-search__submit', function (e) {
         var value_input = $(this).closest(".b-search").find(".b-search__input").val(),
@@ -310,8 +321,8 @@ $(document).ready(function () {
     doc.on('touchstart', '.b-product-item', function (e) {
         if (doc.outerWidth() < 1024) {
             if (!$(this).hasClass("pop-open")) {
-                doc.find(".b-product-item").removeClass("pop-open touch-open");
-                $(this).addClass("pop-open touch-open");
+                doc.find(".b-product-item").removeClass("pop-open");
+                $(this).addClass("pop-open");
                 e.preventDefault();
             }
         }
@@ -326,7 +337,6 @@ $(document).ready(function () {
             filter = target.closest("#b-sidebar-filter"),
             filter_btn = target.closest(".b-filter-open"),
             b_saved = target.closest(".b-saved");
-
 
         if (!b_saved.length > 0) {
             doc.find(".b-saved").removeClass("opened");
