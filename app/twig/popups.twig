@@ -422,7 +422,7 @@
                 </div>
                 <div class="mb20 rel clearfix lh50">
                     <input placeholder="Пароль" class="input-popup lh50 w50p f_l" type="text">
-                    <a href="" class="fz15 color-yellow f_r">Напомнить пароль по СМС</a>
+                    <a href="" class="fz15 orange-hover-color f_r">Напомнить пароль по СМС</a>
                 </div>
                 <div>
                     <button class="btn lh50 ff_cr ttu fz14 bg_y txt_white full_w" href="#" data-close="popups">Войти</button>
@@ -468,7 +468,7 @@
                     <p class="ff_cl fz13 color-gray tal mb5">Вы зарегистрированный пользователь, пожалуйста авторизуйтесь</p>
                     <div class="lh50 clearfix rel">
                         <input placeholder="Пароль" class="input-popup lh50 w50p f_l" type="text">
-                        <a href="" class="fz15 color-yellow f_r">Напомнить пароль по СМС</a>
+                        <a href="" class="fz15 orange-hover-color f_r">Напомнить пароль по СМС</a>
                     </div>
 
                 </div>
@@ -568,245 +568,489 @@
                 <p class="b-popup__title">выбрать город </p>
             </div>
             <div class="b-popup__content pt20">
-                <div class="b-select-region">
-                    <ul class="b-country-list mb20">
-                        <li class="b-country-list__item active">Россия</li>
-                        <li class="b-country-list__item">Казахстан</li>
+                <div class="b-select-region b-tabs">
+                    <ul class="b-country-list b-tabs__nav mb20">
+                        <li class="b-country-list__item b-tabs__nav-item active" data-tab-nav="1">Россия</li>
+                        <li class="b-country-list__item b-tabs__nav-item" data-tab-nav="2">Казахстан</li>
                     </ul>
-                    <div class="mb15">
-                        <div class="b-selected-city">Кострома</div>
-                    </div>
-                    <div class="mb20">
-                        <div class="b-search-region rel mb5">
-                            <input placeholder="Город" class="input-popup lh50 input-search-region" type="text">
-                            <div class="b-clarification abs_input tooltip" data-tooltip-content="#tooltip_content">
-                                <span class="b-clarification__icon"></span>
+                    <div class="b-tabs__container">
+                        <div class="b-tabs__container-item active" data-tab-content="1">
+                            <div class="mb15">
+                                <div class="b-selected-city">Кострома</div>
                             </div>
-                        </div>
-                        <p class="ff_cl fz13 color-gray tal">Например Москва или Санкт-Петербург</p>
-                    </div>
-                    <div class="b-result-search-city clearfix">
-                        <div class="b-result-region">
-                            <p class="fz20 ff_cl mb10 color-gray">Регион</p>
-                            <div class="mobile-visible">
-                                <select class="select border-gray lh50 full_w">
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                </select>
+                            <div class="mb20">
+                                <div class="b-search-region rel mb5">
+                                    <input placeholder="Город" class="input-popup lh50 input-search-region" type="text">
+                                    <div class="b-clarification abs_input tooltip" data-tooltip-content="#tooltip_content">
+                                        <span class="b-clarification__icon"></span>
+                                    </div>
+                                </div>
+                                <p class="ff_cl fz13 color-gray tal">Например Москва или Санкт-Петербург</p>
                             </div>
-                            <div class="b-scroll-result h320 jScrollPane mobile-hidden">
-                                <ul class="b-st-list">
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                    <li class="b-st-list__item">
-                                        <p class="b-st-list__text">Архангельская область</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="b-result-city">
-                            <p class="fz20 ff_cl mb10 color-gray">Населенный пункт</p>
-                            <div class="mobile-visible">
-                                <select class="select border-gray lh50 full_w">
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                    <option>Архангельская область</option>
-                                </select>
-                            </div>
-                            <div class="b-scroll-result h320 jScrollPane mobile-hidden">
-                                <div class="b-city-list clearfix">
-                                    <ul class="b-city-list__section">
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                            <div class="b-result-search-city clearfix">
+                            <div class="b-result-region">
+                                <p class="fz20 ff_cl mb10 color-gray">Регион</p>
+                                <div class="mobile-visible">
+                                    <select class="select border-gray lh50 full_w">
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                    </select>
+                                </div>
+                                <div class="b-scroll-result h320 jScrollPane mobile-hidden">
+                                    <ul class="b-st-list">
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                            </ul>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
+                                        </li>
+                                        <li class="b-st-list__item">
+                                            <p class="b-st-list__text">Архангельская область</p>
                                         </li>
                                     </ul>
-                                    <ul class="b-city-list__section">
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                </div>
+                            </div>
+                            <div class="b-result-city">
+                                <p class="fz20 ff_cl mb10 color-gray">Населенный пункт</p>
+                                <div class="mobile-visible">
+                                    <select class="select border-gray lh50 full_w">
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                        <option>Архангельская область</option>
+                                    </select>
+                                </div>
+                                <div class="b-scroll-result h320 jScrollPane mobile-hidden">
+                                    <div class="b-city-list clearfix">
+                                        <ul class="b-city-list__section">
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul class="b-city-list__section">
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="b-city-list__item">
+                                                <span class="b-city-list__item__letter">К</span>
+                                                <ul class="b-st-list">
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                    <li class="b-st-list__item">
+                                                        <p class="b-st-list__text">Кострома</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="b-tabs__container-item" data-tab-content="2">
+                            <div class="mb15">
+                                <div class="b-selected-city">Кострома</div>
+                            </div>
+                            <div class="mb20">
+                                <div class="b-search-region rel mb5">
+                                    <input placeholder="Город" class="input-popup lh50 input-search-region" type="text">
+                                    <div class="b-clarification abs_input tooltip" data-tooltip-content="#tooltip_content">
+                                        <span class="b-clarification__icon"></span>
+                                    </div>
+                                </div>
+                                <p class="ff_cl fz13 color-gray tal">Например Москва или Санкт-Петербург</p>
+                            </div>
+                            <div class="b-result-search-city clearfix">
+                                <div class="b-result-region">
+                                    <p class="fz20 ff_cl mb10 color-gray">Регион</p>
+                                    <div class="mobile-visible">
+                                        <select class="select border-gray lh50 full_w">
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                        </select>
+                                    </div>
+                                    <div class="b-scroll-result h320 jScrollPane mobile-hidden">
+                                        <ul class="b-st-list">
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                            <li class="b-st-list__item">
+                                                <p class="b-st-list__text">Архангельская область</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="b-result-city">
+                                    <p class="fz20 ff_cl mb10 color-gray">Населенный пункт</p>
+                                    <div class="mobile-visible">
+                                        <select class="select border-gray lh50 full_w">
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                            <option>Архангельская область</option>
+                                        </select>
+                                    </div>
+                                    <div class="b-scroll-result h320 jScrollPane mobile-hidden">
+                                        <div class="b-city-list clearfix">
+                                            <ul class="b-city-list__section">
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </li>
-                                        <li class="b-city-list__item">
-                                            <span class="b-city-list__item__letter">К</span>
-                                            <ul class="b-st-list">
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                            <ul class="b-city-list__section">
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
-                                                </li>
-                                                <li class="b-st-list__item">
-                                                    <p class="b-st-list__text">Кострома</p>
+                                                <li class="b-city-list__item">
+                                                    <span class="b-city-list__item__letter">К</span>
+                                                    <ul class="b-st-list">
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                        <li class="b-st-list__item">
+                                                            <p class="b-st-list__text">Кострома</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

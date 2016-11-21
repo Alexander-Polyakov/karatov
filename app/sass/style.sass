@@ -167,6 +167,10 @@ body
     &:hover
         text-decoration: underline
 
+.orange-hover-color
+    &:hover
+        color: #f05007
+
 .more-value
     background: #f05007
     border-radius: 20px
@@ -1605,7 +1609,6 @@ a.tdu
         .jq-radio__div
             opacity: 1
             +scale(1)
-
     input
         position: absolute
         margin: 0
@@ -1622,9 +1625,6 @@ a.tdu
                 opacity: 1
                 +scale(1)
 
-.filter-radio.active-black.checked + .b-filter-label__text,
-.filter-checkbox.active-black.checked + .b-filter-label__text
-    color: #000
 
 .b-nesting__item-content
     padding: 7px 0
@@ -1788,7 +1788,7 @@ a.tdu
     top: 0
     width: 100%
     height: 100%
-    z-index: 20
+    z-index: 100
     +trans(all,0s,ease,0.1s)
 
 .b-product-item__popup
@@ -1866,21 +1866,18 @@ a.tdu
     z-index: 1
     &.slider-product
         padding-bottom: 110px
-    &.pop-open
-        z-index: 50
-        .b-product-item__overlay
-            box-shadow: 0 2px 3px 0 #ccc
-            opacity: 1
-            z-index: 45
-        .b-product-item__popup
-            display: block
-        .b-fade-slider__nav
-            opacity: 1
-    &.touch-open
-        .b-fade-slider__nav
-            display: none
-
-
+        &:hover
+            z-index: 50
+            .b-product-item__overlay
+                box-shadow: 0 2px 3px 0 #ccc
+                opacity: 1
+                z-index: 45
+            .b-product-item__popup
+                display: block
+            .b-fade-slider__nav
+                opacity: 1
+            .b-products-item__shield-click
+                z-index: 0
 
 .b-product-item__overlay
     background: #fff
@@ -3136,6 +3133,7 @@ a.tdu
     .b-dropbox__popup
         padding-left: 30px
 
+
 .b-sidebar-filter__section
     border-bottom: 1px solid #e8e8e8
     padding: 20px 45px
@@ -3656,9 +3654,9 @@ a.tdu
         +rotate(-45)
 
 .b-flag-select
-    width: 24px
-    height: 16px
-    border: 1px solid #e1e1e1
+    width: 40px
+    padding-left: 15px
+    height: 18px
     position: relative
     cursor: pointer
     &:before
@@ -3668,7 +3666,7 @@ a.tdu
         height: 6px
         border-right: 1px solid #787878
         border-bottom: 1px solid #787878
-        left: -15px
+        left: 0
         top: 50%
         margin-top: -3px
         +rotate(45)
@@ -3681,6 +3679,7 @@ a.tdu
     position: relative
     font-size: 0
     overflow: hidden
+    line-height: 0
     img
         width: 100%
 
@@ -3688,9 +3687,9 @@ a.tdu
     position: relative
     .b-flag-select
         position: absolute
-        left: 25px
+        left: 15px
         top: 50%
-        margin-top: -8px
+        margin-top: -10px
         z-index: 10
     .b-clarification
         right: 10px
@@ -3700,19 +3699,23 @@ a.tdu
 
 .b-flag-select__content
     display: none
-    border: 1px solid #e1e1e1
     position: absolute
     top: 100%
     left: 0
     width: 100%
-    margin-top: 2px
+    margin-top: 5px
     background: #fff
     font-size: 0
 
 .b-flag-select__item
-    margin-bottom: 2px
+    margin-bottom: 5px
+    border: 1px solid #e1e1e1
+    line-height: 0
+    font-size: 0
     img
         width: 100%
+    &:last-child
+        margin-bottom: 0
 
 .b-or-sep
     position: relative
@@ -3788,6 +3791,12 @@ a.tdu
     .easy-autocomplete
         width: 100% !important
 
+.b-tabs__container-item
+    display: none
+    &.active
+        display: block
+
+
 .input-search-region +
     .easy-autocomplete-container
         ul
@@ -3805,6 +3814,8 @@ a.tdu
             padding: 13px
             font-size: 13px
             color: #999
+            &:hover
+                color: #f05007
         li
             border-bottom: 1px solid #e1e0e0
         li:last-child
@@ -3845,6 +3856,8 @@ a.tdu
     border-bottom: 1px dotted #666
     line-height: 1.2em
     cursor: pointer
+    &:hover
+        border-bottom: 1px solid transparent
 
 .b-city-list__item
     position: relative
@@ -5061,6 +5074,15 @@ a.tdu
         padding: 0 60px
         max-width: 100%
 
+
+
+@media screen and (max-width: 1024px)
+    .b-presentation-slider__slide
+        .hover-preview
+            display: none !important
+        .standard-preview
+            display: block !important
+
 @media screen and (max-width: 992px)
     .b-are-browsing__subtitle
         font-size: 14px
@@ -5300,12 +5322,6 @@ a.tdu
 
     .b-expert-page__content
         width: calc(100% - 250px)
-
-    .b-presentation-slider__slide
-        .hover-preview
-            display: none !important
-        .standard-preview
-            display: block !important
 
     .b-text
         font-size: 16px
