@@ -1,7 +1,7 @@
 {% extends "layouts/main.twig" %}
 
 {% block pageScripts %}
-
+    <script src="js/custom-animation.js"></script>
     <script>
         $(document).ready(function () {
             $(".b-values-slider").owlCarousel({
@@ -86,22 +86,22 @@
                     <div class="b-banner-full__preview pos_l m_l_60">
                         <img src="img/banners/banner-img1.png" alt="">
                     </div>
-                    <div class="b-banner-full__content">
-                        <p class="b-banner-full__content-title">Отечественный <br> бренд</p>
+                    <div class="b-banner-full__content" data-el-group="group">
+                        <p class="b-banner-full__content-title" data-elmove="group" data-dur="1" data-delay="0" data-left="0" data-force-start="true" data-top="100">Отечественный <br> бренд</p>
                         <div class="b-banner-full__content-descr">
-                            <p class="mobile-hidden">KARATOV — это российский ювелирный бренд,созданный на базе Костромского ювелирного завода «Топаз» — предприятия, существующего уже 25 лет и входящего в ТОП-3 производителей украшений в России. </p>
-                            <p class="mobile-visible">KARATOV — это российский ювелирный бренд, входящий в ТОП-3 производителей украшений в России. </p>
+                            <p class="mobile-hidden" data-elmove="group" data-dur="1.5" data-delay="0" data-left="0" data-force-start="true" data-top="100">KARATOV — это российский ювелирный бренд,созданный на базе Костромского ювелирного завода «Топаз» — предприятия, существующего уже 25 лет и входящего в ТОП-3 производителей украшений в России. </p>
+                            <p class="mobile-visible" data-elmove="group" data-dur="1.5" data-delay="0" data-left="0" data-force-start="true" data-top="100">KARATOV — это российский ювелирный бренд, входящий в ТОП-3 производителей украшений в России. </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="b-banner-full" style="background-image: url('img/banners/banner-bg1.jpg'); ">
-                <div class="b-container b-banner-full__container">
+                <div class="b-container b-banner-full__container " data-el-group="group">
                     <div class="b-banner-full__content txt_white">
-                        <p class="b-banner-full__content-title">Драгоценные <br> мгновения</p>
+                        <p class="b-banner-full__content-title" data-elmove="group" data-dur="1" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Драгоценные <br> мгновения</p>
                         <div class="b-banner-full__content-descr">
-                            <p class="mobile-hidden">Ювелирные изделия бренда помогут выразить самые нежные чувства, запечатлев события личной жизни в благородном металле. Признание в любви, поздравление с новой должностью, рождение ребёнка и многое другое — для каждого из этих событий вы найдёте подходящее украшение.</p>
-                            <p class="mobile-visible">Ювелирные изделия бренда помогут выразить самые нежные чувства.</p>
+                            <p class="mobile-hidden" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Ювелирные изделия бренда помогут выразить самые нежные чувства, запечатлев события личной жизни в благородном металле. Признание в любви, поздравление с новой должностью, рождение ребёнка и многое другое — для каждого из этих событий вы найдёте подходящее украшение.</p>
+                            <p class="mobile-visible" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Ювелирные изделия бренда помогут выразить самые нежные чувства.</p>
                         </div>
                     </div>
                 </div>
@@ -111,26 +111,26 @@
                     <div class="b-banner-full__preview pos_l img-logo">
                         <img src="img/banners/banner-img2.png" alt="">
                     </div>
-                    <div class="b-banner-full__content">
-                        <p class="b-banner-full__content-title">Под знаком <br>красоты</p>
+                    <div class="b-banner-full__content" data-el-group="group">
+                        <p class="b-banner-full__content-title" data-elmove="group" data-dur="1" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Под знаком <br>красоты</p>
                         <div class="b-banner-full__content-descr">
-                            <p class="mobile-hidden">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. Она воплощает в себе главные ценности бренда: тёплые чувства, важные события и русское ювелирное искусство.</p>
-                            <p class="mobile-visible">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. </p>
+                            <p class="mobile-hidden" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. Она воплощает в себе главные ценности бренда: тёплые чувства, важные события и русское ювелирное искусство.</p>
+                            <p class="mobile-visible" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Символ KARATOV — рябина, которая издавна была славянским символом красоты и мудрости. </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="b-banner-full" style="background-image: url('img/banners/banner-bg3.jpg'); ">
                 <div class="b-container b-banner-full__container">
-                    <div class="b-banner-full__content">
-                        <p class="b-banner-full__content-title">Для важных <br>моментов</p>
-                        <div class="b-banner-full__content-descr mb35 mobile-hidden">
+                    <div class="b-banner-full__content" data-el-group="group">
+                        <p class="b-banner-full__content-title" data-elmove="group" data-dur="1" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">Для важных <br>моментов</p>
+                        <div class="b-banner-full__content-descr mb35 mobile-hidden" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">
                             <p>Коллекции украшений KARATOV — словно собрание удивительных историй, в котором каждый найдёт что-то своё. KARATOV — это счастливые моменты вашей жизни, воплощённые в удивительных украшениях.</p><p></p>
                         </div>
-                        <div class="b-banner-full__content-descr mobile-visible">
+                        <div class="b-banner-full__content-descr mobile-visible" data-elmove="group" data-dur="1.5" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">
                             <p >KARATOV — это счастливые моменты вашей жизни,воплощённые в удивительных украшениях.</p>
                         </div>
-                        <p class="mobile-hidden">
+                        <p class="mobile-hidden" data-elmove="group" data-dur="2" data-delay="0.5" data-left="0" data-force-start="false" data-top="100">
                             <a href="#" class="b-m-grid__item__btn btn">перейти в каталог</a>
                         </p>
                     </div>

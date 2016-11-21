@@ -1779,7 +1779,17 @@ a.tdu
     &:hover
         .b-fade-slider__nav
             opacity: 1
+        .b-products-item__shield-click
+            z-index: 0
 
+.b-products-item__shield-click
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 20
+    +trans(all,0s,ease,0.1s)
 
 .b-product-item__popup
     bottom: 0
@@ -4481,6 +4491,7 @@ a.tdu
 
 .b-products-item__preview
     padding-bottom: 13px
+    display: block
 
 .b-event-logged
     position: relative
@@ -4616,10 +4627,8 @@ a.tdu
     height: 220px
     margin-bottom: 40px
     img
-        height: 100%
-        object-fit: cover
-        width: 100% !important
-
+        min-height: 100%
+        min-width: 100%
 
 .b-values-slider__item
     text-align: center
@@ -5562,6 +5571,13 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-values-slider__item-preview
+        height: auto
+        font-size: 0
+        line-height: 0
+        margin-bottom: 20px
+        img
+            width: 100% !important
     .b-values-slider
         padding-bottom: 40px
     .b-st-grid__item__title
