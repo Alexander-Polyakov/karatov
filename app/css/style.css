@@ -2436,6 +2436,8 @@ a.tdu:hover {
   -moz-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   -o-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  max-height: 600px;
+  overflow: auto;
 }
 .b-filter-select__dropdown:before {
   content: "";
