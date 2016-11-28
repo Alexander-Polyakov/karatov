@@ -422,6 +422,9 @@ a.tdu
 
 .b-event-saved
     position: relative
+    &:hover, &:focus
+        .b-saved__popup
+            display: block
 
 .b-saved-icon
     +sprite(saved-white)
@@ -1778,7 +1781,7 @@ a.tdu
         position: relative
         height: 180px
         width: 100%
-    &:hover
+    &:hover, &:focus
         .b-fade-slider__nav
             opacity: 1
         .b-products-item__shield-click
@@ -5085,7 +5088,6 @@ a.tdu
         .standard-preview
             display: block !important
 
-@media screen and (max-width: 992px)
     .b-are-browsing__subtitle
         font-size: 14px
         margin-bottom: 8px

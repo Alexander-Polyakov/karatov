@@ -31,8 +31,15 @@ CountdownTimer.prototype = {
             }
 
             var ZeroHour = parseInt(this.addZero(hour).slice(-1));
-            if ((ZeroHour == 1) && (ZeroHour == 21)) {
-                var hour_name = 'час';
+
+            if (ZeroHour == 1) {
+                if (parseInt(this.addZero(hour).slice(-2) == 11 )) {
+                    var hour_name = "часов";
+                } else if (parseInt(this.addZero(hour).slice(-2) == 21 )) {
+                    var hour_name = 'час';
+                } else {
+                    var hour_name = 'час';
+                }
             } else if ((ZeroHour >= 2 && ZeroHour <= 4) || (ZeroHour >= 22 && ZeroHour <= 24)) {
                 var hour_name = 'часа';
             } else if ((ZeroHour == 0) || (ZeroHour >= 5 && ZeroHour <= 20)) {
