@@ -139,10 +139,10 @@ $(document).ready(function () {
         var value_input = $(this).closest(".b-search").find(".b-search__input").val(),
             this_search = $(this).closest(".b-search");
 
-        if ((doc.outerWidth() < 992) && (value_input == "")) {
+        if ((doc.outerWidth() <= 1024) && (value_input == "")) {
             this_search.addClass("open");
             e.preventDefault();
-        } else if ((doc.outerWidth() < 992) && (!this_search.hasClass("open"))) {
+        } else if ((doc.outerWidth() <= 1024) && (!this_search.hasClass("open"))) {
             this_search.addClass("open");
             e.preventDefault();
         }
@@ -328,13 +328,20 @@ $(document).ready(function () {
 
 
 
-    $(window).on('click', function (e) {
-        alert("hi");
+    doc.on('click', function(e) {
+        var target = $(e.target),
+            st_popup = target.closest(".b-st-pop-wrap");
+
+        if (!st_popup.length > 0) {
+            doc.find(".b-st-pop-wrap").removeClass("open");
+        }
     });
 
-    $(document).on('click', function (e) {
-        alert("hi");
+    $(".b-st-pop-wrap").click(function(){
+       $(this).addClass("open");
     });
+
+
 
     $(document).on('click', function (e) {
         var target = $(e.target),
@@ -343,6 +350,7 @@ $(document).ready(function () {
             filter = target.closest("#b-sidebar-filter"),
             filter_btn = target.closest(".b-filter-open"),
             b_saved = target.closest(".b-saved");
+
 
         if (!b_saved.length > 0) {
             doc.find(".b-saved").removeClass("opened");
@@ -355,7 +363,7 @@ $(document).ready(function () {
             select.toggleClass("open");
         }
 
-        if ((search.length == 0) && (doc.outerWidth() < 992)) {
+        if ((search.length == 0) && (doc.outerWidth() < 1024)) {
             doc.find(".b-search").removeClass("open");
         }
 

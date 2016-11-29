@@ -422,9 +422,6 @@ a.tdu
 
 .b-event-saved
     position: relative
-    &:hover, &:focus
-        .b-saved__popup
-            display: block
 
 .b-saved-icon
     +sprite(saved-white)
@@ -569,6 +566,7 @@ a.tdu
     font-family: $cl
     text-transform: uppercase
     margin-bottom: 60px
+    line-height: 1.2em
     &.mb20
         margin-bottom: 20px
 
@@ -4923,6 +4921,54 @@ a.tdu
     &:hover
         background: #f48451
 
+.b-buyer-grid-item
+    height: 385px
+    position: relative
+    background-position: top center
+
+.b-buyer-grid-item__content
+    &.p65_50
+        padding: 65px 50px 0
+    &.p35
+        padding: 35px
+    &.abs-center
+        left: 20px
+        top: 20px
+        right: 20px
+        bottom: 20px
+        position: absolute
+        background: #fff
+        padding-top: 25px
+    &.cover
+        > *
+            opacity: 0.5
+        .no-cover
+            opacity: 1
+
+.b-buyer-grid-item__brush
+    margin-bottom: 15px
+    line-height: 1.2em
+
+.b-buyer-grid-item__title
+    font-size: 31px
+    margin-bottom: 10px
+    line-height: 1.2em
+    text-transform: uppercase
+
+.b-buyer-grid-item__descr
+    font-size: 17px
+    color: #111
+    margin-bottom: 20px
+    p
+        margin-bottom: 15px
+    p:last-child
+        margin-bottom: 0
+
+.b-buyer-grid-item__more-text-fz12
+    font-size: 12px
+
+.b-buyer-grid-item__more-text-fz18
+    font-size: 18px
 
 .b-timer
     line-height: 1.2em
@@ -4959,15 +5005,20 @@ a.tdu
 .b-are-browsing__title
     font-size: 28px
 
+.b-st-pop-wrap
+    &.open
+        .b-st-pop-wrap__popup
+            display: block
+
 .tab-visible
-    @media screen and (max-width: 992px) and (min-width: 769px)
+    @media screen and (max-width: 1024px) and (min-width: 769px)
         display: block
 .mobile-visible
     @media screen and (max-width: 768px)
         display: block
 
 .tab-hidden
-    @media screen and (max-width: 992px) and (min-width: 769px)
+    @media screen and (max-width: 1024px) and (min-width: 769px)
         display: none
 
 .mobile-hidden
@@ -5082,6 +5133,38 @@ a.tdu
 
 
 @media screen and (max-width: 1024px)
+    .b-buyer-grid-item__more-text-fz18
+        font-size: 16px
+
+    .b-buyer-grid-item__brush
+        margin-bottom: 5px
+
+    .b-competition-form__input,
+    .b-competition-form__submit
+        height: 36px
+    .b-buyer-grid-item__title
+        font-size: 21px
+        margin-bottom: 5px
+
+    .b-buyer-grid-item__descr
+        font-size: 15px
+        margin-bottom: 10px
+
+    .b-buyer-grid-item
+        height: 240px
+
+    .b-buyer-grid-item__content
+        padding: 25px 30px !important
+        &.abs-center
+            left: 10px
+            top: 10px
+            right: 10px
+            bottom: 10px
+            padding-top: 15px !important
+
+    .b-site-wrapper
+        cursor: pointer
+
     .b-presentation-slider__slide
         .hover-preview
             display: none !important
@@ -5091,6 +5174,7 @@ a.tdu
     .b-are-browsing__subtitle
         font-size: 14px
         margin-bottom: 8px
+
     .b-are-browsing__title
         font-size: 24px
     .tablet-h_auto
