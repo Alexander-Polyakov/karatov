@@ -1,6 +1,47 @@
 $(document).ready(function () {
     var doc = $(document);
 
+    var checkDeviceFunctions = {};
+
+    checkDeviceFunctions.checkWindowWidth = function (callback) {
+        if(doc.outerWidth() > 1024) callback(true);
+        else callback(false);
+    };
+
+
+
+    checkDeviceFunctions.checkDevice = function () {
+        checkDeviceFunctions.checkWindowWidth(function (res) {
+            if(res) {
+                alert("desctop");
+                $(".js-touch-bl").unbind('click');
+                $(".js-touch-bl").hover(function(){
+                    $(this).addClass("js-touch-bl__active");
+                }, function(){
+                    $(this).removeClass("js-touch-bl__active");
+                });
+            } else {
+                alert("mobile");
+
+                $(".js-touch-bl").unbind('hover');
+                doc.on('click', function(e) {
+                    var target = $(e.target),
+                        js_touch_bl = target.closest(".js-touch-bl");
+
+                    if (!js_touch_bl.length) {
+                        $(".js-touch-bl").removeClass("js-touch-bl__active");
+                    } else {
+                        js_touch_bl.addClass("js-touch-bl__active");
+                    }
+                });
+            }
+        });
+    };
+
+    checkDeviceFunctions.checkDevice();
+
+
+
 
     if ($(".filter-checkbox").length > 0) {
         // $(".filter-checkbox").styler();
@@ -327,22 +368,6 @@ $(document).ready(function () {
     });
 
 
-
-    doc.on('click', function(e) {
-        var target = $(e.target),
-            st_popup = target.closest(".b-st-pop-wrap");
-
-        if (!st_popup.length > 0) {
-            doc.find(".b-st-pop-wrap").removeClass("open");
-        }
-    });
-
-    $(".b-st-pop-wrap").click(function(){
-       $(this).addClass("open");
-    });
-
-
-
     $(document).on('click', function (e) {
         var target = $(e.target),
             select = target.closest(".b-filter-select"),
@@ -465,6 +490,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         clearTimeout(id);
         id = setTimeout( function(){
+            checkDeviceFunctions.checkDevice();
             var site_wrapper = doc.find(".b-site-wrapper").outerWidth(),
                 doc_width = doc.outerWidth();
 

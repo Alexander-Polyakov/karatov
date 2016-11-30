@@ -422,6 +422,9 @@ a.tdu
 
 .b-event-saved
     position: relative
+    &.js-touch-bl__active
+        .b-saved__popup
+            display: block
 
 .b-saved-icon
     +sprite(saved-white)
@@ -633,7 +636,7 @@ a.tdu
         position: relative
         margin-right: 50px
         max-width: 230px
-        &:hover
+        &.js-touch-bl__active
             .b-phone__bottom
                 display: block
 
@@ -1005,15 +1008,6 @@ a.tdu
     &:last-child
         margin-bottom: 0
 
-.b-saved
-    &.opened
-        @media screen and (max-width: 992px)
-            .b-saved__popup
-                display: block
-    &:hover
-        @media screen and (min-width: 992px)
-            .b-saved__popup
-                display: block
 
 .b-saved__default
     position: relative
@@ -2184,7 +2178,7 @@ a.tdu
     &.index-reviews
         padding-top: 20px
     &.tab-no-pb
-        @media screen and (max-width: 992px)
+        @media screen and (max-width: 1024px)
             padding-bottom: 0
     &.mobile-no-pb
         @media screen and (max-width: 768px)
@@ -2201,6 +2195,10 @@ a.tdu
             bottom: 40px
             height: 1px
             background: #e0e1e1
+    &.m-com-banner
+        padding-bottom: 30px
+    &.m-com-grid
+        padding-bottom: 100px
 
 .b-main-nav-wrapper
     position: relative
@@ -4887,6 +4885,7 @@ a.tdu
 .b-grid-item
     display: inline-block
     vertical-align: top
+    position: relative
     &.d-w33
         width: 33.33%
     &.d-w66
@@ -4924,7 +4923,7 @@ a.tdu
 .b-buyer-grid-item
     height: 385px
     position: relative
-    background-position: top center
+    background-position: center center
 
 .b-buyer-grid-item__content
     &.p65_50
@@ -4978,8 +4977,10 @@ a.tdu
     & > div
         display: inline-block
         vertical-align: top
-        margin: 0 11px
+        margin-right: 20px
         position: relative
+        &:last-child
+            margin-right: 0
         &:after
             content: ':'
             position: absolute
@@ -5005,11 +5006,30 @@ a.tdu
 .b-are-browsing__title
     font-size: 28px
 
-.b-st-pop-wrap
-    &.open
-        .b-st-pop-wrap__popup
-            display: block
+.b-competition-full-banner__state
+    margin-bottom: 20px
 
+.b-competition-full-banner__title
+    line-height: 1.2em
+    margin-bottom: 20px
+    font-size: 43px
+    font-family: $cl
+    text-transform: uppercase
+
+.b-competition-full-banner__descr
+    color: #666
+    font-size: 17px
+    margin-bottom: 25px
+    line-height: 1.5em
+    p
+        margin-bottom: 15px
+    p:last-child
+        margin-bottom: 0
+
+.b-competition-full-banner__btn-wrapper
+    margin-bottom: 20px
+
+    
 .tab-visible
     @media screen and (max-width: 1024px) and (min-width: 769px)
         display: block
@@ -5133,6 +5153,32 @@ a.tdu
 
 
 @media screen and (max-width: 1024px)
+    .b-competition-full-banner__title
+        font-size: 33px
+
+    .b-competition-full-banner__descr
+        font-size: 15px
+
+    .b-timer
+        font-size: 14px
+        .digit
+            font-size: 16px
+        .digit_name
+            font-size: 14px
+
+    .b-section-wrapper
+        &.m-com-banner
+            padding-bottom: 10px
+        &.m-com-grid
+            padding-bottom: 80px
+
+    .b-grid
+        &.competition-grid
+            .b-grid-row
+                margin: 0 -5px 10px
+            .b-grid-item
+                padding: 0 5px
+
     .b-buyer-grid-item__more-text-fz18
         font-size: 16px
 
@@ -5160,7 +5206,7 @@ a.tdu
             top: 10px
             right: 10px
             bottom: 10px
-            padding-top: 15px !important
+            padding: 15px 10px 0 !important
 
     .b-site-wrapper
         cursor: pointer
@@ -5675,6 +5721,56 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-competition-full-banner__state
+        margin-bottom: 10px
+    .b-competition-full-banner__title
+        font-size: 20px
+        margin-bottom: 10px
+    .b-competition-full-banner__descr
+        font-size: 13px
+        width: 250px
+        margin: 0 auto 15px
+        br
+            display: none
+    .b-timer
+        & > div
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+            &:after
+                right: -10px
+        .digit_name
+            font-size: 12px
+
+    .b-grid-row
+        position: relative
+        &.mobile-niche-bottom
+            padding-bottom: 160px
+        .mobile-abs-left-bottom
+            position: absolute
+            left: 0
+            bottom: 0
+        .mobile-abs-top-right
+            right: 0
+            position: absolute
+            top: -160px
+
+    .b-buyer-grid-item__title
+        font-size: 14px
+        margin-bottom: 10px
+
+    .b-buyer-grid-item__content
+        padding: 10px !important
+
+    .b-buyer-grid-item
+        height: 150px
+
+    .b-grid-item
+        &.m-w50
+            width: 50%
+        &.m-w100
+            width: 100%
+
     .b-values-slider__item-preview
         height: auto
         font-size: 0
@@ -6195,6 +6291,10 @@ a.tdu
         padding: 20px 0 !important
         &.mob-pad-0
             padding: 0 !important
+        &.m-com-grid
+            padding: 0 0 40px !important
+        &.m-com-banner
+            padding: 0 0 10px !important
 
     .mobile-grid-slider
         padding-bottom: 18px
