@@ -3,14 +3,13 @@
 {% block pageScripts %}
 
     <script>
-        $(document).ready(function () {
-            $(".b-full-slider").owlCarousel({
-                items: 1,
-                loop: true,
-                navigation: true,
-                dots: true,
-                mouseDrag: true
-            });
+    $(document).ready(function () {
+        $(".b-full-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            navigation: true,
+            dots: true,
+            mouseDrag: true
         });
 
         $('.mobile-grid-slider').owlCarousel({
@@ -46,23 +45,24 @@
             }
         });
 
-
-        $(document).ready(function () {
-            $(".b-product-slider").owlCarousel({
-                loop: true,
-                nav: true,
-                dots: true,
-                mouseDrag: true,
-                responsive: {
-                    0: {
-                        items: 2
-                    },
-                    768: {
-                        items: 5
-                    }
+        $(".b-product-slider").owlCarousel({
+            loop: true,
+            nav: true,
+            dots: true,
+            mouseDrag: true,
+            responsive: {
+                0: {
+                    items: 2,
+                },
+                768: {
+                    items: 4,
+                },
+                992: {
+                    items: 5,
                 }
-            });
+            }
         });
+    });
 
 
 

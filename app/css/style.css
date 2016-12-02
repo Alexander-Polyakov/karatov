@@ -2940,21 +2940,21 @@ a.tdu:hover {
 .b-product-item.slider-product {
   padding-bottom: 110px;
 }
-.b-product-item.slider-product:hover {
+.b-product-item.js-touch-bl__active {
   z-index: 50;
 }
-.b-product-item.slider-product:hover .b-product-item__overlay {
+.b-product-item.js-touch-bl__active .b-product-item__overlay {
   box-shadow: 0 2px 3px 0 #ccc;
   opacity: 1;
   z-index: 45;
 }
-.b-product-item.slider-product:hover .b-product-item__popup {
+.b-product-item.js-touch-bl__active .b-product-item__popup {
   display: block;
 }
-.b-product-item.slider-product:hover .b-fade-slider__nav {
+.b-product-item.js-touch-bl__active .b-fade-slider__nav {
   opacity: 1;
 }
-.b-product-item.slider-product:hover .b-products-item__shield-click {
+.b-product-item.js-touch-bl__active .b-products-item__shield-click {
   z-index: 0;
 }
 
@@ -7784,6 +7784,16 @@ a.tdu:hover {
   }
 }
 @media screen and (max-width: 1024px) {
+  .b-presentation-slider__slides:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
   .b-competition-full-banner__title {
     font-size: 33px;
   }

@@ -20,13 +20,14 @@
             loop: false,
             nav: false,
             dots: true,
-            mouseDrag: true,
             responsive: {
                 0: {
-                    items: 2
+                    items: 2,
+                    mouseDrag: true
                 },
                 768: {
-                    items: 4
+                    items: 4,
+                    mouseDrag: false
                 }
             }
         });
@@ -49,10 +50,13 @@
                 mouseDrag: true,
                 responsive: {
                     0: {
-                        items: 2
+                        items: 2,
                     },
                     768: {
-                        items: 5
+                        items: 4,
+                    },
+                    992: {
+                        items: 5,
                     }
                 }
             });

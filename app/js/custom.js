@@ -1,44 +1,49 @@
 $(document).ready(function () {
     var doc = $(document);
 
-    var checkDeviceFunctions = {};
+    function CheckDevice() {
+        var doc_width = doc.outerWidth();
 
-    checkDeviceFunctions.checkWindowWidth = function (callback) {
-        if(doc.outerWidth() > 1024) callback(true);
-        else callback(false);
-    };
+        if (doc_width > 1024) {
+            $("body").addClass("desctop");
+            $("body").removeClass("touch");
+        } else {
+            $("body").addClass("touch");
+            $("body").removeClass("desctop");
+        }
+    }
+
+
+    CheckDevice();
+
+
+    doc.on('click', function(e) {
+        var target = $(e.target),
+            js_touch_bl = target.closest(".js-touch-bl");
+
+        if (js_touch_bl.length) {
+            $(".js-touch-bl").removeClass("js-touch-bl__active");
+            js_touch_bl.addClass("js-touch-bl__active");
+        } else {
+            $(".js-touch-bl").removeClass("js-touch-bl__active");
+        }
+    });
 
 
 
-    checkDeviceFunctions.checkDevice = function () {
-        checkDeviceFunctions.checkWindowWidth(function (res) {
-            if(res) {
-                alert("desctop");
-                $(".js-touch-bl").unbind('click');
-                $(".js-touch-bl").hover(function(){
-                    $(this).addClass("js-touch-bl__active");
-                }, function(){
-                    $(this).removeClass("js-touch-bl__active");
-                });
-            } else {
-                alert("mobile");
-
-                $(".js-touch-bl").unbind('hover');
-                doc.on('click', function(e) {
-                    var target = $(e.target),
-                        js_touch_bl = target.closest(".js-touch-bl");
-
-                    if (!js_touch_bl.length) {
-                        $(".js-touch-bl").removeClass("js-touch-bl__active");
-                    } else {
-                        js_touch_bl.addClass("js-touch-bl__active");
-                    }
-                });
+    $(".js-touch-bl").hover(
+        function () {
+            if ($("body").hasClass("desctop")){
+                $(this).addClass("js-touch-bl__active");
             }
-        });
-    };
+        },
+        function () {
+            if ($("body").hasClass("desctop")){
+                $(this).removeClass("js-touch-bl__active");
+            }
+        }
 
-    checkDeviceFunctions.checkDevice();
+    );
 
 
 
@@ -142,7 +147,7 @@ $(document).ready(function () {
 
     if ($(".tooltip").length > 0) {
         $('.tooltip').tooltipster({
-            trigger: 'click',
+            trigger: 'hover',
             maxWidth: 190
         });
     }
@@ -490,7 +495,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         clearTimeout(id);
         id = setTimeout( function(){
-            checkDeviceFunctions.checkDevice();
+            CheckDevice();
             var site_wrapper = doc.find(".b-site-wrapper").outerWidth(),
                 doc_width = doc.outerWidth();
 
