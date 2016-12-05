@@ -600,9 +600,9 @@
                                 <p class='b-sidebar-filter__section__title'>вид украшения</p>
                                 <ul class="b-filter-ul">
                                     <li class="b-filter-ul__li b-dropbox">
-                                        <div class="b-dropbox__static">
+                                        <div>
                                             <label class="b-filter-label">
-                                                <input name="radio1" type="radio" class="filter-radio">
+                                                <input name="radio1" type="radio" class="filter-radio toggle-dropbox">
                                                 <span class='b-filter-label__text'>Ювелирные украшения</span>
                                             </label>
                                         </div>
@@ -697,25 +697,25 @@
                                     </li>
                                     <li class="b-filter-ul__li">
                                         <label class="b-filter-label">
-                                            <input name="radio1" type="radio" class="filter-radio">
+                                            <input name="radio1" type="radio" class="filter-radio toggle-dropbox">
                                             <span class='b-filter-label__text'>Успейте купить</span>
                                         </label>
                                     </li>
                                     <li class="b-filter-ul__li">
                                         <label class="b-filter-label">
-                                            <input name="radio1" type="radio" class="filter-radio">
+                                            <input name="radio1" type="radio" class="filter-radio toggle-dropbox">
                                             <span class='b-filter-label__text'>Есть скидка</span>
                                         </label>
                                     </li>
                                     <li class="b-filter-ul__li">
                                         <label class="b-filter-label">
-                                            <input name="radio1" type="radio" class="filter-radio">
+                                            <input name="radio1" type="radio" class="filter-radio toggle-dropbox">
                                             <span class='b-filter-label__text'>Новинки</span>
                                         </label>
                                     </li>
                                     <li class="b-filter-ul__li">
                                         <label class="b-filter-label">
-                                            <input name="radio1" type="radio" class="filter-radio">
+                                            <input name="radio1" type="radio" class="filter-radio toggle-dropbox">
                                             <span class='b-filter-label__text'>Есть комплект</span>
                                         </label>
                                     </li>
@@ -871,7 +871,7 @@
                             {% for i in 1..7 %}
                             <div class="b-catalog-units__item">
                                 <div href="#" class="b-product-item js-touch-bl">
-                                    <div class="b-products-item__shield-click"></div>
+                                    <div class="b-product-item__overlay"></div>
                                     <div class="b-product-item__content">
                                         <div class="b-product-infographics">
                                             <div class="b-product-infographics__item diamond26px f_l"></div>
@@ -886,19 +886,19 @@
                                         <div class="b-product-item__descr">
                                             <p>Кольцо из красного золота 585 пробы</p>
                                         </div>
-                                    </div>
-                                    <div class="b-product-item__popup">
-                                        <p class="mb20">
-                                            <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white" href="#">Где купить</a>
-                                        </p>
-                                        <p>
-                                            <a class="save-product-btn" href="#">
-                                                <span class="icon normal"></span>
-                                                <span class="icon hover"></span>
-                                                <span class="text normal">Сохранить</span>
-                                                <span class="text active">Сохранено</span>
-                                            </a>
-                                        </p>
+                                        <div class="b-product-item__popup">
+                                            <p class="mb20">
+                                                <a class="btn lh40 ff_cr ttu fz13 bg_y txt_white" href="#">Где купить</a>
+                                            </p>
+                                            <p>
+                                                <a class="save-product-btn" href="#">
+                                                    <span class="icon normal"></span>
+                                                    <span class="icon hover"></span>
+                                                    <span class="text normal">Сохранить</span>
+                                                    <span class="text active">Сохранено</span>
+                                                </a>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
