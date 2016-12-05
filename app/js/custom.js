@@ -196,8 +196,8 @@ $(document).ready(function () {
 
 
 
-    doc.on('click', '.b-flag-select__selected', function (e) {
-        $(this).closest(".b-flag-select").toggleClass("open");
+    doc.on('click', '.b-flag-select', function (e) {
+        $(this).closest(".b-flag-select").addClass("open");
     });
 
 
@@ -379,7 +379,13 @@ $(document).ready(function () {
             search = target.closest(".b-search"),
             filter = target.closest("#b-sidebar-filter"),
             filter_btn = target.closest(".b-filter-open"),
-            b_saved = target.closest(".b-saved");
+            b_saved = target.closest(".b-saved"),
+            flag_select = target.closest(".b-flag-select");
+
+
+        if (!flag_select.length > 0) {
+            doc.find(".b-flag-select").removeClass("open");
+        }
 
 
         if (!b_saved.length > 0) {

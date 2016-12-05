@@ -14,10 +14,10 @@
                 </div>
 
                 <div class="b-header-contacts clearfix">
-                    <div class='b-phone header dib'>
+                    <div class='b-phone header dib js-touch-bl'>
                         <div class="b-phone__top">
                             <p class="b-phone__number-line">
-                                <a class="b-phone__number" href="tel:88007757715">8-800-775-77-15</a>
+                                <span class="b-phone__number" >8-800-775-77-15</span>
                             </p>
                             <p class="b-phone__number-info">бесплатно по России</p>
                         </div>
@@ -61,14 +61,32 @@
                         </div>
                     </div>
                     <div class="b-events-list__item">
-                        <div class="b-event-logged">
-                            <div class="b-event-logged__photo dib"><img src="img/expert_img/bg-avatar-img1.jpg" alt="">
+                        <div class="b-event-logged js-touch-bl">
+                            <div class="b-event-logged__default ">
+                                <div class="b-event-logged__photo dib"><img src="img/expert_img/bg-avatar-img1.jpg" alt="">
+                                </div>
+                                <div class="b-event-logged__content dib mobile-hidden">
+                                    <p class="b-event-logged__name">Алексей Иванов</p>
+                                    {% if page != 'header_buyer' %}
+                                        <p class="b-event-logged__points">1 728 баллов</p>
+                                    {% endif %}
+                                </div>
                             </div>
-                            <div class="b-event-logged__content dib mobile-hidden">
-                                <p class="b-event-logged__name">Алексей Иванов</p>
-                                {% if page != 'header_buyer' %}
-                                    <p class="b-event-logged__points">1 728 баллов</p>
-                                {% endif %}
+                            <div class="b-event-logged__popup">
+                                <ul class="b-profile-menu">
+                                    <li class="b-profile-menu__item">
+                                        <a class="b-profile-menu__link" href="#">Мой профиль</a>
+                                    </li>
+                                    <li class="b-profile-menu__item">
+                                        <a class="b-profile-menu__link" href="#">Мой заказы</a>
+                                    </li>
+                                    <li class="b-profile-menu__item">
+                                        <a class="b-profile-menu__link" href="#">Мой бонусы</a>
+                                    </li>
+                                    <li class="b-profile-menu__item">
+                                        <a class="b-profile-menu__link" href="#">Выйти</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
