@@ -197,7 +197,7 @@ $(document).ready(function () {
 
 
     doc.on('click', '.b-flag-select', function (e) {
-        $(this).closest(".b-flag-select").addClass("open");
+        $(this).closest(".b-flag-select").toggleClass("open");
     });
 
 

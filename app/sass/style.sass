@@ -716,7 +716,7 @@ a.tdu
     font-family: $cl
     position: relative
     cursor: pointer
-    z-index: 150
+    z-index: 220
 
 .hamburger
     width: 26px
@@ -1496,7 +1496,7 @@ a.tdu
 
 .b-filter-select__dropdown
     opacity: 0
-    width: 180px
+    width: 200px
     font-size: 15px
     box-shadow: 0 0 3px 0 #e0dede
     padding: 10px 20px
@@ -3138,7 +3138,7 @@ a.tdu
     z-index: -1
     &.active
         opacity: 1
-        z-index: 130
+        z-index: 210
 
 .b-filter-ul__li
     padding: 7px 0
@@ -3248,6 +3248,7 @@ a.tdu
 .b-catalog-body__filter
     position: relative
     padding-right: 160px
+    z-index: 200
 
 .clear-filters-btn
     position: absolute
@@ -3691,6 +3692,10 @@ a.tdu
         top: 50%
         margin-top: -3px
         +rotate(45)
+    &:hover
+        &:before
+            border-right: 1px solid #f05007
+            border-bottom: 1px solid #f05007
     &.open
         .b-flag-select__content
             display: block
@@ -3879,6 +3884,7 @@ a.tdu
     cursor: pointer
     &:hover
         border-bottom: 1px solid transparent
+        color: #f05007
 
 .b-city-list__item
     position: relative
@@ -4580,6 +4586,12 @@ a.tdu
             box-shadow: 0px 2px 3px 0px #ccc
         .b-event-logged__popup
             display: block
+        .b-event-logged__name
+            color: #f05007
+            &:before
+                border-right: 1px solid #f05007
+                border-bottom: 1px solid #f05007
+
 
 .b-event-logged__photo
     width: 52px
