@@ -816,7 +816,14 @@ a.tdu
         &.hover
             opacity: 0
             +sprite(save-orange)
-    &:hover, &.active
+    &:hover
+        @media screen and (min-width: 1024px)
+            .icon
+                &.normal
+                    opacity: 0
+                &.hover
+                    opacity: 1
+    &.active
         .icon
             &.normal
                 opacity: 0
@@ -977,7 +984,7 @@ a.tdu
 .b-site-header-wrapper
     border-bottom: 1px solid #e0e1e1
     position: relative
-    z-index: 120
+    z-index: 210
 
 .b-site-header
     padding: 30px 0
@@ -4486,8 +4493,9 @@ a.tdu
 
 .b-product-size__link
     color: #111111
+    +trans()
     &:hover
-        text-decoration: underline
+        color: #f26417
 
 .b-products-item__descr
     font-size: 12px

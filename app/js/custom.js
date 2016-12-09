@@ -145,12 +145,26 @@ $(document).ready(function () {
         $("select").styler();
     }
 
-    if ($(".tooltip").length > 0) {
-        $('.tooltip').tooltipster({
-            trigger: 'hover',
-            maxWidth: 190
-        });
+
+
+    function InitTooltip() {
+        if ($(".tooltip").length > 0) {
+            if (doc.outerWidth() > 1024) {
+                $('.tooltip').tooltipster({
+                    trigger: 'hover',
+                    maxWidth: 190
+                });
+            } else {
+                $('.tooltip').tooltipster({
+                    trigger: 'click',
+                    maxWidth: 190
+                });
+            }
+        }
     }
+
+    InitTooltip();
+
 
     if($('.inputmask').length > 0) {
         $('.inputmask').mask("+7 (999) 999-99-99");
