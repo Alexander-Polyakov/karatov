@@ -1501,12 +1501,16 @@ a.tdu
         right: 0
         +trans
 
+.b-filter-select__dropdown-content
+    max-height: 600px
+    overflow: auto
+    padding: 10px 20px
+
 .b-filter-select__dropdown
     opacity: 0
     width: 200px
     font-size: 15px
     box-shadow: 0 0 3px 0 #e0dede
-    padding: 10px 20px
     position: absolute
     pointer-events: none
     top: 100%
@@ -1527,8 +1531,6 @@ a.tdu
     -moz-transition: all .2s cubic-bezier(.5, 0, 0, 1.25), opacity .15s ease-out
     -o-transition: all .2s cubic-bezier(.5, 0, 0, 1.25), opacity .15s ease-out
     transition: all .2s cubic-bezier(.5, 0, 0, 1.25), opacity .15s ease-out
-    max-height: 600px
-    overflow: auto
     &:before
         content: ''
         +arr(12, 6, #fff, t)
@@ -1915,6 +1917,11 @@ a.tdu
     z-index: 10
     &.browsing
         padding: 0 40px
+
+
+.b-section-wrapper
+    &.b-are-browsing
+        position: relative
         &:after
             content: ""
             position: absolute
@@ -2760,7 +2767,7 @@ a.tdu
             &:hover
                 background: #f7f7f7
     &.opened
-        z-index: 160 !important
+        z-index: 210 !important
         .jq-selectbox__select-text
             color: #f37136
         .jq-selectbox__select
@@ -5824,6 +5831,9 @@ a.tdu
 
 
 @media screen and (max-width: 768px)
+    .b-event-logged__default
+        padding: 0
+
     .b-product-slider
         &.browsing
             &:after
