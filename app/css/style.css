@@ -6921,7 +6921,7 @@ a.tdu:hover {
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.b-product-size__link:hover {
+.b-product-size__link:hover, .b-product-size__link.active {
   color: #f26417;
 }
 
